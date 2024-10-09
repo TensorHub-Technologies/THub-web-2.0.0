@@ -1,10 +1,9 @@
 import "./App.css";
+import ThemeToggle from "./components/modes/ThemeToggle";
 function App() {
   return (
     <>
-      <h1 className="text-3xl font-bold underline text-pink-600">
-      TENSOR HUB TECHNOLOGIES
-    </h1>
+      <ThemeToggle/>
     </>
   );
 }
