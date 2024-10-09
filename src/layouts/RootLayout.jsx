@@ -9,7 +9,7 @@ function RootLayout() {
       <Grid size={12}>
         <Navbar />
       </Grid>
-      <Grid size={12} mt="100px">
+      <Grid size={12}>
         <main className="relative">
           <Outlet />
         </main>
