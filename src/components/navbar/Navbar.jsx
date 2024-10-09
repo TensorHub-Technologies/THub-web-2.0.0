@@ -9,7 +9,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { toggleMode } from "../../store/modeSlice";
 
 const Navbar = () => {
-  const [isToggled, setIsToggled] = useState(false);
   const [activePage, setActivePage] = useState("/");
   const [open, setOpen] = useState(false);
 
@@ -33,7 +32,6 @@ const Navbar = () => {
   };
 
   const handleToggleClick = () => {
-    setIsToggled((prev) => !prev);
     dispatch(toggleMode());
   };
 
@@ -54,7 +52,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="w-screen h-auto bg-[#11121c] text-white px-2 py-5 flex dark:bg-white">
+    <nav className="w-screen h-auto bg-white px-2 py-5 flex dark:bg-secondary">
       <div className="max-w-[1300px] mx-auto flex items-center justify-between relative">
         <img src={ThubLogo} className="h-10 w-38 mr-6" alt="THub Logo" />
         <div className="flex-wrap items-center justify-between gap-8 ml-16 hidden md:flex">
@@ -62,8 +60,10 @@ const Navbar = () => {
             <div
               key={item.path}
               className={`cursor-pointer ${
-                activePage === item.path ? "text-[#E22A90]" : "text-[#bdbfd4]"
-              } hover:text-[#E22A90]`}
+                activePage === item.path
+                  ? "text-primary dark:text-primary-dark "
+                  : "text-black hover:text-primary dark:text-secondary-dark dark:hover:text-primary-dark"
+              }`}
               onClick={() => handleNavigation(item.path)}
             >
               {item.name}
@@ -71,47 +71,57 @@ const Navbar = () => {
           ))}
           <div>
             <button
-              className="border border-[#E22A90] text-[#E22A90] px-4 py-2 ml-3 rounded transition-all duration-300 hover:bg-[#E22A90] hover:text-black hover:border-[#E22A90]"
+              className="border border-primary text-primary px-4 py-2 ml-3 rounded transition-all duration-300 hover:bg-primary hover:text-black hover:border-primary
+              dark:border-primary-dark dark:text-primary-dark dark:hover:bg-primary-dark dark:hover:text-black
+              "
               onClick={() => handleNavigation("/auth/register")}
             >
               Get started
             </button>
           </div>
           <div onClick={handleToggleClick} className="cursor-pointer">
-            <img src={isToggled ? TogglMode2 : TogglMode1} alt="toggle_mode" />
+            <img src={isDarkMode ? TogglMode1 : TogglMode2} alt="toggle_mode" />
           </div>
         </div>
       </div>
       <div
-        className="text-2xl cursor-pointer md:hidden mr-8 text-[#E22A90]"
+        className="text-2xl cursor-pointer md:hidden mr-8 text-primary dark:text-primary-dark"
         onClick={handleOpen}
       >
         {open ? <IoMdClose /> : <GrMenu />}
       </div>
       <div
-        className={`gap-6 absolute top-16 left-0 w-screen flex flex-col py-12 px-8 lg:hidden md:hidden duration-300 z-[-1] ease-in-out ${open ? "top-16" : "top-[-500px]"}`}
+        className={`gap-6 absolute top-16 right-0 bg-white dark:bg-secondary flex flex-col py-12 px-8 lg:hidden md:hidden duration-300 z-[-1] ease-in-out ${open ? "top-16" : "top-[-550px]"}`}
       >
         {navItems.map((item) => (
           <div
             key={item.path}
             className={`cursor-pointer ${
-              activePage === item.path ? "text-[#E22A90]" : "text-[#bdbfd4]"
-            } hover:text-[#E22A90]`}
+              activePage === item.path
+                ? "text-primary dark:text-primary-dark "
+                : "text-secondary hover:text-primary dark:text-secondary-dark dark:hover:text-primary-dark"
+            }`}
             onClick={() => handleNavigation(item.path)}
           >
             {item.name}
           </div>
         ))}
+
         <div>
           <button
-            className="border border-[#E22A90] text-[#E22A90] px-4 py-2 rounded transition-all duration-300 hover:bg-[#E22A90] hover:text-black hover:border-[#E22A90]"
+            className="border border-primary text-primary px-4 py-2  rounded transition-all duration-300 hover:bg-primary hover:text-black hover:border-primary
+              dark:border-primary-dark dark:text-primary-dark dark:hover:bg-primary-dark dark:hover:text-black
+              "
             onClick={() => handleNavigation("/auth/register")}
           >
             Get started
           </button>
         </div>
-        <div onClick={handleToggleClick} className="cursor-pointer">
-          <img src={isToggled ? TogglMode2 : TogglMode1} alt="toggle_mode" />
+        <div
+          onClick={handleToggleClick}
+          className="cursor-pointer dark:text-primary-dark"
+        >
+          <img src={isDarkMode ? TogglMode1 : TogglMode2} alt="toggle_mode" />
         </div>
       </div>
     </nav>
