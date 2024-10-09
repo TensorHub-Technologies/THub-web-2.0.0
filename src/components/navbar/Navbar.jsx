@@ -16,8 +16,6 @@ const Navbar = () => {
   const dispatch = useDispatch();
   const isDarkMode = useSelector((state) => state.customization.isDarkMode);
 
-  console.log(isDarkMode, "isDarkMode");
-
   useEffect(() => {
     const root = window.document.documentElement;
     if (isDarkMode) {
