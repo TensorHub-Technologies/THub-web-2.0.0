@@ -1,15 +1,30 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import ThubLogo from "../../assets/images/THub.svg";
 import TogglMode1 from "../../assets/icons/toggle_mode-1.svg";
 import TogglMode2 from "../../assets/icons/toggle_mode-2.svg";
 import { GrMenu } from "react-icons/gr";
 import { IoMdClose } from "react-icons/io";
+import { useDispatch, useSelector } from "react-redux";
+import { toggleMode } from "../../store/modeSlice";
 
 const Navbar = () => {
   const [isToggled, setIsToggled] = useState(false);
   const [activePage, setActivePage] = useState("/");
   const [open, setOpen] = useState(false);
+
+  // redux
+  const dispatch = useDispatch();
+  const isDarkMode = useSelector((state) => state.customization.isDarkMode);
+
+  useEffect(() => {
+    const root = window.document.documentElement;
+    if (isDarkMode) {
+      root.classList.add("dark");
+    } else {
+      root.classList.remove("dark");
+    }
+  }, [isDarkMode]);
 
   const navigate = useNavigate();
   const handleNavigation = (path) => {
@@ -19,6 +34,7 @@ const Navbar = () => {
 
   const handleToggleClick = () => {
     setIsToggled((prev) => !prev);
+    dispatch(toggleMode());
   };
 
   const handleOpen = () => {
@@ -38,7 +54,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="w-screen h-auto bg-[#11121c] text-white px-2 py-5 flex">
+    <nav className="w-screen h-auto bg-[#11121c] text-white px-2 py-5 flex dark:bg-white">
       <div className="max-w-[1300px] mx-auto flex items-center justify-between relative">
         <img src={ThubLogo} className="h-10 w-38 mr-6" alt="THub Logo" />
         <div className="flex-wrap items-center justify-between gap-8 ml-16 hidden md:flex">
