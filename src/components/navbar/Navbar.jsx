@@ -52,7 +52,7 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="w-screen h-auto bg-white px-2 py-5 flex dark:bg-secondary">
+    <nav className="h-auto bg-white px-2 py-5 flex dark:bg-secondary">
       <div className="max-w-[1300px] mx-auto flex items-center justify-between relative">
         <img src={ThubLogo} className="h-10 w-38 mr-6" alt="THub Logo" />
         <div className="flex-wrap items-center justify-between gap-8 ml-16 hidden md:flex">

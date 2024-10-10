@@ -1,14 +1,64 @@
+import Typewriter from "typewriter-effect";
+import "./Home.css";
+import { useSelector } from "react-redux";
 function Banner() {
+  const isDarkMode = useSelector((state) => state.customization.isDarkMode);
+  const strings = [
+    "Vector Embeddings",
+    "GenAI Apps",
+    "RAG Systems",
+    "Retrieval Augmented Fine Tuning",
+  ];
+  const cursorColor = isDarkMode ? "white" : "black";
+
   return (
-    <div id="hero" className="w-full border-2 border-red-500 min-h-screen">
-      <div id="hero-container" className=" dark:bg-secondary ">
+    <div id="hero" className="w-full min-h-screen  dark:bg-secondary">
+      <div id="hero-container" className=" pt-10">
         <p className="text-center text-primary dark:text-primary-dark ">
           Best GenAI Apps Builder
         </p>
-        <h1 className="text-center text-secondary dark:text-secondary-dark ">
+        <h1 className="text-center text-secondary dark:text-white mt-4 text-5xl">
           A 30X Faster Way To Build
         </h1>
+        <div className="flex justify-center my-5">
+          <span
+            className="text-center font-bold text-5xl bg-gradient-to-r from-[#B425D5] to-[#FB5582] bg-clip-text text-transparent inline-block"
+            id="type-animation"
+          >
+            <Typewriter
+              onInit={(typewriter) => {
+                strings.forEach((text) => {
+                  typewriter
+                    .typeString(text)
+                    .pauseFor(2000)
+                    .deleteAll()
+                    .pauseFor(500);
+                });
+                typewriter.start();
+              }}
+              options={{
+                autoStart: true,
+                loop: true,
+                cursor: "|",
+                delay: 100,
+              }}
+            />
+          </span>
+        </div>
       </div>
+      <div className="flex justify-center">
+        <button
+          type="button"
+          className="text-white bg-gradient-to-r from-[#B425D5] to-[#FB5582] hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 font-medium rounded-lg px-10 py-4 text-center me-2 mb-2 text-lg"
+        >
+          Start Building
+        </button>
+      </div>
+      <style>{`
+        #type-animation .Typewriter__cursor {
+          color: ${cursorColor}; 
+        }
+      `}</style>
     </div>
   );
 }
