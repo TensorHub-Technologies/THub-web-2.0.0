@@ -6,6 +6,8 @@
     @apply transition-colors duration-200
 }
 
-/* body {
-    background-color: #11121c;
-  } */
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  }
