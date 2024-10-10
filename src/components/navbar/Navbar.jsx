@@ -27,8 +27,16 @@ const Navbar = () => {
 
   const navigate = useNavigate();
   const handleNavigation = (path) => {
-    setActivePage(path);
-    navigate(path);
+    if (path === "/feedback") {
+      const feedbackUrl = "https://forms.office.com/r/R9WUwnXRV2";
+      window.open(feedbackUrl, "_blank");
+    } else if (path === "/document") {
+      const documentUrl = "https://docs.thub.tech/";
+      window.open(documentUrl, "_blank");
+    } else {
+      setActivePage(path);
+      navigate(path);
+    }
   };
 
   const handleToggleClick = () => {
@@ -53,7 +61,7 @@ const Navbar = () => {
 
   return (
     <nav className="w-screen h-auto bg-white px-2 py-5 flex dark:bg-secondary">
-      <div className="max-w-[1300px] mx-auto flex items-center justify-between relative">
+      <div className="max-w-[1300px] mx-auto flex items-center justify-between">
         <img src={ThubLogo} className="h-10 w-38 mr-6" alt="THub Logo" />
         <div className="flex-wrap items-center justify-between gap-8 ml-16 hidden md:flex">
           {navItems.map((item) => (
