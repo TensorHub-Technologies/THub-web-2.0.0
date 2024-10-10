@@ -2,7 +2,7 @@ import ContactSection from "../components/contact/Contact";
 
 const Contact = () => {
   return (
-    <div>
+    <div className="relative overflow-hidden">
       <ContactSection />
     </div>
   );
