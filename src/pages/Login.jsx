@@ -1,5 +1,5 @@
 const Login = () => {
-  return <div className="text-white">Login</div>;
+  return <div className="text-black">Login</div>;
 };
 
 export default Login;

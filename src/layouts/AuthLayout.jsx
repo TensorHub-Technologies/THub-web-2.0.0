@@ -1,5 +1,5 @@
 const AuthLayout = () => {
-  return <div className="text-white">AuthLayout</div>;
+  return <div className="text-black">AuthLayout</div>;
 };
 
 export default AuthLayout;

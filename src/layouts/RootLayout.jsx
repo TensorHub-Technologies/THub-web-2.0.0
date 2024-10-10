@@ -1,23 +1,20 @@
-import Grid from "@mui/material/Grid2";
 import { Outlet } from "react-router-dom";
 import Navbar from "../components/navbar/Navbar";
 import Footer from "../components/footer/Footer";
 
 function RootLayout() {
   return (
-    <Grid container spacing={2}>
-      <Grid size={12}>
+    <div className="flex flex-col min-h-screen">
+      <header className="w-full">
         <Navbar />
-      </Grid>
-      <Grid size={12}>
-        <main className="relative">
-          <Outlet />
-        </main>
-      </Grid>
-      <Grid size={12}>
+      </header>
+      <main className="flex-1 w-full relative overflow-hidden">
+        <Outlet />
+      </main>
+      <footer className="w-full">
         <Footer />
-      </Grid>
-    </Grid>
+      </footer>
+    </div>
   );
 }
 

@@ -2,7 +2,7 @@ import Banner from "../components/home/Banner";
 
 const Home = () => {
   return (
-    <div className="text-white">
+    <div className="text-black">
       <Banner />
     </div>
   );

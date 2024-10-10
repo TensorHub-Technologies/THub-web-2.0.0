@@ -1,5 +1,5 @@
 const Pricing = () => {
-  return <div className="text-white">Pricing</div>;
+  return <div className="text-black">Pricing</div>;
 };
 
 export default Pricing;
