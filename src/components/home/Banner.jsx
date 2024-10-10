@@ -1,6 +1,9 @@
-import Typewriter from "typewriter-effect";
 import "./Home.css";
 import { useSelector } from "react-redux";
+import Typewriter from "typewriter-effect";
+import heroImage_dark from "../../assets/images/hero-image-dark.png";
+import heroImage_light from "../../assets/images/hero-image-light.png";
+
 function Banner() {
   const isDarkMode = useSelector((state) => state.customization.isDarkMode);
   const strings = [
@@ -54,6 +57,19 @@ function Banner() {
           Start Building
         </button>
       </div>
+      <div className="flex justify-center">
+        <div className="border-2 border-primary-dark w-8/12 my-8 rounded-3xl">
+          <img
+            src={isDarkMode ? heroImage_dark : heroImage_light}
+            alt="Banner image"
+          />
+        </div>
+      </div>
+      <ul className="flex justify-center gap-8 dark:text-secondary-dark list-disc">
+        <li>Build GenAI Apps 30X faster</li>
+        <li>Build RAG Systems</li>
+        <li>Build Retrieval Augmented Fine Tuning</li>
+      </ul>
       <style>{`
         #type-animation .Typewriter__cursor {
           color: ${cursorColor}; 
