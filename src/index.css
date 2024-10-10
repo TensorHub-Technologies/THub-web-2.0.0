@@ -7,5 +7,7 @@
 }
 
 body {
-    background-color: #11121c;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
   }
