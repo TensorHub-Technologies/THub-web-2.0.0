@@ -1,8 +1,4 @@
-import { useSelector } from "react-redux";
 function Banner() {
-  const isDarkMode = useSelector((state) => state.customization.isDarkMode);
-  console.log(isDarkMode, "isDArkmode");
-
   return (
     <div id="hero" className="w-full border-2 border-red-500 min-h-screen">
       <div id="hero-container" className=" dark:bg-secondary ">
