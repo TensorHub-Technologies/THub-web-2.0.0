@@ -45,10 +45,10 @@ const CourseCard = ({ imgSrc, title, description, logos, path }) => {
   };
 
   return (
-    <div className="col-span-1 max-w-sm mx-auto" data-aos="fade-up-sm">
+    <div className="max-w-md mx-auto border w-full" data-aos="fade-up-sm">
       {/* <div className="card w-full bg-white shadow-md rounded-lg overflow-hidden border-2 border-gray-800"> */}
-      <div className="bg-background border border-gray-500 w-full">
-        <div className="image-container">
+      <div className="bg-background  w-full">
+        <div className="image-container object-contain">
           <img src={imgSrc} className="card_image w-full" alt={title} />
         </div>
         <div className="p-4 bg-background dark:bg-background-dark">
@@ -56,7 +56,7 @@ const CourseCard = ({ imgSrc, title, description, logos, path }) => {
             {title}
           </h5>
 
-          <p className="text-secondary dark:text-secondary-dark">
+          <p className="text-lg text-secondary dark:text-secondary-dark mb-10">
             {description}
           </p>
 
@@ -83,7 +83,7 @@ const CourseCard = ({ imgSrc, title, description, logos, path }) => {
           <div className="mt-12 text-center mb-2">
             <button
               onClick={() => handleButtonClick(path)}
-              className="bg-primary dark:bg-primary-dark text-white text-md py-2 px-12 rounded-md"
+              className="bg-primary dark:bg-primary-dark text-white text-lg py-2 px-20 rounded-md"
             >
               Course Details
             </button>
@@ -175,7 +175,7 @@ const CoursesSection = () => {
       imgSrc: isDarkMode ? workshopImage : workshopImageLite,
       title: "GenAI for Techies",
       description:
-        "Explore the cutting-edge of AI innovation tailored for tech experts ready to lead the future of technology.",
+        "Explore the cutting-edge of AI innovation tailored for tech experts ready to lead the future of technology and innovation.",
       logos: [
         [
           { src: qdrantLogo, alt: "Qdrant", width: "70px" },
