@@ -1,5 +1,11 @@
+import CourseCard from "../components/academy/Academy";
+
 const Academy = () => {
-  return <div className="text-black">Academy</div>;
+  return (
+    <div>
+      <CourseCard />
+    </div>
+  );
 };
 
 export default Academy;
