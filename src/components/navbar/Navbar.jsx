@@ -60,9 +60,9 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="w-screen h-auto bg-white px-2 py-5 flex dark:bg-secondary">
+    <nav className="h-auto relative z-10 bg-white px-2 py-5 flex dark:bg-secondary">
       <div className="max-w-[1300px] mx-auto flex items-center justify-between">
-        <img src={ThubLogo} className="h-10 w-38 mr-6" alt="THub Logo" />
+        <img src={ThubLogo} className="h-10 w-38 mr-20" alt="THub Logo" />
         <div className="flex-wrap items-center justify-between gap-8 ml-16 hidden md:flex">
           {navItems.map((item) => (
             <div
@@ -99,7 +99,7 @@ const Navbar = () => {
         {open ? <IoMdClose /> : <GrMenu />}
       </div>
       <div
-        className={`gap-6 absolute top-16 right-0 bg-white dark:bg-secondary flex flex-col py-12 px-8 lg:hidden md:hidden duration-300 z-[-1] ease-in-out ${open ? "top-16" : "top-[-550px]"}`}
+        className={`gap-6 absolute top-16 right-0 bg-background dark:bg-secondary flex flex-col py-12 px-8 lg:hidden md:hidden duration-300 z-[-1] ease-in-out ${open ? "top-16" : "top-[-600px]"}`}
       >
         {navItems.map((item) => (
           <div

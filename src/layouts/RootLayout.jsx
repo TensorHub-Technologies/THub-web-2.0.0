@@ -8,7 +8,7 @@ function RootLayout() {
       <header className="w-full">
         <Navbar />
       </header>
-      <main className="flex-1 w-full relative overflow-hidden">
+      <main className="flex-1 w-full">
         <Outlet />
       </main>
       <footer className="w-full">
