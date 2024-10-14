@@ -15,7 +15,7 @@ function Banner() {
   const cursorColor = isDarkMode ? "white" : "black";
 
   return (
-    <div id="hero" className="w-full min-h-screen  dark:bg-secondary">
+    <section id={isDarkMode ? "" : "hero-main-light"}>
       <div id="hero-container" className=" pt-10">
         <p className="text-center text-primary dark:text-primary-dark ">
           Best GenAI Apps Builder
@@ -75,7 +75,7 @@ function Banner() {
           color: ${cursorColor}; 
         }
       `}</style>
-    </div>
+    </section>
   );
 }
 
