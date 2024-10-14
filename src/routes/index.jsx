@@ -6,8 +6,6 @@ const UseCases = loadable(() => import("../pages/UseCases"));
 const Pricing = loadable(() => import("../pages/Pricing"));
 const Blog = loadable(() => import("../pages/Blog"));
 const Academy = loadable(() => import("../pages/Academy"));
-const Document = loadable(() => import("../pages/Document"));
-const Feedback = loadable(() => import("../pages/Feedback"));
 const Contact = loadable(() => import("../pages/Contact"));
 const Login = loadable(() => import("../pages/Login"));
 const ErrorPage = loadable(() => import("../pages/Error"));
@@ -40,14 +38,6 @@ export const router = createBrowserRouter([
       {
         path: "academy",
         element: <Academy />,
-      },
-      {
-        path: "document",
-        element: <Document />,
-      },
-      {
-        path: "feedback",
-        element: <Feedback />,
       },
       {
         path: "contact",
