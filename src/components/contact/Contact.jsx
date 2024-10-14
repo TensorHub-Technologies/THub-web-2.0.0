@@ -3,30 +3,36 @@ import { FiPhoneCall } from "react-icons/fi";
 import ContactForm from "./ContactForm";
 
 const Contact = () => {
+  // const isDarkMode = useSelector((state) => state.customization.isDarkMode);
+
   return (
-    <div className="border-red-400">
+    <div className="border-red-400 dark:bg-secondary">
       <div className="text-center py-5">
-        <h3 className="text-secondary  text-3xl  font-bold">Contact With Us</h3>
+        <h3 className="text-secondary  text-3xl  font-bold dark:text-background">
+          Contact With Us
+        </h3>
         <div className="mt-2">
-          <span className="">Home / </span>
+          <span className="dark:text-secondary-dark">Home / </span>
           <span className="text-secondary-dark">contact</span>
         </div>
       </div>
 
       <div className="grid grid-cols-2 py-12 mx-16">
         <div className="text-center">
-          <div className="inline-flex align-middle justify-center p-4 rounded-lg bg-primary text-white h-18 w-18 mb-8">
+          <div className="inline-flex align-middle justify-center p-4 rounded-lg bg-primary dark:bg-primary-dark text-white dark:text-secondary h-18 w-18 mb-8">
             <LiaMapMarkedAltSolid size={40} />
           </div>
-          <h3 className="text-3xl font-medium">
+          <h3 className="text-3xl font-medium dark:text-secondary-dark">
             CT1, Villa Espana, 158 Velachery <br /> Main Road, Chennai - 600042
           </h3>
         </div>
         <div className="text-center">
-          <div className="inline-flex align-middle justify-center p-4 rounded-lg bg-primary text-white h-18 w-18 mb-8">
+          <div className="inline-flex align-middle justify-center p-4 rounded-lg bg-primary dark:bg-primary-dark text-white dark:text-secondary h-18 w-18 mb-8">
             <FiPhoneCall size={40} />
           </div>
-          <h3 className="text-3xl font-medium">Contact # 9940014844</h3>
+          <h3 className="text-3xl font-medium dark:text-secondary-dark">
+            Contact # 9940014844
+          </h3>
         </div>
       </div>
 

@@ -1,5 +1,4 @@
 import { useState } from "react";
-import ContactForm from "../../contact/ContactForm";
 
 const MasterClassGenAI = () => {
   // State to manage dropdown visibility
@@ -190,7 +189,6 @@ const MasterClassGenAI = () => {
           </div>
         </div>
       </div>
-      <ContactForm />
     </div>
   );
 };

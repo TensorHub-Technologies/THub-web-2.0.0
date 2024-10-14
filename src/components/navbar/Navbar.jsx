@@ -27,8 +27,16 @@ const Navbar = () => {
 
   const navigate = useNavigate();
   const handleNavigation = (path) => {
-    setActivePage(path);
-    navigate(path);
+    if (path === "/feedback") {
+      const feedbackUrl = "https://forms.office.com/r/R9WUwnXRV2";
+      window.open(feedbackUrl, "_blank");
+    } else if (path === "/document") {
+      const documentUrl = "https://docs.thub.tech/";
+      window.open(documentUrl, "_blank");
+    } else {
+      setActivePage(path);
+      navigate(path);
+    }
   };
 
   const handleToggleClick = () => {
@@ -52,9 +60,9 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="h-auto bg-white px-2 py-5 flex dark:bg-secondary">
-      <div className="max-w-[1300px] mx-auto flex items-center justify-between relative">
-        <img src={ThubLogo} className="h-10 w-38 mr-6" alt="THub Logo" />
+    <nav className="h-auto relative z-10 bg-white px-2 py-5 flex dark:bg-secondary">
+      <div className="max-w-[1300px] mx-auto flex items-center justify-between">
+        <img src={ThubLogo} className="h-10 w-38 mr-20" alt="THub Logo" />
         <div className="flex-wrap items-center justify-between gap-8 ml-16 hidden md:flex">
           {navItems.map((item) => (
             <div
@@ -91,7 +99,7 @@ const Navbar = () => {
         {open ? <IoMdClose /> : <GrMenu />}
       </div>
       <div
-        className={`gap-6 absolute top-16 right-0 bg-white dark:bg-secondary flex flex-col py-12 px-8 lg:hidden md:hidden duration-300 z-[-1] ease-in-out ${open ? "top-16" : "top-[-550px]"}`}
+        className={`gap-6 absolute top-16 right-0 bg-background dark:bg-secondary flex flex-col py-12 px-8 lg:hidden md:hidden duration-300 z-[-1] ease-in-out ${open ? "top-16" : "top-[-600px]"}`}
       >
         {navItems.map((item) => (
           <div
