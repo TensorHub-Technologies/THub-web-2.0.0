@@ -1,3 +1,4 @@
+import Accordion from "../components/home/Accordion";
 import Banner from "../components/home/Banner";
 import Features_Anime_One from "../components/home/Features_Anime_One";
 import Features_Anime_Three from "../components/home/Features_Anime_Three";
@@ -15,6 +16,7 @@ const Home = () => {
       <Features_Anime_Two />
       <Features_Anime_Three />
       <Pricing_Plan />
+      <Accordion />
     </div>
   );
 };
