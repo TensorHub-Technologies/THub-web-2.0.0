@@ -12,6 +12,13 @@ const ErrorPage = loadable(() => import("../pages/Error"));
 const RootLayout = loadable(() => import("../layouts/RootLayout"));
 const AuthLayout = loadable(() => import("../layouts/AuthLayout"));
 const Register = loadable(() => import("../pages/Register"));
+const MasterClass = loadable(
+  () => import("../components/academy/details/MasterClass"),
+);
+const Leadership = loadable(
+  () => import("../components/academy/details/Leadership"),
+);
+const Techie = loadable(() => import("../components/academy/details/Techie"));
 
 export const router = createBrowserRouter([
   {
@@ -42,6 +49,18 @@ export const router = createBrowserRouter([
       {
         path: "contact",
         element: <Contact />,
+      },
+      {
+        path: "academy/master-class",
+        element: <MasterClass />,
+      },
+      {
+        path: "academy/leadership",
+        element: <Leadership />,
+      },
+      {
+        path: "academy/techie",
+        element: <Techie />,
       },
     ],
   },
