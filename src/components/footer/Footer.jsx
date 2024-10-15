@@ -3,16 +3,16 @@ import ThubLogo from "../../assets/images/THub.svg";
 import StripeBackground from "../../assets/images/shapes/stripe-colored.svg";
 import { RiSendPlaneLine } from "react-icons/ri";
 import {
-  FaFacebook,
-  FaTwitter,
-  FaGithub,
-  FaDribbble,
-  FaInstagram,
-} from "react-icons/fa";
+  FiFacebook,
+  FiTwitter,
+  FiGithub,
+  FiDribbble,
+  FiInstagram,
+} from "react-icons/fi";
 
 const Footer = () => {
   return (
-    <footer className="relative z-10 text-black">
+    <footer className="relative z-10 text-black dark:bg-secondary border-t border-gray-200 dark:border-gray-700">
       <div
         className="absolute inset-0 bg-cover bg-center"
         style={{
@@ -24,7 +24,7 @@ const Footer = () => {
         }}
       />
 
-      <div className="relative z-20 mx-auto w-full max-w-screen-xl">
+      <div className="relative z-20 mx-auto w-full max-w-screen-xl ">
         <div className="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
           <div className="">
             <img
@@ -144,19 +144,18 @@ const Footer = () => {
               <div className="flex items-center">
                 <div className="relative w-full">
                   <input
-                    id="message-input"
-                    type="text"
-                    aria-describedby="helper-text-explanation"
-                    className="bg-gray-50 border rounded-lg border-r-0 border-gray-300 text-secondary-dark dark:text-gray-400 block w-full py-3 px-4"
+                    type="email"
+                    name="email"
+                    className="px-3 py-3 dark:bg-secondary border rounded-e-none border-e-0 shadow-md border-secondary-dark placeholder-secondary-dark focus:outline-none dark:focus:border-primary-dark focus:border-primary focus:ring-primary  dark:focus:ring-primary-dark focus:right-0 block w-full rounded-md text-lg focus:ring-1"
                     placeholder="Enter you email"
                   />
                 </div>
                 <button
-                  className="flex-shrink-0  border-r-0 inline-flex items-center py-3 px-4 bg-primary rounded-e-lg  text-background"
+                  className="flex-shrink-0 dark:bg-primary-dark dark:text-secondary  border-r-0 inline-flex items-center px-4 bg-primary rounded-e-lg  text-background"
                   type="button"
                 >
-                  <span id="send-icon">
-                    <RiSendPlaneLine size={24} />
+                  <span id="send-icon" className="py-[14px]">
+                    <RiSendPlaneLine size={26} />
                   </span>
                 </button>
               </div>
@@ -166,42 +165,42 @@ const Footer = () => {
                 to="#"
                 className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
               >
-                <FaGithub className="w-5 h-5" />
+                <FiGithub className="w-5 h-5" />
                 <span className="sr-only">GitHub account</span>
               </Link>
               <Link
                 to="#"
                 className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
               >
-                <FaDribbble className="w-5 h-5" />
+                <FiDribbble className="w-5 h-5" />
                 <span className="sr-only">Dribbble account</span>
               </Link>
               <Link
                 to="#"
                 className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
               >
-                <FaFacebook className="w-5 h-5" />
+                <FiFacebook className="w-5 h-5" />
                 <span className="sr-only">Facebook page</span>
               </Link>
               <Link
                 to="#"
                 className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
               >
-                <FaTwitter className="w-5 h-5" />
+                <FiTwitter className="w-5 h-5" />
                 <span className="sr-only">Twitter page</span>
               </Link>
               <Link
                 to="#"
                 className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
               >
-                <FaInstagram className="w-5 h-5" />
+                <FiInstagram className="w-5 h-5" />
                 <span className="sr-only">Instagram account</span>
               </Link>
             </div>
           </div>
         </div>
         <div className="px-4 py-6 flex justify-center">
-          <span className="text-sm text-secondary">
+          <span className="text-sm text-secondary dark:text-secondary-dark">
             © 2024 TensorHub Technologies Private Limited. All Rights Reserved.
           </span>
         </div>
