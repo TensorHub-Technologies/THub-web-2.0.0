@@ -17,7 +17,7 @@ function Pricing_Plan() {
   };
 
   return (
-    <section className="px-4 sm:px-8 lg:px-16">
+    <section className="px-4 sm:px-8 lg:px-16 pb-10 ">
       <div className="flex flex-col justify-center items-center gap-5">
         <p className="text-primary dark:text-primary-dark text-4xl">
           Pricing Plan
@@ -42,6 +42,7 @@ function Pricing_Plan() {
               name="subscription"
               className={subStyle.radio}
               checked={selectedPlan === "monthly"}
+              onChange={handleMonthly}
             />
             <label
               htmlFor="monthly"
@@ -65,6 +66,7 @@ function Pricing_Plan() {
               name="subscription"
               className={subStyle.radio}
               checked={selectedPlan === "yearly"}
+              onChange={handleYearly}
             />
             <label
               htmlFor="yearly"

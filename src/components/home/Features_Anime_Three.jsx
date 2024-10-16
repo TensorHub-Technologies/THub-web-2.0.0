@@ -3,9 +3,15 @@ import feature_third_gif_light from "../../assets/illustrations/feature_third-2.
 
 // redux
 import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 function Features_Anime_Three() {
   const isDarkMode = useSelector((state) => state.customization.isDarkMode);
+  const navigate = useNavigate();
+  const handleNavigation = () => {
+    console.log("redirection");
+    navigate("/auth/register");
+  };
   return (
     <section>
       <div className="flex flex-col lg:flex-row gap-10 p-8 lg:p-16 mt-[-128px]">
@@ -98,9 +104,14 @@ function Features_Anime_Three() {
           </ul>
 
           <div className="flex items-center mt-8">
-            <p className="text-primary dark:text-primary-dark cursor-pointer">
+            <button
+              className="text-primary dark:text-primary-dark cursor-pointer"
+              onClick={() => {
+                handleNavigation();
+              }}
+            >
               Get Started Free
-            </p>
+            </button>
             <div className="w-5 ml-2 text-primary dark:text-primary-dark">
               <svg
                 className="icon"
