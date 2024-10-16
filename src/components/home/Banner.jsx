@@ -65,7 +65,7 @@ function Banner() {
           />
         </div>
       </div>
-      <ul className="flex justify-center gap-8 dark:text-secondary-dark list-disc">
+      <ul className="flex flex-col items-center lg:justify-center lg:flex-row lg:gap-8  dark:text-secondary-dark list-disc">
         <li>Build GenAI Apps 30X faster</li>
         <li>Build RAG Systems</li>
         <li>Build Retrieval Augmented Fine Tuning</li>

@@ -9,9 +9,8 @@ function Features_First() {
     <section className="px-5 py-10 lg:px-20">
       {/* Heading Section */}
       <div className="flex justify-center text-center">
-        <h1 className="dark:text-white my-10 text-3xl md:text-4xl lg:text-5xl font-bold">
-          Build GenAI at Rapid Pace <br />
-          Across Your Favorite LLMs
+        <h1 className="dark:text-white mb-10 text-3xl md:text-4xl lg:text-5xl font-bold w-[40rem]">
+          Build GenAI at Rapid Pace Across Your Favorite LLMs
         </h1>
       </div>
 
