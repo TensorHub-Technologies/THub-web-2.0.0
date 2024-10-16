@@ -1,5 +1,5 @@
 import { useState } from "react";
-// import { TbCircleCheckFilled } from 'react-icons/tb';
+import ContactForm from "../../contact/ContactForm.jsx";
 
 const Techie = () => {
   // State to manage dropdown visibility
@@ -1579,6 +1579,7 @@ const Techie = () => {
           </div>
         </div>
       </div>
+      <ContactForm />
     </div>
   );
 };
