@@ -1,5 +1,11 @@
-const UseCases = () => {
-  return <div className="text-black">UseCases</div>;
+import Usecase from "../components/usecases/Usecases";
+
+const Usecases = () => {
+  return (
+    <div>
+      <Usecase />
+    </div>
+  );
 };
 
-export default UseCases;
+export default Usecases;

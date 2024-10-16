@@ -1,4 +1,5 @@
 import { useState } from "react";
+import ContactForm from "../../contact/ContactForm.jsx";
 
 const Leadership = () => {
   // State to manage dropdown visibility
@@ -473,6 +474,7 @@ const Leadership = () => {
           </div>
         </div>
       </div>
+      <ContactForm />
     </div>
   );
 };
