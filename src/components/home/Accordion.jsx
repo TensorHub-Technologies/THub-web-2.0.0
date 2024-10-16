@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const Accordion = () => {
-  const [openIndex, setOpenIndex] = useState(0); // Open the first accordion by default
+  const [openIndex, setOpenIndex] = useState(0);
 
   const toggleAccordion = (index) => {
     setOpenIndex(openIndex === index ? null : index);
