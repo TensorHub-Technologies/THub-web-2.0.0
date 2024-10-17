@@ -26,11 +26,11 @@ const Leadership = () => {
         <h2 className="text-center  text-primary dark:text-primary-dark">
           GenAI For Leaders and CxO&apos;s Details
         </h2>
-        <div className="card-container border-2 border-gray-300 rounded-lg p-5 shadow-lg bg-[#f9f9f9] dark:bg-[#3c3c3c] my-5">
+        <div className="card-container border-2 border-gray-300 rounded-lg p-5 shadow-lg dark:border-gray-700 bg-white dark:bg-secondary my-5">
           {/* Card for Topic 1 */}
           <div className="card rounded-lg mb-4 overflow-hidden">
             <div
-              className="card-header p-4 cursor-pointer flex justify-between items-center text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444] border border-white border-opacity-10"
+              className="card-header p-4 cursor-pointer flex justify-between items-center text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
               onClick={() => toggleDropdown("topic1")}
             >
               Integration of ChatGPT with Business Applications
@@ -43,7 +43,7 @@ const Leadership = () => {
                 {/* Subtopic 1 */}
                 <div className="subtopic mt-2">
                   <div
-                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444]"
+                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 shadow dark:border-gray-700"
                     onClick={() => toggleDropdown("subtopic1")}
                   >
                     Integration Capability of ChatGPT
@@ -81,7 +81,7 @@ const Leadership = () => {
           {/* Card for Topic 2 */}
           <div className="card rounded-lg mb-4 overflow-hidden">
             <div
-              className="card-header p-4 cursor-pointer flex justify-between items-center text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444] border border-white border-opacity-10"
+              className="card-header p-4 cursor-pointer flex justify-between items-center text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
               onClick={() => toggleDropdown("topic2")}
             >
               OpenAI Custom GPT Models
@@ -94,7 +94,7 @@ const Leadership = () => {
                 {/* Subtopic 3 */}
                 <div className="subtopic mt-2">
                   <div
-                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444]"
+                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 shadow dark:border-gray-700"
                     onClick={() => toggleDropdown("subtopic3")}
                   >
                     Overview of Custom GPT Models
@@ -134,7 +134,7 @@ const Leadership = () => {
 
           <div className="card rounded-lg mb-4 overflow-hidden">
             <div
-              className="card-header p-4 cursor-pointer flex justify-between items-center text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444] border border-white border-opacity-10"
+              className="card-header p-4 cursor-pointer flex justify-between items-center text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
               onClick={() => toggleDropdown("topic3")}
             >
               Advanced Prompt Engineering and Fine Tunning Techniques
@@ -147,7 +147,7 @@ const Leadership = () => {
                 {/* Subtopic 3 */}
                 <div className="subtopic mt-2">
                   <div
-                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444]"
+                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 shadow dark:border-gray-700"
                     onClick={() => toggleDropdown("subtopic3")}
                   >
                     Advanced Prompt Engineering
@@ -172,7 +172,7 @@ const Leadership = () => {
                 {/* Subtopic 4 */}
                 <div className="subtopic mt-2">
                   <div
-                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444]"
+                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 shadow dark:border-gray-700"
                     onClick={() => toggleDropdown("subtopic4")}
                   >
                     Hyperparameter Tuning & Domain Adaptation
@@ -196,7 +196,7 @@ const Leadership = () => {
                 {/* Subtopic 5 */}
                 <div className="subtopic mt-2">
                   <div
-                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444]"
+                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 shadow dark:border-gray-700"
                     onClick={() => toggleDropdown("subtopic5")}
                   >
                     Overview of Fine-Tuning
@@ -222,7 +222,7 @@ const Leadership = () => {
 
           <div className="card rounded-lg mb-4 overflow-hidden">
             <div
-              className="card-header p-4 cursor-pointer flex justify-between items-center text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444] border border-white border-opacity-10"
+              className="card-header p-4 cursor-pointer flex justify-between items-center text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
               onClick={() => toggleDropdown("topic4")}
             >
               Impact of GenAI in Leadership & Management
@@ -235,7 +235,7 @@ const Leadership = () => {
                 {/* Subtopic 3 */}
                 <div className="subtopic mt-2">
                   <div
-                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444]"
+                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 shadow dark:border-gray-700"
                     onClick={() => toggleDropdown("subtopic3")}
                   >
                     Impact in Industries and Business Mode
@@ -266,7 +266,7 @@ const Leadership = () => {
                 {/* Subtopic 5 */}
                 <div className="subtopic mt-2">
                   <div
-                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444]"
+                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 shadow dark:border-gray-700"
                     onClick={() => toggleDropdown("subtopic5")}
                   >
                     Leadership in the Age of AI
@@ -297,7 +297,7 @@ const Leadership = () => {
 
           <div className="card rounded-lg mb-4 overflow-hidden">
             <div
-              className="card-header p-4 cursor-pointer flex justify-between items-center text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444] border border-white border-opacity-10"
+              className="card-header p-4 cursor-pointer flex justify-between items-center text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
               onClick={() => toggleDropdown("topic5")}
             >
               Generative AI for Sales & Marketing
@@ -310,7 +310,7 @@ const Leadership = () => {
                 {/* Subtopic 3 */}
                 <div className="subtopic mt-2">
                   <div
-                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444]"
+                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 shadow dark:border-gray-700"
                     onClick={() => toggleDropdown("subtopic3")}
                   >
                     Using Generative AI for content creation (product
@@ -344,7 +344,7 @@ const Leadership = () => {
 
           <div className="card rounded-lg mb-4 overflow-hidden">
             <div
-              className="card-header p-4 cursor-pointer flex justify-between items-center text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444] border border-white border-opacity-10"
+              className="card-header p-4 cursor-pointer flex justify-between items-center text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
               onClick={() => toggleDropdown("topic5")}
             >
               Generative AI for Sales & Marketing
@@ -357,7 +357,7 @@ const Leadership = () => {
                 {/* Subtopic 3 */}
                 <div className="subtopic mt-2">
                   <div
-                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444]"
+                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 shadow dark:border-gray-700"
                     onClick={() => toggleDropdown("subtopic3")}
                   >
                     Using Generative AI for content creation (product
@@ -391,7 +391,7 @@ const Leadership = () => {
 
           <div className="card rounded-lg mb-4 overflow-hidden">
             <div
-              className="card-header p-4 cursor-pointer flex justify-between items-center text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444] border border-white border-opacity-10"
+              className="card-header p-4 cursor-pointer flex justify-between items-center text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
               onClick={() => toggleDropdown("topic6")}
             >
               Ethics & Regulations Consideration
@@ -404,7 +404,7 @@ const Leadership = () => {
                 {/* Subtopic 3 */}
                 <div className="subtopic mt-2">
                   <div
-                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444]"
+                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 shadow dark:border-gray-700"
                     onClick={() => toggleDropdown("subtopic3")}
                   >
                     Ethics and Sustainability AI
@@ -433,7 +433,7 @@ const Leadership = () => {
 
           <div className="card rounded-lg mb-4 overflow-hidden">
             <div
-              className="card-header p-4 cursor-pointer flex justify-between items-center text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444] border border-white border-opacity-10"
+              className="card-header p-4 cursor-pointer flex justify-between items-center text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
               onClick={() => toggleDropdown("topic7")}
             >
               Live Project
@@ -446,7 +446,7 @@ const Leadership = () => {
                 {/* Subtopic 3 */}
                 <div className="subtopic mt-2">
                   <div
-                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444]"
+                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 shadow dark:border-gray-700"
                     onClick={() => toggleDropdown("subtopic3")}
                   >
                     Building Generative AI Apps using
