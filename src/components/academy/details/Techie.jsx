@@ -26,11 +26,11 @@ const Techie = () => {
         <h2 className="text-center  text-primary dark:text-primary-dark">
           GenAI For Techies Details
         </h2>
-        <div className="card-container border-2 border-gray-300 rounded-lg p-5 shadow-lg bg-[#f9f9f9] dark:bg-[#3c3c3c] my-5">
+        <div className="card-container border-2 border-gray-300 rounded-lg p-5 shadow-lg dark:border-gray-700 bg-white dark:bg-secondary my-5">
           {/* Card for Topic 1 */}
           <div className="card rounded-lg mb-4 overflow-hidden">
             <div
-              className="card-header p-4 cursor-pointer flex justify-between items-center text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444] border border-white border-opacity-10"
+              className="card-header p-4 cursor-pointer flex justify-between items-center text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
               onClick={() => toggleDropdown("topic1")}
             >
               Introduction to Generative AI
@@ -43,7 +43,7 @@ const Techie = () => {
                 {/* Subtopic 1 */}
                 <div className="subtopic mt-2">
                   <div
-                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444]"
+                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 shadow dark:border-gray-700"
                     onClick={() => toggleDropdown("subtopic1")}
                   >
                     Overview of Generative AI <br />
@@ -66,7 +66,7 @@ const Techie = () => {
 
                 <div className="subtopic mt-2">
                   <div
-                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444]"
+                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
                     onClick={() => toggleDropdown("subtopic2")}
                   >
                     Types of Generative Models <br />
@@ -86,7 +86,7 @@ const Techie = () => {
                 </div>
                 <div className="subtopic mt-2">
                   <div
-                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444]"
+                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
                     onClick={() => toggleDropdown("subtopic3")}
                   >
                     Impact and Future of Generative AI <br />
@@ -112,7 +112,7 @@ const Techie = () => {
           {/* Card for Topic 2 */}
           <div className="card rounded-lg mb-4 overflow-hidden">
             <div
-              className="card-header p-4 cursor-pointer flex justify-between items-center text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444] border border-white border-opacity-10"
+              className="card-header p-4 cursor-pointer flex justify-between items-center text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
               onClick={() => toggleDropdown("topic2")}
             >
               NLP Fundamental
@@ -125,7 +125,7 @@ const Techie = () => {
                 {/* Subtopic 3 */}
                 <div className="subtopic mt-2">
                   <div
-                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444]"
+                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
                     onClick={() => toggleDropdown("subtopic4")}
                   >
                     Basics of Natural Language Processing <br />
@@ -147,7 +147,7 @@ const Techie = () => {
 
                 <div className="subtopic mt-2">
                   <div
-                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444]"
+                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
                     onClick={() => toggleDropdown("subtopic5")}
                   >
                     Core NLP Tasks <br />
@@ -169,7 +169,7 @@ const Techie = () => {
 
                 <div className="subtopic mt-2">
                   <div
-                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444]"
+                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
                     onClick={() => toggleDropdown("subtopic6")}
                   >
                     NLP Applications <br />
@@ -198,7 +198,7 @@ const Techie = () => {
 
           <div className="card rounded-lg mb-4 overflow-hidden">
             <div
-              className="card-header p-4 cursor-pointer flex justify-between items-center text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444] border border-white border-opacity-10"
+              className="card-header p-4 cursor-pointer flex justify-between items-center text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
               onClick={() => toggleDropdown("topic3")}
             >
               Transformers and Attention Mechanism
@@ -211,7 +211,7 @@ const Techie = () => {
                 {/* Subtopic 3 */}
                 <div className="subtopic mt-2">
                   <div
-                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444]"
+                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
                     onClick={() => toggleDropdown("subtopic4")}
                   >
                     Introduction to Transformers <br />
@@ -233,7 +233,7 @@ const Techie = () => {
 
                 <div className="subtopic mt-2">
                   <div
-                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444]"
+                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
                     onClick={() => toggleDropdown("subtopic5")}
                   >
                     Self-Attention Mechanism <br />
@@ -255,7 +255,7 @@ const Techie = () => {
 
                 <div className="subtopic mt-2">
                   <div
-                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444]"
+                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
                     onClick={() => toggleDropdown("subtopic6")}
                   >
                     Transformer Architecture
@@ -285,7 +285,7 @@ const Techie = () => {
 
           <div className="card rounded-lg mb-4 overflow-hidden">
             <div
-              className="card-header p-4 cursor-pointer flex justify-between items-center text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444] border border-white border-opacity-10"
+              className="card-header p-4 cursor-pointer flex justify-between items-center text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
               onClick={() => toggleDropdown("topic4")}
             >
               Foundation Models
@@ -298,7 +298,7 @@ const Techie = () => {
                 {/* Subtopic 3 */}
                 <div className="subtopic mt-2">
                   <div
-                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444]"
+                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
                     onClick={() => toggleDropdown("subtopic4")}
                   >
                     Overview of Foundation Models <br />
@@ -319,7 +319,7 @@ const Techie = () => {
 
                 <div className="subtopic mt-2">
                   <div
-                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444]"
+                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
                     onClick={() => toggleDropdown("subtopic5")}
                   >
                     Architecture and Training <br />
@@ -340,7 +340,7 @@ const Techie = () => {
 
                 <div className="subtopic mt-2">
                   <div
-                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444]"
+                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
                     onClick={() => toggleDropdown("subtopic6")}
                   >
                     Applications and Use Cases <br />
@@ -362,7 +362,7 @@ const Techie = () => {
 
                 <div className="subtopic mt-2">
                   <div
-                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444]"
+                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
                     onClick={() => toggleDropdown("subtopic7")}
                   >
                     Future of Foundation Models <br />
@@ -391,7 +391,7 @@ const Techie = () => {
 
           <div className="card rounded-lg mb-4 overflow-hidden">
             <div
-              className="card-header p-4 cursor-pointer flex justify-between items-center text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444] border border-white border-opacity-10"
+              className="card-header p-4 cursor-pointer flex justify-between items-center text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
               onClick={() => toggleDropdown("topic5")}
             >
               Prompt Engineering Fundamentals
@@ -404,7 +404,7 @@ const Techie = () => {
                 {/* Subtopic 3 */}
                 <div className="subtopic mt-2">
                   <div
-                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444]"
+                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
                     onClick={() => toggleDropdown("subtopic4")}
                   >
                     Deep Dive into Advanced Technique <br />
@@ -426,7 +426,7 @@ const Techie = () => {
 
                 <div className="subtopic mt-2">
                   <div
-                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444]"
+                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
                     onClick={() => toggleDropdown("subtopic5")}
                   >
                     Tools and Frameworks <br />
@@ -455,7 +455,7 @@ const Techie = () => {
 
           <div className="card rounded-lg mb-4 overflow-hidden">
             <div
-              className="card-header p-4 cursor-pointer flex justify-between items-center text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444] border border-white border-opacity-10"
+              className="card-header p-4 cursor-pointer flex justify-between items-center text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
               onClick={() => toggleDropdown("topic6")}
             >
               Project
@@ -468,7 +468,7 @@ const Techie = () => {
                 {/* Subtopic 3 */}
                 <div className="subtopic mt-2">
                   <div
-                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444]"
+                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
                     onClick={() => toggleDropdown("subtopic4")}
                   >
                     Case Studies and Practical Applications <br />
@@ -498,7 +498,7 @@ const Techie = () => {
 
           <div className="card rounded-lg mb-4 overflow-hidden">
             <div
-              className="card-header p-4 cursor-pointer flex justify-between items-center text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444] border border-white border-opacity-10"
+              className="card-header p-4 cursor-pointer flex justify-between items-center text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
               onClick={() => toggleDropdown("topic7")}
             >
               Fine-Tuning Generative Models
@@ -511,7 +511,7 @@ const Techie = () => {
                 {/* Subtopic 3 */}
                 <div className="subtopic mt-2">
                   <div
-                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444]"
+                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
                     onClick={() => toggleDropdown("subtopic4")}
                   >
                     Overview of Fine-Tuning
@@ -533,7 +533,7 @@ const Techie = () => {
 
                 <div className="subtopic mt-2">
                   <div
-                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444]"
+                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
                     onClick={() => toggleDropdown("subtopic5")}
                   >
                     Fine-Tuning Techniques <br />
@@ -562,7 +562,7 @@ const Techie = () => {
 
           <div className="card rounded-lg mb-4 overflow-hidden">
             <div
-              className="card-header p-4 cursor-pointer flex justify-between items-center text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444] border border-white border-opacity-10"
+              className="card-header p-4 cursor-pointer flex justify-between items-center text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
               onClick={() => toggleDropdown("topic8")}
             >
               Fine-Tuning GPT Models
@@ -575,7 +575,7 @@ const Techie = () => {
                 {/* Subtopic 3 */}
                 <div className="subtopic mt-2">
                   <div
-                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444]"
+                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
                     onClick={() => toggleDropdown("subtopic4")}
                   >
                     Introduction to GPT Models <br />
@@ -596,7 +596,7 @@ const Techie = () => {
 
                 <div className="subtopic mt-2">
                   <div
-                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444]"
+                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
                     onClick={() => toggleDropdown("subtopic5")}
                   >
                     Fine-Tuning Methods <br />
@@ -626,7 +626,7 @@ const Techie = () => {
 
           <div className="card rounded-lg mb-4 overflow-hidden">
             <div
-              className="card-header p-4 cursor-pointer flex justify-between items-center text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444] border border-white border-opacity-10"
+              className="card-header p-4 cursor-pointer flex justify-between items-center text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
               onClick={() => toggleDropdown("topic9")}
             >
               Introduction to Vector Database
@@ -639,7 +639,7 @@ const Techie = () => {
                 {/* Subtopic 3 */}
                 <div className="subtopic mt-2">
                   <div
-                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444]"
+                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
                     onClick={() => toggleDropdown("subtopic4")}
                   >
                     Vector Databases Overview <br />
@@ -660,7 +660,7 @@ const Techie = () => {
 
                 <div className="subtopic mt-2">
                   <div
-                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444]"
+                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
                     onClick={() => toggleDropdown("subtopic5")}
                   >
                     Core Concepts <br />
@@ -681,7 +681,7 @@ const Techie = () => {
 
                 <div className="subtopic mt-2">
                   <div
-                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444]"
+                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
                     onClick={() => toggleDropdown("subtopic5")}
                   >
                     Popular Vector Databases <br />
@@ -709,7 +709,7 @@ const Techie = () => {
 
           <div className="card rounded-lg mb-4 overflow-hidden">
             <div
-              className="card-header p-4 cursor-pointer flex justify-between items-center text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444] border border-white border-opacity-10"
+              className="card-header p-4 cursor-pointer flex justify-between items-center text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
               onClick={() => toggleDropdown("topic10")}
             >
               Introduction to LangChain
@@ -722,7 +722,7 @@ const Techie = () => {
                 {/* Subtopic 3 */}
                 <div className="subtopic mt-2">
                   <div
-                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444]"
+                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
                     onClick={() => toggleDropdown("subtopic4")}
                   >
                     LangChain Overview
@@ -745,7 +745,7 @@ const Techie = () => {
 
                 <div className="subtopic mt-2">
                   <div
-                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444]"
+                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
                     onClick={() => toggleDropdown("subtopic5")}
                   >
                     Building Applications with LangChain <br />
@@ -773,7 +773,7 @@ const Techie = () => {
 
           <div className="card rounded-lg mb-4 overflow-hidden">
             <div
-              className="card-header p-4 cursor-pointer flex justify-between items-center text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444] border border-white border-opacity-10"
+              className="card-header p-4 cursor-pointer flex justify-between items-center text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
               onClick={() => toggleDropdown("topic11")}
             >
               Introduction to LlamaIndex
@@ -786,7 +786,7 @@ const Techie = () => {
                 {/* Subtopic 3 */}
                 <div className="subtopic mt-2">
                   <div
-                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444]"
+                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
                     onClick={() => toggleDropdown("subtopic4")}
                   >
                     LlamaIndex Overview <br />
@@ -807,7 +807,7 @@ const Techie = () => {
 
                 <div className="subtopic mt-2">
                   <div
-                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444]"
+                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
                     onClick={() => toggleDropdown("subtopic5")}
                   >
                     Applications and Use Cases <br />
@@ -835,7 +835,7 @@ const Techie = () => {
 
           <div className="card rounded-lg mb-4 overflow-hidden">
             <div
-              className="card-header p-4 cursor-pointer flex justify-between items-center text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444] border border-white border-opacity-10"
+              className="card-header p-4 cursor-pointer flex justify-between items-center text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
               onClick={() => toggleDropdown("topic12")}
             >
               Introduction to LLM Agents
@@ -848,7 +848,7 @@ const Techie = () => {
                 {/* Subtopic 3 */}
                 <div className="subtopic mt-2">
                   <div
-                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444]"
+                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
                     onClick={() => toggleDropdown("subtopic4")}
                   >
                     Understanding LLM Agents <br />
@@ -877,7 +877,7 @@ const Techie = () => {
 
           <div className="card rounded-lg mb-4 overflow-hidden">
             <div
-              className="card-header p-4 cursor-pointer flex justify-between items-center text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444] border border-white border-opacity-10"
+              className="card-header p-4 cursor-pointer flex justify-between items-center text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
               onClick={() => toggleDropdown("topic13")}
             >
               Retrieval Augmented Generation (RAG)
@@ -890,7 +890,7 @@ const Techie = () => {
                 {/* Subtopic 3 */}
                 <div className="subtopic mt-2">
                   <div
-                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444]"
+                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
                     onClick={() => toggleDropdown("subtopic4")}
                   >
                     RAG Overview <br />
@@ -920,7 +920,7 @@ const Techie = () => {
 
           <div className="card rounded-lg mb-4 overflow-hidden">
             <div
-              className="card-header p-4 cursor-pointer flex justify-between items-center text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444] border border-white border-opacity-10"
+              className="card-header p-4 cursor-pointer flex justify-between items-center text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
               onClick={() => toggleDropdown("topic12")}
             >
               Project
@@ -933,7 +933,7 @@ const Techie = () => {
                 {/* Subtopic 3 */}
                 <div className="subtopic mt-2">
                   <div
-                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444]"
+                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
                     onClick={() => toggleDropdown("subtopic4")}
                   >
                     RAG on PDF Documents & Structured Data
@@ -960,7 +960,7 @@ const Techie = () => {
 
           <div className="card rounded-lg mb-4 overflow-hidden">
             <div
-              className="card-header p-4 cursor-pointer flex justify-between items-center text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444] border border-white border-opacity-10"
+              className="card-header p-4 cursor-pointer flex justify-between items-center text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
               onClick={() => toggleDropdown("topic14")}
             >
               Understanding Hugging Face Models & Hub
@@ -973,7 +973,7 @@ const Techie = () => {
                 {/* Subtopic 3 */}
                 <div className="subtopic mt-2">
                   <div
-                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444]"
+                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
                     onClick={() => toggleDropdown("subtopic4")}
                   >
                     Introduction to Hugging Face <br />
@@ -996,7 +996,7 @@ const Techie = () => {
 
                 <div className="subtopic mt-2">
                   <div
-                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444]"
+                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
                     onClick={() => toggleDropdown("subtopic5")}
                   >
                     Hugging Face Models <br />
@@ -1020,7 +1020,7 @@ const Techie = () => {
 
                 <div className="subtopic mt-2">
                   <div
-                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444]"
+                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
                     onClick={() => toggleDropdown("subtopic6")}
                   >
                     Hugging Face Hub <br />
@@ -1050,7 +1050,7 @@ const Techie = () => {
 
           <div className="card rounded-lg mb-4 overflow-hidden">
             <div
-              className="card-header p-4 cursor-pointer flex justify-between items-center text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444] border border-white border-opacity-10"
+              className="card-header p-4 cursor-pointer flex justify-between items-center text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
               onClick={() => toggleDropdown("topic15")}
             >
               Introduction to Open-Source Models - Llama 3 & Mistral
@@ -1063,7 +1063,7 @@ const Techie = () => {
                 {/* Subtopic 3 */}
                 <div className="subtopic mt-2">
                   <div
-                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444]"
+                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
                     onClick={() => toggleDropdown("subtopic4")}
                   >
                     Introduction to Open-Source Models <br />
@@ -1086,7 +1086,7 @@ const Techie = () => {
 
                 <div className="subtopic mt-2">
                   <div
-                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444]"
+                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
                     onClick={() => toggleDropdown("subtopic5")}
                   >
                     Llama 3 & Mistral <br />
@@ -1111,7 +1111,7 @@ const Techie = () => {
 
                 <div className="subtopic mt-2">
                   <div
-                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444]"
+                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
                     onClick={() => toggleDropdown("subtopic6")}
                   >
                     Fine-Tuning Open-Source Models <br />
@@ -1142,7 +1142,7 @@ const Techie = () => {
 
           <div className="card rounded-lg mb-4 overflow-hidden">
             <div
-              className="card-header p-4 cursor-pointer flex justify-between items-center text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444] border border-white border-opacity-10"
+              className="card-header p-4 cursor-pointer flex justify-between items-center text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
               onClick={() => toggleDropdown("topic16")}
             >
               AWS Bedrock
@@ -1155,7 +1155,7 @@ const Techie = () => {
                 {/* Subtopic 3 */}
                 <div className="subtopic mt-2">
                   <div
-                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444]"
+                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
                     onClick={() => toggleDropdown("subtopic4")}
                   >
                     Overview of AWS Bedrock <br />
@@ -1192,7 +1192,7 @@ const Techie = () => {
 
           <div className="card rounded-lg mb-4 overflow-hidden">
             <div
-              className="card-header p-4 cursor-pointer flex justify-between items-center text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444] border border-white border-opacity-10"
+              className="card-header p-4 cursor-pointer flex justify-between items-center text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
               onClick={() => toggleDropdown("topic17")}
             >
               Azure OpenAI Services
@@ -1205,7 +1205,7 @@ const Techie = () => {
                 {/* Subtopic 3 */}
                 <div className="subtopic mt-2">
                   <div
-                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444]"
+                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
                     onClick={() => toggleDropdown("subtopic4")}
                   >
                     Overview of Azure OpenAI Services <br />
@@ -1237,7 +1237,7 @@ const Techie = () => {
 
           <div className="card rounded-lg mb-4 overflow-hidden">
             <div
-              className="card-header p-4 cursor-pointer flex justify-between items-center text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444] border border-white border-opacity-10"
+              className="card-header p-4 cursor-pointer flex justify-between items-center text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
               onClick={() => toggleDropdown("topic18")}
             >
               Image Generation and Advanced Models
@@ -1250,7 +1250,7 @@ const Techie = () => {
                 {/* Subtopic 3 */}
                 <div className="subtopic mt-2">
                   <div
-                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444]"
+                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
                     onClick={() => toggleDropdown("subtopic4")}
                   >
                     Introduction to Image Generation and GANs <br />
@@ -1272,7 +1272,7 @@ const Techie = () => {
 
                 <div className="subtopic mt-2">
                   <div
-                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444]"
+                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
                     onClick={() => toggleDropdown("subtopic5")}
                   >
                     Transformer-Based Computer Vision Models Introduction to
@@ -1295,7 +1295,7 @@ const Techie = () => {
 
                 <div className="subtopic mt-2">
                   <div
-                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444]"
+                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
                     onClick={() => toggleDropdown("subtopic6")}
                   >
                     Diffusion Models Overview of Diffusion Models & its
@@ -1324,7 +1324,7 @@ const Techie = () => {
 
           <div className="card rounded-lg mb-4 overflow-hidden">
             <div
-              className="card-header p-4 cursor-pointer flex justify-between items-center text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444] border border-white border-opacity-10"
+              className="card-header p-4 cursor-pointer flex justify-between items-center text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
               onClick={() => toggleDropdown("topic19")}
             >
               Building GenAI Apps with Low Code No Code platform
@@ -1337,7 +1337,7 @@ const Techie = () => {
                 {/* Subtopic 3 */}
                 <div className="subtopic mt-2">
                   <div
-                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444]"
+                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
                     onClick={() => toggleDropdown("subtopic4")}
                   >
                     Overview of Low Code Platform <br />
@@ -1370,7 +1370,7 @@ const Techie = () => {
 
           <div className="card rounded-lg mb-4 overflow-hidden">
             <div
-              className="card-header p-4 cursor-pointer flex justify-between items-center text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444] border border-white border-opacity-10"
+              className="card-header p-4 cursor-pointer flex justify-between items-center text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
               onClick={() => toggleDropdown("topic20")}
             >
               Project
@@ -1383,7 +1383,7 @@ const Techie = () => {
                 {/* Subtopic 3 */}
                 <div className="subtopic mt-2">
                   <div
-                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444]"
+                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
                     onClick={() => toggleDropdown("subtopic4")}
                   >
                     Hands-On Exercise to build GenAI apps like RAG, Querying
@@ -1413,7 +1413,7 @@ const Techie = () => {
 
           <div className="card rounded-lg mb-4 overflow-hidden">
             <div
-              className="card-header p-4 cursor-pointer flex justify-between items-center text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444] border border-white border-opacity-10"
+              className="card-header p-4 cursor-pointer flex justify-between items-center text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
               onClick={() => toggleDropdown("topic21")}
             >
               Introduction to LLM Agents
@@ -1426,7 +1426,7 @@ const Techie = () => {
                 {/* Subtopic 3 */}
                 <div className="subtopic mt-2">
                   <div
-                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444]"
+                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
                     onClick={() => toggleDropdown("subtopic4")}
                   >
                     Understanding LLM Agents <br />
@@ -1455,7 +1455,7 @@ const Techie = () => {
 
           <div className="card rounded-lg mb-4 overflow-hidden">
             <div
-              className="card-header p-4 cursor-pointer flex justify-between items-center text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444] border border-white border-opacity-10"
+              className="card-header p-4 cursor-pointer flex justify-between items-center text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
               onClick={() => toggleDropdown("topic22")}
             >
               Retrieval Augmented Generation (RAG)
@@ -1468,7 +1468,7 @@ const Techie = () => {
                 {/* Subtopic 3 */}
                 <div className="subtopic mt-2">
                   <div
-                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444]"
+                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
                     onClick={() => toggleDropdown("subtopic4")}
                   >
                     RAG Overview <br />
@@ -1498,7 +1498,7 @@ const Techie = () => {
 
           <div className="card rounded-lg mb-4 overflow-hidden">
             <div
-              className="card-header p-4 cursor-pointer flex justify-between items-center text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444] border border-white border-opacity-10"
+              className="card-header p-4 cursor-pointer flex justify-between items-center text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
               onClick={() => toggleDropdown("topic23")}
             >
               RAG Optimization and Multimodal RAG
@@ -1511,7 +1511,7 @@ const Techie = () => {
                 {/* Subtopic 3 */}
                 <div className="subtopic mt-2">
                   <div
-                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444]"
+                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
                     onClick={() => toggleDropdown("subtopic4")}
                   >
                     Optimizing RAG <br />
@@ -1540,7 +1540,7 @@ const Techie = () => {
 
           <div className="card rounded-lg mb-4 overflow-hidden">
             <div
-              className="card-header p-4 cursor-pointer flex justify-between items-center text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444] border border-white border-opacity-10"
+              className="card-header p-4 cursor-pointer flex justify-between items-center text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
               onClick={() => toggleDropdown("topic24")}
             >
               Project
@@ -1553,7 +1553,7 @@ const Techie = () => {
                 {/* Subtopic 3 */}
                 <div className="subtopic mt-2">
                   <div
-                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444]"
+                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
                     onClick={() => toggleDropdown("subtopic4")}
                   >
                     RAG on PDF Documents & Structured Data

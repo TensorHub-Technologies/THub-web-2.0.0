@@ -26,11 +26,11 @@ const MasterClassGenAI = () => {
         <h2 className="text-center  text-primary dark:text-primary-dark">
           MasterClass in GenAI Details
         </h2>
-        <div className="card-container border-2 border-gray-300 rounded-lg p-5 shadow-lg bg-[#f9f9f9] dark:bg-[#3c3c3c] my-5">
+        <div className="card-container border-2 border-gray-300 rounded-lg p-5 shadow-lg dark:border-gray-700 bg-white dark:bg-secondary my-5">
           {/* Card for Topic 1 */}
           <div className="card rounded-lg mb-4 overflow-hidden">
             <div
-              className="card-header p-4 cursor-pointer flex justify-between items-center text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444] border border-white border-opacity-10"
+              className="card-header p-4 cursor-pointer flex justify-between items-center text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700"
               onClick={() => toggleDropdown("topic1")}
             >
               Introduction to Generative AI
@@ -43,7 +43,7 @@ const MasterClassGenAI = () => {
                 {/* Subtopic 1 */}
                 <div className="subtopic mt-2">
                   <div
-                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444]"
+                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 shadow dark:border-gray-700"
                     onClick={() => toggleDropdown("subtopic1")}
                   >
                     GenAI - Tools & Integration
@@ -69,7 +69,7 @@ const MasterClassGenAI = () => {
                 {/* Subtopic 2 */}
                 <div className="subtopic mt-2">
                   <div
-                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444]"
+                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 shadow dark:border-gray-700 "
                     onClick={() => toggleDropdown("subtopic2")}
                   >
                     Generative AI Industry Impact & Use Cases
@@ -102,7 +102,7 @@ const MasterClassGenAI = () => {
           {/* Card for Topic 2 */}
           <div className="card rounded-lg mb-4 overflow-hidden">
             <div
-              className="card-header p-4 cursor-pointer flex justify-between items-center text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444] border border-white border-opacity-10"
+              className="card-header p-4 cursor-pointer flex justify-between items-center text-black dark:text-[white] bg-white dark:bg-secondary  border border-gray-200 rounded-lg shadow dark:border-gray-700"
               onClick={() => toggleDropdown("topic2")}
             >
               Prompt Engineering Fundamentals
@@ -115,7 +115,7 @@ const MasterClassGenAI = () => {
                 {/* Subtopic 3 */}
                 <div className="subtopic mt-2">
                   <div
-                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444]"
+                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 shadow dark:border-gray-700"
                     onClick={() => toggleDropdown("subtopic3")}
                   >
                     Introduction to Prompt Engineering <br />
@@ -139,7 +139,7 @@ const MasterClassGenAI = () => {
                 {/* Subtopic 4 */}
                 <div className="subtopic mt-2">
                   <div
-                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444]"
+                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 shadow dark:border-gray-700 "
                     onClick={() => toggleDropdown("subtopic4")}
                   >
                     Prompt Engineering Techniques
@@ -165,7 +165,7 @@ const MasterClassGenAI = () => {
                 {/* Subtopic 5 */}
                 <div className="subtopic mt-2">
                   <div
-                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-[#eeeeee] dark:bg-[#444]"
+                    className="subtopic-header p-3 rounded-lg flex justify-between items-center cursor-pointer text-black dark:text-[white] bg-white dark:bg-secondary border border-gray-200 shadow dark:border-gray-700 "
                     onClick={() => toggleDropdown("subtopic5")}
                   >
                     Prompt Frameworks
