@@ -41,94 +41,94 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="flex flex-col items-center justify-center">
+          <div className="flex flex-col  justify-center items-center">
             <h2 className="mb-2 text-lg font-bold text-gray-900  dark:text-white mr-4">
               THub
             </h2>
             <ul className="text-secondary dark:text-secondary-dark font-medium">
               <li className="mb-2">
                 <Link
-                  href="#"
-                  className="hover:text-primary dark:hover:text-primary-dark"
+                  to="#"
+                  className="transition-all duration-300 hover:text-primary dark:hover:text-primary-dark hover:ml-1"
                 >
                   About
                 </Link>
               </li>
               <li className="mb-2">
                 <Link
-                  href="#"
-                  className="hover:text-primary dark:hover:text-primary-dark dark:text-secondary-dark"
+                  to="/blog"
+                  className=" transition-all duration-300 hover:text-primary dark:hover:text-primary-dark hover:ml-1 dark:text-secondary-dark"
                 >
                   Blog
                 </Link>
               </li>
               <li className="mb-2">
                 <Link
-                  href="#"
-                  className="hover:text-primary dark:hover:text-primary-dark dark:text-secondary-dark"
+                  to="#"
+                  className=" transition-all duration-300 hover:text-primary dark:hover:text-primary-dark hover:ml-1 dark:text-secondary-dark"
                 >
                   Sign in
                 </Link>
               </li>
               <li className="mb-2">
                 <Link
-                  href="#"
-                  className="hover:text-primary dark:hover:text-primary-dark dark:text-secondary-dark"
+                  to="#"
+                  className="transition-all duration-300 hover:text-primary dark:hover:text-primary-dark hover:ml-1"
                 >
                   Register
                 </Link>
               </li>
               <li className="mb-2">
                 <Link
-                  href="#"
-                  className="hover:text-primary dark:hover:text-primary-dark dark:text-secondary-dark"
+                  to="/contact"
+                  className=" transition-all duration-300 hover:text-primary dark:hover:text-primary-dark hover:ml-1 dark:text-secondary-dark"
                 >
                   Contact
                 </Link>
               </li>
             </ul>
           </div>
-          <div className="flex flex-col items-center justify-center">
-            <h2 className="mb-2 text-lg font-bold text-gray-900  dark:text-white mr-[152px]">
+          <div className="flex flex-col justify-center ">
+            <h2 className="mb-2 text-lg font-bold text-gray-900  dark:text-white text-start">
               Use Cases
             </h2>
             <ul className="text-secondary dark:text-secondary-dark font-medium">
               <li className="mb-2">
                 <Link
-                  href="#"
-                  className="hover:text-primary dark:hover:text-primary-dark"
+                  to="#"
+                  className=" transition-all duration-300 hover:text-primary dark:hover:text-primary-dark hover:ml-1"
                 >
                   Retrieval Augmented Generation
                 </Link>
               </li>
               <li className="mb-2">
                 <Link
-                  href="#"
-                  className="hover:text-primary dark:hover:text-primary-dark dark:text-secondary-dark"
+                  to="#"
+                  className=" transition-all duration-300 hover:text-primary dark:hover:text-primary-dark hover:ml-1 dark:text-secondary-dark"
                 >
-                  Retrieval Augmented Fine Tuning{" "}
+                  Retrieval Augmented Fine Tuning
                 </Link>
               </li>
               <li className="mb-2">
                 <Link
-                  href="#"
-                  className="hover:text-primary dark:hover:text-primary-dark dark:text-secondary-dark"
+                  to="#"
+                  className=" transition-all duration-300 hover:text-primary dark:hover:text-primary-dark hover:ml-1 dark:text-secondary-dark"
                 >
                   Recommender System
                 </Link>
               </li>
               <li className="mb-2">
                 <Link
-                  href="#"
-                  className="hover:text-primary dark:hover:text-primary-dark dark:text-secondary-dark"
+                  to="#"
+                  className=" transition-all duration-300 hover:text-primary dark:hover:text-primary-dark hover:ml-1 dark:text-secondary-dark"
                 >
                   Document Summarization
                 </Link>
               </li>
               <li className="mb-2">
                 <Link
-                  href="#"
-                  className="hover:text-primary dark:hover:text-primary-dark dark:text-secondary-dark"
+                  to="#"
+                  className=" transition-all duration-300 hover:text-primary dark:hover:text-primary-dark hover:ml-1 dark:text-secondary-dark"
                 >
                   Product Description
                 </Link>
@@ -136,8 +136,8 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="flex flex-col items-center justify-center mb-16 ">
-            <h2 className="mb-2 text-lg font-bold text-gray-900  dark:text-white mr-40">
+          <div className="flex flex-col ">
+            <h2 className="mb-2 text-lg font-bold text-gray-900  dark:text-white">
               News & Update
             </h2>
             <div className="w-full max-w-sm">
