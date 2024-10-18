@@ -1,5 +1,9 @@
 import dark_app_image from "../../assets/icons/home-icons/dark-app.png";
 import light_app_image from "../../assets/icons/home-icons/light-app.png";
+import dragdark from "../../assets/icons/home-icons/drag_dark.svg";
+import draglite from "../../assets/icons/home-icons/drag_lite.svg";
+import pipedark from "../../assets/icons/home-icons/pipe_dark.svg";
+import pipelite from "../../assets/icons/home-icons/pipe_lite.svg";
 import { useSelector } from "react-redux";
 
 function Features_First() {
@@ -40,7 +44,7 @@ function Features_First() {
         <div className="lg:flex gap-5 items-start w-full">
           <div className="w-16 h-16 border border-primary bg-slate-200 dark:bg-slate-800 dark:border dark:border-slate-950 p-2 rounded-lg flex-shrink-0">
             <img
-              src={isDarkMode ? dark_app_image : light_app_image}
+              src={isDarkMode ? dragdark : draglite}
               alt="drag and drop"
               className="w-full h-full object-contain"
             />
@@ -60,7 +64,7 @@ function Features_First() {
         <div className="lg:flex gap-5 items-start w-full">
           <div className="w-16 h-16 border border-primary bg-slate-200 dark:bg-slate-800 dark:border dark:border-slate-950 p-2 rounded-lg flex-shrink-0">
             <img
-              src={isDarkMode ? dark_app_image : light_app_image}
+              src={isDarkMode ? pipedark : pipelite}
               alt="automated data pipeline"
               className="w-full h-full object-contain"
             />
