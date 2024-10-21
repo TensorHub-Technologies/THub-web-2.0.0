@@ -1,10 +1,41 @@
 import { useGoogleLogin } from "@react-oauth/google";
+import axios from "axios";
+import { useState } from "react";
 
 function Google_Custom_Button() {
+  const [userInfo, setUserInfo] = useState(null);
+
   const login = useGoogleLogin({
-    onSuccess: (tokenResponse) => console.log(tokenResponse),
+    scope: "openid email profile",
+    onSuccess: async (credentialResponse) => {
+      console.log("Access Token:", credentialResponse.access_token);
+
+      // Exchange token or fetch user profile
+      const userInfoData = await fetchUserInfo(credentialResponse.access_token);
+      console.log("User Info:", userInfoData);
+      alert("Token generated successfully");
+      setUserInfo(userInfoData);
+      console.log(userInfo);
+    },
     onError: () => console.log("Login Failed"),
   });
+
+  const fetchUserInfo = async (accessToken) => {
+    try {
+      const response = await axios.get(
+        "https://www.googleapis.com/oauth2/v3/userinfo",
+        {
+          headers: {
+            Authorization: `Bearer ${accessToken}`,
+          },
+        },
+      );
+      return response.data;
+    } catch (error) {
+      console.error("Failed to fetch user info:", error);
+    }
+  };
+
   return (
     <div>
       <button

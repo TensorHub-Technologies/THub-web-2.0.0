@@ -1,56 +1,51 @@
+// import assests
 import bg_sand from "../../assets/images/bg/light-hero.jpg";
 import workspace_image_light from "../../assets/screens/top-2.png";
 import workspace_image_dark from "../../assets/screens/top-1.png";
 import blurryImage from "../../assets/svgs/blurry-shape-4.svg";
+import arrow_light from "../../assets/svgs/curve-arrow-light.svg";
+import arrow_dark from "../../assets/svgs/curve-arrow-dark.svg";
+
+// import hooks
 import { useSelector } from "react-redux";
 
 function FooterImage() {
   const isDarkMode = useSelector((state) => state.customization.isDarkMode);
   return (
-    <section className="relative">
-      <div className="flex justify-center relative">
-        {/* Image container */}
-        <div className="w-[90%] h-auto border border-gray-700">
-          {isDarkMode ? (
-            <img
-              className="object-contain rounded-2xl"
-              src={blurryImage}
-              alt="blurry image"
-            />
-          ) : (
-            <img
-              className="object-contain rounded-2xl"
-              src={bg_sand}
-              alt="bg sand image"
-            />
-          )}
-        </div>
-
-        {/* Text overlay */}
-        <div className="absolute flex flex-col top-20 gap-3 ">
-          <h1 className="text-4xl font-bold text-black text-center dark:text-white">
+    <section className="min-h-screen flex justify-center items-center">
+      <div
+        className="relative bg-cover bg-center w-[90%] max-w-7xl rounded-lg shadow-md overflow-hidden"
+        style={{
+          backgroundImage: `url(${isDarkMode ? blurryImage : bg_sand})`,
+        }}
+      >
+        {/* Content */}
+        <div className="relative z-10 flex flex-col items-center justify-center min-h-screen  mt-16  text-center px-6 sm:px-0">
+          <h1 className="text-4xl md:text-4xl font-extrabold text-secondary dark:text-white leading-snug mb-2">
             Using{" "}
             <span className="text-primary dark:text-primary-dark">THub</span>{" "}
-            you can save hours each week creating
+            you can save hours each week
           </h1>
-          <h1 className="text-4xl font-bold text-black text-center dark:text-white">
-            long-form content.
+          <h1 className="text-4xl md:text-4xl font-extrabold text-secondary leading-snug dark:text-white">
+            creating long-form content.
           </h1>
-          <div className="flex items-center justify-center mt-10 dark:mt-0">
-            <button
-              type="button"
-              className="text-white w-40  bg-primary hover:bg-blue-900 font-lg rounded-lg text-lg px-3 py-2.5 me-2 dark:bg-primary-dark dark:hover:bg-pink-600 focus:outline-none"
-            >
-              Get Started Free
-            </button>
-          </div>
-          <div className="absolute top-64 border-2 rounded-lg border-primary dark:top-40 dark:border-primary-dark overflow-hidden h-auto flex justify-center">
-            <img
-              className="object-contain max-h-full max-w-full"
-              src={isDarkMode ? workspace_image_dark : workspace_image_light}
-              alt="workspace image"
-            />
-          </div>
+
+          <button className="px-5 py-3 bg-primary dark:bg-primary-dark dark:text-secondary text-white rounded-lg text-lg my-8  transition">
+            Get Started Free
+          </button>
+          {/* arrow image */}
+          <img
+            className="absolute z-0 w-12 h-16"
+            src={isDarkMode ? arrow_dark : arrow_light}
+            alt="arrow image"
+            style={{ top: "28%", left: "58%", transform: "translateX(-50%)" }}
+          />
+          {/* THub Mockup Image */}
+          <img
+            src={isDarkMode ? workspace_image_dark : workspace_image_light}
+            alt="THub Workspace Mockup"
+            className="w-11/12 max-w-4xl shadow-lg rounded-lg border-2 border-primary dark:border-primary-dark"
+          />
         </div>
       </div>
     </section>
