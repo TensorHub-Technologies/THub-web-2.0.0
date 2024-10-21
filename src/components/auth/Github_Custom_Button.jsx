@@ -1,9 +1,32 @@
+import { useEffect } from "react";
+
 function Github_Custom_Button() {
+  const client_id = "Ov23livsiN32CRBf7KtH";
+
+  useEffect(() => {
+    const query = window.location.search;
+    const urlParams = new URLSearchParams(query);
+    const searchParams = urlParams.get("code");
+    console.log(searchParams);
+  }, []);
+
+  const loginWithGithub = () => {
+    const state = Array.from(crypto.getRandomValues(new Uint8Array(16)))
+      .map((byte) => byte.toString(16).padStart(2, "0"))
+      .join("");
+    console.log(state, "token");
+    localStorage.setItem("latestCSRFToken", state);
+
+    const link = `https://github.com/login/oauth/authorize?client_id=${client_id} `;
+    window.location.assign(link);
+  };
+
   return (
     <div>
       <button
+        onClick={loginWithGithub}
         type="button"
-        className="px-16 text-black bg-white border dark:border-gray-500 dark:hover:border-primary-dark hover:border-primary focus:ring-4 focus:outline-none font-medium rounded-lg text-lg  py-2.5 text-center inline-flex items-center dark:bg-black dark:text-white"
+        className="px-16 text-black bg-white border dark:border-gray-500 dark:hover:border-primary-dark hover:border-primary  focus:outline-none font-medium rounded-lg text-lg  py-2.5 text-center inline-flex items-center dark:bg-black dark:text-white"
       >
         <svg
           className="w-6 h-6 me-5"
