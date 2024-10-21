@@ -21,14 +21,6 @@ const Usecase = () => {
   return (
     <div className="border-red-400 dark:bg-secondary">
       <div className="text-center py-5">
-        <h3 className="text-secondary text-3xl font-bold dark:text-background">
-          Use Cases
-        </h3>
-        <div className="mt-2">
-          <span className="dark:text-secondary-dark">Home / </span>
-          <span className="text-secondary-dark">Use Cases</span>
-        </div>
-
         <div className="flex flex-col items-center text-center">
           <h1 className="dark:text-primary-dark text-primary my-10 text-3xl md:text-4xl lg:text-5xl font-bold">
             THub Use Cases
