@@ -7,7 +7,6 @@ import Features_First from "../components/home/Features_First";
 import FooterImage from "../components/home/FooterImage";
 import Pricing_Plan from "../components/home/Pricing_Plan";
 import Usecase from "../components/usecases/Usecases";
-import "../pages/MainHome.css";
 
 const Home = () => {
   return (

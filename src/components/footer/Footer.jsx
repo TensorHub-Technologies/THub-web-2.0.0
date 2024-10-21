@@ -42,13 +42,13 @@ const Footer = () => {
             </ul>
           </div>
           <div className="flex flex-col  justify-center items-center">
-            <h2 className="mb-2 text-lg font-bold text-gray-900  dark:text-white mr-4">
+            <h2 className="mb-2 text-lg font-bold text-secondary  dark:text-white mr-4">
               THub
             </h2>
             <ul className="text-secondary dark:text-secondary-dark font-medium">
               <li className="mb-2">
                 <Link
-                  to="#"
+                  to="/about"
                   className="transition-all duration-300 hover:text-primary dark:hover:text-primary-dark hover:ml-1"
                 >
                   About
@@ -89,7 +89,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="flex flex-col justify-center ">
-            <h2 className="mb-2 text-lg font-bold text-gray-900  dark:text-white text-start">
+            <h2 className="mb-2 text-lg font-bold text-secondary  dark:text-white text-start">
               Use Cases
             </h2>
             <ul className="text-secondary dark:text-secondary-dark font-medium">
@@ -137,7 +137,7 @@ const Footer = () => {
           </div>
 
           <div className="flex flex-col ">
-            <h2 className="mb-2 text-lg font-bold text-gray-900  dark:text-white">
+            <h2 className="mb-2 text-lg font-bold text-secondary  dark:text-white">
               News & Update
             </h2>
             <div className="w-full max-w-sm">
@@ -146,7 +146,7 @@ const Footer = () => {
                   <input
                     type="email"
                     name="email"
-                    className="px-3 py-3 dark:bg-secondary border rounded-e-none border-e-0 shadow-md border-secondary-dark placeholder-secondary-dark focus:outline-none dark:focus:border-primary-dark focus:border-primary focus:ring-primary  dark:focus:ring-primary-dark focus:right-0 block w-full rounded-md text-lg focus:ring-1"
+                    className="px-3 py-3 dark:bg-secondary text-secondary dark:text-background border rounded-e-none border-e-0 shadow-md border-secondary-dark placeholder-secondary-dark focus:outline-none dark:focus:border-primary-dark focus:border-primary focus:ring-primary  dark:focus:ring-primary-dark focus:right-0 block w-full rounded-md text-lg focus:ring-1"
                     placeholder="Enter you email"
                   />
                 </div>
@@ -163,35 +163,35 @@ const Footer = () => {
             <div className="flex columns-5 mt-6 mr-24">
               <Link
                 to="#"
-                className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+                className="text-gray-500 hover:text-secondary dark:hover:text-white"
               >
                 <FiGithub className="w-5 h-5" />
                 <span className="sr-only">GitHub account</span>
               </Link>
               <Link
                 to="#"
-                className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
+                className="text-gray-500 hover:text-secondary dark:hover:text-white ms-5"
               >
                 <FiDribbble className="w-5 h-5" />
                 <span className="sr-only">Dribbble account</span>
               </Link>
               <Link
                 to="#"
-                className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
+                className="text-gray-500 hover:text-secondary dark:hover:text-white ms-5"
               >
                 <FiFacebook className="w-5 h-5" />
                 <span className="sr-only">Facebook page</span>
               </Link>
               <Link
                 to="#"
-                className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
+                className="text-gray-500 hover:text-secondary dark:hover:text-white ms-5"
               >
                 <FiTwitter className="w-5 h-5" />
                 <span className="sr-only">Twitter page</span>
               </Link>
               <Link
                 to="#"
-                className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
+                className="text-gray-500 hover:text-secondary dark:hover:text-white ms-5"
               >
                 <FiInstagram className="w-5 h-5" />
                 <span className="sr-only">Instagram account</span>

@@ -56,13 +56,14 @@ const Navbar = () => {
     { name: "Document", path: "/document" },
     { name: "Feedback", path: "/feedback" },
     { name: "Contact", path: "/contact" },
+    { name: "About", path: "/about" },
     { name: "Login", path: "/auth/login" },
   ];
 
   return (
-    <nav className="h-auto relative z-10 bg-white px-2 py-5 flex dark:bg-secondary">
+    <nav className="h-auto fixed top-0 left-0 right-0 z-50 bg-white px-2 py-5 flex dark:bg-secondary shadow-lg">
       <div className="max-w-[1300px] mx-auto flex items-center justify-between">
-        <img src={ThubLogo} className="h-10 w-38 mr-20" alt="THub Logo" />
+        <img src={ThubLogo} className="h-10 w-38 mr-10" alt="THub Logo" />
         <div className="flex-wrap items-center justify-between gap-8 ml-16 hidden md:flex">
           {navItems.map((item) => (
             <div
@@ -99,7 +100,9 @@ const Navbar = () => {
         {open ? <IoMdClose /> : <GrMenu />}
       </div>
       <div
-        className={`gap-6 absolute top-16 right-0 bg-background dark:bg-secondary flex flex-col py-12 px-8 lg:hidden md:hidden duration-300 z-[-1] ease-in-out ${open ? "top-16" : "top-[-600px]"}`}
+        className={`gap-6 absolute top-16 right-0 bg-background dark:bg-secondary flex flex-col py-12 px-8 lg:hidden md:hidden duration-300 z-[-1] ease-in-out ${
+          open ? "top-16" : "top-[-700px]"
+        }`}
       >
         {navItems.map((item) => (
           <div
