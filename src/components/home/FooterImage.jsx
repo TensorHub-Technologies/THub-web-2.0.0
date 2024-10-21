@@ -35,7 +35,7 @@ function FooterImage() {
           </button>
           {/* arrow image */}
           <img
-            className="absolute z-0 w-12 h-16"
+            className="absolute z-0 w-12 h-16 "
             src={isDarkMode ? arrow_dark : arrow_light}
             alt="arrow image"
             style={{ top: "28%", left: "58%", transform: "translateX(-50%)" }}
