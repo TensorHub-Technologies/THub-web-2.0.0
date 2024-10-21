@@ -41,7 +41,7 @@ function Banner() {
   return (
     <section id={isDarkMode ? "" : "hero-main-light"}>
       <div id="hero-container" className=" pt-10">
-        <p className="text-center text-primary dark:text-primary-dark ">
+        <p className="text-center text-primary dark:text-primary-dark mt-24 py-4">
           Best Agents and GenAI Apps Builder
         </p>
         <h1 className="text-center text-secondary dark:text-white mt-4 text-5xl">
