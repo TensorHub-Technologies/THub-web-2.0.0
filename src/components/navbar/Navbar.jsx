@@ -62,8 +62,8 @@ const Navbar = () => {
 
   return (
     <nav className="h-auto fixed top-0 left-0 right-0 z-50 bg-white px-2 py-5 flex dark:bg-secondary shadow-lg">
-      <div className="max-w-[1300px] mx-auto flex items-center justify-between">
-        <img src={ThubLogo} className="h-10 w-38 mr-10" alt="THub Logo" />
+      <div className="mx-auto flex items-center justify-between">
+        <img src={ThubLogo} className="h-10 w-38" alt="THub Logo" />
         <div className="flex-wrap items-center justify-between gap-8 ml-16 hidden md:flex">
           {navItems.map((item) => (
             <div
