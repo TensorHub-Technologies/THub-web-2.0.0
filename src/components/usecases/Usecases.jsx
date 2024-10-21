@@ -241,9 +241,7 @@ const Usecase = () => {
                 className="h-full object-contain"
               />
             </div>
-            <h4 className="text-xl font-semibold dark:text-white">
-              Product Catalog
-            </h4>
+            <h4 className="text-xl font-semibold dark:text-white">Agents</h4>
             <p className="text-md dark:text-secondary-dark">
               Leverage THub to build a product catalog application that
               leverages the integrated LLMs and vector databases.
