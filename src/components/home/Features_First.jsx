@@ -14,7 +14,8 @@ function Features_First() {
       {/* Heading Section */}
       <div className="flex justify-center text-center my-10">
         <h1 className="dark:text-white text-secondary mt-5 mb-12  text-3xl md:text-4xl lg:text-5xl font-bold w-[40rem]">
-          Build GenAI at Rapid Pace Across Your Favorite LLMs
+          Build Multi Agents & GenAI Apps at Rapid Pace Across Your Favorite
+          LLMs
         </h1>
       </div>
 

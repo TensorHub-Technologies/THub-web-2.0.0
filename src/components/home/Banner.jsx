@@ -9,6 +9,7 @@ function Banner() {
   const strings = [
     "Vector Embeddings",
     "GenAI Apps",
+    "Agentic Workflows",
     "RAG Systems",
     "Retrieval Augmented Fine Tuning",
   ];
@@ -39,9 +40,9 @@ function Banner() {
 
   return (
     <section id={isDarkMode ? "" : "hero-main-light"}>
-      <div id="hero-container" className="pt-10">
-        <p className="text-center text-primary dark:text-primary-dark mt-4">
-          Best GenAI Apps Builder
+      <div id="hero-container" className=" pt-10">
+        <p className="text-center text-primary dark:text-primary-dark ">
+          Best Agents and GenAI Apps Builder
         </p>
         <h1 className="text-center text-secondary dark:text-white mt-4 text-5xl">
           A 30X Faster Way To Build
@@ -74,9 +75,10 @@ function Banner() {
           />
         </div>
       </div>
-      <ul className="flex flex-col items-center lg:justify-center lg:flex-row lg:gap-8 dark:text-secondary-dark list-disc">
-        <li>Build GenAI Apps 30X faster</li>
+      <ul className="flex flex-col items-center lg:justify-center lg:flex-row lg:gap-8  dark:text-secondary-dark list-disc">
+        <li>Build Agent and GenAI Apps 30X faster</li>
         <li>Build RAG Systems</li>
+        <li>Agentic Workflows</li>
         <li>Build Retrieval Augmented Fine Tuning</li>
       </ul>
     </section>
