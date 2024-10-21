@@ -6,6 +6,7 @@ const UseCases = loadable(() => import("../pages/UseCases"));
 const Pricing = loadable(() => import("../pages/Pricing"));
 const Blog = loadable(() => import("../pages/Blog"));
 const AboutUs = loadable(() => import("../pages/AboutUs"));
+const BlogDetails = loadable(() => import("../pages/BlogDetails"));
 const Academy = loadable(() => import("../pages/Academy"));
 const Contact = loadable(() => import("../pages/Contact"));
 const Login = loadable(() => import("../pages/Login"));
@@ -42,6 +43,10 @@ export const router = createBrowserRouter([
       {
         path: "blog",
         element: <Blog />,
+      },
+      {
+        path: "blog/:id",
+        element: <BlogDetails />,
       },
       {
         path: "academy",

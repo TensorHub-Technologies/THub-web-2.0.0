@@ -10,9 +10,10 @@ function Features_First() {
   const isDarkMode = useSelector((state) => state.customization.isDarkMode);
 
   return (
-    <section className="px-5 py-10 lg:px-20">
-      <div className="flex justify-center text-center">
-        <h1 className="dark:text-white py-10 text-3xl md:text-4xl lg:text-5xl font-bold w-[50rem]">
+    <section className="px-5 py-10 lg:px-16">
+      {/* Heading Section */}
+      <div className="flex justify-center text-center my-10">
+        <h1 className="dark:text-white text-secondary mt-5 mb-12  text-3xl md:text-4xl lg:text-5xl font-bold w-[40rem]">
           Build Multi Agents & GenAI Apps at Rapid Pace Across Your Favorite
           LLMs
         </h1>
@@ -83,7 +84,7 @@ function Features_First() {
       <div className="flex justify-center">
         <button
           type="button"
-          className="text-white bg-primary hover:bg-blue-900 font-lg rounded-lg text-lg px-5 py-2.5 me-2 mt-5 dark:bg-primary-dark dark:hover:bg-pink-600 focus:outline-none"
+          className="text-white dark:text-secondary bg-primary hover:bg-blue-900 font-lg rounded-lg text-lg px-5 py-2.5 me-2 mt-10 dark:bg-primary-dark dark:hover:bg-pink-600 focus:outline-none"
         >
           Try a demo
         </button>

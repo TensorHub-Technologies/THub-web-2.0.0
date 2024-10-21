@@ -15,7 +15,6 @@ import sqldark from "../../assets/icons/usecase-icons/sql_dark.png";
 import sqllite from "../../assets/icons/usecase-icons/sql_lite.png";
 import customerdark from "../../assets/icons/usecase-icons/customer_dark.png";
 import customerlite from "../../assets/icons/usecase-icons/customer_lite.png";
-import Accordion from "../home/Accordion";
 
 const Usecase = () => {
   const isDarkMode = useSelector((state) => state.customization.isDarkMode);
@@ -53,7 +52,7 @@ const Usecase = () => {
             <h4 className="text-xl font-semibold dark:text-white">
               Retrieval-Augmented Generation
             </h4>
-            <p className="text-md dark:text-secondary-dark">
+            <p className="text-md dark:text-secondary-dark max-w-xs">
               Use THub&apos;s low-code/no-code features to quickly build a
               Retrieval-Augmented Generation application.
             </p>
@@ -90,7 +89,7 @@ const Usecase = () => {
             <h4 className="text-xl font-semibold dark:text-white">
               Retrieval-Augmented Fine Tuning
             </h4>
-            <p className="text-md dark:text-secondary-dark">
+            <p className="text-md dark:text-secondary-dark max-w-xs">
               Leverage THub&apos;s drag-and-drop features to set up a
               Retrieval-Augmented Fine Tuning workflow.
             </p>
@@ -127,7 +126,7 @@ const Usecase = () => {
             <h4 className="text-xl font-semibold dark:text-white">
               Recommender Systems
             </h4>
-            <p className="text-md dark:text-secondary-dark">
+            <p className="text-md dark:text-secondary-dark max-w-xs">
               Use THub to build a recommender system that leverages the power of
               the integrated LLMs and vector databases.
             </p>
@@ -164,9 +163,9 @@ const Usecase = () => {
             <h4 className="text-xl font-semibold dark:text-white">
               Document Summarization
             </h4>
-            <p className="text-md dark:text-secondary-dark">
+            <p className="text-md dark:text-secondary-dark max-w-xs">
               Leverage THub&apos;s low-code/no-code features to create a
-              document summarization application.
+              document summarization application smoothly.
             </p>
             <div className="flex items-center mt-0 group">
               <p className="text-[#11121c] dark:text-secondary-dark cursor-pointer group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90]  group-hover:underline">
@@ -207,7 +206,7 @@ const Usecase = () => {
             <h4 className="text-xl font-semibold dark:text-white">
               Product Description
             </h4>
-            <p className="text-md dark:text-secondary-dark">
+            <p className="text-md dark:text-secondary-dark max-w-xs">
               Use THub to build a product description application that leverages
               the integrated LLMs and vector databases.
             </p>
@@ -242,7 +241,7 @@ const Usecase = () => {
               />
             </div>
             <h4 className="text-xl font-semibold dark:text-white">Agents</h4>
-            <p className="text-md dark:text-secondary-dark">
+            <p className="text-md dark:text-secondary-dark max-w-xs">
               Leverage THub to build a product catalog application that
               leverages the integrated LLMs and vector databases.
             </p>
@@ -279,9 +278,9 @@ const Usecase = () => {
             <h4 className="text-xl font-semibold dark:text-white">
               Query SQL Database
             </h4>
-            <p className="text-md dark:text-secondary-dark">
+            <p className="text-md dark:text-secondary-dark max-w-xs">
               Leverage THub to create a system that can query SQL databases and
-              do data analytics smoothly.
+              perform and enhance data analytics smoothly.
             </p>
             <div className="flex items-center mt-0 group">
               <p className="text-[#11121c] dark:text-secondary-dark cursor-pointer group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90]  group-hover:underline">
@@ -316,7 +315,7 @@ const Usecase = () => {
             <h4 className="text-xl font-semibold dark:text-white">
               Customer Support
             </h4>
-            <p className="text-md dark:text-secondary-dark">
+            <p className="text-md dark:text-secondary-dark max-w-xs">
               Use THub to build customer support GenAI apps. Enhance user
               experience with personalized, AI-driven interactions.
             </p>
@@ -344,8 +343,8 @@ const Usecase = () => {
           </div>
         </div>
       </section>
-      <Accordion />
     </div>
   );
 };
+
 export default Usecase;
