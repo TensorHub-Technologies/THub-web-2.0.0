@@ -78,12 +78,6 @@ function Banner() {
           />
         </div>
       </div>
-      <ul className="flex flex-col items-center lg:justify-center lg:flex-row lg:gap-8  dark:text-secondary-dark list-disc">
-        <li>Build Agent and GenAI Apps 30X faster</li>
-        <li>Build RAG Systems</li>
-        <li>Agentic Workflows</li>
-        <li>Build Retrieval Augmented Fine Tuning</li>
-      </ul>
     </section>
   );
 }
