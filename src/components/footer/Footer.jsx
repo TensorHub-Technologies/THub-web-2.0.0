@@ -181,7 +181,7 @@ const Footer = () => {
                 <span className="sr-only">Linkedin</span>
               </Link>
               <Link
-                to="#"
+                to="https://www.facebook.com/profile.php?id=61564135198933"
                 className="text-gray-500 hover:text-secondary dark:hover:text-white ms-5"
               >
                 <FiFacebook className="w-5 h-5" />
