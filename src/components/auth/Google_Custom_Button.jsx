@@ -1,40 +1,36 @@
 import { useGoogleLogin } from "@react-oauth/google";
 import axios from "axios";
-import { useState } from "react";
 
 function Google_Custom_Button() {
-  const [userInfo, setUserInfo] = useState(null);
-
   const login = useGoogleLogin({
     scope: "openid email profile",
     onSuccess: async (credentialResponse) => {
-      console.log("Access Token:", credentialResponse.access_token);
+      try {
+        console.log("Access Token:", credentialResponse.access_token);
+        const token = credentialResponse.access_token;
+        const userDetails = {
+          token,
+          company: "test",
+          department: "Engineering",
+          role: "Developer",
+          designation: "Software Engineer",
+          subscription_type: "Free",
+          subscription_duration: 12,
+          subscription_date: new Date().toISOString(),
+        };
 
-      // Exchange token or fetch user profile
-      const userInfoData = await fetchUserInfo(credentialResponse.access_token);
-      console.log("User Info:", userInfoData);
-      alert("Token generated successfully");
-      setUserInfo(userInfoData);
-      console.log(userInfo);
+        const response = await axios.post(
+          "https://localhost:4000/auth/google",
+          userDetails,
+        );
+        console.log("user registered successfully", response.data);
+      } catch (error) {
+        alert(error.message);
+        console.log("Google login failed", error);
+      }
     },
     onError: () => console.log("Login Failed"),
   });
-
-  const fetchUserInfo = async (accessToken) => {
-    try {
-      const response = await axios.get(
-        "https://www.googleapis.com/oauth2/v3/userinfo",
-        {
-          headers: {
-            Authorization: `Bearer ${accessToken}`,
-          },
-        },
-      );
-      return response.data;
-    } catch (error) {
-      console.error("Failed to fetch user info:", error);
-    }
-  };
 
   return (
     <div>

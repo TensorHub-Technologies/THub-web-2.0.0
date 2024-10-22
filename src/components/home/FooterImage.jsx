@@ -1,5 +1,5 @@
 // import assests
-import bg_sand from "../../assets/images/bg/light-hero.jpg";
+import bg_sand from "../../assets/images/light-hero.jpg";
 import workspace_image_light from "../../assets/screens/top-2.png";
 import workspace_image_dark from "../../assets/screens/top-1.png";
 import blurryImage from "../../assets/svgs/blurry-shape-4.svg";
