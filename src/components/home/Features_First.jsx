@@ -10,10 +10,19 @@ function Features_First() {
   const isDarkMode = useSelector((state) => state.customization.isDarkMode);
 
   return (
-    <section className="px-5 py-10 lg:px-16">
+    <section className="px-5 py-4 lg:px-16">
+      <ul className="flex flex-col items-center lg:justify-center lg:flex-row lg:gap-8  dark:text-secondary-dark list-disc">
+        <li>Build Agent and GenAI Apps 30X faster</li>
+        <li>Build RAG Systems</li>
+        <li>Agentic Workflows</li>
+        <li>Build Retrieval Augmented Fine Tuning</li>
+      </ul>
       {/* Heading Section */}
       <div className="flex justify-center text-center my-10">
-        <h1 className="dark:text-white text-secondary mt-5 mb-12  text-3xl md:text-4xl lg:text-5xl font-bold w-[40rem]">
+        <h1
+          className="dark:text-white text-secondary mt-5 mb-12  text-3xl md:text-4xl lg:text-5xl font-bold w-[60rem]"
+          style={{ lineHeight: "4rem" }}
+        >
           Build Multi Agents & GenAI Apps at Rapid Pace Across Your Favorite
           LLMs
         </h1>
