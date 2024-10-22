@@ -2,13 +2,9 @@ import { Link } from "react-router-dom";
 import ThubLogo from "../../assets/images/THub.svg";
 import StripeBackground from "../../assets/images/shapes/stripe-colored.svg";
 import { RiSendPlaneLine } from "react-icons/ri";
-import {
-  FiFacebook,
-  FiTwitter,
-  FiGithub,
-  FiDribbble,
-  FiInstagram,
-} from "react-icons/fi";
+import { FiFacebook, FiGithub } from "react-icons/fi";
+import { FaLinkedinIn } from "react-icons/fa6";
+import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   return (
@@ -98,6 +94,15 @@ const Footer = () => {
                   to="#"
                   className=" transition-all duration-300 hover:text-primary dark:hover:text-primary-dark hover:ml-1"
                 >
+                  Agents
+                </Link>
+              </li>
+
+              <li className="mb-2">
+                <Link
+                  to="#"
+                  className=" transition-all duration-300 hover:text-primary dark:hover:text-primary-dark hover:ml-1"
+                >
                   Retrieval Augmented Generation
                 </Link>
               </li>
@@ -169,14 +174,14 @@ const Footer = () => {
                 <span className="sr-only">GitHub account</span>
               </Link>
               <Link
-                to="#"
+                to="https://www.linkedin.com/company/102053952"
                 className="text-gray-500 hover:text-secondary dark:hover:text-white ms-5"
               >
-                <FiDribbble className="w-5 h-5" />
-                <span className="sr-only">Dribbble account</span>
+                <FaLinkedinIn className="w-5 h-5" />
+                <span className="sr-only">Linkedin</span>
               </Link>
               <Link
-                to="#"
+                to="https://www.facebook.com/profile.php?id=61564135198933"
                 className="text-gray-500 hover:text-secondary dark:hover:text-white ms-5"
               >
                 <FiFacebook className="w-5 h-5" />
@@ -186,15 +191,8 @@ const Footer = () => {
                 to="#"
                 className="text-gray-500 hover:text-secondary dark:hover:text-white ms-5"
               >
-                <FiTwitter className="w-5 h-5" />
+                <FaXTwitter className="w-5 h-5" />
                 <span className="sr-only">Twitter page</span>
-              </Link>
-              <Link
-                to="#"
-                className="text-gray-500 hover:text-secondary dark:hover:text-white ms-5"
-              >
-                <FiInstagram className="w-5 h-5" />
-                <span className="sr-only">Instagram account</span>
               </Link>
             </div>
           </div>
