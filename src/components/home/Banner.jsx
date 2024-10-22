@@ -1,17 +1,20 @@
 import "./Home.css";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import heroImage_dark from "../../assets/images/hero-image-dark.png";
-import heroImage_light from "../../assets/images/hero-image-light.png";
+// import heroImage_dark from "../../assets/images/hero-image-dark.png";
+// import heroImage_light from "../../assets/images/hero-image-light.png";
+import Picture_dark from "../../assets/images/Picture2.png";
+import Picture_lite from "../../assets/images/Picture1.png";
 
 function Banner() {
   const isDarkMode = useSelector((state) => state.customization.isDarkMode);
   const strings = [
-    "Vector Embeddings",
-    "GenAI Apps",
+    "Agents",
     "Agentic Workflows",
     "RAG Systems",
     "Retrieval Augmented Fine Tuning",
+    "GenAI Apps",
+    "Vector Embeddings",
   ];
   const cursorColor = isDarkMode ? "white" : "black";
 
@@ -68,9 +71,9 @@ function Banner() {
         </button>
       </div>
       <div className="flex justify-center">
-        <div className="border-2 border-primary-dark w-8/12 my-10 rounded-3xl ">
+        <div className="border-2 dark:border-primary-dark border-primary w-8/12 my-10 rounded-3xl">
           <img
-            src={isDarkMode ? heroImage_dark : heroImage_light}
+            src={isDarkMode ? Picture_dark : Picture_lite}
             alt="Banner image"
           />
         </div>
