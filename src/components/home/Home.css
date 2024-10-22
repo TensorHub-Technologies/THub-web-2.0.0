@@ -1,6 +1,6 @@
 
-#hero-main-light{
-    background-image: url(../../src/assets/images/light-hero.jpg);
+#hero-main-light {
+  background-image: url('@/assets/images/light-hero.jpg');
 }
 
 .gif-anime{
