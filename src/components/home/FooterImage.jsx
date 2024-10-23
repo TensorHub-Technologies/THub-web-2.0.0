@@ -12,9 +12,9 @@ import { useSelector } from "react-redux";
 function FooterImage() {
   const isDarkMode = useSelector((state) => state.customization.isDarkMode);
   return (
-    <section className="min-h-screen flex justify-center items-center">
+    <section className="min-h-screen flex justify-center items-center py-20">
       <div
-        className="relative bg-cover bg-center w-[90%] max-w-7xl rounded-lg shadow-md overflow-hidden"
+        className="relative bg-cover bg-center w-[90%] max-w-7xl rounded-2xl  dark:border dark:border-gray-800 overflow-hidden "
         style={{
           backgroundImage: `url(${isDarkMode ? blurryImage : bg_sand})`,
         }}

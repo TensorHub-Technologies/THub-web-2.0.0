@@ -37,7 +37,7 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-          <div className="flex flex-col  justify-center items-center">
+          <div className="flex flex-col  items-center">
             <h2 className="mb-2 text-lg font-bold text-secondary  dark:text-white mr-4">
               THub
             </h2>
@@ -130,14 +130,6 @@ const Footer = () => {
                   Document Summarization
                 </Link>
               </li>
-              <li className="mb-2">
-                <Link
-                  to="#"
-                  className=" transition-all duration-300 hover:text-primary dark:hover:text-primary-dark hover:ml-1 dark:text-secondary-dark"
-                >
-                  Product Description
-                </Link>
-              </li>
             </ul>
           </div>
 
@@ -197,10 +189,10 @@ const Footer = () => {
             </div>
           </div>
         </div>
-        <div className="px-4 py-6 flex justify-center">
-          <span className="text-sm text-secondary dark:text-secondary-dark">
-            © 2024 TensorHub Technologies Private Limited. All Rights Reserved.
-          </span>
+        <div className="flex justify-center items-center pb-2">
+          <p className="text-sm text-secondary dark:text-secondary-dark">
+            © TensorHub Technologies Private Limited
+          </p>
         </div>
       </div>
     </footer>
