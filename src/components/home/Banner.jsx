@@ -9,7 +9,6 @@ import Picture_lite from "../../assets/images/Picture1.png";
 function Banner() {
   const isDarkMode = useSelector((state) => state.customization.isDarkMode);
   const strings = [
-    "Agents",
     "Agentic Workflows",
     "RAG Systems",
     "Retrieval Augmented Fine Tuning",
