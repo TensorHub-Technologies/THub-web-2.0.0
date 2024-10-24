@@ -1,23 +1,113 @@
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 function Github_Custom_Button() {
-  const client_id = "Ov23livsiN32CRBf7KtH";
+  const [userData, setUserData] = useState({});
+  console.log(userData.id, userData.name, userData.avatar_url, "****");
+
+  const client_id = "Ov23liLgDH9KQ9QZbAFc";
 
   useEffect(() => {
     const query = window.location.search;
     const urlParams = new URLSearchParams(query);
     const searchParams = urlParams.get("code");
-    console.log(searchParams);
+
+    if (searchParams) {
+      async function getAccessToken() {
+        const response = await fetch(
+          "http://localhost:2000/getAccessToken?code=" + searchParams,
+          {
+            method: "GET",
+          },
+        );
+        const data = await response.json();
+
+        if (data.access_token) {
+          localStorage.setItem("access_token", data.access_token);
+          await getUserData();
+        } else {
+          console.error("Failed to get access token:", data.error_description);
+        }
+      }
+      getAccessToken();
+    } else if (localStorage.getItem("access_token")) {
+      getUserData();
+    }
   }, []);
 
-  const loginWithGithub = () => {
-    const state = Array.from(crypto.getRandomValues(new Uint8Array(16)))
-      .map((byte) => byte.toString(16).padStart(2, "0"))
-      .join("");
-    console.log(state, "token");
-    localStorage.setItem("latestCSRFToken", state);
+  async function getUserData() {
+    try {
+      const response = await fetch("http://localhost:2000/getuserData", {
+        method: "GET",
+        headers: {
+          Authorization: "Bearer " + localStorage.getItem("access_token"),
+        },
+      });
 
-    const link = `https://github.com/login/oauth/authorize?client_id=${client_id} `;
+      if (!response.ok) {
+        throw new Error(`Error fetching user data: ${response.statusText}`);
+      }
+
+      const data = await response.json();
+      console.log(data, "User Data");
+      setUserData(data);
+
+      // Call insertUserData with the fetched data
+      await insertUserData(data);
+    } catch (error) {
+      console.error("Error getting user data:", error);
+    }
+  }
+
+  async function insertUserData(userData) {
+    const formData = new FormData();
+
+    formData.append("uid", userData.id || null);
+    formData.append("email", userData.email || null);
+    formData.append(
+      "access_token",
+      localStorage.getItem("access_token") || null,
+    );
+    formData.append("name", userData.name || null);
+    formData.append("login_type", "github");
+    formData.append("picture", userData.avatar_url || null);
+    formData.append("subscription_type", "free");
+    formData.append("department", userData.department || null);
+    formData.append("role", userData.role || null);
+    formData.append("designation", userData.designation || null);
+    formData.append("company", userData.company || null);
+    formData.append("workspace", userData.workspace || null);
+    formData.append("encryption_key", userData.encryption_key || null);
+    formData.append(
+      "subscription_duration",
+      userData.subscription_duration || null,
+    );
+    formData.append("subscription_date", userData.subscription_date || null);
+    formData.append("phone", userData.phone || null);
+    formData.append("password_hash", userData.password_hash || null);
+
+    try {
+      const response = await axios.post(
+        "http://localhost:2000/insertUserData",
+        formData,
+        {
+          headers: {
+            "Content-Type": "multipart/form-data", // This is necessary for FormData
+          },
+        },
+      );
+
+      console.log("User data inserted:", response.data);
+    } catch (error) {
+      console.error(
+        "Error inserting user data:",
+        error.response ? error.response.data : error.message,
+      );
+    }
+  }
+
+  const loginWithGithub = () => {
+    const link = `https://github.com/login/oauth/authorize?client_id=${client_id}`;
     window.location.assign(link);
   };
 
