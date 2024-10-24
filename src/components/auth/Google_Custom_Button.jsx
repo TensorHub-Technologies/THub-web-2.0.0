@@ -3,42 +3,30 @@ import axios from "axios";
 
 function Google_Custom_Button() {
   const login = useGoogleLogin({
-    scope: "openid email profile",
-    onSuccess: async (credentialResponse) => {
+    onSuccess: async (response) => {
+      console.log("Authorization Code:", response);
       try {
-        console.log("Access Token:", credentialResponse.access_token);
-        const token = credentialResponse.access_token;
-        const userDetails = {
-          token,
-          company: "test",
-          department: "Engineering",
-          role: "Developer",
-          designation: "Software Engineer",
-          subscription_type: "Free",
-          subscription_duration: 12,
-          subscription_date: new Date().toISOString(),
-        };
-
-        const response = await axios.post(
-          "https://localhost:4000/auth/google",
-          userDetails,
+        const { data } = await axios.post(
+          "http://localhost:2000/api/auth/google",
+          {
+            code: response.code,
+          },
         );
-        console.log("user registered successfully", response.data);
+        console.log("ID Token:", data.id_token);
       } catch (error) {
-        alert(error.message);
-        console.log("Google login failed", error);
+        console.error("Failed to exchange code:", error);
       }
     },
-    onError: () => console.log("Login Failed"),
+    scope: "openid profile email",
+    flow: "auth-code",
+    access_type: "offline",
   });
 
   return (
     <div>
       <button
         type="button"
-        onClick={() => {
-          login();
-        }}
+        onClick={login}
         className="px-16 text-black bg-white border dark:border-gray-500 dark:hover:border-primary-dark hover:border-primary  focus:outline-none font-medium rounded-lg text-lg  py-2.5 text-center inline-flex items-center dark:bg-black dark:text-white"
       >
         <svg
