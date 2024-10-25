@@ -13,6 +13,7 @@ function Google_Custom_Button() {
           },
         );
         console.log("ID Token:", data.id_token);
+        alert("user login successful");
       } catch (error) {
         console.error("Failed to exchange code:", error);
       }
