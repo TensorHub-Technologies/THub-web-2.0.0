@@ -42,7 +42,7 @@ const SignUp = () => {
     >
       {() => (
         <Form className="">
-          <div className="space-y-10">
+          <div className="space-y-8 ml-16">
             <div className="">
               <div className="relative">
                 <span className="absolute left-4 top-[22px] dark:text-secondary-dark">
@@ -52,7 +52,7 @@ const SignUp = () => {
                   type="text"
                   name="firstName"
                   placeholder="First Name"
-                  className="block w-full pl-12 pr-2 py-4 dark:text-background dark:bg-secondary border shadow-md border-secondary-dark placeholder-secondary-dark focus:outline-none dark:focus:border-primary-dark focus:border-primary focus:ring-primary dark:focus:ring-primary-dark rounded-md text-lg focus:ring-1"
+                  className="block w-full pl-12 pr-2 py-4 dark:text-background  dark:bg-secondary border border-gray-300 dark:border-gray-700 placeholder-black dark:placeholder-secondary-dark focus:outline-none dark:focus:border-primary-dark focus:border-primary focus:ring-primary dark:focus:ring-primary-dark rounded-md text-lg focus:ring-1"
                 />
               </div>
               <ErrorMessage
@@ -71,7 +71,7 @@ const SignUp = () => {
                   type="text"
                   name="lastName"
                   placeholder="Last Name"
-                  className="block w-full pl-12 pr-2 py-4 dark:text-background dark:bg-secondary border shadow-md border-secondary-dark placeholder-secondary-dark focus:outline-none dark:focus:border-primary-dark focus:border-primary focus:ring-primary dark:focus:ring-primary-dark rounded-md text-lg focus:ring-1"
+                  className="block w-full pl-12 pr-2 py-4 dark:text-background dark:bg-secondary border border-gray-300 dark:border-gray-700 placeholder-black dark:placeholder-secondary-dark focus:outline-none dark:focus:border-primary-dark focus:border-primary focus:ring-primary dark:focus:ring-primary-dark rounded-md text-lg focus:ring-1"
                 />
               </div>
               <ErrorMessage
@@ -90,7 +90,7 @@ const SignUp = () => {
                   type="email"
                   name="email"
                   placeholder="Email"
-                  className="block w-full pl-12 pr-2 py-4 dark:text-background dark:bg-secondary border  shadow-md border-secondary-dark placeholder-secondary-dark focus:outline-none dark:focus:border-primary-dark focus:border-primary focus:ring-primary  dark:focus:ring-primary-dark  rounded-md text-lg focus:ring-1"
+                  className="block w-full pl-12 pr-2 py-4 dark:text-background dark:bg-secondary border border-gray-300 dark:border-gray-700 placeholder-black dark:placeholder-secondary-dark focus:outline-none dark:focus:border-primary-dark focus:border-primary focus:ring-primary  dark:focus:ring-primary-dark  rounded-md text-lg focus:ring-1"
                 />
               </div>
               <ErrorMessage
@@ -109,7 +109,7 @@ const SignUp = () => {
                   type="tel"
                   name="phoneNumber"
                   placeholder="Phone Number"
-                  className="block w-full pl-12 pr-2 py-4 dark:text-background dark:bg-secondary border shadow-md border-secondary-dark placeholder-secondary-dark focus:outline-none dark:focus:border-primary-dark focus:border-primary focus:ring-primary dark:focus:ring-primary-dark rounded-md text-lg focus:ring-1"
+                  className="block w-full pl-12 pr-2 py-4 dark:text-background dark:bg-secondary border border-gray-300 dark:border-gray-700 placeholder-black dark:placeholder-secondary-dark focus:outline-none dark:focus:border-primary-dark focus:border-primary focus:ring-primary dark:focus:ring-primary-dark rounded-md text-lg focus:ring-1"
                 />
               </div>
               <ErrorMessage
@@ -128,7 +128,7 @@ const SignUp = () => {
                   type={showPassword ? "password" : "text"}
                   name="password"
                   placeholder="Password"
-                  className="block w-full pl-12 pr-2 py-4 dark:text-background dark:bg-secondary border shadow-md border-secondary-dark placeholder-secondary-dark focus:outline-none dark:focus:border-primary-dark focus:border-primary focus:ring-primary dark:focus:ring-primary-dark rounded-md text-lg focus:ring-1"
+                  className="block w-full pl-12 pr-2 py-4 dark:text-background dark:bg-secondary border border-gray-300 dark:border-gray-700 placeholder-black dark:placeholder-secondary-dark focus:outline-none dark:focus:border-primary-dark focus:border-primary focus:ring-primary dark:focus:ring-primary-dark rounded-md text-lg focus:ring-1"
                 />
                 <span
                   onClick={togglePasswordVisibility}
@@ -153,7 +153,7 @@ const SignUp = () => {
                   type={showConfirmPassword ? "password" : "text"}
                   name="confirmPassword"
                   placeholder="Confirm Password"
-                  className="block w-full pl-12 pr-2 py-4 dark:text-background dark:bg-secondary border shadow-md border-secondary-dark placeholder-secondary-dark focus:outline-none dark:focus:border-primary-dark focus:border-primary focus:ring-primary dark:focus:ring-primary-dark rounded-md text-lg focus:ring-1"
+                  className="block w-full pl-12 pr-2 py-4 dark:text-background dark:bg-secondary border border-gray-300 dark:border-gray-700 placeholder-black dark:placeholder-secondary-dark focus:outline-none dark:focus:border-primary-dark focus:border-primary focus:ring-primary dark:focus:ring-primary-dark rounded-md text-lg focus:ring-1"
                 />
                 <span
                   onClick={toggleConfirmPasswordVisibility}
