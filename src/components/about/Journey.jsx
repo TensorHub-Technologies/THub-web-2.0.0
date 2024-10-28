@@ -11,7 +11,7 @@ function Journey() {
 
   return (
     <section className="px-5 py-10 lg:px-20">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14">
         <div className="flex flex-col items-start text-left gap-5 w-full">
           <div className="w-12 h-12 border border-primary bg-slate-200 dark:bg-slate-800 dark:border-slate-950 p-2 rounded-lg flex items-center justify-center">
             <img

@@ -5,6 +5,8 @@
     <link rel="icon" type="image/svg+xml" href="/src/assets/images/Thub.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TensorHub A Low Code No Code Platform</title>
+    
+    <!-- Script to apply dark mode based on local storage -->
     <script>
       (function() {
           const isDarkMode = JSON.parse(localStorage.getItem('isDarkMode'));
@@ -12,10 +14,13 @@
               document.documentElement.classList.add('dark');
           }
       })();
-  </script>
+    </script>
+
+    <!-- Moved the main script here -->
+    <script type="module" src="/src/main.jsx"></script>
   </head>
+  
   <body>
     <div id="root"></div>
-    <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

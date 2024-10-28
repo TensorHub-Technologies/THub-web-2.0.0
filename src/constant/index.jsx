@@ -5,6 +5,9 @@ import sristiPic from "../assets/images/team/Srishti_pic.png";
 import prasadPic from "../assets/images/team/P S V Prasad.png";
 import govardhanPic from "../assets/images/team/Govardhan.jpeg";
 import ceoPic from "../assets/images/team/GS_Oct.png";
+import aditya from "../assets/images/team/Aadithya2.png";
+import pp from "../assets/images/team/Pp.jpeg";
+import mahadev from "../assets/images/team/mahadev.jpg";
 
 export const teamMembers = [
   {
@@ -23,13 +26,13 @@ export const teamMembers = [
     id: 3,
     name: "Aadithya G S",
     designation: "Founder & Research Scientist",
-    image: "https://via.placeholder.com/150",
+    image: aditya,
   },
   {
     id: 4,
     name: "Prathyanka S",
     designation: "Founder &  Business Analyst",
-    image: "https://via.placeholder.com/150",
+    image: pp,
   },
   {
     id: 5,
@@ -60,5 +63,11 @@ export const teamMembers = [
     name: "P S V Prasad",
     designation: "Gen AI Developer",
     image: prasadPic,
+  },
+  {
+    id: 10,
+    name: "Mahadev Bamma",
+    designation: "Gen AI Developer",
+    image: mahadev,
   },
 ];

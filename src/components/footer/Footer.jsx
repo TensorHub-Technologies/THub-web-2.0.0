@@ -60,7 +60,7 @@ const Footer = () => {
               </li>
               <li className="mb-2">
                 <Link
-                  to="#"
+                  to="auth/login"
                   className=" transition-all duration-300 hover:text-primary dark:hover:text-primary-dark hover:ml-1 dark:text-secondary-dark"
                 >
                   Sign in
@@ -68,7 +68,7 @@ const Footer = () => {
               </li>
               <li className="mb-2">
                 <Link
-                  to="#"
+                  to="auth/register"
                   className="transition-all duration-300 hover:text-primary dark:hover:text-primary-dark hover:ml-1"
                 >
                   Register
