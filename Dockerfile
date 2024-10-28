@@ -6,9 +6,11 @@ WORKDIR /app
 # Copy package.json and package-lock.json (or yarn.lock) files
 COPY package*.json yarn.lock ./
 
+#install PNPM globaly
+RUN npm install -g pnpm
 
 # Install dependencies
-RUN pnpm
+RUN pnpm install
 
 # Copy the rest of your app's source code
 COPY . .
