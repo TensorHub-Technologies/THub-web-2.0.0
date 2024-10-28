@@ -53,9 +53,18 @@ function Github_Custom_Button() {
         },
       });
 
-      const data = response.data;
+      const { data, id, workspace } = response;
       console.log(data, "User Data");
       setUserData(data);
+      const finalWorkspace = workspace === null ? "beta" : workspace;
+      switch (window.location.hostname) {
+        case "localhost":
+          window.location.href = `http://localhost:8080/?theme=dark&uid=${id}`;
+          break;
+        default:
+          window.location.href = `https://${finalWorkspace}.thub.tech/?theme=dark&uid=${id}`;
+          break;
+      }
     } catch (error) {
       console.error("Error getting user data:", error);
     }
