@@ -12,7 +12,19 @@ function Google_Custom_Button() {
             code: response.code,
           },
         );
-        console.log("ID Token:", data.id_token);
+
+        const { id_token, workspace, userId } = data;
+        console.log("ID Token:", id_token);
+        const finalWorkspace = workspace === null ? "beta" : workspace;
+
+        switch (window.location.hostname) {
+          case "localhost":
+            window.location.href = `http://localhost:8080/?theme=dark&uid=${userId}`;
+            break;
+          default:
+            window.location.href = `https://${finalWorkspace}.thub.tech/?theme=dark&uid=${userId}`;
+            break;
+        }
         alert("user login successful");
       } catch (error) {
         console.error("Failed to exchange code:", error);
