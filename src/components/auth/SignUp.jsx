@@ -98,7 +98,7 @@ const SignUp = () => {
     >
       {() => (
         <Form className="">
-          <div className="space-y-8 ml-16">
+          <div className="space-y-8">
             <div className="">
               <div className="relative">
                 <span className="absolute left-4 top-[22px] dark:text-secondary-dark">
