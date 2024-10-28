@@ -1,4 +1,5 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
+import axios from "axios";
 import {
   AiOutlineUser,
   AiOutlineEye,
@@ -16,9 +17,38 @@ const SignIn = () => {
     setShowPassword((prev) => !prev);
   };
 
-  const handleSubmit = (values) => {
+  const handleSubmit = async (values) => {
     console.log("Form Data", values);
-    // Handle form submission (e.g., send to API)
+    const { email, password } = values;
+    console.log(email, password);
+    const apiUrl =
+      window.location.hostname === "localhost"
+        ? "http://localhost:2000/loginUser"
+        : "https://thub-dev-420204.uc.r.appspot.com/loginUser";
+    try {
+      const response = await axios.post(apiUrl, { email, password });
+      if (response.status === 200) {
+        console.log("user inserted successfully");
+        const { token, userId, workspace } = response.data;
+        localStorage.setItem("token", token);
+        alert("user login successful");
+
+        const finalWorkspace = workspace === null ? "beta" : workspace;
+        switch (window.location.hostname) {
+          case "localhost":
+            window.location.href = `http://localhost:8080/?theme=dark&uid=${userId}`;
+            break;
+          default:
+            window.location.href = `https://${finalWorkspace}.thub.tech/?theme=dark&uid=${userId}`;
+            break;
+        }
+      } else {
+        console.error("Error:", response.statusText);
+      }
+    } catch (error) {
+      console.error("Login failed:", error.response?.data || error.message);
+      alert("Invalid email or password. Please try again.");
+    }
   };
 
   return (

@@ -1,4 +1,5 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
+import axios from "axios";
 import { Link } from "react-router-dom";
 import {
   AiOutlineUser,
@@ -22,9 +23,64 @@ const SignUp = () => {
     setShowConfirmPassword((prev) => !prev);
   };
 
-  const handleSubmit = (values) => {
+  const handleSubmit = async (values) => {
     console.log("Form Data", values);
-    // Handle form submission (e.g., send to API)
+
+    if (values.password === values.confirmPassword) {
+      const email = values.email;
+      const firstName = values.firstName;
+      const lastName = values.lastName;
+      const phone = values.phoneNumber;
+      const password = values.password;
+
+      const today = new Date();
+      const date = today.getDate();
+      const month = today.getMonth() + 1;
+      const year = today.getFullYear();
+      const subscription_date = year + "-" + month + "-" + date;
+
+      const subscription_type = "free";
+      const login_type = "email";
+      const subscription_duration = "yearly";
+      const apiUrl =
+        window.location.hostname === "localhost"
+          ? "http://localhost:2000/user"
+          : "https://thub-dev-420204.uc.r.appspot.com/user";
+      try {
+        const response = await axios.post(apiUrl, {
+          email,
+          firstName,
+          lastName,
+          phone,
+          password,
+          login_type,
+          subscription_type,
+          subscription_duration,
+          subscription_date,
+        });
+
+        if (response.status === 200) {
+          console.log(response.status, "response status");
+          console.log("user inserted successfully");
+          const { userId, workspace } = response.data;
+          console.log(userId, workspace);
+          const finalWorkspace = workspace === null ? "beta" : workspace;
+
+          switch (window.location.hostname) {
+            case "localhost":
+              window.location.href = `http://localhost:8080/?theme=dark&uid=${userId}`;
+              break;
+            default:
+              window.location.href = `https://${finalWorkspace}.thub.tech/?theme=dark&uid=${userId}`;
+              break;
+          }
+        } else {
+          console.error("Error:", response.statusText);
+        }
+      } catch (error) {
+        console.error("Error:", error);
+      }
+    }
   };
 
   return (
@@ -42,7 +98,7 @@ const SignUp = () => {
     >
       {() => (
         <Form className="">
-          <div className="space-y-10">
+          <div className="space-y-8 ml-16">
             <div className="">
               <div className="relative">
                 <span className="absolute left-4 top-[22px] dark:text-secondary-dark">
@@ -52,7 +108,7 @@ const SignUp = () => {
                   type="text"
                   name="firstName"
                   placeholder="First Name"
-                  className="block w-full pl-12 pr-2 py-4 dark:text-background dark:bg-secondary border shadow-md border-secondary-dark placeholder-secondary-dark focus:outline-none dark:focus:border-primary-dark focus:border-primary focus:ring-primary dark:focus:ring-primary-dark rounded-md text-lg focus:ring-1"
+                  className="block w-full pl-12 pr-2 py-4 dark:text-background  dark:bg-secondary border border-gray-300 dark:border-gray-700 placeholder-black dark:placeholder-secondary-dark focus:outline-none dark:focus:border-primary-dark focus:border-primary focus:ring-primary dark:focus:ring-primary-dark rounded-md text-lg focus:ring-1"
                 />
               </div>
               <ErrorMessage
@@ -71,7 +127,7 @@ const SignUp = () => {
                   type="text"
                   name="lastName"
                   placeholder="Last Name"
-                  className="block w-full pl-12 pr-2 py-4 dark:text-background dark:bg-secondary border shadow-md border-secondary-dark placeholder-secondary-dark focus:outline-none dark:focus:border-primary-dark focus:border-primary focus:ring-primary dark:focus:ring-primary-dark rounded-md text-lg focus:ring-1"
+                  className="block w-full pl-12 pr-2 py-4 dark:text-background dark:bg-secondary border border-gray-300 dark:border-gray-700 placeholder-black dark:placeholder-secondary-dark focus:outline-none dark:focus:border-primary-dark focus:border-primary focus:ring-primary dark:focus:ring-primary-dark rounded-md text-lg focus:ring-1"
                 />
               </div>
               <ErrorMessage
@@ -90,7 +146,7 @@ const SignUp = () => {
                   type="email"
                   name="email"
                   placeholder="Email"
-                  className="block w-full pl-12 pr-2 py-4 dark:text-background dark:bg-secondary border  shadow-md border-secondary-dark placeholder-secondary-dark focus:outline-none dark:focus:border-primary-dark focus:border-primary focus:ring-primary  dark:focus:ring-primary-dark  rounded-md text-lg focus:ring-1"
+                  className="block w-full pl-12 pr-2 py-4 dark:text-background dark:bg-secondary border border-gray-300 dark:border-gray-700 placeholder-black dark:placeholder-secondary-dark focus:outline-none dark:focus:border-primary-dark focus:border-primary focus:ring-primary  dark:focus:ring-primary-dark  rounded-md text-lg focus:ring-1"
                 />
               </div>
               <ErrorMessage
@@ -109,7 +165,7 @@ const SignUp = () => {
                   type="tel"
                   name="phoneNumber"
                   placeholder="Phone Number"
-                  className="block w-full pl-12 pr-2 py-4 dark:text-background dark:bg-secondary border shadow-md border-secondary-dark placeholder-secondary-dark focus:outline-none dark:focus:border-primary-dark focus:border-primary focus:ring-primary dark:focus:ring-primary-dark rounded-md text-lg focus:ring-1"
+                  className="block w-full pl-12 pr-2 py-4 dark:text-background dark:bg-secondary border border-gray-300 dark:border-gray-700 placeholder-black dark:placeholder-secondary-dark focus:outline-none dark:focus:border-primary-dark focus:border-primary focus:ring-primary dark:focus:ring-primary-dark rounded-md text-lg focus:ring-1"
                 />
               </div>
               <ErrorMessage
@@ -128,7 +184,7 @@ const SignUp = () => {
                   type={showPassword ? "password" : "text"}
                   name="password"
                   placeholder="Password"
-                  className="block w-full pl-12 pr-2 py-4 dark:text-background dark:bg-secondary border shadow-md border-secondary-dark placeholder-secondary-dark focus:outline-none dark:focus:border-primary-dark focus:border-primary focus:ring-primary dark:focus:ring-primary-dark rounded-md text-lg focus:ring-1"
+                  className="block w-full pl-12 pr-2 py-4 dark:text-background dark:bg-secondary border border-gray-300 dark:border-gray-700 placeholder-black dark:placeholder-secondary-dark focus:outline-none dark:focus:border-primary-dark focus:border-primary focus:ring-primary dark:focus:ring-primary-dark rounded-md text-lg focus:ring-1"
                 />
                 <span
                   onClick={togglePasswordVisibility}
@@ -153,7 +209,7 @@ const SignUp = () => {
                   type={showConfirmPassword ? "password" : "text"}
                   name="confirmPassword"
                   placeholder="Confirm Password"
-                  className="block w-full pl-12 pr-2 py-4 dark:text-background dark:bg-secondary border shadow-md border-secondary-dark placeholder-secondary-dark focus:outline-none dark:focus:border-primary-dark focus:border-primary focus:ring-primary dark:focus:ring-primary-dark rounded-md text-lg focus:ring-1"
+                  className="block w-full pl-12 pr-2 py-4 dark:text-background dark:bg-secondary border border-gray-300 dark:border-gray-700 placeholder-black dark:placeholder-secondary-dark focus:outline-none dark:focus:border-primary-dark focus:border-primary focus:ring-primary dark:focus:ring-primary-dark rounded-md text-lg focus:ring-1"
                 />
                 <span
                   onClick={toggleConfirmPasswordVisibility}
