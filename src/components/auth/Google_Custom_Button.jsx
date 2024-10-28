@@ -5,24 +5,27 @@ function Google_Custom_Button() {
   const login = useGoogleLogin({
     onSuccess: async (response) => {
       console.log("Authorization Code:", response);
+      const apiUrl =
+        window.location.hostname === "localhost"
+          ? "http://localhost:2000/api/auth/google"
+          : "https://thub-web-ser-2-0-dot-thub-dev-420204.uc.r.appspot.com/api/auth/google";
       try {
-        const { data } = await axios.post(
-          "http://localhost:2000/api/auth/google",
-          {
-            code: response.code,
-          },
-        );
+        const { data } = await axios.post(apiUrl, {
+          code: response.code,
+        });
 
         const { id_token, workspace, userId } = data;
         console.log("ID Token:", id_token);
         const finalWorkspace = workspace === null ? "beta" : workspace;
-
+        const mode = localStorage.getItem("isDarkMode") === "true";
+        console.log(mode);
+        const theme = mode ? "dark" : "lite";
         switch (window.location.hostname) {
           case "localhost":
-            window.location.href = `http://localhost:8080/?theme=dark&uid=${userId}`;
+            window.location.href = `http://localhost:8080/?theme=${theme}&uid=${userId}`;
             break;
           default:
-            window.location.href = `https://${finalWorkspace}.thub.tech/?theme=dark&uid=${userId}`;
+            window.location.href = `https://${finalWorkspace}.thub.tech/?theme=${theme}&uid=${userId}`;
             break;
         }
         alert("user login successful");
