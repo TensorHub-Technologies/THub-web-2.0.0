@@ -17,7 +17,7 @@ function Pricing_Plan() {
   };
 
   return (
-    <section className="px-4 sm:px-8 lg:px-16 pb-10 ">
+    <section className="px-4 sm:px-8 lg:px-16 pb-10 py-10">
       <div className="flex flex-col justify-center items-center gap-5">
         <p className="text-primary dark:text-primary-dark text-4xl">
           Pricing Plan

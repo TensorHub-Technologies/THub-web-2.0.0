@@ -22,7 +22,7 @@ const Usecase = () => {
     <div className="border-red-400 dark:bg-secondary">
       <div className="text-center py-5">
         <div className="flex flex-col items-center text-center">
-          <h1 className="dark:text-primary-dark text-primary my-10 text-3xl md:text-4xl lg:text-5xl font-bold">
+          <h1 className="dark:text-primary-dark text-primary my-5 text-3xl md:text-4xl lg:text-5xl font-bold">
             THub Use Cases
           </h1>
           <h1 className="dark:text-white text-2xl md:text-3xl lg:text-4xl font-bold">
