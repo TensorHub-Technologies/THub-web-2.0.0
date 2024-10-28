@@ -1,6 +1,7 @@
 import { teamMembers } from "../../constant/index";
+import nvidiaDark from "../../assets/images/team/nvidia-dark.png";
 import nvidia from "../../assets/images/team/nvidia.png";
-import google from "../../assets/images/team/Google-Logo.png";
+import googleDark from "../../assets/images/team/Google-Logodrak.png";
 import startup from "../../assets/images/team/startupIndia.png";
 
 const Team = () => {
@@ -31,11 +32,23 @@ const Team = () => {
         <h3 className="text-center dark:text-primary-dark text-primary">
           Global Accelerator and Innovation Programs
         </h3>
-        <div className="flex justify-center items-center mx-auto py-10">
+        <div className="flex justify-center items-center mx-auto py-4">
           <div className="flex gap-4">
-            <img src={nvidia} alt="Image 1" className="w-72 h-auto" />
-            <img src={google} alt="Image 2" className="w-72 h-auto" />
-            <img src={startup} alt="Image 3" className="w-72 h-auto" />
+            <>
+              <img
+                src={nvidiaDark}
+                alt="Image 1"
+                className="w-72 h-auto dark:hidden"
+              />
+
+              <img
+                src={nvidia}
+                alt="Image 1 Dark"
+                className="w-72 h-auto hidden dark:block"
+              />
+            </>
+            <img src={googleDark} alt="Image 1 Dark" className="w-72 h-auto" />
+            <img src={startup} alt="Image 3" className="w-72 h-auto pl-4" />
           </div>
         </div>
       </div>
