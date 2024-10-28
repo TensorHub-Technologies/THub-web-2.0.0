@@ -49,8 +49,9 @@ const Usecase = () => {
             </div>
             <h4 className="text-xl font-semibold dark:text-white">Agents</h4>
             <p className="text-md dark:text-secondary-dark max-w-xs">
-              Leverage THub to build a product catalog application that
-              leverages the integrated LLMs and vector databases.
+              Build autonomous Agents and Multi Agents like customer support
+              Agent, Market Agent, Financial Audit Agents, Business Analyst
+              Agent etc
             </p>
             <div className="flex items-center mt-0 group">
               <p className="text-[#11121c] dark:text-secondary-dark cursor-pointer group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90]  group-hover:underline">

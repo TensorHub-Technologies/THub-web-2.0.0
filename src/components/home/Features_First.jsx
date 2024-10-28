@@ -23,8 +23,15 @@ function Features_First() {
           className="dark:text-white text-secondary mt-5 mb-12  text-3xl md:text-4xl lg:text-5xl font-bold w-[60rem]"
           style={{ lineHeight: "4rem" }}
         >
-          Build Multi Agents & GenAI Apps at Rapid Pace Across Your Favorite
-          LLMs
+          Build{" "}
+          <span className="text-primary dark:text-primary-dark">
+            {" "}
+            Multi Agents
+          </span>{" "}
+          & <span className="text-primary dark:text-primary-dark">
+            GenAI
+          </span>{" "}
+          Apps at Rapid Pace Across Your Favorite LLMs
         </h1>
       </div>
 

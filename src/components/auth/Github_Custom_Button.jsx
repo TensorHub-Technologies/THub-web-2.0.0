@@ -14,19 +14,29 @@ function Github_Custom_Button() {
 
     if (searchParams) {
       async function getAccessToken() {
-        const response = await fetch(
-          "http://localhost:2000/getAccessToken?code=" + searchParams,
-          {
-            method: "GET",
-          },
-        );
-        const data = await response.json();
+        try {
+          const response = await axios.get(
+            "http://localhost:2000/getAccessToken",
+            {
+              params: {
+                code: searchParams,
+              },
+            },
+          );
 
-        if (data.access_token) {
-          localStorage.setItem("access_token", data.access_token);
-          await getUserData();
-        } else {
-          console.error("Failed to get access token:", data.error_description);
+          const data = response.data;
+
+          if (data.access_token) {
+            localStorage.setItem("access_token", data.access_token);
+            await getUserData();
+          } else {
+            console.error(
+              "Failed to get access token:",
+              data.error_description,
+            );
+          }
+        } catch (error) {
+          console.error("Error fetching access token:", error);
         }
       }
       getAccessToken();
@@ -37,72 +47,17 @@ function Github_Custom_Button() {
 
   async function getUserData() {
     try {
-      const response = await fetch("http://localhost:2000/getuserData", {
-        method: "GET",
+      const response = await axios.get("http://localhost:2000/getuserData", {
         headers: {
           Authorization: "Bearer " + localStorage.getItem("access_token"),
         },
       });
 
-      if (!response.ok) {
-        throw new Error(`Error fetching user data: ${response.statusText}`);
-      }
-
-      const data = await response.json();
+      const data = response.data;
       console.log(data, "User Data");
       setUserData(data);
-
-      // Call insertUserData with the fetched data
-      await insertUserData(data);
     } catch (error) {
       console.error("Error getting user data:", error);
-    }
-  }
-
-  async function insertUserData(userData) {
-    const formData = new FormData();
-
-    formData.append("uid", userData.id || null);
-    formData.append("email", userData.email || null);
-    formData.append(
-      "access_token",
-      localStorage.getItem("access_token") || null,
-    );
-    formData.append("name", userData.name || null);
-    formData.append("login_type", "github");
-    formData.append("picture", userData.avatar_url || null);
-    formData.append("subscription_type", "free");
-    formData.append("department", userData.department || null);
-    formData.append("role", userData.role || null);
-    formData.append("designation", userData.designation || null);
-    formData.append("company", userData.company || null);
-    formData.append("workspace", userData.workspace || null);
-    formData.append("encryption_key", userData.encryption_key || null);
-    formData.append(
-      "subscription_duration",
-      userData.subscription_duration || null,
-    );
-    formData.append("subscription_date", userData.subscription_date || null);
-    formData.append("phone", userData.phone || null);
-    formData.append("password_hash", userData.password_hash || null);
-
-    try {
-      const response = await axios.post(
-        "http://localhost:2000/insertUserData",
-        formData,
-        {
-          headers: {
-            "Content-Type": "multipart/form-data", // This is necessary for FormData
-          },
-        },
-      );
-
-      console.log("User data inserted:", response.data);
-    } catch (error) {
-      console.error(
-        "Error inserting user data:",
-        error.response ? error.response.data : error.message,
-      );
     }
   }
 
