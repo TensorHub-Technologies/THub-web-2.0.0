@@ -201,23 +201,25 @@ const CoursesSection = () => {
   ];
 
   return (
-    <section className="py-12  bg-background dark:bg-background-dark ">
-      <div className="container mx-auto px-4">
-        <div className="mb-8 text-center">
-          <h2 className="text-3xl font-bold text-black dark:text-white">
-            Start Your AI Journey
-          </h2>
-          <p className="text-gray-500 mt-1">Home / Academy</p>
-        </div>
+    <section className="bg-background dark:bg-background-dark ">
+      <div className="text-center py-5 mt-20">
+        <div className="container mx-auto px-4">
+          <div className="mb-8 text-center">
+            <h2 className="text-3xl font-bold text-black dark:text-white">
+              Start Your AI Journey
+            </h2>
+            <p className="text-gray-500 mt-1">Home / Academy</p>
+          </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {courses.map((course, index) => (
-            <div className="p-2" key={index}>
-              {" "}
-              {/* Added padding around each card */}
-              <CourseCard key={index} {...course} />
-            </div>
-          ))}
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+            {courses.map((course, index) => (
+              <div className="p-2" key={index}>
+                {" "}
+                {/* Added padding around each card */}
+                <CourseCard key={index} {...course} />
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

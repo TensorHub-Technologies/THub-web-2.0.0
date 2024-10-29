@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import feature_first_gif_dark from "../../assets/illustrations/feature_first-1.gif";
 import feature_first_gif_light from "../../assets/illustrations/feature_first-2.gif";
 
@@ -5,6 +6,11 @@ import feature_first_gif_light from "../../assets/illustrations/feature_first-2.
 import { useSelector } from "react-redux";
 
 function Features_Anime_One() {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/auth/login");
+  };
+
   const isDarkMode = useSelector((state) => state.customization.isDarkMode);
   return (
     <section>
@@ -98,9 +104,12 @@ function Features_Anime_One() {
           </ul>
 
           <div className="flex items-center mt-8">
-            <p className="text-primary dark:text-primary-dark cursor-pointer">
+            <button
+              className="text-primary dark:text-primary-dark cursor-pointer"
+              onClick={() => handleClick()}
+            >
               Get Started Free
-            </p>
+            </button>
             <div className="w-5 ml-2 text-primary dark:text-primary-dark">
               <svg
                 className="icon"

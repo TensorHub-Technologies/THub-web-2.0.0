@@ -8,8 +8,14 @@ import blurryImage from "@/assets/svgs/blurry-shape-4.svg";
 
 // import hooks
 import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 function FooterImage() {
+  const navigate = useNavigate();
+  const handleNavigation = () => {
+    console.log("redirection");
+    navigate("/auth/login");
+  };
   const isDarkMode = useSelector((state) => state.customization.isDarkMode);
   return (
     <section className="min-h-screen flex justify-center items-center py-20">
@@ -30,7 +36,12 @@ function FooterImage() {
             creating long-form content.
           </h1>
 
-          <button className="px-5 py-3 bg-primary dark:bg-primary-dark dark:text-secondary text-white rounded-lg text-lg my-8  transition">
+          <button
+            className="px-5 py-3 bg-primary dark:bg-primary-dark dark:text-secondary text-white rounded-lg text-lg my-8  transition"
+            onClick={() => {
+              handleNavigation();
+            }}
+          >
             Get Started Free
           </button>
           {/* arrow image */}
