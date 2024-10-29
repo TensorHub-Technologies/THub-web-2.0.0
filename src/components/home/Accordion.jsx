@@ -1,0 +1,93 @@
+import { useState } from "react";
+
+const Accordion = () => {
+  const [openIndex, setOpenIndex] = useState(0);
+
+  const toggleAccordion = (index) => {
+    setOpenIndex(openIndex === index ? null : index);
+  };
+
+  const items = [
+    {
+      question: "What is THub?",
+      answer:
+        "THub is a low code/no code platform for creating Generative AI applications, using a drag-and-drop interface with various Language Model Embeddings and Vector Databases.",
+    },
+    {
+      question: "Is THub suitable for non-coders?",
+      answer:
+        "Yes, THub's drag-and-drop interface allows individuals with no coding experience to build sophisticated AI applications.",
+    },
+    {
+      question: "What sets THub apart from others?",
+      answer:
+        "THub stands out for its user-friendly interface, seamless integration of LLMs and vector databases, and a broad feature set catering to all levels of coding expertise.",
+    },
+    {
+      question: "What kind of applications can be built using THub?",
+      answer:
+        "THub empowers users to create a variety of Generative AI applications, including retrieval augmented generation, fine-tuning, document summarization, recommender systems, and chatbots. With its versatile features and integrations, the possibilities are endless.",
+    },
+    {
+      question: "Is THub suitable for businesses of all sizes?",
+      answer:
+        "Yes, THub caters to businesses of all sizes, from startups to enterprises. Its flexible pricing plans and scalable features make it an ideal choice for projects and businesses at any stage of development. Additionally, THub offers enterprise-level support and customization options for larger organizations.",
+    },
+  ];
+
+  return (
+    <div
+      id="accordion-flush"
+      className="flex flex-col items-center max-w-3xl mx-auto py-10"
+    >
+      <h1 className="dark:text-white  text-center mt-5 mb-12 text-3xl md:text-4xl lg:text-5xl font-bold">
+        Questions About our{" "}
+        <span className="dark:text-primary-dark text-primary">
+          Thub <br />
+        </span>{" "}
+        We have Answers!{" "}
+      </h1>
+
+      {items.map((item, index) => (
+        <div key={index} className="w-full">
+          <div className="group">
+            <button
+              type="button"
+              className={`w-full flex items-center justify-between py-5 px-6 text-secondary dark:text-secondary-dark text-left 
+                ${openIndex === index ? "text-primary-dark" : "group-hover:text-primary dark:group-hover:text-primary-dark"}`}
+              onClick={() => toggleAccordion(index)}
+            >
+              <span className="flex items-center gap-4 transition-transform duration-300">
+                <h3
+                  className={`transition-transform duration-300 ${openIndex === index ? "text-primary dark:text-primary-dark" : ""}`}
+                  style={{ minWidth: "24px" }}
+                >
+                  {openIndex === index ? "−" : "+"}
+                </h3>
+                <h3
+                  className={`${openIndex === index ? "text-primary dark:text-primary-dark" : ""}`}
+                >
+                  {item.question}
+                </h3>
+              </span>
+            </button>
+            <div
+              className={`border-t transition-colors duration-300 
+                ${openIndex === index ? "dark:border-primary-dark border-primary" : "border-secondary-dark dark:border-secondary-dark"}`}
+            />
+          </div>
+
+          <div
+            className={`overflow-hidden transition-all duration-300 ease-in-out ${openIndex === index ? "max-h-screen opacity-100" : "max-h-0 opacity-0"}`}
+          >
+            <div className="py-5 px-6 text-secondary dark:text-gray-400">
+              <p>{item.answer}</p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
+};
+
+export default Accordion;
