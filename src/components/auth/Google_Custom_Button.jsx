@@ -17,13 +17,15 @@ function Google_Custom_Button() {
         const { id_token, workspace, userId } = data;
         console.log("ID Token:", id_token);
         const finalWorkspace = workspace === null ? "beta" : workspace;
-
+        const mode = localStorage.getItem("isDarkMode") === "true";
+        console.log(mode);
+        const theme = mode ? "dark" : "lite";
         switch (window.location.hostname) {
           case "localhost":
-            window.location.href = `http://localhost:8080/?theme=dark&uid=${userId}`;
+            window.location.href = `http://localhost:8080/?theme=${theme}&uid=${userId}`;
             break;
           default:
-            window.location.href = `https://${finalWorkspace}.thub.tech/?theme=dark&uid=${userId}`;
+            window.location.href = `https://${finalWorkspace}.thub.tech/?theme=${theme}&uid=${userId}`;
             break;
         }
         alert("user login successful");
