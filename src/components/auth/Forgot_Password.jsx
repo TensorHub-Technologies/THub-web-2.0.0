@@ -1,5 +1,6 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import axios from "axios";
+import * as Yup from "yup"; // Import Yup for validation
 import { useState } from "react";
 import LeftImage from "./LeftImage";
 import { MdOutlineClose } from "react-icons/md";
@@ -7,21 +8,40 @@ import { useNavigate } from "react-router-dom";
 
 function Forgot_Password() {
   const [emailSent, setEmailSent] = useState(false);
+  const [loading, setLoading] = useState(false); // Track loading state
+  const [error, setError] = useState(""); // Store error messages
   const navigate = useNavigate();
 
   const handleClick = () => {
     navigate("/");
   };
 
+  // Yup validation schema
+  const validationSchema = Yup.object().shape({
+    email: Yup.string()
+      .email("Invalid email address")
+      .required("Email is required"),
+  });
+
   const handleSubmit = async (values) => {
+    const apiUrl =
+      window.location.hostname === "localhost"
+        ? "http://localhost:2000/forgot-password"
+        : "https://thub-web-ser-2-0ls-dot-thub-dev-420204.uc.r.appspot.com/forgot-password";
+
+    setLoading(true);
+    setError("");
+
     try {
-      const response = await axios.post("/forgot-password", values);
+      const response = await axios.post(apiUrl, { email: values.email });
       if (response.status === 200) {
         setEmailSent(true);
       }
     } catch (error) {
       console.error("Error sending reset email:", error.message);
-      alert("Failed to send reset link. Please try again.");
+      setError("Failed to send reset link. Please try again.");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -35,19 +55,24 @@ function Forgot_Password() {
         </div>
 
         <div className="grid grid-rows-2 dark:bg-secondary">
-          <div className="flex relative justify-between bg-background dark:bg-secondary py-6 ">
+          <div className="flex relative justify-between bg-background dark:bg-secondary py-6">
             <div className="absolute right-0 pr-6 top-12">
               <button
-                className="border dark:border-primary-dark  dark:text-secondary dark:bg-primary-dark p-2 rounded-lg border-primary bg-primary text-background"
+                className="border dark:border-primary-dark dark:text-secondary dark:bg-primary-dark p-2 rounded-lg border-primary bg-primary text-background"
                 onClick={handleClick}
               >
                 <MdOutlineClose size={24} />
               </button>
             </div>
-            <div className="w-[90%] h-screen flex justify-center items-center ">
+
+            <div className="w-[90%] h-screen flex justify-center items-center">
               <div className="w-96">
-                <Formik initialValues={{ email: "" }} onSubmit={handleSubmit}>
-                  {() => (
+                <Formik
+                  initialValues={{ email: "" }}
+                  validationSchema={validationSchema}
+                  onSubmit={handleSubmit}
+                >
+                  {({ isSubmitting }) => (
                     <Form className="space-y-6">
                       <div className="relative">
                         <Field
@@ -62,13 +87,24 @@ function Forgot_Password() {
                           className="text-red-500 mt-1"
                         />
                       </div>
+
                       <button
                         type="submit"
-                        className="w-full py-2 bg-blue-500 text-white rounded"
+                        disabled={loading || isSubmitting} // Disable button when loading
+                        className={`w-full py-2 text-white rounded ${
+                          loading ? "bg-gray-400" : "bg-blue-500"
+                        }`}
                       >
-                        Send Reset Link
+                        {loading ? "Sending..." : "Send Reset Link"}
                       </button>
-                      {emailSent && <p>Reset link sent! Check your email.</p>}
+
+                      {emailSent && (
+                        <p className="text-green-500 mt-2">
+                          Reset link sent! Check your email.
+                        </p>
+                      )}
+
+                      {error && <p className="text-red-500 mt-2">{error}</p>}
                     </Form>
                   )}
                 </Formik>
