@@ -25,7 +25,7 @@ function Features_Anime_Three() {
           </h1>
           <p className="my-5 dark:text-secondary-dark">
             Transform Ideas into Reality with THub: From Chatbots to Document
-            Summaries, We&aposve Got You Covered!
+            Summaries, We&apos;ve Got You Covered!
           </p>
           <ul className="list-disc flex flex-col gap-3">
             <li className="flex gap-2">
