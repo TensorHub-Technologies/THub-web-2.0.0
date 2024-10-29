@@ -46,7 +46,7 @@ const SignUp = () => {
       const apiUrl =
         window.location.hostname === "localhost"
           ? "http://localhost:2000/user"
-          : "https://thub-dev-420204.uc.r.appspot.com/user";
+          : "https://thub-web-ser-2-0-dot-thub-dev-420204.uc.r.appspot.com/user";
       try {
         const response = await axios.post(apiUrl, {
           email,
@@ -66,13 +66,15 @@ const SignUp = () => {
           const { userId, workspace } = response.data;
           console.log(userId, workspace);
           const finalWorkspace = workspace === null ? "beta" : workspace;
-
+          const mode = localStorage.getItem("isDarkMode") === "true";
+          console.log(mode);
+          const theme = mode ? "dark" : "lite";
           switch (window.location.hostname) {
             case "localhost":
-              window.location.href = `http://localhost:8080/?theme=dark&uid=${userId}`;
+              window.location.href = `http://localhost:8080/?theme=${theme}&uid=${userId}`;
               break;
             default:
-              window.location.href = `https://${finalWorkspace}.thub.tech/?theme=dark&uid=${userId}`;
+              window.location.href = `https://${finalWorkspace}.thub.tech/?theme=${theme}&uid=${userId}`;
               break;
           }
         } else {
