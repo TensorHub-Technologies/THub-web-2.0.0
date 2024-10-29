@@ -9,6 +9,7 @@ import {
 import { GoMail } from "react-icons/go";
 import { BsPhone } from "react-icons/bs";
 import { useState } from "react";
+import { CiLock } from "react-icons/ci";
 import { signUpValidationSchema } from "../../schemas/signUpValidationSchema";
 
 const SignUp = () => {
@@ -45,7 +46,7 @@ const SignUp = () => {
       const apiUrl =
         window.location.hostname === "localhost"
           ? "http://localhost:2000/user"
-          : "https://thub-web-ser-2-0-dot-thub-dev-420204.uc.r.appspot.com/user";
+          : "https://thub-web-ser-2-0ls-dot-thub-dev-420204.uc.r.appspot.com/user";
       try {
         const response = await axios.post(apiUrl, {
           email,
@@ -100,17 +101,17 @@ const SignUp = () => {
     >
       {() => (
         <Form className="">
-          <div className="space-y-8 ml-16">
+          <div className="space-y-8">
             <div className="">
               <div className="relative">
-                <span className="absolute left-4 top-[22px] dark:text-secondary-dark">
+                <span className="absolute left-4 top-[18px] dark:text-secondary-dark">
                   <AiOutlineUser />
                 </span>
                 <Field
                   type="text"
                   name="firstName"
                   placeholder="First Name"
-                  className="block w-full pl-12 pr-2 py-4 dark:text-background  dark:bg-secondary border border-gray-300 dark:border-gray-700 placeholder-black dark:placeholder-secondary-dark focus:outline-none dark:focus:border-primary-dark focus:border-primary focus:ring-primary dark:focus:ring-primary-dark rounded-md text-lg focus:ring-1"
+                  className="block w-full pl-12 pr-2 py-3  dark:text-background dark:bg-secondary border  shadow-md border-secondary-dark placeholder-secondary-dark focus:outline-none dark:focus:border-primary-dark focus:border-primary focus:ring-primary  dark:focus:ring-primary-dark  rounded-md text-lg focus:ring-1"
                 />
               </div>
               <ErrorMessage
@@ -122,14 +123,14 @@ const SignUp = () => {
 
             <div className="">
               <div className="relative">
-                <span className="absolute left-4 top-[22px] dark:text-secondary-dark">
+                <span className="absolute left-4 top-[18px] dark:text-secondary-dark">
                   <AiOutlineUser />
                 </span>
                 <Field
                   type="text"
                   name="lastName"
                   placeholder="Last Name"
-                  className="block w-full pl-12 pr-2 py-4 dark:text-background dark:bg-secondary border border-gray-300 dark:border-gray-700 placeholder-black dark:placeholder-secondary-dark focus:outline-none dark:focus:border-primary-dark focus:border-primary focus:ring-primary dark:focus:ring-primary-dark rounded-md text-lg focus:ring-1"
+                  className="block w-full pl-12 pr-2 py-3  dark:text-background dark:bg-secondary border  shadow-md border-secondary-dark placeholder-secondary-dark focus:outline-none dark:focus:border-primary-dark focus:border-primary focus:ring-primary  dark:focus:ring-primary-dark  rounded-md text-lg focus:ring-1"
                 />
               </div>
               <ErrorMessage
@@ -141,14 +142,14 @@ const SignUp = () => {
 
             <div className="">
               <div className="relative">
-                <span className="absolute left-4 top-[22px] dark:text-secondary-dark">
+                <span className="absolute left-4 top-[18px] dark:text-secondary-dark">
                   <GoMail />
                 </span>
                 <Field
                   type="email"
                   name="email"
                   placeholder="Email"
-                  className="block w-full pl-12 pr-2 py-4 dark:text-background dark:bg-secondary border border-gray-300 dark:border-gray-700 placeholder-black dark:placeholder-secondary-dark focus:outline-none dark:focus:border-primary-dark focus:border-primary focus:ring-primary  dark:focus:ring-primary-dark  rounded-md text-lg focus:ring-1"
+                  className="block w-full pl-12 pr-2 py-3  dark:text-background dark:bg-secondary border  shadow-md border-secondary-dark placeholder-secondary-dark focus:outline-none dark:focus:border-primary-dark focus:border-primary focus:ring-primary  dark:focus:ring-primary-dark  rounded-md text-lg focus:ring-1"
                 />
               </div>
               <ErrorMessage
@@ -160,14 +161,14 @@ const SignUp = () => {
 
             <div className="">
               <div className="relative">
-                <span className="absolute left-4 top-[22px] dark:text-secondary-dark">
+                <span className="absolute left-4 top-[18px] dark:text-secondary-dark">
                   <BsPhone />
                 </span>
                 <Field
                   type="tel"
                   name="phoneNumber"
                   placeholder="Phone Number"
-                  className="block w-full pl-12 pr-2 py-4 dark:text-background dark:bg-secondary border border-gray-300 dark:border-gray-700 placeholder-black dark:placeholder-secondary-dark focus:outline-none dark:focus:border-primary-dark focus:border-primary focus:ring-primary dark:focus:ring-primary-dark rounded-md text-lg focus:ring-1"
+                  className="block w-full pl-12 pr-2 py-3  dark:text-background dark:bg-secondary border  shadow-md border-secondary-dark placeholder-secondary-dark focus:outline-none dark:focus:border-primary-dark focus:border-primary focus:ring-primary  dark:focus:ring-primary-dark  rounded-md text-lg focus:ring-1"
                 />
               </div>
               <ErrorMessage
@@ -179,14 +180,14 @@ const SignUp = () => {
 
             <div className="">
               <div className="relative">
-                <span className="absolute left-4 top-[22px] dark:text-secondary-dark">
-                  <AiOutlineUser />
+                <span className="absolute left-4 top-[18px] dark:text-secondary-dark">
+                  <CiLock />
                 </span>
                 <Field
                   type={showPassword ? "password" : "text"}
                   name="password"
                   placeholder="Password"
-                  className="block w-full pl-12 pr-2 py-4 dark:text-background dark:bg-secondary border border-gray-300 dark:border-gray-700 placeholder-black dark:placeholder-secondary-dark focus:outline-none dark:focus:border-primary-dark focus:border-primary focus:ring-primary dark:focus:ring-primary-dark rounded-md text-lg focus:ring-1"
+                  className="block w-full pl-12 pr-2 py-3  dark:text-background dark:bg-secondary border  shadow-md border-secondary-dark placeholder-secondary-dark focus:outline-none dark:focus:border-primary-dark focus:border-primary focus:ring-primary  dark:focus:ring-primary-dark  rounded-md text-lg focus:ring-1"
                 />
                 <span
                   onClick={togglePasswordVisibility}
@@ -204,14 +205,14 @@ const SignUp = () => {
 
             <div className="">
               <div className="relative">
-                <span className="absolute left-4 top-[22px] dark:text-secondary-dark">
-                  <AiOutlineUser />
+                <span className="absolute left-4 top-[18px] dark:text-secondary-dark">
+                  <CiLock />
                 </span>
                 <Field
                   type={showConfirmPassword ? "password" : "text"}
                   name="confirmPassword"
                   placeholder="Confirm Password"
-                  className="block w-full pl-12 pr-2 py-4 dark:text-background dark:bg-secondary border border-gray-300 dark:border-gray-700 placeholder-black dark:placeholder-secondary-dark focus:outline-none dark:focus:border-primary-dark focus:border-primary focus:ring-primary dark:focus:ring-primary-dark rounded-md text-lg focus:ring-1"
+                  className="block w-full pl-12 pr-2 py-3  dark:text-background dark:bg-secondary border  shadow-md border-secondary-dark placeholder-secondary-dark focus:outline-none dark:focus:border-primary-dark focus:border-primary focus:ring-primary  dark:focus:ring-primary-dark  rounded-md text-lg focus:ring-1"
                 />
                 <span
                   onClick={toggleConfirmPasswordVisibility}
@@ -233,7 +234,7 @@ const SignUp = () => {
 
             <button
               type="submit"
-              className="w-full py-4 px-6 bg-primary dark:bg-primary-dark text-white dark:text-secondary rounded-lg hover:bg-[#31519b] dark:hover:bg-[#e65ca8]"
+              className="w-full py-3 px-6 bg-primary dark:bg-primary-dark text-white dark:text-secondary rounded-lg hover:bg-[#31519b] dark:hover:bg-[#e65ca8]"
             >
               Sign Up for Free
             </button>

@@ -1,8 +1,8 @@
 import { useNavigate } from "react-router-dom";
-import LeftImage from "./LeftImage";
 import LoginTop from "./LoginTop";
 import SignUp from "./SignUp";
 import { MdOutlineClose } from "react-icons/md";
+import LeftImage2 from "./LeftImage2";
 
 const RegisterForm = () => {
   const navigate = useNavigate();
@@ -13,7 +13,7 @@ const RegisterForm = () => {
     <div className="h-screen grid grid-cols-1 md:grid-cols-2">
       <div className="flex justify-center bg-white dark:bg-secondary p-4 md:p-0">
         <div className="text-white text-center">
-          <LeftImage />
+          <LeftImage2 />
         </div>
       </div>
 

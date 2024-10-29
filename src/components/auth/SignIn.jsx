@@ -65,14 +65,14 @@ const SignIn = () => {
           <div className="space-y-10">
             <div className="">
               <div className="relative">
-                <span className="absolute left-4 top-[22px] dark:text-secondary-dark">
+                <span className="absolute left-4 top-[18px] dark:text-secondary-dark">
                   <GoMail />
                 </span>
                 <Field
                   type="email"
                   name="email"
                   placeholder="Enter Your Email"
-                  className="block w-full pl-12 pr-2 py-4  dark:text-background dark:bg-secondary border  shadow-md border-secondary-dark placeholder-secondary-dark focus:outline-none dark:focus:border-primary-dark focus:border-primary focus:ring-primary  dark:focus:ring-primary-dark  rounded-md text-lg focus:ring-1"
+                  className="block w-full pl-12 pr-2 py-3  dark:text-background dark:bg-secondary border  shadow-md border-secondary-dark placeholder-secondary-dark focus:outline-none dark:focus:border-primary-dark focus:border-primary focus:ring-primary  dark:focus:ring-primary-dark  rounded-md text-lg focus:ring-1"
                 />
               </div>
               <ErrorMessage
@@ -83,14 +83,14 @@ const SignIn = () => {
             </div>
             <div className="mb-4 mt-7">
               <div className="relative">
-                <span className="absolute left-4 top-[22px] dark:text-secondary-dark">
+                <span className="absolute left-4 top-[18px] dark:text-secondary-dark">
                   <AiOutlineUser />
                 </span>
                 <Field
                   type={showPassword ? "password" : "text"}
                   name="password"
                   placeholder="Password"
-                  className="block w-full pl-12 pr-2 py-4 dark:text-background dark:bg-secondary border shadow-md border-secondary-dark placeholder-secondary-dark focus:outline-none dark:focus:border-primary-dark focus:border-primary focus:ring-primary dark:focus:ring-primary-dark rounded-md text-lg focus:ring-1"
+                  className="block w-full pl-12 pr-2 py-3 dark:text-background dark:bg-secondary border shadow-md border-secondary-dark placeholder-secondary-dark focus:outline-none dark:focus:border-primary-dark focus:border-primary focus:ring-primary dark:focus:ring-primary-dark rounded-md text-lg focus:ring-1"
                 />
                 <span
                   onClick={togglePasswordVisibility}
@@ -118,7 +118,7 @@ const SignIn = () => {
 
           <button
             type="submit"
-            className="w-full mt-8 py-4 px-6 bg-primary dark:bg-primary-dark text-white dark:text-secondary rounded-lg hover:bg-[#31519b] dark:hover:bg-[#e65ca8]"
+            className="w-full mt-8 py-3 px-6 bg-primary dark:bg-primary-dark text-white dark:text-secondary rounded-lg hover:bg-[#31519b] dark:hover:bg-[#e65ca8]"
           >
             Sign In With THub
           </button>

@@ -12,17 +12,20 @@ function Github_Custom_Button() {
     const urlParams = new URLSearchParams(query);
     const searchParams = urlParams.get("code");
 
-    if (searchParams) {
+    const access = localStorage.getItem("access_token");
+
+    if ((searchParams && access == undefined) || access == null) {
       async function getAccessToken() {
+        const apiUrl =
+          window.location.hostname === "localhost"
+            ? "http://localhost:2000"
+            : "https://thub-web-ser-2-0ls-dot-thub-dev-420204.uc.r.appspot.com";
         try {
-          const response = await axios.get(
-            "http://localhost:2000/getAccessToken",
-            {
-              params: {
-                code: searchParams,
-              },
+          const response = await axios.get(`${apiUrl}/getAccessToken`, {
+            params: {
+              code: searchParams,
             },
-          );
+          });
 
           const data = response.data;
 
@@ -46,16 +49,32 @@ function Github_Custom_Button() {
   }, []);
 
   async function getUserData() {
+    const apiUrl =
+      window.location.hostname === "localhost"
+        ? "http://localhost:2000"
+        : "https://thub-web-ser-2-0ls-dot-thub-dev-420204.uc.r.appspot.com/";
     try {
-      const response = await axios.get("http://localhost:2000/getuserData", {
+      const response = await axios.get(`${apiUrl}/getuserData`, {
         headers: {
           Authorization: "Bearer " + localStorage.getItem("access_token"),
         },
       });
 
       const data = response.data;
-      console.log(data, "User Data");
       setUserData(data);
+      if (data.uid) {
+        const finalWorkspace =
+          data?.workspace === null ? "beta" : data?.workspace;
+        localStorage.removeItem("access_token");
+        switch (window.location.hostname) {
+          case "localhost":
+            window.location.href = `http://localhost:8080/?theme=dark&uid=${data?.uid}`;
+            break;
+          default:
+            window.location.href = `https://${finalWorkspace}.thub.tech/?theme=dark&uid=${data?.uid}`;
+            break;
+        }
+      }
     } catch (error) {
       console.error("Error getting user data:", error);
     }
