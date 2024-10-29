@@ -108,12 +108,12 @@ const SignIn = () => {
           </div>
 
           <div className="text-end mt-1">
-            <a
-              href="/forgot-password"
+            <Link
+              to="/auth/forgot-password"
               className="text-primary dark:text-primary-dark"
             >
               Forgot Password?
-            </a>
+            </Link>
           </div>
 
           <button

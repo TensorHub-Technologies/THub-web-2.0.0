@@ -1,5 +1,6 @@
 import { createBrowserRouter } from "react-router-dom";
 import loadable from "@loadable/component";
+import Forgot_Password from "../components/auth/Forgot_Password";
 
 const Home = loadable(() => import("../pages/Home"));
 const UseCases = loadable(() => import("../pages/UseCases"));
@@ -97,6 +98,10 @@ export const router = createBrowserRouter([
       {
         path: "login",
         element: <Login />,
+      },
+      {
+        path: "forgot-password",
+        element: <Forgot_Password />,
       },
     ],
   },

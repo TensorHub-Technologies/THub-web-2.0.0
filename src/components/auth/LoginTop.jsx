@@ -16,7 +16,7 @@ const LoginTop = () => {
         </div>
         <div className="flex items-center justify-center my-6 w-full">
           <hr className="border dark:border-gray-600 w-24 " />
-          <span className="dark:text-white">Sign in with Email</span>
+          <span className="dark:text-white">Or Register with Email</span>
           <hr className="border dark:border-gray-600 w-24" />
         </div>
       </div>
