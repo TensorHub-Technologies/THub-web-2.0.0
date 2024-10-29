@@ -1,14 +1,11 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
-import { API_URLs } from "../../constant";
 
 function Github_Custom_Button() {
   const [userData, setUserData] = useState({});
   console.log(userData.id, userData.name, userData.avatar_url, "****");
 
   const client_id = "Ov23liLgDH9KQ9QZbAFc";
-
-  console.log(API_URLs, "process.env.API_URLs");
 
   useEffect(() => {
     const query = window.location.search;
