@@ -7,10 +7,10 @@ function Google_Custom_Button() {
       console.log("Authorization Code:", response);
       const apiUrl =
         window.location.hostname === "localhost"
-          ? "http://localhost:2000/api/auth/google"
-          : "https://thub-web-ser-2-0-dot-thub-dev-420204.uc.r.appspot.com/api/auth/google";
+          ? "http://localhost:2000"
+          : "https://thub-web-ser-2-0ls-dot-thub-dev-420204.uc.r.appspot.com/";
       try {
-        const { data } = await axios.post(apiUrl, {
+        const { data } = await axios.post(`${apiUrl}/api/auth/google`, {
           code: response.code,
         });
 

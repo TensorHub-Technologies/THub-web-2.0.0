@@ -6,7 +6,7 @@ const LeftImage = () => {
   const isDarkMode = useSelector((state) => state.customization.isDarkMode);
 
   return (
-    <div className="py-28 px-20 mx-10 my-6 border border-secondary-dark rounded-2xl flex flex-col dark:bg-[#171825] hidden md:block">
+    <div className="py-28 px-20 mx-10 my-6 border border-secondary-dark rounded-2xl  flex-col dark:bg-[#171825] hidden md:block">
       <h2 className="text-secondary dark:text-background text-center mb-4">
         Unlock the Power of <br className="hidden xl:block" />
         <span className="text-primary dark:text-primary-dark">THub </span> GenAI
