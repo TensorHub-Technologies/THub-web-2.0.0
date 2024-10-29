@@ -9,8 +9,7 @@ function Features_Anime_Three() {
   const isDarkMode = useSelector((state) => state.customization.isDarkMode);
   const navigate = useNavigate();
   const handleNavigation = () => {
-    console.log("redirection");
-    navigate("/auth/register");
+    navigate("/auth/login");
   };
   return (
     <section>

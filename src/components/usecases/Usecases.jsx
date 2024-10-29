@@ -21,15 +21,18 @@ const Usecase = () => {
   const isDarkMode = useSelector((state) => state.customization.isDarkMode);
   const navigate = useNavigate();
   const handleClick = () => {
-    navigate("/use-cases-details");
+    navigate("/auth/login");
   };
   return (
     <div className="border-red-400 dark:bg-secondary">
       <div className="text-center py-5">
         <div className="flex flex-col items-center text-center">
-          <h1 className="dark:text-primary-dark text-primary my-5 text-3xl md:text-4xl lg:text-5xl font-bold">
-            THub Use Cases
-          </h1>
+          <div className="mb-8 text-center">
+            <h2 className="text-3xl font-bold text-black dark:text-white">
+              Use Cases
+            </h2>
+            <p className="text-gray-500 mt-1">Home / UseCases</p>
+          </div>
           <h1 className="dark:text-white text-2xl md:text-3xl lg:text-4xl font-bold">
             Build{" "}
             <span className="dark:text-primary-dark text-primary">

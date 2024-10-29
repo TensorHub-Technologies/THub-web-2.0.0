@@ -7,7 +7,7 @@ const Blogs = () => {
   };
 
   return (
-    <div className="border-red-400 dark:bg-secondary py-5">
+    <div className="border-red-400 dark:bg-secondary py-5 mt-20">
       <div className="text-center">
         <h3 className="text-secondary  text-3xl  font-bold dark:text-background">
           Blog Posts
