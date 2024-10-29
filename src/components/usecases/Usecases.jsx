@@ -15,9 +15,14 @@ import sqldark from "../../assets/icons/usecase-icons/sql_dark.png";
 import sqllite from "../../assets/icons/usecase-icons/sql_lite.png";
 import customerdark from "../../assets/icons/usecase-icons/customer_dark.png";
 import customerlite from "../../assets/icons/usecase-icons/customer_lite.png";
+import { useNavigate } from "react-router-dom";
 
 const Usecase = () => {
   const isDarkMode = useSelector((state) => state.customization.isDarkMode);
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/use-cases-details");
+  };
   return (
     <div className="border-red-400 dark:bg-secondary">
       <div className="text-center py-5">
@@ -54,9 +59,12 @@ const Usecase = () => {
               Agent etc
             </p>
             <div className="flex items-center mt-0 group">
-              <p className="text-[#11121c] dark:text-secondary-dark cursor-pointer group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90]  group-hover:underline">
-                Try Product Catalog
-              </p>
+              <button
+                className="text-[#11121c] dark:text-secondary-dark cursor-pointer group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90]  group-hover:underline"
+                onClick={() => handleClick()}
+              >
+                Try Agents
+              </button>
               <div className="w-4 ml-2 text-[#11121c] dark:text-secondary-dark group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90] ">
                 <svg
                   className="icon"
@@ -91,9 +99,12 @@ const Usecase = () => {
               Retrieval-Augmented Generation application.
             </p>
             <div className="flex items-center mt-0 group">
-              <p className="text-[#11121c] dark:text-secondary-dark cursor-pointer group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90]  group-hover:underline">
+              <button
+                className="text-[#11121c] dark:text-secondary-dark cursor-pointer group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90]  group-hover:underline"
+                onClick={() => handleClick()}
+              >
                 Try RAG
-              </p>
+              </button>
               <div className="w-4 ml-2 text-[#11121c] dark:text-secondary-dark group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90] ">
                 <svg
                   className="icon"
@@ -128,9 +139,12 @@ const Usecase = () => {
               Retrieval-Augmented Fine Tuning workflow.
             </p>
             <div className="flex items-center mt-0 group">
-              <p className="text-[#11121c] dark:text-secondary-dark cursor-pointer group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90]  group-hover:underline">
+              <button
+                className="text-[#11121c] dark:text-secondary-dark cursor-pointer group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90]  group-hover:underline"
+                onClick={() => handleClick()}
+              >
                 Try RAFT
-              </p>
+              </button>
               <div className="w-4 ml-2 text-[#11121c] dark:text-secondary-dark group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90] ">
                 <svg
                   className="icon"
@@ -165,9 +179,12 @@ const Usecase = () => {
               the integrated LLMs and vector databases.
             </p>
             <div className="flex items-center mt-0 group">
-              <p className="text-[#11121c] dark:text-secondary-dark cursor-pointer group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90]  group-hover:underline">
+              <button
+                className="text-[#11121c] dark:text-secondary-dark cursor-pointer group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90]  group-hover:underline"
+                onClick={() => handleClick()}
+              >
                 Try Recommender Systems
-              </p>
+              </button>
               <div className="w-4 ml-2 text-[#11121c] dark:text-secondary-dark group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90] ">
                 <svg
                   className="icon"
@@ -206,9 +223,12 @@ const Usecase = () => {
               document summarization application smoothly.
             </p>
             <div className="flex items-center mt-0 group">
-              <p className="text-[#11121c] dark:text-secondary-dark cursor-pointer group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90]  group-hover:underline">
+              <button
+                className="text-[#11121c] dark:text-secondary-dark cursor-pointer group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90]  group-hover:underline"
+                onClick={() => handleClick()}
+              >
                 Try Document Summarization
-              </p>
+              </button>
               <div className="w-4 ml-2 text-[#11121c] dark:text-secondary-dark group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90] ">
                 <svg
                   className="icon"
@@ -244,9 +264,12 @@ const Usecase = () => {
               the integrated LLMs and vector databases.
             </p>
             <div className="flex items-center mt-0 group">
-              <p className="text-[#11121c] dark:text-secondary-dark cursor-pointer group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90]  group-hover:underline">
+              <button
+                className="text-[#11121c] dark:text-secondary-dark cursor-pointer group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90]  group-hover:underline"
+                onClick={() => handleClick()}
+              >
                 Try Product Description
-              </p>
+              </button>
               <div className="w-4 ml-2 text-[#11121c] dark:text-secondary-dark group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90] ">
                 <svg
                   className="icon"
@@ -282,9 +305,12 @@ const Usecase = () => {
               perform and enhance data analytics smoothly.
             </p>
             <div className="flex items-center mt-0 group">
-              <p className="text-[#11121c] dark:text-secondary-dark cursor-pointer group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90]  group-hover:underline">
+              <button
+                className="text-[#11121c] dark:text-secondary-dark cursor-pointer group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90]  group-hover:underline"
+                onClick={() => handleClick()}
+              >
                 Try SQL Database
-              </p>
+              </button>
               <div className="w-4 ml-2 text-[#11121c] dark:text-secondary-dark group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90] ">
                 <svg
                   className="icon"
@@ -319,9 +345,12 @@ const Usecase = () => {
               experience with personalized, AI-driven interactions.
             </p>
             <div className="flex items-center mt-0 group">
-              <p className="text-[#11121c] dark:text-secondary-dark cursor-pointer group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90]  group-hover:underline">
+              <button
+                className="text-[#11121c] dark:text-secondary-dark cursor-pointer group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90]  group-hover:underline"
+                onClick={() => handleClick()}
+              >
                 Try Customer Support
-              </p>
+              </button>
               <div className="w-4 ml-2 text-[#11121c] dark:text-secondary-dark group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90] ">
                 <svg
                   className="icon"
