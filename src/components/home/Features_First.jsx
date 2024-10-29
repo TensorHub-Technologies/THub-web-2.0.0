@@ -5,8 +5,13 @@ import draglite from "../../assets/icons/home-icons/drag_lite.svg";
 import pipedark from "../../assets/icons/home-icons/pipe_dark.svg";
 import pipelite from "../../assets/icons/home-icons/pipe_lite.svg";
 import { useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 function Features_First() {
+  const navigate = useNavigate();
+  const handleClick = () => {
+    navigate("/auth/login");
+  };
   const isDarkMode = useSelector((state) => state.customization.isDarkMode);
 
   return (
@@ -101,6 +106,7 @@ function Features_First() {
         <button
           type="button"
           className="text-white dark:text-secondary bg-primary hover:bg-blue-900 font-lg rounded-lg text-lg px-5 py-2.5 me-2 mt-10 dark:bg-primary-dark dark:hover:bg-pink-600 focus:outline-none"
+          onClick={() => handleClick()}
         >
           Try a demo
         </button>

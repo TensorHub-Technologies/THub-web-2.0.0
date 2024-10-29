@@ -43,9 +43,9 @@ const Accordion = () => {
       <h1 className="dark:text-white  text-center mt-5 mb-12 text-3xl md:text-4xl lg:text-5xl font-bold">
         Questions About our{" "}
         <span className="dark:text-primary-dark text-primary">
-          Thub <br />
-        </span>{" "}
-        We have Answers!{" "}
+          THub <br />
+        </span>
+        We have Answers!
       </h1>
 
       {items.map((item, index) => (

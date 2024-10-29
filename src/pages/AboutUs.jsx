@@ -1,13 +1,11 @@
 import About from "../components/about/About";
-import Founder from "../components/about/Founder";
 import Journey from "../components/about/Journey";
-import Mission from "../components/about/Mission";
 import Team from "../components/about/Team";
 
 const AboutUs = () => {
   return (
     <div className="border-red-400 dark:bg-secondary">
-      <div className="text-center py-5">
+      <div className="text-center py-5 mt-20">
         <h3 className="text-secondary  text-3xl  font-bold dark:text-background">
           About THub
         </h3>
@@ -17,10 +15,6 @@ const AboutUs = () => {
         </div>
       </div>
       <About />
-
-      <Mission />
-
-      <Founder />
 
       <Journey />
 
