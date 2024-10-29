@@ -9,11 +9,11 @@ COPY package*.json yarn.lock ./
 #install PNPM globaly
 RUN npm install -g pnpm
 
+# Copy the rest of your app's source code
+COPY . 
+
 # Install dependencies
 RUN pnpm install
-
-# Copy the rest of your app's source code
-COPY . .
 
 # Build your app
 RUN pnpm build
