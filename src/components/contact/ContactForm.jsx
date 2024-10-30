@@ -22,12 +22,12 @@ const ContactForm = () => {
       onSubmit={handleSubmit}
     >
       {() => (
-        <div className="flex items-center justify-center min-h-screen bg-gray-100 dark:bg-gray-800">
+        <div className="flex items-center justify-center min-h-screen bg-background dark:bg-background-dark">
           <Form className="py-16 w-full max-w-md">
             <div className="mb-4">
               <div className="flex flex-col">
                 <label
-                  className="text-lg text-start font-medium text-secondary dark:text-secondary-dark mb-2"
+                  className="text-lg text-start font-medium text-secondary dark:text-secondary-dark mb-2 -ml-8"
                   htmlFor="firstName"
                 >
                   Your Name*
@@ -54,7 +54,7 @@ const ContactForm = () => {
             <div className="mb-4">
               <div className="flex flex-col">
                 <label
-                  className="text-lg text-start font-medium text-secondary dark:text-secondary-dark mb-2"
+                  className="text-lg text-start font-medium text-secondary dark:text-secondary-dark mb-2 -ml-8"
                   htmlFor="email"
                 >
                   Email*
@@ -81,7 +81,7 @@ const ContactForm = () => {
             <div className="mb-4">
               <div className="flex flex-col">
                 <label
-                  className="text-lg text-start font-medium text-secondary dark:text-secondary-dark mb-2"
+                  className="text-lg text-start font-medium text-secondary dark:text-secondary-dark mb-2 -ml-8"
                   htmlFor="mobileNumber"
                 >
                   Mobile Number*
@@ -108,7 +108,7 @@ const ContactForm = () => {
             <div className="mb-4">
               <div className="flex flex-col">
                 <label
-                  className="text-lg text-start font-medium text-secondary dark:text-secondary-dark mb-2"
+                  className="text-lg text-start font-medium text-secondary dark:text-secondary-dark mb-2 -ml-8"
                   htmlFor="YourMessage"
                 >
                   Your Message*

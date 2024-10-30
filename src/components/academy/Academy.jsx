@@ -56,7 +56,7 @@ const CourseCard = ({ imgSrc, title, description, logos, path }) => {
             {title}
           </h5>
 
-          <p className="text-lg text-secondary dark:text-secondary-dark mb-10">
+          <p className="text-lg text-secondary dark:text-secondary-dark mb-10 text-justify">
             {description}
           </p>
 

@@ -161,6 +161,8 @@ const Footer = () => {
               <Link
                 to="#"
                 className="text-gray-500 hover:text-secondary dark:hover:text-white"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <FiGithub className="w-5 h-5" />
                 <span className="sr-only">GitHub account</span>
@@ -168,6 +170,8 @@ const Footer = () => {
               <Link
                 to="https://www.linkedin.com/company/102053952"
                 className="text-gray-500 hover:text-secondary dark:hover:text-white ms-5"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <FaLinkedinIn className="w-5 h-5" />
                 <span className="sr-only">Linkedin</span>
@@ -175,6 +179,8 @@ const Footer = () => {
               <Link
                 to="https://www.facebook.com/profile.php?id=61564135198933"
                 className="text-gray-500 hover:text-secondary dark:hover:text-white ms-5"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <FiFacebook className="w-5 h-5" />
                 <span className="sr-only">Facebook page</span>
@@ -182,6 +188,8 @@ const Footer = () => {
               <Link
                 to="#"
                 className="text-gray-500 hover:text-secondary dark:hover:text-white ms-5"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <FaXTwitter className="w-5 h-5" />
                 <span className="sr-only">Twitter page</span>

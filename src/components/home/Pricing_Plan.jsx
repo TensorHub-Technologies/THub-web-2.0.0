@@ -1,20 +1,24 @@
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import { pricingData } from "./PricingData";
-
-// styling
 import subStyle from "./subscription.module.css";
 import PriceDropdown from "./PriceDropdown";
 
 function Pricing_Plan() {
   const isDarkMode = useSelector((state) => state.customization.isDarkMode);
   const [selectedPlan, setSelectedPlan] = useState("monthly");
+  const [currency, setCurrency] = useState("INR");
 
-  const handleMonthly = () => {
-    setSelectedPlan("monthly");
-  };
-  const handleYearly = () => {
-    setSelectedPlan("yearly");
+  const handleMonthly = () => setSelectedPlan("monthly");
+  const handleYearly = () => setSelectedPlan("yearly");
+
+  // Handler to update the currency based on dropdown selection
+  const handleCurrencyChange = (selectedCurrency) =>
+    setCurrency(selectedCurrency);
+
+  // Function to get the correct price based on selected plan and currency
+  const getPrice = (plan) => {
+    return plan.prices[currency] || plan.prices["INR"]; // Default to INR if currency not found
   };
 
   return (
@@ -33,11 +37,8 @@ function Pricing_Plan() {
           Get started with a 30-day trial, Cancel anytime.
         </p>
       </div>
-      <div className="">
-        <PriceDropdown />
-      </div>
 
-      {/* switch button */}
+      {/* Switch button */}
       <div className={subStyle.switch_parent}>
         <div className={subStyle.switch_wrapper}>
           <button className={subStyle.switch_button} onClick={handleMonthly}>
@@ -89,6 +90,7 @@ function Pricing_Plan() {
               Yearly
             </label>
           </button>
+
           <div
             className={
               isDarkMode
@@ -101,18 +103,23 @@ function Pricing_Plan() {
             }}
           ></div>
         </div>
+        {/* Dropdown for currency selection */}
+        <div className="absolute right-5 mr-12">
+          <PriceDropdown onCurrencyChange={handleCurrencyChange} />
+        </div>
       </div>
-      {/* cards for pricing */}
+
+      {/* Cards for pricing */}
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
         {pricingData[selectedPlan].map((plan, index) => (
           <div
             key={index}
-            className={`group p-6 bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700  relative hover:shadow-xl ${isDarkMode ? subStyle.card_selection_dark : subStyle.card_selection_light}`}
+            className={`group p-6 bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700 relative hover:shadow-xl ${isDarkMode ? subStyle.card_selection_dark : subStyle.card_selection_light}`}
           >
             <p className="mb-3 text-4xl text-primary dark:text-primary-dark">
               {plan.title}
             </p>
-            <p className="text-4xl my-5 dark:text-white">{plan.price}</p>
+            <p className="text-4xl my-5 dark:text-white">{getPrice(plan)}</p>
             <p className="text-xl dark:text-white">{plan.description}</p>
             <div className="flex justify-center items-center">
               <button
