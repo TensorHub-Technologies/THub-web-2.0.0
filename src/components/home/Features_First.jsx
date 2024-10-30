@@ -55,7 +55,7 @@ function Features_First() {
             <h4 className="text-2xl font-semibold dark:text-white">
               No Code-Low Code Platform
             </h4>
-            <p className="text-lg dark:text-secondary-dark">
+            <p className="text-lg dark:text-secondary-dark text-justify">
               Build production-ready GenAI apps at scale & speed with a no
               code-low code platform.
             </p>
@@ -75,7 +75,7 @@ function Features_First() {
             <h4 className="text-2xl font-semibold dark:text-white">
               Drag & Drop Features
             </h4>
-            <p className="text-lg dark:text-secondary-dark">
+            <p className="text-lg dark:text-secondary-dark text-justify">
               Simply drag & drop data loaders, LLMs, agents, chains, and
               embedding models to build your custom GenAI Apps.
             </p>
@@ -95,7 +95,7 @@ function Features_First() {
             <h4 className="text-2xl font-semibold dark:text-white">
               Automated Data Pipeline
             </h4>
-            <p className="text-lg dark:text-secondary-dark">
+            <p className="text-lg dark:text-secondary-dark text-justify">
               Build end-to-end pipelines for structured, semi-structured, and
               unstructured data all in one platform.
             </p>

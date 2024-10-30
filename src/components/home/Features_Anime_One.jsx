@@ -23,7 +23,7 @@ function Features_Anime_One() {
           <h1 className="text-4xl sm:text-5xl mt-2 dark:text-white">
             GenerativeAI App Creation
           </h1>
-          <p className="my-5 dark:text-secondary-dark">
+          <p className="my-5 dark:text-secondary-dark text-justify">
             Unleash Creativity with THub: Effortlessly Craft AI-powered Apps in
             Minutes!
           </p>
@@ -47,7 +47,7 @@ function Features_Anime_One() {
                 </svg>
               </div>
               <div>
-                <p className="dark:text-secondary-dark">
+                <p className="dark:text-secondary-dark text-justify">
                   Utilize drag-and-drop functionality for quick and intuitive
                   app development.
                 </p>
@@ -71,7 +71,7 @@ function Features_Anime_One() {
                 </svg>
               </div>
               <div>
-                <p className="dark:text-secondary-dark">
+                <p className="dark:text-secondary-dark text-justify">
                   Utilize drag-and-drop functionality for quick and intuitive
                   app development.
                 </p>
@@ -95,7 +95,7 @@ function Features_Anime_One() {
                 </svg>
               </div>
               <div>
-                <p className="dark:text-secondary-dark">
+                <p className="dark:text-secondary-dark text-justify">
                   Access a variety of embedding models such as OpenAI, Gemini,
                   Claude, and more for enhanced generative capabilities.
                 </p>
