@@ -5,7 +5,7 @@ function Github_Custom_Button() {
   const [userData, setUserData] = useState({});
   console.log(userData.id, userData.name, userData.avatar_url, "****");
 
-  const client_id = "Ov23liLgDH9KQ9QZbAFc";
+  const client_id = "Ov23livsiN32CRBf7KtH";
 
   useEffect(() => {
     const query = window.location.search;

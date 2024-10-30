@@ -7,9 +7,7 @@ import Recovered from "../components/auth/Recovered";
 
 const Home = loadable(() => import("../pages/Home"));
 const UseCases = loadable(() => import("../pages/UseCases"));
-const UseCasesDetails = loadable(
-  () => import("../components/usecases/UsecasesDetails"),
-);
+
 const Pricing = loadable(() => import("../pages/Pricing"));
 const Blog = loadable(() => import("../pages/Blog"));
 const AboutUs = loadable(() => import("../pages/AboutUs"));
@@ -44,10 +42,10 @@ export const router = createBrowserRouter([
         path: "use-cases",
         element: <UseCases />,
       },
-      {
-        path: "use-cases-details",
-        element: <UseCasesDetails />,
-      },
+      // {
+      //   path: "use-cases-details",
+      //   element: <UseCasesDetails />,
+      // },
       {
         path: "pricing",
         element: <Pricing />,
