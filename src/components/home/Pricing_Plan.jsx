@@ -4,6 +4,7 @@ import { pricingData } from "./PricingData";
 
 // styling
 import subStyle from "./subscription.module.css";
+import PriceDropdown from "./PriceDropdown";
 
 function Pricing_Plan() {
   const isDarkMode = useSelector((state) => state.customization.isDarkMode);
@@ -32,6 +33,10 @@ function Pricing_Plan() {
           Get started with a 30-day trial, Cancel anytime.
         </p>
       </div>
+      <div className="">
+        <PriceDropdown />
+      </div>
+
       {/* switch button */}
       <div className={subStyle.switch_parent}>
         <div className={subStyle.switch_wrapper}>

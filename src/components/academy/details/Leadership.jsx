@@ -314,7 +314,7 @@ const Leadership = () => {
                     onClick={() => toggleDropdown("subtopic3")}
                   >
                     Using Generative AI for content creation (product
-                    descriptions, social media posts, etc..)
+                    descriptions, social media posts, ..)
                     <br />
                     AI-powered chatbots for customer engagement and support
                     <br />
@@ -361,7 +361,7 @@ const Leadership = () => {
                     onClick={() => toggleDropdown("subtopic3")}
                   >
                     Using Generative AI for content creation (product
-                    descriptions, social media posts, etc..)
+                    descriptions, social media posts, ..)
                     <br />
                     AI-powered chatbots for customer engagement and support{" "}
                     <br />

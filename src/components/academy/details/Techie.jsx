@@ -302,7 +302,7 @@ const Techie = () => {
                     onClick={() => toggleDropdown("subtopic4")}
                   >
                     Overview of Foundation Models <br />
-                    BERT, T5, GPT etc..
+                    BERT, T5, GPT ..
                     <span className="chevron text-primary dark:text-primary-dark">
                       {dropdowns.subtopic4 ? "▼" : "➤"}
                     </span>
@@ -1343,10 +1343,10 @@ const Techie = () => {
                     Overview of Low Code Platform <br />
                     Setting Up Credentials <br />
                     Create a Workflow <br />
-                    Experimenting with different Tools, LLM, Vector Store etc.
+                    Experimenting with different Tools, LLM, Vector Store .
                     <br />
                     Building different types of GenAI apps like autonomous
-                    agents, RAG etc.
+                    agents, RAG .
                     <span className="chevron text-primary dark:text-primary-dark">
                       {dropdowns.subtopic4 ? "▼" : "➤"}
                     </span>
@@ -1389,7 +1389,7 @@ const Techie = () => {
                     Hands-On Exercise to build GenAI apps like RAG, Querying
                     from SQL Database,
                     <br />
-                    Autonomous Agents etc.Setting Up Credentials.
+                    Autonomous Agents .Setting Up Credentials.
                     <span className="chevron text-primary dark:text-primary-dark">
                       {dropdowns.subtopic4 ? "▼" : "➤"}
                     </span>
@@ -1398,7 +1398,7 @@ const Techie = () => {
                     <div className="learning-outcomes  text-black dark:text-[white]">
                       <div className="outcome mt-1 pl-2">
                         Apply learned concepts to build production ready RAG on
-                        documents, SQL database etc. using low code platform.
+                        documents, SQL database . using low code platform.
                       </div>
                     </div>
                   )}
