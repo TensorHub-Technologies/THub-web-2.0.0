@@ -9,9 +9,12 @@ import { GoMail } from "react-icons/go";
 import { useState } from "react";
 import { signInValidationSchema } from "../../schemas/signInValidationSchema";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { setEmail } from "../../store/userSlice";
 
 const SignIn = () => {
   const [showPassword, setShowPassword] = useState(true);
+  const dispatch = useDispatch();
 
   const togglePasswordVisibility = () => {
     setShowPassword((prev) => !prev);
@@ -23,15 +26,20 @@ const SignIn = () => {
     console.log(email, password);
     const apiUrl =
       window.location.hostname === "localhost"
-        ? "http://localhost:2000/loginUser"
-        : "https://thub-web-ser-2-0-dot-thub-dev-420204.uc.r.appspot.com/loginUser";
+        ? "http://localhost:2000"
+        : "https://thub-web-ser-2-0-dot-thub-dev-420204.uc.r.appspot.com";
     try {
-      const response = await axios.post(apiUrl, { email, password });
+      const response = await axios.post(`${apiUrl}/loginUser`, {
+        email,
+        password,
+      });
       if (response.status === 200) {
         console.log("user inserted successfully");
         const { token, userId, workspace } = response.data;
         localStorage.setItem("token", token);
         alert("user login successful");
+
+        dispatch(setEmail(email));
 
         const finalWorkspace = workspace === null ? "beta" : workspace;
         switch (window.location.hostname) {

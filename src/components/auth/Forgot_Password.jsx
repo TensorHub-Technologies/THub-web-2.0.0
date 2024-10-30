@@ -1,16 +1,19 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import axios from "axios";
-import * as Yup from "yup"; // Import Yup for validation
+import * as Yup from "yup";
 import { useState } from "react";
 import LeftImage from "./LeftImage";
 import { MdOutlineClose } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { setEmail } from "../../store/userSlice";
 
 function Forgot_Password() {
   const [emailSent, setEmailSent] = useState(false);
-  const [loading, setLoading] = useState(false); // Track loading state
-  const [error, setError] = useState(""); // Store error messages
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const handleClick = () => {
     navigate("/");
@@ -26,20 +29,24 @@ function Forgot_Password() {
   const handleSubmit = async (values) => {
     const apiUrl =
       window.location.hostname === "localhost"
-        ? "http://localhost:2000/forgot-password"
-        : "https://thub-web-ser-2-0ls-dot-thub-dev-420204.uc.r.appspot.com/forgot-password";
+        ? "http://localhost:2000/send_recovery_email"
+        : "https://thub-web-ser-2-0ls-dot-thub-dev-420204.uc.r.appspot.com/send_recovery_email";
 
     setLoading(true);
     setError("");
 
     try {
-      const response = await axios.post(apiUrl, { email: values.email });
+      const response = await axios.post(apiUrl, {
+        recipient_email: values.email,
+      });
       if (response.status === 200) {
         setEmailSent(true);
+        dispatch(setEmail(values.email));
+        navigate("/auth/otp");
       }
     } catch (error) {
-      console.error("Error sending reset email:", error.message);
-      setError("Failed to send reset link. Please try again.");
+      console.error("Error sending OTP:", error.message);
+      setError("Failed to send OTP. Please try again.");
     } finally {
       setLoading(false);
     }
@@ -90,17 +97,17 @@ function Forgot_Password() {
 
                       <button
                         type="submit"
-                        disabled={loading || isSubmitting} // Disable button when loading
+                        disabled={loading || isSubmitting}
                         className={`w-full py-2 text-white rounded ${
                           loading ? "bg-gray-400" : "bg-blue-500"
                         }`}
                       >
-                        {loading ? "Sending..." : "Send Reset Link"}
+                        {loading ? "Sending..." : "Send OTP"}
                       </button>
 
                       {emailSent && (
                         <p className="text-green-500 mt-2">
-                          Reset link sent! Check your email.
+                          OTP sent! Check your email.
                         </p>
                       )}
 

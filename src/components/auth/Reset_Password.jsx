@@ -3,7 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
 
 function ResetPassword() {
-  const { token } = useParams(); // Get the token from the URL
+  const { token } = useParams();
   const [newPassword, setNewPassword] = useState("");
   const [error, setError] = useState("");
   const [success, setSuccess] = useState("");

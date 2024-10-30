@@ -1,6 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
 import loadable from "@loadable/component";
 import Forgot_Password from "../components/auth/Forgot_Password";
+import OTPInput from "../components/auth/OTPInput";
+import Reset from "../components/auth/Reset";
+import Recovered from "../components/auth/Recovered";
 
 const Home = loadable(() => import("../pages/Home"));
 const UseCases = loadable(() => import("../pages/UseCases"));
@@ -102,6 +105,18 @@ export const router = createBrowserRouter([
       {
         path: "forgot-password",
         element: <Forgot_Password />,
+      },
+      {
+        path: "otp",
+        element: <OTPInput />,
+      },
+      {
+        path: "reset",
+        element: <Reset />,
+      },
+      {
+        path: "recovered",
+        element: <Recovered />,
       },
     ],
   },
