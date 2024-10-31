@@ -58,12 +58,12 @@ const Usecase = () => {
               />
             </div>
             <h4 className="text-xl font-semibold dark:text-white">
-              Agentic Workflows <span> d</span>
+              Agentic Workflows
             </h4>
             <p className="text-md dark:text-secondary-dark max-w-xs text-justify">
               Build autonomous Agents and Multi Agents like customer support
               Agent, Market Agent, Financial Audit Agents, Business Analyst
-              Agent
+              Agent.
             </p>
             <div className="flex items-center mt-0 group">
               <button
@@ -226,7 +226,7 @@ const Usecase = () => {
             <p className="text-md dark:text-secondary-dark max-w-xs text-justify">
               Leverage THub to automate your SQL queries effortlessly, enabling
               you to retrieve results in real time and streamline your data
-              analysis process
+              analysis
             </p>
             <div className="flex items-center mt-0 group">
               <button
@@ -267,7 +267,7 @@ const Usecase = () => {
             </h4>
             <p className="text-md dark:text-secondary-dark max-w-xs text-justify">
               Analyze your customer interactions to identify insights, allowing
-              you to tailor your strategies for a more personalized experience{" "}
+              you to tailor your strategies for a more personalized experience.{" "}
             </p>
             <div className="flex items-center mt-0 group">
               <button
@@ -350,7 +350,7 @@ const Usecase = () => {
             </h4>
             <p className="text-md dark:text-secondary-dark max-w-xs text-justify">
               Effortlessly generate compelling descriptions for your products
-              automatically,and improving customer engagement
+              automatically,and improving customer engagement.
             </p>
             <div className="flex items-center mt-0 group">
               <button

@@ -1,10 +1,10 @@
 import { createBrowserRouter } from "react-router-dom";
 import loadable from "@loadable/component";
 import Forgot_Password from "../components/auth/Forgot_Password";
+import ResetPassword from "../components/auth/Reset_Password";
 
 const Home = loadable(() => import("../pages/Home"));
 const UseCases = loadable(() => import("../pages/UseCases"));
-
 const Pricing = loadable(() => import("../pages/Pricing"));
 const Blog = loadable(() => import("../pages/Blog"));
 const AboutUs = loadable(() => import("../pages/AboutUs"));
@@ -39,10 +39,6 @@ export const router = createBrowserRouter([
         path: "use-cases",
         element: <UseCases />,
       },
-      // {
-      //   path: "use-cases-details",
-      //   element: <UseCasesDetails />,
-      // },
       {
         path: "pricing",
         element: <Pricing />,
@@ -100,6 +96,10 @@ export const router = createBrowserRouter([
       {
         path: "forgot-password",
         element: <Forgot_Password />,
+      },
+      {
+        path: "reset-password/:token",
+        element: <ResetPassword />,
       },
     ],
   },

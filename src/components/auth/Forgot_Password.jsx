@@ -1,22 +1,22 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import axios from "axios";
-import * as Yup from "yup"; // Import Yup for validation
+import * as Yup from "yup";
 import { useState } from "react";
+import { GoMail } from "react-icons/go";
 import LeftImage from "./LeftImage";
 import { MdOutlineClose } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
 
 function Forgot_Password() {
   const [emailSent, setEmailSent] = useState(false);
-  const [loading, setLoading] = useState(false); // Track loading state
-  const [error, setError] = useState(""); // Store error messages
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
   const navigate = useNavigate();
 
   const handleClick = () => {
     navigate("/");
   };
 
-  // Yup validation schema
   const validationSchema = Yup.object().shape({
     email: Yup.string()
       .email("Invalid email address")
@@ -66,48 +66,64 @@ function Forgot_Password() {
             </div>
 
             <div className="w-[90%] h-screen flex justify-center items-center">
-              <div className="w-96">
-                <Formik
-                  initialValues={{ email: "" }}
-                  validationSchema={validationSchema}
-                  onSubmit={handleSubmit}
-                >
-                  {({ isSubmitting }) => (
-                    <Form className="space-y-6">
-                      <div className="relative">
-                        <Field
-                          type="email"
-                          name="email"
-                          placeholder="Enter your email"
-                          className="block w-full px-4 py-2 border rounded"
-                        />
-                        <ErrorMessage
-                          name="email"
-                          component="div"
-                          className="text-red-500 mt-1"
-                        />
-                      </div>
+              <div className="flex justify-center h-full">
+                <div className="reset-password-container mt-1 md:mt-36">
+                  <h1 className="text-center dark:text-background text-background-dark -mt-6 mb-6">
+                    Forgot Password
+                  </h1>
+                  <div className="w-96">
+                    <Formik
+                      initialValues={{ email: "" }}
+                      validationSchema={validationSchema}
+                      onSubmit={handleSubmit}
+                    >
+                      {({ isSubmitting }) => (
+                        <Form className="space-y-8">
+                          <div className="">
+                            <div className="relative">
+                              <span className="absolute left-4 top-[18px] dark:text-secondary-dark">
+                                <GoMail />
+                              </span>
+                              <Field
+                                type="email"
+                                name="email"
+                                placeholder="Enter Your Email"
+                                className="block w-full pl-12 pr-2 py-3   dark:text-background dark:bg-secondary border  shadow-md border-secondary-dark placeholder-secondary-dark focus:outline-none dark:focus:border-primary-dark focus:border-primary focus:ring-primary  dark:focus:ring-primary-dark  rounded-md text-lg focus:ring-1"
+                              />
+                            </div>
+                            <ErrorMessage
+                              name="email"
+                              component="div"
+                              className="text-red-500 text-sm mt-1 absolute"
+                            />
+                          </div>
 
-                      <button
-                        type="submit"
-                        disabled={loading || isSubmitting} // Disable button when loading
-                        className={`w-full py-2 text-white rounded ${
-                          loading ? "bg-gray-400" : "bg-blue-500"
-                        }`}
-                      >
-                        {loading ? "Sending..." : "Send Reset Link"}
-                      </button>
+                          <button
+                            type="submit"
+                            disabled={loading || isSubmitting}
+                            className={`w-full py-2  text-white rounded ${
+                              loading
+                                ? "bg-gray-400"
+                                : "bg-primary dark:bg-primary-dark"
+                            }`}
+                          >
+                            {loading ? "Sending..." : "Send Reset Link"}
+                          </button>
 
-                      {emailSent && (
-                        <p className="text-green-500 mt-2">
-                          Reset link sent! Check your email.
-                        </p>
+                          {emailSent && (
+                            <p className="text-green-500 mt-2">
+                              Reset link sent! Check your email.
+                            </p>
+                          )}
+
+                          {error && (
+                            <p className="text-red-500 mt-2">{error}</p>
+                          )}
+                        </Form>
                       )}
-
-                      {error && <p className="text-red-500 mt-2">{error}</p>}
-                    </Form>
-                  )}
-                </Formik>
+                    </Formik>
+                  </div>
+                </div>
               </div>
             </div>
           </div>

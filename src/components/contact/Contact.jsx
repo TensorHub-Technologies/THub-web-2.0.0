@@ -21,8 +21,8 @@ const Contact = () => {
             <LiaMapMarkedAltSolid size={30} />
           </div>
           <h3 className="text-xl font-medium dark:text-secondary-dark">
-            KHB Colony, 5th Block, Koramangala, <br /> Bengaluru, Karnataka
-            560095
+            KMJ Ascend 4th floor KHB Colony, 5th Block, Koramangala, <br />{" "}
+            Bengaluru, Karnataka 560095
           </h3>
         </div>
         <div className="text-center">
