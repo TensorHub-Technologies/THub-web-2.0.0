@@ -17,7 +17,7 @@ import customerdark from "../../assets/icons/usecase-icons/customer_dark.png";
 import customerlite from "../../assets/icons/usecase-icons/customer_lite.png";
 import { useNavigate } from "react-router-dom";
 
-const Usecase = () => {
+const UsecaseHome = () => {
   const isDarkMode = useSelector((state) => state.customization.isDarkMode);
   const navigate = useNavigate();
 
@@ -29,12 +29,6 @@ const Usecase = () => {
     <div className="border-red-400 dark:bg-secondary">
       <div className="text-center py-5">
         <div className="flex flex-col items-center text-center">
-          <div className="mb-8 text-center">
-            <h2 className="text-3xl font-bold text-black dark:text-white">
-              Use Cases
-            </h2>
-            <p className="text-gray-500 mt-1">Home / UseCases</p>
-          </div>
           <h1 className="dark:text-white text-2xl md:text-3xl lg:text-4xl font-bold">
             Build{" "}
             <span className="dark:text-primary-dark text-primary">
@@ -383,4 +377,4 @@ const Usecase = () => {
   );
 };
 
-export default Usecase;
+export default UsecaseHome;
