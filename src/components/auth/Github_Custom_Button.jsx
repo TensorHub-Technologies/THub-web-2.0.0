@@ -64,7 +64,7 @@ function Github_Custom_Button() {
       setUserData(data);
       if (data.uid) {
         const finalWorkspace =
-          data?.workspace === null ? "beta" : data?.workspace;
+          data?.workspace === null ? "app" : data?.workspace;
         localStorage.removeItem("access_token");
         switch (window.location.hostname) {
           case "localhost":

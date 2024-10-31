@@ -33,7 +33,7 @@ const SignIn = () => {
         localStorage.setItem("token", token);
         alert("user login successful");
 
-        const finalWorkspace = workspace === null ? "beta" : workspace;
+        const finalWorkspace = workspace === null ? "app" : workspace;
         switch (window.location.hostname) {
           case "localhost":
             window.location.href = `http://localhost:8080/?theme=dark&uid=${userId}`;

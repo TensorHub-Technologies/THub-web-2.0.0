@@ -65,7 +65,7 @@ const SignUp = () => {
           console.log("user inserted successfully");
           const { userId, workspace } = response.data;
           console.log(userId, workspace);
-          const finalWorkspace = workspace === null ? "beta" : workspace;
+          const finalWorkspace = workspace === null ? "app" : workspace;
           const mode = localStorage.getItem("isDarkMode") === "true";
           console.log(mode);
           const theme = mode ? "dark" : "lite";
