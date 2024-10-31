@@ -3,11 +3,7 @@ const About = () => {
     <section>
       <div className="flex flex-col lg:flex-row gap-10 p-8 lg:p-16">
         <div className="w-full lg:w-[40rem]">
-          <p className="text-primary dark:text-primary-dark text-justify">
-            About Thub.
-          </p>
-
-          <p className="my-5 dark:text-secondary-dark text-justify">
+          <p className="dark:text-secondary-dark text-justify">
             At TensorHub, we are at the forefront of the AI revolution, helping
             businesses harness the power of Generative AI to transform
             unstructured data into meaningful outcomes. Our low-code/no-code

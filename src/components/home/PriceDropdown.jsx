@@ -1,6 +1,10 @@
 import { useState } from "react";
 import PropTypes from "prop-types";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
+import INRFlag from "../../assets/images/flag/india.png";
+import USDFlag from "../../assets/images/flag/usd.png";
+import GBPFlag from "../../assets/images/flag/GB.png";
+import EuroFlag from "../../assets/images/flag/ero.png";
 
 const PriceDropdown = ({ onCurrencyChange }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -13,6 +17,14 @@ const PriceDropdown = ({ onCurrencyChange }) => {
     setIsOpen(false);
     onCurrencyChange(option);
   };
+
+  // Map currencies to their respective flags
+  const currencyOptions = [
+    { code: "INR", flag: INRFlag },
+    { code: "USD", flag: USDFlag },
+    { code: "GBP", flag: GBPFlag },
+    { code: "Euro", flag: EuroFlag },
+  ];
 
   return (
     <div className="relative inline-block text-left">
@@ -31,13 +43,14 @@ const PriceDropdown = ({ onCurrencyChange }) => {
 
       {isOpen && (
         <div className="absolute right-0 z-10 mt-2 w-44 origin-top-right bg-background dark:bg-background-dark border border-gray-200 rounded-md shadow-lg outline-none">
-          {["INR", "USD", "GBP", "Euro"].map((currency) => (
+          {currencyOptions.map(({ code, flag }) => (
             <button
-              key={currency}
-              onClick={() => handleOptionClick(currency)}
-              className="block w-full text-left px-4 py-2 text-sm text-primary dark:text-primary-dark hover:bg-gray-200 dark:hover:bg-gray-700 hover:rounded-lg transition duration-150 ease-in-out"
+              key={code}
+              onClick={() => handleOptionClick(code)}
+              className="flex items-center  w-full text-left px-4 py-2 text-sm text-primary dark:text-primary-dark hover:bg-gray-200 dark:hover:bg-gray-700 hover:rounded-lg transition duration-150 ease-in-out"
             >
-              <span className="ml-2">{currency}</span>
+              <img src={flag} alt={`${code} flag`} className="w-4 h-4 mr-4" />
+              <span>{code}</span>
             </button>
           ))}
         </div>
