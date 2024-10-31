@@ -7,7 +7,7 @@ import govardhanPic from "../assets/images/team/Govardhan.jpeg";
 import ceoPic from "../assets/images/team/GS_Oct.png";
 import aditya from "../assets/images/team/Aadithya2.png";
 import pp from "../assets/images/team/Pp.jpeg";
-import mahadev from "../assets/images/team/mahadev.jpg";
+import mahadev from "../assets/images/team/mahadev.png";
 
 export const teamMembers = [
   {
@@ -15,59 +15,69 @@ export const teamMembers = [
     name: "Ganapathy Shankar",
     designation: "Founder & CEO",
     image: ceoPic,
+    linkedIn: "https://www.linkedin.com/in/ganapathyshankar",
   },
   {
     id: 2,
     name: "Govardhan Rao",
     designation: "Founder & Chief Strategy Officer",
     image: govardhanPic,
+    linkedIn: "https://www.linkedin.com/in/govardhansakkuri/",
   },
   {
     id: 3,
     name: "Aadithya G S",
     designation: "Founder & Research Scientist",
     image: aditya,
+    linkedIn: "https://www.linkedin.com/in/aadithya-g-s-6b9033203/",
   },
   {
     id: 4,
     name: "Prathyanka S",
-    designation: "Founder &  Business Analyst",
+    designation: "Founder & Business Analyst",
     image: pp,
+    linkedIn: "https://www.linkedin.com/in/prathyanka-s-2897ba231/",
   },
   {
     id: 5,
     name: "Abhishek Samuel",
     designation: "Cloud & AI Architect",
     image: abhishekPic,
+    linkedIn: "https://www.linkedin.com/in/abhishek-yovan-b120a2214/",
   },
   {
     id: 6,
     name: "Srishti Mishra",
     designation: "UI & AI Designer",
     image: sristiPic,
+    linkedIn: "https://www.linkedin.com/in/srishti-mishra-149601145/",
   },
   {
     id: 7,
     name: "Saikumar",
     designation: "Full Stack & Gen AI Developer",
     image: saiPic,
+    linkedIn: "https://www.linkedin.com/in/saikumar-bidave-278882215/",
   },
   {
     id: 8,
     name: "Ganesh M S",
     designation: "Full Stack & Gen AI Developer",
     image: ganeshPic,
+    linkedIn: "https://www.linkedin.com/in/ganesh-savadattimath-350a32212/",
   },
   {
     id: 9,
     name: "P S V Prasad",
     designation: "Gen AI Developer",
     image: prasadPic,
+    linkedIn: "https://www.linkedin.com/in/p-s-v-prasad-480b51243/",
   },
   {
     id: 10,
     name: "Mahadev Bamma",
     designation: "Gen AI Developer",
     image: mahadev,
+    linkedIn: "https://www.linkedin.com/in/mahadev-bamma/",
   },
 ];

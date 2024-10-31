@@ -22,7 +22,7 @@ function Features_Anime_Three() {
           <h1 className="text-4xl sm:text-5xl mt-2 dark:text-white">
             Building <span className="dark:text-primary-dark">THub.</span>
           </h1>
-          <p className="my-5 dark:text-secondary-dark">
+          <p className="my-5 dark:text-secondary-dark text-justify">
             Transform Ideas into Reality with THub: From Chatbots to Document
             Summaries, We&apos;ve Got You Covered!
           </p>
@@ -45,7 +45,7 @@ function Features_Anime_Three() {
                 </svg>
               </div>
               <div>
-                <p className="dark:text-secondary-dark">
+                <p className="dark:text-secondary-dark text-justify">
                   Create a wide range of generative apps including retrieval
                   augmented generation, document summary, recommender systems,
                   and chatbots.
@@ -70,7 +70,7 @@ function Features_Anime_Three() {
                 </svg>
               </div>
               <div>
-                <p className="dark:text-secondary-dark">
+                <p className="dark:text-secondary-dark text-justify">
                   Customize and fine-tune your apps for specific use cases with
                   features like retrieval augmented fine-tuning.
                 </p>
@@ -94,7 +94,7 @@ function Features_Anime_Three() {
                 </svg>
               </div>
               <div>
-                <p className="dark:text-secondary-dark">
+                <p className="dark:text-secondary-dark text-justify">
                   Empower your apps with dynamic data manipulation and querying
                   capabilities.
                 </p>

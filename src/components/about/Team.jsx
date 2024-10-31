@@ -3,6 +3,7 @@ import nvidiaDark from "../../assets/images/team/nvidia-dark.png";
 import nvidia from "../../assets/images/team/nvidia.png";
 import googleDark from "../../assets/images/team/Google-Logodrak.png";
 import startup from "../../assets/images/team/startupIndia.png";
+import { FaLinkedin } from "react-icons/fa"; // Import LinkedIn icon
 
 const Team = () => {
   return (
@@ -21,8 +22,16 @@ const Team = () => {
               <h3 className="text-secondary dark:text-background text-xl font-semibold">
                 {member.name}
               </h3>
-              <p className="text-secondary dark:text-white text-sm">
+              <p className="text-secondary dark:text-white text-sm flex items-center justify-center">
                 {member.designation}
+                <a
+                  href={member.linkedIn}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="ml-2"
+                >
+                  <FaLinkedin className="text-primary dark:text-primary-dark" />
+                </a>
               </p>
             </div>
           </div>

@@ -1,13 +1,10 @@
 import { createBrowserRouter } from "react-router-dom";
 import loadable from "@loadable/component";
 import Forgot_Password from "../components/auth/Forgot_Password";
-import OTPInput from "../components/auth/OTPInput";
-import Reset from "../components/auth/Reset";
-import Recovered from "../components/auth/Recovered";
+import ResetPassword from "../components/auth/Reset_Password";
 
 const Home = loadable(() => import("../pages/Home"));
 const UseCases = loadable(() => import("../pages/UseCases"));
-
 const Pricing = loadable(() => import("../pages/Pricing"));
 const Blog = loadable(() => import("../pages/Blog"));
 const AboutUs = loadable(() => import("../pages/AboutUs"));
@@ -42,10 +39,6 @@ export const router = createBrowserRouter([
         path: "use-cases",
         element: <UseCases />,
       },
-      // {
-      //   path: "use-cases-details",
-      //   element: <UseCasesDetails />,
-      // },
       {
         path: "pricing",
         element: <Pricing />,
@@ -105,16 +98,8 @@ export const router = createBrowserRouter([
         element: <Forgot_Password />,
       },
       {
-        path: "otp",
-        element: <OTPInput />,
-      },
-      {
-        path: "reset",
-        element: <Reset />,
-      },
-      {
-        path: "recovered",
-        element: <Recovered />,
+        path: "reset-password/:token",
+        element: <ResetPassword />,
       },
     ],
   },

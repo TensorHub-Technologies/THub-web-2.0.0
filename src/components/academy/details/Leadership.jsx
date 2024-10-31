@@ -21,7 +21,7 @@ const Leadership = () => {
   };
 
   return (
-    <div className="p-4 bg-background dark:bg-background-dark">
+    <div className="p-4 bg-background dark:bg-background-dark mt-24">
       <div className="container max-w-2xl mx-auto">
         <h2 className="text-center  text-primary dark:text-primary-dark">
           GenAI For Leaders and CxO&apos;s Details
@@ -314,7 +314,7 @@ const Leadership = () => {
                     onClick={() => toggleDropdown("subtopic3")}
                   >
                     Using Generative AI for content creation (product
-                    descriptions, social media posts, etc..)
+                    descriptions, social media posts, ..)
                     <br />
                     AI-powered chatbots for customer engagement and support
                     <br />
@@ -361,7 +361,7 @@ const Leadership = () => {
                     onClick={() => toggleDropdown("subtopic3")}
                   >
                     Using Generative AI for content creation (product
-                    descriptions, social media posts, etc..)
+                    descriptions, social media posts, ..)
                     <br />
                     AI-powered chatbots for customer engagement and support{" "}
                     <br />

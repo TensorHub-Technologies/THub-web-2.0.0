@@ -3,12 +3,10 @@ import { FiPhoneCall } from "react-icons/fi";
 import ContactForm from "./ContactForm";
 
 const Contact = () => {
-  // const isDarkMode = useSelector((state) => state.customization.isDarkMode);
-
   return (
     <div className="border-red-400 dark:bg-secondary">
       <div className="text-center py-5 mt-20">
-        <h3 className="text-secondary  text-3xl  font-bold dark:text-background">
+        <h3 className="text-secondary text-2xl font-bold dark:text-background">
           Contact With Us
         </h3>
         <div className="mt-2">
@@ -17,28 +15,29 @@ const Contact = () => {
         </div>
       </div>
 
-      <div className="grid grid-cols-2 py-12 mx-16">
+      <div className="grid grid-cols-1 sm:grid-cols-2 py-12 mx-4 sm:mx-16 gap-8">
         <div className="text-center">
-          <div className="inline-flex align-middle justify-center p-4 rounded-lg bg-primary dark:bg-primary-dark text-white dark:text-secondary h-18 w-18 mb-8">
-            <LiaMapMarkedAltSolid size={40} />
+          <div className="inline-flex align-middle justify-center p-4 rounded-lg bg-primary dark:bg-primary-dark text-white dark:text-secondary h-18 w-18 mb-4">
+            <LiaMapMarkedAltSolid size={30} />
           </div>
-          <h3 className="text-3xl font-medium dark:text-secondary-dark">
-            CT1, Villa Espana, 158 Velachery <br /> Main Road, Chennai - 600042
+          <h3 className="text-xl font-medium dark:text-secondary-dark">
+            KMJ Ascend 4th floor KHB Colony, 5th Block, Koramangala, <br />{" "}
+            Bengaluru, Karnataka 560095
           </h3>
         </div>
         <div className="text-center">
-          <div className="inline-flex align-middle justify-center p-4 rounded-lg bg-primary dark:bg-primary-dark text-white dark:text-secondary h-18 w-18 mb-8">
-            <FiPhoneCall size={40} />
+          <div className="inline-flex align-middle justify-center p-4 rounded-lg bg-primary dark:bg-primary-dark text-white dark:text-secondary h-18 w-18 mb-4">
+            <FiPhoneCall size={30} />
           </div>
-          <h3 className="text-3xl font-medium dark:text-secondary-dark">
+          <h3 className="text-xl font-medium dark:text-secondary-dark">
             Contact # 9940014844
           </h3>
         </div>
       </div>
 
-      <div className="relative px-20  h-[600px] overflow-hidden">
+      <div className="relative px-4 sm:px-20 h-[300px] sm:h-[600px] overflow-hidden">
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15550.924450022147!2d80.20306218306209!3d12.989042258338452!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525d87f808f4c3%3A0x38eeb69ec22d62e5!2sVilla%20Espana%2C%20Xs%20Real%20Villa%20Espana%2C%20158%2C%20Velachery%20Main%20Rd%2C%20TN%20Police%20Housing%20Colony%2C%20Velachery%2C%20Chennai%2C%20Tamil%20Nadu%20600042!5e0!3m2!1sen!2sin!4v1713766486349!5m2!1sen!2sin"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3888.5874650746628!2d77.6158050760527!3d12.93421508737776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1450034c594d%3A0xef45a793679bb3f9!2sKMJ%20Ascend 4th Floor%2C%20KHB%20Colony%2C%205th%20Block%2C%20Koramangala%2C%20Bengaluru%2C%20Karnataka%20560095!5e0!3m2!1sen!2sin!4v1682431795187!5m2!1sen!2sin"
           className="w-full h-full border-0 rounded-lg"
           allowFullScreen=""
           loading="lazy"

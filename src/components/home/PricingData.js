@@ -2,7 +2,12 @@ export const pricingData = {
   monthly: [
     {
       title: "Free",
-      price: "₹ 0",
+      prices: {
+        INR: "₹ 0",
+        USD: "$0",
+        GBP: "£0",
+        Euro: "€0",
+      },
       description: "For starters to explore and integrate",
       buttonInfo: "Start for Free",
       list: [
@@ -10,15 +15,20 @@ export const pricingData = {
         "5 GenAI Apps",
         "API based access to LLM",
         "Embedding Model",
-        " Vector Database etc",
-        "Shared or your own API keys",
+        "Vector Database",
+        "Bring your own API key",
         "Basic Analytics",
         "Standard Support",
       ],
     },
     {
       title: "Pro",
-      price: "₹ 19,999",
+      prices: {
+        INR: "₹ 19,999",
+        USD: "$199",
+        GBP: "£159",
+        Euro: "€189",
+      },
       description: "For small & medium businesses",
       buttonInfo: "Choose Plan",
       list: [
@@ -34,7 +44,12 @@ export const pricingData = {
     },
     {
       title: "Enterprise",
-      price: "Contact for Price",
+      prices: {
+        INR: "Contact for Price",
+        USD: "Contact for Price",
+        GBP: "Contact for Price",
+        Euro: "Contact for Price",
+      },
       description: "For large teams and enterprises.",
       buttonInfo: "Choose Plan",
       list: ["All Pro Features", "Unlimited Seats", "Unlimited GenAI Apps"],
@@ -43,7 +58,12 @@ export const pricingData = {
   yearly: [
     {
       title: "Free",
-      price: "₹ 0",
+      prices: {
+        INR: "₹ 0",
+        USD: "$0",
+        GBP: "£0",
+        Euro: "€0",
+      },
       description: "For starters to explore and integrate",
       buttonInfo: "Start for Free",
       list: [
@@ -51,7 +71,7 @@ export const pricingData = {
         "5 GenAI Apps",
         "API based access to LLM",
         "Embedding Model",
-        " Vector Database etc",
+        "Vector Database",
         "Shared or your own API keys",
         "Basic Analytics",
         "Standard Support",
@@ -59,7 +79,12 @@ export const pricingData = {
     },
     {
       title: "Pro",
-      price: "₹ 2,19,000",
+      prices: {
+        INR: "₹ 2,19,999",
+        USD: "$2,199",
+        GBP: "£1,699",
+        Euro: "€2,099",
+      },
       description: "For small & medium businesses",
       buttonInfo: "Choose Plan",
       list: [
@@ -75,7 +100,12 @@ export const pricingData = {
     },
     {
       title: "Enterprise",
-      price: "Contact for Price",
+      prices: {
+        INR: "Contact for Price",
+        USD: "Contact for Price",
+        GBP: "Contact for Price",
+        Euro: "Contact for Price",
+      },
       description: "For large teams and enterprises.",
       buttonInfo: "Choose Plan",
       list: ["All Pro Features", "Unlimited Seats", "Unlimited GenAI Apps"],

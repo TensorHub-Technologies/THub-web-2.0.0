@@ -21,7 +21,7 @@ function Journey() {
             />
           </div>
           <h4 className="text-xl font-semibold dark:text-white">Mission</h4>
-          <p className="text-md dark:text-secondary-dark max-w-xs">
+          <p className="text-md dark:text-secondary-dark max-w-xs text-justify">
             At THub, our mission is to simplify AI workflows, empowering
             businesses to deploy AI-driven applications that create measurable
             impact. We are committed to building a scalable, adaptable, and
@@ -38,7 +38,7 @@ function Journey() {
             />
           </div>
           <h4 className="text-xl font-semibold dark:text-white">Our Journey</h4>
-          <p className="text-md dark:text-secondary-dark max-w-xs">
+          <p className="text-md dark:text-secondary-dark max-w-xs text-justify">
             THub was founded with a singular mission: to provide AI solutions
             that solve real business problems in a fast, efficient, and scalable
             manner. As businesses continue to evolve, we aim to be at the
@@ -58,7 +58,7 @@ function Journey() {
             />
           </div>
           <h4 className="text-xl font-semibold dark:text-white">Our Future</h4>
-          <p className="text-md dark:text-secondary-dark max-w-xs">
+          <p className="text-md dark:text-secondary-dark max-w-xs text-justify">
             As we move forward, THub plans to venture into new frontiers of
             quantum computing in the coming years. We remain committed to
             driving AI innovation and helping businesses achieve breakthroughs

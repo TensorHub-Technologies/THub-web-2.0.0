@@ -5,21 +5,96 @@
     <link rel="icon" type="image/svg+xml" href="/src/assets/images/Thub.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>TensorHub A Low Code No Code Platform</title>
-    
+
     <!-- Script to apply dark mode based on local storage -->
     <script>
-      (function() {
-          const isDarkMode = JSON.parse(localStorage.getItem('isDarkMode'));
-          if (isDarkMode) {
-              document.documentElement.classList.add('dark');
-          }
+      (function () {
+        const isDarkMode = JSON.parse(localStorage.getItem("isDarkMode"));
+        if (isDarkMode) {
+          document.documentElement.classList.add("dark");
+        }
       })();
+    </script>
+
+    <script type="module">
+      import Chatbot from "https://cdn.jsdelivr.net/npm/thub-embed@1.5.8/dist/web.js";
+      Chatbot.init({
+        chatflowid: "03da9841-eabd-48f2-bc05-813de1fe4a83",
+        apiHost: "https://alpha.thub.tech",
+        chatflowConfig: {
+          // topK: 2
+        },
+        observersConfig: {
+          // (optional) Allows you to execute code in parent based upon signal observations within the chatbot.
+          // The userinput field submitted to bot ("" when reset by bot)
+          observeUserInput: (userInput) => {
+            console.log({ userInput });
+          },
+          // The bot message stack has changed
+          observeMessages: (messages) => {
+            console.log({ messages });
+          },
+          // The bot loading signal changed
+          observeLoading: (loading) => {
+            console.log({ loading });
+          },
+        },
+        theme: {
+          button: {
+            backgroundColor: "rgb(63,94,251)",
+            backgroundColor:
+              "linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%)",
+            right: 20,
+            bottom: 20,
+            size: "medium",
+            iconColor: "white",
+          },
+          chatWindow: {
+            title: "THub Bot",
+            welcomeMessage: "Hello! This is custom welcome message",
+            errorMessage: "This is a custom error message",
+            backgroundColor: "#ffffff",
+            height: 700,
+            width: 400,
+            fontSize: 16,
+            poweredByTextColor: "#303235",
+            botMessage: {
+              backgroundColor: "#f7f8ff",
+              textColor: "#303235",
+              showAvatar: true,
+              avatarSrc: "./src/assets/images/thub_icon.svg",
+            },
+            footer: {
+              text: "Powered by",
+              companyLink: "https://docs.thub.tech/",
+            },
+
+            userMessage: {
+              backgroundColor: "#3B81F6",
+              textColor: "#ffffff",
+              showAvatar: true,
+              avatarSrc: "/src/assets/images/profile.svg",
+              borderRadius: "1px",
+            },
+            textInput: {
+              placeholder: "Type your question",
+              backgroundColor: "#ffffff",
+              textColor: "#303235",
+              sendButtonColor: "#E22A90",
+              borderRadius: "12px",
+            },
+            feedback: {
+              color: "#303235",
+            },
+          },
+        },
+      });
     </script>
 
     <!-- Moved the main script here -->
     <script type="module" src="/src/main.jsx"></script>
   </head>
-  
+
   <body>
     <div id="root"></div>
   </body>
