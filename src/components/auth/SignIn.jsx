@@ -34,6 +34,8 @@ const SignIn = () => {
         alert("user login successful");
 
         const finalWorkspace = workspace === null ? "app" : workspace;
+        console.log("finalWorkspace: ", finalWorkspace);
+        console.log("data?.workspace: ", workspace);
         switch (window.location.hostname) {
           case "localhost":
             window.location.href = `http://localhost:8080/?theme=dark&uid=${userId}`;
