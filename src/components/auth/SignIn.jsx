@@ -33,7 +33,8 @@ const SignIn = () => {
         localStorage.setItem("token", token);
         alert("user login successful");
 
-        const finalWorkspace = workspace === null ? "beta" : workspace;
+        const finalWorkspace =
+          workspace === null || undefined ? "beta" : workspace;
         console.log("finalWorkspace: ", finalWorkspace);
         console.log("data?.workspace: ", workspace);
         switch (window.location.hostname) {

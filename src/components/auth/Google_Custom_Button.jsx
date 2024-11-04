@@ -16,7 +16,8 @@ function Google_Custom_Button() {
 
         const { id_token, workspace, userId } = data;
         console.log("ID Token:", id_token);
-        const finalWorkspace = workspace === null ? "beta" : workspace;
+        const finalWorkspace =
+          workspace === null || undefined ? "beta" : workspace;
         console.log("finalWorkspace: ", finalWorkspace);
         console.log("data?.workspace: ", data?.workspace);
         const mode = localStorage.getItem("isDarkMode") === "true";
