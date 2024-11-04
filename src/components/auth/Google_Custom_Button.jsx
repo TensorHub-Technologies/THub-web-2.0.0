@@ -29,7 +29,7 @@ function Google_Custom_Button() {
           default:
             window.location.href = finalWorkspace
               ? `https://${finalWorkspace}.thub.tech/?theme=${theme}&uid=${userId}`
-              : `https://beta.thub.tech/?theme=dark&uid=${data?.uid}`;
+              : `https://beta.thub.tech/?theme=dark&uid=${data?.userId}`;
             break;
         }
         alert("user login successful");
