@@ -27,7 +27,9 @@ function Google_Custom_Button() {
             window.location.href = `http://localhost:8080/?theme=${theme}&uid=${userId}`;
             break;
           default:
-            window.location.href = `https://${finalWorkspace}.thub.tech/?theme=${theme}&uid=${userId}`;
+            window.location.href = finalWorkspace
+              ? `https://${finalWorkspace}.thub.tech/?theme=${theme}&uid=${userId}`
+              : `https://beta.thub.tech/?theme=dark&uid=${data?.uid}`;
             break;
         }
         alert("user login successful");

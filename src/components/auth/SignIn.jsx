@@ -41,7 +41,9 @@ const SignIn = () => {
             window.location.href = `http://localhost:8080/?theme=dark&uid=${userId}`;
             break;
           default:
-            window.location.href = `https://${finalWorkspace}.thub.tech/?theme=dark&uid=${userId}`;
+            window.location.href = finalWorkspace
+              ? `https://${finalWorkspace}.thub.tech/?theme=dark&uid=${userId}`
+              : `https://beta.thub.tech/?theme=dark&uid=${userId}`;
             break;
         }
       } else {

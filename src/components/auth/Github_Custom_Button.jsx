@@ -73,7 +73,9 @@ function Github_Custom_Button() {
             window.location.href = `http://localhost:8080/?theme=dark&uid=${data?.uid}`;
             break;
           default:
-            window.location.href = `https://${finalWorkspace}.thub.tech/?theme=dark&uid=${data?.uid}`;
+            window.location.href = finalWorkspace
+              ? `https://${finalWorkspace}.thub.tech/?theme=dark&uid=${data?.uid}`
+              : `https://beta.thub.tech/?theme=dark&uid=${data?.uid}`;
             break;
         }
       }
