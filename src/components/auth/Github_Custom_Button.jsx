@@ -64,7 +64,7 @@ function Github_Custom_Button() {
       setUserData(data);
       if (data.uid) {
         const finalWorkspace =
-          data?.workspace === null || undefined ? "beta" : data?.workspace;
+          data?.workspace != null ? data?.workspace : "beta";
         console.log("finalWorkspace: ", finalWorkspace);
         console.log("data?.workspace: ", data?.workspace);
         localStorage.removeItem("access_token");
