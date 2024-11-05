@@ -61,17 +61,17 @@ const SignUp = () => {
         });
 
         if (response.status === 200) {
-          console.log(response.status, "response status");
-          console.log("user inserted successfully");
           const { userId, workspace } = response.data;
-          console.log(userId, workspace);
-          const finalWorkspace = workspace === null ? "beta" : workspace;
-          const mode = localStorage.getItem("isDarkMode") === "true";
-          console.log(mode);
-          const theme = mode ? "dark" : "lite";
+          const finalWorkspace = workspace || "beta";
+          const theme =
+            localStorage.getItem("isDarkMode") === "true" ? "dark" : "lite";
+
           switch (window.location.hostname) {
             case "localhost":
               window.location.href = `http://localhost:8080/?theme=${theme}&uid=${userId}`;
+              break;
+            case "thub-web-2-0-0-378678297066.us-central1.run.app":
+              window.location.href = `https://demo.thub.tech/?theme=${theme}&uid=${userId}`;
               break;
             default:
               window.location.href = `https://${finalWorkspace}.thub.tech/?theme=${theme}&uid=${userId}`;
