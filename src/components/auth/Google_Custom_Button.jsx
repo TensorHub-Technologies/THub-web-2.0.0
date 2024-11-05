@@ -5,34 +5,40 @@ function Google_Custom_Button() {
   const login = useGoogleLogin({
     onSuccess: async (response) => {
       console.log("Authorization Code:", response);
+
       const apiUrl =
         window.location.hostname === "localhost"
           ? "http://localhost:2000"
           : "https://thub-web-ser-2-0ls-dot-thub-dev-420204.uc.r.appspot.com";
+
       try {
         const { data } = await axios.post(`${apiUrl}/api/auth/google`, {
           code: response.code,
         });
 
         const { id_token, workspace, userId } = data;
-        console.log("ID Token:", id_token);
-        const finalWorkspace = workspace != null ? workspace : "beta";
-        console.log("finalWorkspace: ", finalWorkspace);
-        console.log("data?.workspace: ", workspace);
-        const mode = localStorage.getItem("isDarkMode") === "true";
-        console.log(mode);
-        const theme = mode ? "dark" : "lite";
+        console.log("ID Token:", id_token, "workspace", workspace);
+
+        const finalWorkspace = workspace || "beta";
+        const theme =
+          localStorage.getItem("isDarkMode") === "true" ? "dark" : "lite";
+
+        let redirectUrl;
+
         switch (window.location.hostname) {
           case "localhost":
-            window.location.href = `http://localhost:8080/?theme=${theme}&uid=${userId}`;
+            redirectUrl = `http://localhost:8080/?theme=${theme}&uid=${userId}`;
+            break;
+          case "thub-web-2-0-0-378678297066.us-central1.run.app":
+            redirectUrl = `https://demo.thub.tech/?theme=${theme}&uid=${userId}`;
             break;
           default:
-            window.location.href = finalWorkspace
-              ? `https://${finalWorkspace}.thub.tech/?theme=${theme}&uid=${userId}`
-              : `https://beta.thub.tech/?theme=dark&uid=${userId}`;
+            redirectUrl = `https://${finalWorkspace}.thub.tech/?theme=${theme}&uid=${userId}`;
             break;
         }
-        alert("user login successful");
+
+        window.location.href = redirectUrl;
+        alert("User login successful");
       } catch (error) {
         console.error("Failed to exchange code:", error);
       }
