@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import { useSelector } from "react-redux";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import axios from "axios";
 import * as Yup from "yup";
@@ -6,12 +8,16 @@ import { GoMail } from "react-icons/go";
 import LeftImage from "./LeftImage";
 import { MdOutlineClose } from "react-icons/md";
 import { useNavigate } from "react-router-dom";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function Forgot_Password() {
   const [emailSent, setEmailSent] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const navigate = useNavigate();
+
+  const isDarkMode = useSelector((state) => state.customization.isDarkMode);
 
   const handleClick = () => {
     navigate("/");
@@ -44,6 +50,23 @@ function Forgot_Password() {
       setLoading(false);
     }
   };
+
+  useEffect(() => {
+    if (emailSent) {
+      toast.success("Email sent successfully!", {
+        position: "bottom-left",
+        theme: isDarkMode ? "dark" : "light",
+        style: { whiteSpace: "nowrap" },
+      });
+    }
+    if (error) {
+      toast.error(error, {
+        position: "bottom-left",
+        theme: isDarkMode ? "dark" : "light",
+        style: { width: "380px", whiteSpace: "nowrap" },
+      });
+    }
+  }, [emailSent, error]);
 
   return (
     <div>
@@ -109,16 +132,7 @@ function Forgot_Password() {
                           >
                             {loading ? "Sending..." : "Send Reset Link"}
                           </button>
-
-                          {emailSent && (
-                            <p className="text-green-500 mt-2">
-                              Reset link sent! Check your email.
-                            </p>
-                          )}
-
-                          {error && (
-                            <p className="text-red-500 mt-2">{error}</p>
-                          )}
+                          <ToastContainer />
                         </Form>
                       )}
                     </Formik>

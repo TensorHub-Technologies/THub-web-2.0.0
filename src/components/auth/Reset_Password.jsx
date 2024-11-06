@@ -7,6 +7,9 @@ import { CiLock } from "react-icons/ci";
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import * as Yup from "yup";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { useSelector } from "react-redux";
 
 function ResetPassword() {
   const { token } = useParams();
@@ -16,6 +19,8 @@ function ResetPassword() {
   const navigate = useNavigate();
   const [uid, setUid] = useState("");
   const [showPassword, setShowPassword] = useState(true);
+
+  const isDarkMode = useSelector((state) => state.customization.isDarkMode);
 
   const togglePasswordVisibility = () => {
     setShowPassword((prev) => !prev);
@@ -34,6 +39,23 @@ function ResetPassword() {
       setError("User ID is missing from the URL.");
     }
   }, [token]);
+
+  useEffect(() => {
+    if (success) {
+      toast.success(`${success}`, {
+        position: "bottom-left",
+        theme: isDarkMode ? "dark" : "light",
+        style: { width: "430px", whiteSpace: "nowrap" },
+      });
+    }
+    if (error) {
+      toast.error(`${error}`, {
+        position: "bottom-left",
+        theme: isDarkMode ? "dark" : "light",
+        style: { width: "500px", whiteSpace: "nowrap" },
+      });
+    }
+  }, [success, error]);
 
   const handleSubmit = async (values) => {
     setLoading(true);
@@ -138,11 +160,10 @@ function ResetPassword() {
                 >
                   {loading ? "Resetting..." : "Reset Password"}
                 </button>
+                <ToastContainer />
               </Form>
             )}
           </Formik>
-          {error && <p className="text-red-500 mt-2">{error}</p>}
-          {success && <p className="text-green-500 mt-2">{success}</p>}
         </div>
       </div>
     </div>
