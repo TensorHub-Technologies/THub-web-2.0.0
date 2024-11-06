@@ -27,7 +27,7 @@ const ContactForm = () => {
             <div className="mb-4">
               <div className="flex flex-col">
                 <label
-                  className="text-lg text-start font-medium text-secondary dark:text-secondary-dark mb-2 -ml-8"
+                  className="text-lg text-start font-medium text-secondary dark:text-secondary-dark mb-2 -ml-0"
                   htmlFor="firstName"
                 >
                   Your Name*
@@ -54,7 +54,7 @@ const ContactForm = () => {
             <div className="mb-4">
               <div className="flex flex-col">
                 <label
-                  className="text-lg text-start font-medium text-secondary dark:text-secondary-dark mb-2 -ml-8"
+                  className="text-lg text-start font-medium text-secondary dark:text-secondary-dark mb-2 -ml-0"
                   htmlFor="email"
                 >
                   Email*
@@ -81,7 +81,7 @@ const ContactForm = () => {
             <div className="mb-4">
               <div className="flex flex-col">
                 <label
-                  className="text-lg text-start font-medium text-secondary dark:text-secondary-dark mb-2 -ml-8"
+                  className="text-lg text-start font-medium text-secondary dark:text-secondary-dark mb-2 -ml-0"
                   htmlFor="mobileNumber"
                 >
                   Mobile Number*
@@ -108,7 +108,7 @@ const ContactForm = () => {
             <div className="mb-4">
               <div className="flex flex-col">
                 <label
-                  className="text-lg text-start font-medium text-secondary dark:text-secondary-dark mb-2 -ml-8"
+                  className="text-lg text-start font-medium text-secondary dark:text-secondary-dark mb-2 -ml-0"
                   htmlFor="YourMessage"
                 >
                   Your Message*

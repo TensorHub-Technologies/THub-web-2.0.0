@@ -28,8 +28,10 @@ function Pricing_Plan() {
           Pricing Plan
         </p>
         <div className="flex flex-col gap-1 justify-center items-center">
-          <h1 className="text-4xl dark:text-white">Ready to Get Started?</h1>
-          <h1 className="text-4xl dark:text-white">
+          <h1 className="text-4xl dark:text-white text-left sm:text-center w-full">
+            Ready to Get Started?
+          </h1>
+          <h1 className="text-4xl dark:text-white text-left sm:text-center w-full">
             Don&apos;t Worry, We&apos;ll Keep You Under Budget
           </h1>
         </div>
