@@ -12,6 +12,8 @@ import { useState } from "react";
 import { CiLock } from "react-icons/ci";
 import { signUpValidationSchema } from "../../schemas/signUpValidationSchema";
 import Modal from "react-modal";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 Modal.setAppElement("#root");
 const SignUp = () => {
@@ -53,12 +55,14 @@ const SignUp = () => {
   const sendOtp = async (email) => {
     try {
       setLoading(true);
+      toast.success("OTP Sent Successfully", {
+        theme: "colored",
+      });
       const response = await axios.post(`${apiUrl}/send-otp`, { email });
       if (response.status === 200) {
         setOtpSent(true);
         setShowModal(true);
         setEmail(email);
-        alert("OTP sent to your email.");
       } else {
         console.error("Failed to send OTP:", response.statusText);
       }
@@ -76,7 +80,9 @@ const SignUp = () => {
     try {
       const response = await axios.post(`${apiUrl}/verify-otp`, { email, otp });
       if (response.status === 200) {
-        alert("OTP verified successfully!");
+        toast.success("OTP Verification Successful", {
+          theme: "colored",
+        });
         setShowModal(true);
         return true;
       } else {
@@ -161,6 +167,7 @@ const SignUp = () => {
     >
       {() => (
         <Form className="">
+          <ToastContainer />
           <div className="space-y-8">
             {showModal && (
               <Modal
@@ -174,6 +181,7 @@ const SignUp = () => {
                   type="text"
                   name="otp"
                   placeholder="Enter OTP"
+                  maxLength="6"
                   className="block w-[30%] pl-12 py-3 border-4 border-black"
                   value={otp}
                   onChange={(e) => setOtp(e.target.value)}
