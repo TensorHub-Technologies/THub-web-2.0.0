@@ -11,24 +11,21 @@ function Github_Custom_Button() {
     const query = window.location.search;
     const urlParams = new URLSearchParams(query);
     const searchParams = urlParams.get("code");
-
     const access = localStorage.getItem("access_token");
 
-    if ((searchParams && access == undefined) || access == null) {
+    if (searchParams && !access) {
       async function getAccessToken() {
         const apiUrl =
           window.location.hostname === "localhost"
             ? "http://localhost:2000"
             : "https://thub-web-ser-2-0ls-dot-thub-dev-420204.uc.r.appspot.com";
+
         try {
           const response = await axios.get(`${apiUrl}/getAccessToken`, {
-            params: {
-              code: searchParams,
-            },
+            params: { code: searchParams },
           });
 
           const data = response.data;
-
           if (data.access_token) {
             localStorage.setItem("access_token", data.access_token);
             await getUserData();
@@ -43,7 +40,7 @@ function Github_Custom_Button() {
         }
       }
       getAccessToken();
-    } else if (localStorage.getItem("access_token")) {
+    } else if (access) {
       getUserData();
     }
   }, []);
@@ -53,27 +50,37 @@ function Github_Custom_Button() {
       window.location.hostname === "localhost"
         ? "http://localhost:2000"
         : "https://thub-web-ser-2-0ls-dot-thub-dev-420204.uc.r.appspot.com/";
+
     try {
       const response = await axios.get(`${apiUrl}/getuserData`, {
         headers: {
-          Authorization: "Bearer " + localStorage.getItem("access_token"),
+          Authorization: `Bearer ${localStorage.getItem("access_token")}`,
         },
       });
 
       const data = response.data;
       setUserData(data);
       if (data.uid) {
-        const finalWorkspace =
-          data?.workspace === null ? "beta" : data?.workspace;
+        const finalWorkspace = data?.workspace || "beta";
+        const theme =
+          localStorage.getItem("isDarkMode") === "true" ? "dark" : "lite";
+
         localStorage.removeItem("access_token");
+
+        let redirectUrl;
         switch (window.location.hostname) {
           case "localhost":
-            window.location.href = `http://localhost:8080/?theme=dark&uid=${data?.uid}`;
+            redirectUrl = `http://localhost:8080/?theme=${theme}&uid=${data?.uid}`;
+            break;
+          case "thub-web-2-0-0-378678297066.us-central1.run.app":
+            redirectUrl = `https://demo.thub.tech/?theme=${theme}&uid=${data?.uid}`;
             break;
           default:
-            window.location.href = `https://${finalWorkspace}.thub.tech/?theme=dark&uid=${data?.uid}`;
+            redirectUrl = `https://${finalWorkspace}.thub.tech/?theme=${theme}&uid=${data?.uid}`;
             break;
         }
+
+        window.location.href = redirectUrl;
       }
     } catch (error) {
       console.error("Error getting user data:", error);

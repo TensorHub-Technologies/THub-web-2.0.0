@@ -9,12 +9,9 @@ import { GoMail } from "react-icons/go";
 import { useState } from "react";
 import { signInValidationSchema } from "../../schemas/signInValidationSchema";
 import { Link } from "react-router-dom";
-import { useDispatch } from "react-redux";
-import { setEmail } from "../../store/userSlice";
 
 const SignIn = () => {
   const [showPassword, setShowPassword] = useState(true);
-  const dispatch = useDispatch();
 
   const togglePasswordVisibility = () => {
     setShowPassword((prev) => !prev);
@@ -23,7 +20,7 @@ const SignIn = () => {
   const handleSubmit = async (values) => {
     console.log("Form Data", values);
     const { email, password } = values;
-    console.log(email, password);
+
     const apiUrl =
       window.location.hostname === "localhost"
         ? "http://localhost:2000"
@@ -34,20 +31,24 @@ const SignIn = () => {
         password,
       });
       if (response.status === 200) {
-        console.log("user inserted successfully");
+        console.log("User inserted successfully");
         const { token, userId, workspace } = response.data;
         localStorage.setItem("token", token);
-        alert("user login successful");
+        alert("User login successful");
 
-        dispatch(setEmail(email));
+        const finalWorkspace = workspace || "beta";
+        const theme =
+          localStorage.getItem("isDarkMode") === "true" ? "dark" : "lite";
 
-        const finalWorkspace = workspace === null ? "beta" : workspace;
         switch (window.location.hostname) {
           case "localhost":
-            window.location.href = `http://localhost:8080/?theme=dark&uid=${userId}`;
+            window.location.href = `http://localhost:8080/?theme=${theme}&uid=${userId}`;
+            break;
+          case "thub-web-2-0-0-378678297066.us-central1.run.app":
+            window.location.href = `https://demo.thub.tech/?theme=${theme}&uid=${userId}`;
             break;
           default:
-            window.location.href = `https://${finalWorkspace}.thub.tech/?theme=dark&uid=${userId}`;
+            window.location.href = `https://${finalWorkspace}.thub.tech/?theme=${theme}&uid=${userId}`;
             break;
         }
       } else {
