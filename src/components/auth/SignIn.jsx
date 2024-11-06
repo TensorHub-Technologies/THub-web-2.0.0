@@ -23,11 +23,13 @@ const SignIn = () => {
 
     const apiUrl =
       window.location.hostname === "localhost"
-        ? "http://localhost:2000/loginUser"
-        : "https://thub-web-ser-2-0ls-dot-thub-dev-420204.uc.r.appspot.com/loginUser";
-
+        ? "http://localhost:2000"
+        : "https://thub-web-ser-2-0-dot-thub-dev-420204.uc.r.appspot.com";
     try {
-      const response = await axios.post(apiUrl, { email, password });
+      const response = await axios.post(`${apiUrl}/loginUser`, {
+        email,
+        password,
+      });
       if (response.status === 200) {
         console.log("User inserted successfully");
         const { token, userId, workspace } = response.data;
