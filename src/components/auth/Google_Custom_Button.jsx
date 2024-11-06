@@ -1,9 +1,13 @@
+import { useState } from "react";
 import { useGoogleLogin } from "@react-oauth/google";
 import axios from "axios";
 
 function Google_Custom_Button() {
+  const [loading, setLoading] = useState(false);
+
   const login = useGoogleLogin({
     onSuccess: async (response) => {
+      setLoading(true); // Start loader
       console.log("Authorization Code:", response);
 
       const apiUrl =
@@ -38,9 +42,10 @@ function Google_Custom_Button() {
         }
 
         window.location.href = redirectUrl;
-        alert("User login successful");
       } catch (error) {
         console.error("Failed to exchange code:", error);
+      } finally {
+        setLoading(false);
       }
     },
     scope: "openid profile email",
@@ -50,10 +55,14 @@ function Google_Custom_Button() {
 
   return (
     <div>
+      {loading && (
+        <div className="fixed top-0 left-0 w-full h-1 bg-primary dark:bg-primary-dark animate-pulse z-50" />
+      )}
+
       <button
         type="button"
         onClick={login}
-        className="px-16 text-black bg-white border dark:border-gray-500 dark:hover:border-primary-dark hover:border-primary  focus:outline-none font-medium rounded-lg text-lg  py-2.5 text-center inline-flex items-center dark:bg-black dark:text-white"
+        className="px-16 text-black bg-white border dark:border-gray-500 dark:hover:border-primary-dark hover:border-primary focus:outline-none font-medium rounded-lg text-lg py-2.5 text-center inline-flex items-center dark:bg-black dark:text-white"
       >
         <svg
           className="w-6 h-6 me-5"

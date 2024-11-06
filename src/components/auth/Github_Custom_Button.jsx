@@ -3,9 +3,9 @@ import axios from "axios";
 
 function Github_Custom_Button() {
   const [userData, setUserData] = useState({});
-  console.log(userData.id, userData.name, userData.avatar_url, "****");
+  console.log(userData.uid, userData.name, userData.avatar_url, "****");
 
-  const client_id = "Ov23livsiN32CRBf7KtH";
+  const client_id = "Ov23liXLGJx4h6LN9zZj";
 
   useEffect(() => {
     const query = window.location.search;
@@ -13,7 +13,9 @@ function Github_Custom_Button() {
     const searchParams = urlParams.get("code");
     const access = localStorage.getItem("access_token");
 
-    if (searchParams && !access) {
+    console.log(searchParams, "searchParams", access, "access");
+
+    if (searchParams && access === null) {
       async function getAccessToken() {
         const apiUrl =
           window.location.hostname === "localhost"
@@ -26,6 +28,8 @@ function Github_Custom_Button() {
           });
 
           const data = response.data;
+          console.log("data", data.access_token);
+
           if (data.access_token) {
             localStorage.setItem("access_token", data.access_token);
             await getUserData();
@@ -64,8 +68,6 @@ function Github_Custom_Button() {
         const finalWorkspace = data?.workspace || "beta";
         const theme =
           localStorage.getItem("isDarkMode") === "true" ? "dark" : "lite";
-
-        localStorage.removeItem("access_token");
 
         let redirectUrl;
         switch (window.location.hostname) {
