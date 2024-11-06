@@ -19,7 +19,7 @@ const SignUp = () => {
   const [showConfirmPassword, setShowConfirmPassword] = useState(true);
   const [loading, setLoading] = useState(false);
   const [otpSent, setOtpSent] = useState(false);
-  const [showModal, setShowModal] = useState(false);
+  const [showModal, setShowModal] = useState(true);
   const [otp, setOtp] = useState("");
   const [email, setEmail] = useState("");
   const [tempUserData, setTempUserData] = useState(null);
@@ -77,7 +77,7 @@ const SignUp = () => {
       const response = await axios.post(`${apiUrl}/verify-otp`, { email, otp });
       if (response.status === 200) {
         alert("OTP verified successfully!");
-        setShowModal(false);
+        setShowModal(true);
         return true;
       } else {
         alert("Invalid OTP. Please try again.");
@@ -167,14 +167,14 @@ const SignUp = () => {
                 isOpen={otpSent}
                 onRequestClose={() => setShowModal(false)}
                 contentLabel="OTP Verification"
-                className="otp-modal"
+                className="otp-modal bg-primary dark:bg-primary-dark h-full flex flex-col justify-center items-center mt-10"
               >
                 <h2>Enter OTP</h2>
                 <Field
                   type="text"
                   name="otp"
                   placeholder="Enter OTP"
-                  className="block w-full pl-12 py-3"
+                  className="block w-[30%] pl-12 py-3 border-4 border-black"
                   value={otp}
                   onChange={(e) => setOtp(e.target.value)}
                 />
@@ -184,13 +184,16 @@ const SignUp = () => {
                   className="text-red-500"
                 />
 
-                <div className="flex justify-between mt-4">
-                  <button onClick={handleResendOtp} className="text-blue-500">
+                <div className="flex justify-between mt-4 gap-10">
+                  <button
+                    onClick={handleResendOtp}
+                    className=" rounded-lg border-2 border-black p-3 bg-white text-black hover:bg-primary shadow-lg  hover:text-white"
+                  >
                     Resend OTP
                   </button>
                   <button
                     onClick={handleOtpVerification}
-                    className="bg-primary text-white px-4 py-2 rounded-lg"
+                    className=" px-4 py-2 rounded-lg border-2 border-black  bg-white text-black  hover:bg-primary shadow-lg hover:text-white"
                   >
                     Continue
                   </button>
