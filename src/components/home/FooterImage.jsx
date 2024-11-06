@@ -26,7 +26,7 @@ function FooterImage() {
         }}
       >
         {/* Content */}
-        <div className="relative z-10 flex flex-col items-center justify-center min-h-screen  mt-20  text-center px-6 sm:px-0">
+        <div className="relative z-10 flex flex-col items-center justify-center min-h-screen  mt-[5rem]  text-center px-6 sm:px-0">
           <h1 className="text-4xl md:text-4xl font-extrabold text-secondary dark:text-white leading-snug mb-2">
             Using{" "}
             <span className="text-primary dark:text-primary-dark">THub</span>{" "}
