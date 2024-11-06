@@ -35,7 +35,6 @@ function FooterImage() {
           <h1 className="text-4xl md:text-4xl font-extrabold text-secondary leading-snug dark:text-white">
             creating long-form content.
           </h1>
-
           <button
             className="px-5 py-3 bg-primary dark:bg-primary-dark dark:text-secondary text-white rounded-lg text-lg my-8  transition"
             onClick={() => {

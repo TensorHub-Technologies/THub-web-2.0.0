@@ -11,10 +11,20 @@ import { BsPhone } from "react-icons/bs";
 import { useState } from "react";
 import { CiLock } from "react-icons/ci";
 import { signUpValidationSchema } from "../../schemas/signUpValidationSchema";
+import Modal from "react-modal";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
+Modal.setAppElement("#root");
 const SignUp = () => {
   const [showPassword, setShowPassword] = useState(true);
   const [showConfirmPassword, setShowConfirmPassword] = useState(true);
+  const [loading, setLoading] = useState(false);
+  const [otpSent, setOtpSent] = useState(false);
+  const [showModal, setShowModal] = useState(true);
+  const [otp, setOtp] = useState("");
+  const [email, setEmail] = useState("");
+  const [tempUserData, setTempUserData] = useState(null);
 
   const togglePasswordVisibility = () => {
     setShowPassword((prev) => !prev);
@@ -24,65 +34,121 @@ const SignUp = () => {
     setShowConfirmPassword((prev) => !prev);
   };
 
-  const handleSubmit = async (values) => {
-    console.log("Form Data", values);
+  const apiUrl =
+    window.location.hostname === "localhost"
+      ? "http://localhost:2000"
+      : "https://thub-web-ser-2-0-dot-thub-dev-420204.uc.r.appspot.com";
 
-    if (values.password === values.confirmPassword) {
-      const email = values.email;
-      const firstName = values.firstName;
-      const lastName = values.lastName;
-      const phone = values.phoneNumber;
-      const password = values.password;
+  const checkEmail = async (email) => {
+    console.log(apiUrl);
+    console.log("Checkemail function executed");
+    try {
+      const response = await axios.post(`${apiUrl}/check-email`, { email });
+      return response.data.exists;
+    } catch (error) {
+      console.error("Error checking email:", error);
+      return false;
+    }
+  };
 
-      const today = new Date();
-      const date = today.getDate();
-      const month = today.getMonth() + 1;
-      const year = today.getFullYear();
-      const subscription_date = year + "-" + month + "-" + date;
-
-      const subscription_type = "free";
-      const login_type = "email";
-      const subscription_duration = "yearly";
-      const apiUrl =
-        window.location.hostname === "localhost"
-          ? "http://localhost:2000/user"
-          : "https://thub-web-ser-2-0ls-dot-thub-dev-420204.uc.r.appspot.com/user";
-      try {
-        const response = await axios.post(apiUrl, {
-          email,
-          firstName,
-          lastName,
-          phone,
-          password,
-          login_type,
-          subscription_type,
-          subscription_duration,
-          subscription_date,
-        });
-
-        if (response.status === 200) {
-          const { userId, workspace } = response.data;
-          const finalWorkspace = workspace || "beta";
-          const theme =
-            localStorage.getItem("isDarkMode") === "true" ? "dark" : "lite";
-
-          switch (window.location.hostname) {
-            case "localhost":
-              window.location.href = `http://localhost:8080/?theme=${theme}&uid=${userId}`;
-              break;
-            case "thub-web-2-0-0-378678297066.us-central1.run.app":
-              window.location.href = `https://demo.thub.tech/?theme=${theme}&uid=${userId}`;
-              break;
-            default:
-              window.location.href = `https://${finalWorkspace}.thub.tech/?theme=${theme}&uid=${userId}`;
-              break;
-          }
-        } else {
-          console.error("Error:", response.statusText);
-        }
-      } catch (error) {
-        console.error("Error:", error);
+  // Send OTP to the user's email
+  const sendOtp = async (email) => {
+    try {
+      setLoading(true);
+      toast.success("OTP Sent Successfully", {
+        theme: "colored",
+      });
+      const response = await axios.post(`${apiUrl}/send-otp`, { email });
+      if (response.status === 200) {
+        setOtpSent(true);
+        setShowModal(true);
+        setEmail(email);
+      } else {
+        console.error("Failed to send OTP:", response.statusText);
       }
+    } catch (error) {
+      console.error("Error sending OTP:", error);
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  // Verify the OTP
+  const verifyOtp = async (otp) => {
+    console.log("Verifying OTP for email:", email);
+    console.log("OTP provided:", otp);
+    try {
+      const response = await axios.post(`${apiUrl}/verify-otp`, { email, otp });
+      if (response.status === 200) {
+        toast.success("OTP Verification Successful", {
+          theme: "colored",
+        });
+        setShowModal(true);
+        return true;
+      } else {
+        alert("Invalid OTP. Please try again.");
+        return false;
+      }
+    } catch (error) {
+      console.error("Error verifying OTP:", error);
+      return false;
+    }
+  };
+
+  const handleResendOtp = () => {
+    setOtp("");
+    setOtpSent(false);
+    sendOtp(email);
+  };
+
+  const handleSubmit = async (values) => {
+    if (!otpSent) {
+      const emailExists = await checkEmail(values.email);
+      if (emailExists) return alert("Email is already in use.");
+
+      setTempUserData(values);
+      await sendOtp(values.email);
+      return;
+    }
+  };
+
+  const handleOtpVerification = async () => {
+    const otpVerified = await verifyOtp(otp);
+    if (!otpVerified)
+      return alert("OTP verification failed. Please try again.");
+
+    const payload = {
+      email: tempUserData.email,
+      firstName: tempUserData.firstName,
+      lastName: tempUserData.lastName,
+      phone: tempUserData.phoneNumber,
+      password: tempUserData.password,
+      subscription_type: "free",
+      login_type: "email",
+      subscription_duration: "yearly",
+      subscription_date: new Date().toISOString().split("T")[0],
+    };
+
+    try {
+      const response = await axios.post(`${apiUrl}/user`, payload);
+      if (response.status === 200) {
+        const { userId, workspace } = response.data;
+        const finalWorkspace = workspace || "beta";
+        const theme =
+          localStorage.getItem("isDarkMode") === "true" ? "dark" : "lite";
+        switch (window.location.hostname) {
+          case "localhost":
+            window.location.href = `http://localhost:8080/?theme=${theme}&uid=${userId}`;
+            break;
+          default:
+            window.location.href = `https://${finalWorkspace}.thub.tech/?theme=${theme}&uid=${userId}`;
+            break;
+        }
+      }
+    } catch (error) {
+      console.error("Error registering user:", error);
+    } finally {
+      setShowModal(false);
     }
   };
 
@@ -101,7 +167,48 @@ const SignUp = () => {
     >
       {() => (
         <Form className="">
+          <ToastContainer />
           <div className="space-y-8">
+            {showModal && (
+              <Modal
+                isOpen={otpSent}
+                onRequestClose={() => setShowModal(false)}
+                contentLabel="OTP Verification"
+                className="otp-modal bg-primary dark:bg-primary-dark h-full flex flex-col justify-center items-center mt-10"
+              >
+                <h2>Enter OTP</h2>
+                <Field
+                  type="text"
+                  name="otp"
+                  placeholder="Enter OTP"
+                  maxLength="6"
+                  className="block w-[30%] pl-12 py-3 border-4 border-black"
+                  value={otp}
+                  onChange={(e) => setOtp(e.target.value)}
+                />
+                <ErrorMessage
+                  name="otp"
+                  component="div"
+                  className="text-red-500"
+                />
+
+                <div className="flex justify-between mt-4 gap-10">
+                  <button
+                    onClick={handleResendOtp}
+                    className=" rounded-lg border-2 border-black p-3 bg-white text-black hover:bg-primary shadow-lg  hover:text-white"
+                  >
+                    Resend OTP
+                  </button>
+                  <button
+                    onClick={handleOtpVerification}
+                    className=" px-4 py-2 rounded-lg border-2 border-black  bg-white text-black  hover:bg-primary shadow-lg hover:text-white"
+                  >
+                    Continue
+                  </button>
+                </div>
+              </Modal>
+            )}
+
             <div className="">
               <div className="relative">
                 <span className="absolute left-4 top-[18px] dark:text-secondary-dark">
@@ -160,22 +267,26 @@ const SignUp = () => {
             </div>
 
             <div className="">
-              <div className="relative">
-                <span className="absolute left-4 top-[18px] dark:text-secondary-dark">
-                  <BsPhone />
-                </span>
-                <Field
-                  type="tel"
-                  name="phoneNumber"
-                  placeholder="Phone Number"
-                  className="block w-full pl-12 pr-2 py-3  dark:text-background dark:bg-secondary border  shadow-md border-secondary-dark placeholder-secondary-dark focus:outline-none dark:focus:border-primary-dark focus:border-primary focus:ring-primary  dark:focus:ring-primary-dark  rounded-md text-lg focus:ring-1"
-                />
-              </div>
-              <ErrorMessage
-                name="phoneNumber"
-                component="div"
-                className="text-red-500 text-sm mt-1 absolute"
-              />
+              {!otpSent && (
+                <div>
+                  <div className="relative">
+                    <span className="absolute left-4 top-[18px] dark:text-secondary-dark">
+                      <BsPhone />
+                    </span>
+                    <Field
+                      type="tel"
+                      name="phoneNumber"
+                      placeholder="Phone Number"
+                      className="block w-full pl-12 pr-2 py-3  dark:text-background dark:bg-secondary border  shadow-md border-secondary-dark placeholder-secondary-dark focus:outline-none dark:focus:border-primary-dark focus:border-primary focus:ring-primary  dark:focus:ring-primary-dark  rounded-md text-lg focus:ring-1"
+                    />
+                  </div>
+                  <ErrorMessage
+                    name="phoneNumber"
+                    component="div"
+                    className="text-red-500 text-sm mt-1 absolute"
+                  />
+                </div>
+              )}
             </div>
 
             <div className="">
@@ -236,7 +347,7 @@ const SignUp = () => {
               type="submit"
               className="w-full py-3 px-6 bg-primary dark:bg-primary-dark text-white dark:text-secondary rounded-lg hover:bg-[#31519b] dark:hover:bg-[#e65ca8]"
             >
-              Sign Up for Free
+              {loading ? "Sending OTP..." : "Sign Up"}
             </button>
           </div>
 
