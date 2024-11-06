@@ -69,11 +69,12 @@ const Footer = () => {
               <li className="mb-2">
                 <Link
                   to="auth/register"
-                  className="transition-all duration-300 hover:text-primary dark:hover:text-primary-dark hover:ml-1"
+                  className="relative transition-all duration-300 hover:text-primary dark:hover:text-primary-dark hover:left-1"
                 >
                   Register
                 </Link>
               </li>
+
               <li className="mb-2">
                 <Link
                   to="/contact"
