@@ -12,6 +12,7 @@ import { useState } from "react";
 import { CiLock } from "react-icons/ci";
 import { signUpValidationSchema } from "../../schemas/signUpValidationSchema";
 import Modal from "react-modal";
+import { useSelector } from "react-redux";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -25,6 +26,7 @@ const SignUp = () => {
   const [otp, setOtp] = useState("");
   const [email, setEmail] = useState("");
   const [tempUserData, setTempUserData] = useState(null);
+  const isDarkMode = useSelector((state) => state.customization.isDarkMode);
 
   const togglePasswordVisibility = () => {
     setShowPassword((prev) => !prev);
@@ -55,16 +57,23 @@ const SignUp = () => {
   const sendOtp = async (email) => {
     try {
       setLoading(true);
-      toast.success("OTP Sent Successfully", {
-        theme: "colored",
-      });
+
       const response = await axios.post(`${apiUrl}/send-otp`, { email });
       if (response.status === 200) {
+        toast.success(`OTP Sent Successfully`, {
+          position: "bottom-left",
+          theme: isDarkMode ? "dark" : "light",
+          style: { width: "430px", whiteSpace: "nowrap" },
+        });
         setOtpSent(true);
         setShowModal(true);
         setEmail(email);
       } else {
-        console.error("Failed to send OTP:", response.statusText);
+        toast.error(`Sending OTP Failed`, {
+          position: "bottom-left",
+          theme: isDarkMode ? "dark" : "light",
+          style: { width: "500px", whiteSpace: "nowrap" },
+        });
       }
     } catch (error) {
       console.error("Error sending OTP:", error);
