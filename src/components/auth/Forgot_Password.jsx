@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import { useSelector } from "react-redux";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import axios from "axios";
 import * as Yup from "yup";
@@ -16,8 +15,6 @@ function Forgot_Password() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const navigate = useNavigate();
-
-  const isDarkMode = useSelector((state) => state.customization.isDarkMode);
 
   const handleClick = () => {
     navigate("/");
@@ -55,15 +52,15 @@ function Forgot_Password() {
     if (emailSent) {
       toast.success("Email sent successfully!", {
         position: "bottom-left",
-        theme: isDarkMode ? "dark" : "light",
         style: { whiteSpace: "nowrap" },
+        theme: "colored",
       });
     }
     if (error) {
       toast.error(error, {
         position: "bottom-left",
-        theme: isDarkMode ? "dark" : "light",
         style: { width: "380px", whiteSpace: "nowrap" },
+        theme: "colored",
       });
     }
   }, [emailSent, error]);
