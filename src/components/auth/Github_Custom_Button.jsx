@@ -69,7 +69,7 @@ function Github_Custom_Button() {
             redirectUrl = `http://localhost:8080/?theme=${theme}&uid=${data?.uid}`;
             break;
           case "thub-web-2-0-0-378678297066.us-central1.run.app":
-            redirectUrl = `https://beta.thub.tech/?theme=${theme}&uid=${data?.uid}`;
+            redirectUrl = `https://demo.thub.tech/?theme=${theme}&uid=${data?.uid}`;
             break;
           default:
             redirectUrl = `https://${finalWorkspace}.thub.tech/?theme=${theme}&uid=${data?.uid}`;
