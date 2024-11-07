@@ -23,7 +23,7 @@ function Google_Custom_Button() {
         const { id_token, workspace, userId } = data;
         console.log("ID Token:", id_token, "workspace", workspace);
 
-        const finalWorkspace = workspace || "beta";
+        const finalWorkspace = workspace || "app";
         const theme =
           localStorage.getItem("isDarkMode") === "true" ? "dark" : "lite";
 
@@ -34,7 +34,7 @@ function Google_Custom_Button() {
             redirectUrl = `http://localhost:8080/?theme=${theme}&uid=${userId}`;
             break;
           case "thub-web-2-0-0-378678297066.us-central1.run.app":
-            redirectUrl = `https://demo.thub.tech/?theme=${theme}&uid=${userId}`;
+            redirectUrl = `https://beta.thub.tech/?theme=${theme}&uid=${userId}`;
             break;
           default:
             redirectUrl = `https://${finalWorkspace}.thub.tech/?theme=${theme}&uid=${userId}`;
