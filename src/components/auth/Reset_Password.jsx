@@ -9,7 +9,6 @@ import { ErrorMessage, Field, Form, Formik } from "formik";
 import * as Yup from "yup";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-import { useSelector } from "react-redux";
 
 function ResetPassword() {
   const { token } = useParams();
@@ -19,8 +18,6 @@ function ResetPassword() {
   const navigate = useNavigate();
   const [uid, setUid] = useState("");
   const [showPassword, setShowPassword] = useState(true);
-
-  const isDarkMode = useSelector((state) => state.customization.isDarkMode);
 
   const togglePasswordVisibility = () => {
     setShowPassword((prev) => !prev);
@@ -44,15 +41,15 @@ function ResetPassword() {
     if (success) {
       toast.success(`${success}`, {
         position: "bottom-left",
-        theme: isDarkMode ? "dark" : "light",
         style: { width: "430px", whiteSpace: "nowrap" },
+        theme: "colored",
       });
     }
     if (error) {
       toast.error(`${error}`, {
         position: "bottom-left",
-        theme: isDarkMode ? "dark" : "light",
         style: { width: "500px", whiteSpace: "nowrap" },
+        theme: "colored",
       });
     }
   }, [success, error]);
