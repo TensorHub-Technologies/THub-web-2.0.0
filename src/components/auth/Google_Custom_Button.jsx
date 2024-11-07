@@ -34,7 +34,7 @@ function Google_Custom_Button() {
             redirectUrl = `http://localhost:8080/?theme=${theme}&uid=${userId}`;
             break;
           case "thub-web-2-0-0-378678297066.us-central1.run.app":
-            redirectUrl = `https://beta.thub.tech/?theme=${theme}&uid=${userId}`;
+            redirectUrl = `https://demo.thub.tech/?theme=${theme}&uid=${userId}`;
             break;
           default:
             redirectUrl = `https://${finalWorkspace}.thub.tech/?theme=${theme}&uid=${userId}`;
