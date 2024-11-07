@@ -24,7 +24,7 @@ const SignIn = () => {
     const apiUrl =
       window.location.hostname === "localhost"
         ? "http://localhost:2000"
-        : "https://thub-web-ser-2-0-dot-thub-dev-420204.uc.r.appspot.com";
+        : "https://thub-web-ser-2-0ls-dot-thub-dev-420204.uc.r.appspot.com";
     try {
       const response = await axios.post(`${apiUrl}/loginUser`, {
         email,
