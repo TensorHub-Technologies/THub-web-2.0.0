@@ -133,12 +133,15 @@ const SignUp = () => {
       const response = await axios.post(`${apiUrl}/user`, payload);
       if (response.status === 200) {
         const { userId, workspace } = response.data;
-        const finalWorkspace = workspace || "beta";
+        const finalWorkspace = workspace || "app";
         const theme =
           localStorage.getItem("isDarkMode") === "true" ? "dark" : "lite";
         switch (window.location.hostname) {
           case "localhost":
             window.location.href = `http://localhost:8080/?theme=${theme}&uid=${userId}`;
+            break;
+          case "thub-web-2-0-0-378678297066.us-central1.run.app":
+            window.location.href = `https://beta.thub.tech/?theme=${theme}&uid=${userId}`;
             break;
           default:
             window.location.href = `https://${finalWorkspace}.thub.tech/?theme=${theme}&uid=${userId}`;
