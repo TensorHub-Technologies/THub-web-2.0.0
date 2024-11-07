@@ -59,7 +59,7 @@ function Github_Custom_Button() {
       const data = response.data;
       setUserData(data);
       if (data.uid) {
-        const finalWorkspace = data?.workspace || "beta";
+        const finalWorkspace = data?.workspace || "app";
         const theme =
           localStorage.getItem("isDarkMode") === "true" ? "dark" : "lite";
 
@@ -69,7 +69,7 @@ function Github_Custom_Button() {
             redirectUrl = `http://localhost:8080/?theme=${theme}&uid=${data?.uid}`;
             break;
           case "thub-web-2-0-0-378678297066.us-central1.run.app":
-            redirectUrl = `https://demo.thub.tech/?theme=${theme}&uid=${data?.uid}`;
+            redirectUrl = `https://beta.thub.tech/?theme=${theme}&uid=${data?.uid}`;
             break;
           default:
             redirectUrl = `https://${finalWorkspace}.thub.tech/?theme=${theme}&uid=${data?.uid}`;
