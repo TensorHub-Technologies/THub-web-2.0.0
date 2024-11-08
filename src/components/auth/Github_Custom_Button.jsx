@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import axios from "axios";
 
 function Github_Custom_Button() {
@@ -7,7 +7,7 @@ function Github_Custom_Button() {
 
   const client_id = "Ov23liXLGJx4h6LN9zZj";
 
-  useEffect(() => {
+  const handleGithubAuth = async () => {
     const query = window.location.search;
     const urlParams = new URLSearchParams(query);
     const searchParams = urlParams.get("code");
@@ -16,38 +16,32 @@ function Github_Custom_Button() {
     console.log(searchParams, "searchParams", access, "access");
 
     if (searchParams && access === null) {
-      async function getAccessToken() {
+      try {
         const apiUrl =
           window.location.hostname === "localhost"
             ? "http://localhost:2000"
             : "https://thub-web-ser-2-0ls-dot-thub-dev-420204.uc.r.appspot.com";
 
-        try {
-          const response = await axios.get(`${apiUrl}/getAccessToken`, {
-            params: { code: searchParams },
-          });
+        const response = await axios.get(`${apiUrl}/getAccessToken`, {
+          params: { code: searchParams },
+        });
 
-          const data = response.data;
-          console.log("data", data.access_token);
+        const data = response.data;
+        console.log("data", data.access_token);
 
-          if (data.access_token) {
-            localStorage.setItem("access_token", data.access_token);
-            await getUserData();
-          } else {
-            console.error(
-              "Failed to get access token:",
-              data.error_description,
-            );
-          }
-        } catch (error) {
-          console.error("Error fetching access token:", error);
+        if (data.access_token) {
+          localStorage.setItem("access_token", data.access_token);
+          await getUserData();
+        } else {
+          console.error("Failed to get access token:", data.error_description);
         }
+      } catch (error) {
+        console.error("Error fetching access token:", error);
       }
-      getAccessToken();
     } else if (access) {
       getUserData();
     }
-  }, []);
+  };
 
   async function getUserData() {
     const apiUrl =
@@ -65,7 +59,7 @@ function Github_Custom_Button() {
       const data = response.data;
       setUserData(data);
       if (data.uid) {
-        const finalWorkspace = data?.workspace || "beta";
+        const finalWorkspace = data?.workspace || "app";
         const theme =
           localStorage.getItem("isDarkMode") === "true" ? "dark" : "lite";
 
@@ -94,6 +88,8 @@ function Github_Custom_Button() {
     window.location.assign(link);
   };
 
+  handleGithubAuth();
+
   return (
     <div>
       <button
@@ -102,7 +98,7 @@ function Github_Custom_Button() {
         className="px-16 text-black bg-white border dark:border-gray-500 dark:hover:border-primary-dark hover:border-primary  focus:outline-none font-medium rounded-lg text-lg  py-2.5 text-center inline-flex items-center dark:bg-black dark:text-white"
       >
         <svg
-          className="w-6 h-6 me-5"
+          className="w-3 h-4 me-5"
           aria-hidden="true"
           xmlns="http://www.w3.org/2000/svg"
           fill="currentColor"

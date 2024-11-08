@@ -4,7 +4,7 @@ import workspace_image_light from "../../assets/screens/top-2.png";
 import workspace_image_dark from "../../assets/screens/top-1.png";
 import arrow_light from "../../assets/svgs/curve-arrow-light.svg";
 import arrow_dark from "../../assets/svgs/curve-arrow-dark.svg";
-import blurryImage from "@/assets/svgs/blurry-shape-4.svg";
+import blurryImage from "/blurry-shape-4.svg";
 
 // import hooks
 import { useSelector } from "react-redux";
@@ -26,7 +26,7 @@ function FooterImage() {
         }}
       >
         {/* Content */}
-        <div className="relative z-10 flex flex-col items-center justify-center min-h-screen  mt-20  text-center px-6 sm:px-0">
+        <div className="relative z-10 flex flex-col items-center justify-center min-h-screen  mt-[5rem]  text-center px-6 sm:px-0">
           <h1 className="text-4xl md:text-4xl font-extrabold text-secondary dark:text-white leading-snug mb-2">
             Using{" "}
             <span className="text-primary dark:text-primary-dark">THub</span>{" "}

@@ -21,7 +21,7 @@ const Leadership = () => {
   };
 
   return (
-    <div className="p-4 bg-background dark:bg-background-dark mt-24">
+    <div className="p-4 bg-background dark:bg-background-dark mt-20">
       <div className="container max-w-2xl mx-auto">
         <h2 className="text-center  text-primary dark:text-primary-dark">
           GenAI For Leaders and CxO&apos;s Details

@@ -23,7 +23,7 @@ function Google_Custom_Button() {
         const { id_token, workspace, userId } = data;
         console.log("ID Token:", id_token, "workspace", workspace);
 
-        const finalWorkspace = workspace || "beta";
+        const finalWorkspace = workspace || "app";
         const theme =
           localStorage.getItem("isDarkMode") === "true" ? "dark" : "lite";
 
@@ -65,7 +65,7 @@ function Google_Custom_Button() {
         className="px-16 text-black bg-white border dark:border-gray-500 dark:hover:border-primary-dark hover:border-primary focus:outline-none font-medium rounded-lg text-lg py-2.5 text-center inline-flex items-center dark:bg-black dark:text-white"
       >
         <svg
-          className="w-6 h-6 me-5"
+          className="w-3 h-4 me-5"
           aria-hidden="true"
           xmlns="http://www.w3.org/2000/svg"
           fill="currentColor"
