@@ -39,6 +39,9 @@ function OTP_Modal({
   const handleKeyDown = (index, e) => {
     if (e.key === "Backspace" && index > 0 && !otp[index]) {
       inputRefs.current[index - 1].focus();
+    } else if (e.key === "Enter") {
+      e.preventDefault();
+      handleOtpSubmit();
     }
   };
 
