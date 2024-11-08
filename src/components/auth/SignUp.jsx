@@ -11,7 +11,6 @@ import { BsPhone } from "react-icons/bs";
 import { useState } from "react";
 import { CiLock } from "react-icons/ci";
 import { signUpValidationSchema } from "../../schemas/signUpValidationSchema";
-// import Modal from "react-modal";
 import { useSelector } from "react-redux";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -59,19 +58,23 @@ const SignUp = () => {
 
       const response = await axios.post(`${apiUrl}/send-otp`, { email });
       if (response.status === 200) {
-        toast.success(`OTP Sent Successfully`, {
-          position: "bottom-left",
-          theme: isDarkMode ? "dark" : "light",
-          style: { width: "430px", whiteSpace: "nowrap" },
+        toast.success("OTP Sent Successfully", {
+          theme: "colored",
+          style: {
+            background: isDarkMode ? "#e22a90" : "#3c5ba4",
+            color: "white",
+          },
         });
         setOtpSent(true);
         setShowModal(true);
         setEmail(email);
       } else {
         toast.error(`Sending OTP Failed`, {
-          position: "bottom-left",
-          theme: isDarkMode ? "dark" : "light",
-          style: { width: "500px", whiteSpace: "nowrap" },
+          theme: "colored",
+          style: {
+            background: "red",
+            color: "white",
+          },
         });
       }
     } catch (error) {
@@ -90,11 +93,21 @@ const SignUp = () => {
       if (response.status === 200) {
         toast.success("OTP Verification Successful", {
           theme: "colored",
+          style: {
+            background: isDarkMode ? "#e22a90" : "#3c5ba4",
+            color: "white",
+          },
         });
         setShowModal(true);
         return true;
       } else {
-        alert("Invalid OTP. Please try again.");
+        toast.error(`Invalid OTP`, {
+          theme: "colored",
+          style: {
+            background: "red",
+            color: "white",
+          },
+        });
         return false;
       }
     } catch (error) {
