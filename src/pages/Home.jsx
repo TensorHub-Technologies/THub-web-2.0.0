@@ -10,7 +10,6 @@ import UsecaseHome from "../components/usecases/UsecasesHome";
 
 const Home = () => {
   console.log("*** env: ", import.meta.env.VITE_URL);
-  console.log("*** env gbl: ", $GCP_VITE_URL);
   return (
     <div className="w-full min-h-screen dark:bg-secondary" id="banner-main">
       <Banner />
