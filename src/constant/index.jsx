@@ -69,7 +69,7 @@ export const teamMembers = [
   {
     id: 9,
     name: "P S V Prasad",
-    designation: "Gen AI Developer",
+    designation: "Data Scientist & Gen AI Developer",
     image: prasadPic,
     linkedIn: "https://www.linkedin.com/in/p-s-v-prasad-480b51243/",
   },
