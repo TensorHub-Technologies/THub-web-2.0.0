@@ -124,7 +124,14 @@ const SignUp = () => {
   const handleSubmit = async (values) => {
     if (!otpSent) {
       const emailExists = await checkEmail(values.email);
-      if (emailExists) return alert("Email is already in use.");
+      if (emailExists)
+        return toast.error(`Email Already Exist`, {
+          theme: "colored",
+          style: {
+            background: "red",
+            color: "white",
+          },
+        });
 
       setTempUserData(values);
       await sendOtp(values.email);
