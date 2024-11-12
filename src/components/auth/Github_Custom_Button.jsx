@@ -20,7 +20,7 @@ function Github_Custom_Button() {
         const apiUrl =
           window.location.hostname === "localhost"
             ? "http://localhost:2000"
-            : "https://thub-web-ser-2-0ls-dot-thub-dev-420204.uc.r.appspot.com";
+            : "https://thub-web-server-2-0-378678297066.us-central1.run.app";
 
         const response = await axios.get(`${apiUrl}/getAccessToken`, {
           params: { code: searchParams },
@@ -47,7 +47,7 @@ function Github_Custom_Button() {
     const apiUrl =
       window.location.hostname === "localhost"
         ? "http://localhost:2000"
-        : "https://thub-web-ser-2-0ls-dot-thub-dev-420204.uc.r.appspot.com/";
+        : "https://thub-web-server-2-0-378678297066.us-central1.run.app";
 
     try {
       const response = await axios.get(`${apiUrl}/getuserData`, {
