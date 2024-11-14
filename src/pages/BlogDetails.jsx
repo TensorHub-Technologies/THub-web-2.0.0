@@ -55,7 +55,7 @@ const BlogDetails = () => {
 
                     <ul className="list-none flex items-center text-sm space-x-4 text-black dark:text-secondary-dark">
                       <li>Thu Jul 04 2024</li>
-                      <li>5 Min. Read</li>
+                      <li>2 Min. Read</li>
                     </ul>
                   </div>
 
