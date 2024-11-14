@@ -83,7 +83,7 @@ const Navbar = () => {
               className="border border-primary text-primary px-4 py-2 ml-3 rounded transition-all duration-300 hover:bg-primary hover:text-black hover:border-primary
               dark:border-primary-dark dark:text-primary-dark dark:hover:bg-primary-dark dark:hover:text-black
               "
-              onClick={() => handleNavigation("/auth/login")}
+              onClick={() => handleNavigation("/auth/register")}
             >
               Get started
             </button>
