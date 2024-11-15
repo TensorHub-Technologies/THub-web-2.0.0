@@ -7,12 +7,14 @@ const ComparisonTable = () => {
     padding: "8px",
     backgroundColor: "transparent",
     color: isDarkMode ? "white" : "black",
-    textAlign: "left",
+    textAlign: "center",
   };
 
   const tableDataStyle = {
     border: "1px solid #ddd",
     padding: "8px",
+    textAlign: "center",
+    verticalAlign: "middle",
   };
   const data = [
     { feature: "Flexibility in Reasoning", aiAgents: "✅", rpa: "❌" },
