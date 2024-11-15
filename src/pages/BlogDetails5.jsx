@@ -10,7 +10,7 @@ import type3_img6 from "../assets/images/blog/type3_image6.png";
 
 const BlogDetails5 = () => {
   return (
-    <div className="border-red-400 dark:bg-secondary">
+    <div className="text-justify container mx-auto px-4 border-red-400 dark:bg-secondary">
       <div className="text-center py-5">
         <h3 className="text-secondary text-3xl font-bold dark:text-background">
           Blog Posts

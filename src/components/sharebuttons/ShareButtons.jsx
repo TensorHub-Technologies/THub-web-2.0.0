@@ -1,7 +1,7 @@
 const ShareButtons = () => {
   const shareOnLinkedIn = () => {
     const currentUrl = window.location.href; // Get the full URL including the query string
-    const linkedInShareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=https://thub.tech/blog-details.html${currentUrl}`;
+    const linkedInShareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=https://thub.tech`;
     window.open(linkedInShareUrl, "_blank");
     console.log("Share on LinkedIn:", currentUrl);
   };
@@ -24,7 +24,7 @@ const ShareButtons = () => {
       <a
         href="#"
         onClick={shareOnLinkedIn}
-        className="text-black dark:text-secondary-dark hover:text-[#3c5ba4] dark:hover:text-[#e22a90] fixed bottom-56 right-6 flex flex-col gap-1.5"
+        className="text-black dark:text-secondary-dark hover:text-[#3c5ba4] dark:hover:text-[#e22a90] transition-none fixed bottom-56 right-6 flex flex-col gap-1.5"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -100,7 +100,7 @@ const ShareButtons = () => {
         </svg>
       </a>
       <a
-        href="mailto:?subject=Check out this blog post&body=Here is a link to the blog post: [URL]"
+        href="mailto:?subject=Check out this blog post&body=Here is a link to the blog post: https://thub.tech"
         className="text-black dark:text-secondary-dark hover:text-[#3c5ba4] dark:hover:text-[#e22a90] fixed bottom-20 right-7 flex flex-col gap-1"
       >
         <svg
