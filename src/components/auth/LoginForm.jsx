@@ -7,7 +7,7 @@ import { MdOutlineClose } from "react-icons/md";
 const LoginForm = () => {
   const navigate = useNavigate();
   const handleClick = () => {
-    navigate("/");
+    navigate(-1);
   };
 
   return (
