@@ -3,10 +3,15 @@ import profile from "../assets/images/blog/ganapathi _profile.jpg";
 import image_1 from "../assets/images/blog/article_img1.png";
 import image_2 from "../assets/images/blog/article_img2.png";
 import ShareButtons from "../components/sharebuttons/ShareButtons";
+import MetaTags from "../components/common/Metatags";
 
 const BlogDetails = () => {
   return (
     <div className="border-red-400 dark:bg-secondary text-justify container mx-auto px-4">
+      <MetaTags
+        title={"Understanding Retrieval-Augmented Generation (RAG)"}
+        image={"/assets/rag_aii.png"}
+      />
       <div className="text-center py-5">
         <h3 className="text-secondary text-3xl font-bold dark:text-background">
           Blog Posts
@@ -60,10 +65,10 @@ const BlogDetails = () => {
                   </div>
 
                   {/* Blog Content */}
-                  <h4 className="text-black dark:text-secondary-dark font-medium mb-5 text-left text-2xl">
+                  <h4 className="text-black dark:text-secondary-dark font-medium mb-5 text-justify text-2xl">
                     Introduction to RAG
                   </h4>
-                  <p className="font-medium mb-5 text-left text-black dark:text-secondary-dark space-y-6">
+                  <p className="font-medium mb-5 text-black dark:text-secondary-dark space-y-6 text-justify">
                     Generative AI (Gen AI) continues to transform the way we
                     interact with technology, enabling the creation of systems
                     that can generate accurate and contextually relevant
@@ -75,7 +80,7 @@ const BlogDetails = () => {
                     AI capabilities. This blog explores what RAG is, how it
                     works, and the key components that make it effective.
                   </p>
-                  <article className="blog-post  font-medium mb-0 text-left text-black dark:text-secondary-dark space-y-6">
+                  <article className="blog-post  font-medium mb-0 text-justify text-black dark:text-secondary-dark space-y-6">
                     <h4>What is Retrieval-Augmented Generation (RAG)?</h4>
                     <p>
                       RAG is an innovative framework designed to boost the

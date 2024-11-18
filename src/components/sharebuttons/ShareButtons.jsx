@@ -1,7 +1,7 @@
 const ShareButtons = () => {
   const shareOnLinkedIn = () => {
     const currentUrl = window.location.href; // Get the full URL including the query string
-    const linkedInShareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=https://thub.tech`;
+    const linkedInShareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(currentUrl)}`;
     window.open(linkedInShareUrl, "_blank");
     console.log("Share on LinkedIn:", currentUrl);
   };
