@@ -64,11 +64,11 @@ const BlogDetails4 = () => {
                   </div>
 
                   {/* Blog Content */}
-                  <h4 className="text-black dark:text-secondary-dark font-medium mb-5 text-left text-2xl">
+                  <h4 className="text-black dark:text-secondary-dark font-medium mb-5 text-justify text-2xl">
                     Unpacking the Next 6 Techniques in Retrieval-Augmented
                     Generation
                   </h4>
-                  <p className="font-medium mb-5 text-left text-black dark:text-secondary-dark space-y-6">
+                  <p className="font-medium mb-5 text-justify text-black dark:text-secondary-dark space-y-6">
                     Welcome back to our RAG series! In Part 1, we introduced you
                     to the fundamentals of Retrieval-Augmented Generation (RAG)
                     and explored six foundational RAG techniques. Now, in Part
@@ -79,7 +79,7 @@ const BlogDetails4 = () => {
                     dive into the next set of RAG techniques and see how each
                     one transforms information retrieval in unique ways!
                   </p>
-                  <article className="blog-post  font-medium mb-0 text-left text-black dark:text-secondary-dark space-y-6">
+                  <article className="blog-post  font-medium mb-0 text-justify text-black dark:text-secondary-dark space-y-6">
                     <h4>
                       The Next 6 RAG Techniques: Advanced Approaches for Complex
                       Needs{" "}

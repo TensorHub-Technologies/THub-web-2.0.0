@@ -58,10 +58,10 @@ const BlogDetails2 = () => {
                   </div>
 
                   {/* Blog Content */}
-                  <h4 className="text-black dark:text-secondary-dark font-medium mb-5 text-left text-2xl">
+                  <h4 className="text-black dark:text-secondary-dark font-medium mb-5 text-justify text-2xl">
                     Introduction
                   </h4>
-                  <p className="font-medium mb-5 text-left text-black dark:text-secondary-dark space-y-6">
+                  <p className="font-medium mb-5 text-justify text-black dark:text-secondary-dark space-y-6">
                     The field of artificial intelligence (AI) has seen
                     remarkable advancements in recent years, particularly in the
                     realm of language models. A standout innovation is
@@ -72,7 +72,7 @@ const BlogDetails2 = () => {
                     from its inception in 2021 to June 2024, highlighting key
                     advancements and their implications.
                   </p>
-                  <article className="blog-post  font-medium mb-0 text-left text-black dark:text-secondary-dark space-y-6">
+                  <article className="blog-post  font-medium mb-0 text-justify text-black dark:text-secondary-dark space-y-6">
                     <h4>The Genesis of RAG</h4>
                     <p>
                       Introduced in 2021, RAG represents a significant shift in
