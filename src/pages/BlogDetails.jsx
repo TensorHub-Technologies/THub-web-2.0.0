@@ -3,10 +3,15 @@ import profile from "../assets/images/blog/ganapathi _profile.jpg";
 import image_1 from "../assets/images/blog/article_img1.png";
 import image_2 from "../assets/images/blog/article_img2.png";
 import ShareButtons from "../components/sharebuttons/ShareButtons";
+import MetaTags from "../components/common/Metatags";
 
 const BlogDetails = () => {
   return (
     <div className="border-red-400 dark:bg-secondary text-justify container mx-auto px-4">
+      <MetaTags
+        title={"Understanding Retrieval-Augmented Generation (RAG)"}
+        image={rag_ai}
+      />
       <div className="text-center py-5">
         <h3 className="text-secondary text-3xl font-bold dark:text-background">
           Blog Posts
