@@ -77,6 +77,7 @@ label:hover {
     background-color: #191a28;
     font-size: 18px;
     margin-bottom: 20px;
+
 }
 
 .button_click_light {
@@ -134,14 +135,15 @@ label:hover {
 
 .list_features_dark{
     list-style-type: none;
-    color: #ffffff;
     font-size: 18px;
+    color: white;
     margin: 18px 0px 0px 25px;
 }
 .list_features_light {
     list-style-type: none;
     font-size: 18px;
-    margin: 18px 0px 0px 25px;
+    margin: 12px 0px 0px 25px;
+    color:#616161;
 }
 
 .list_features_dark::before {
