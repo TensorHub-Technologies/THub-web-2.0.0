@@ -1,7 +1,9 @@
 import { Helmet } from "react-helmet";
 import PropTypes from "prop-types";
 
-const MetaTags = ({ title, description, image, url }) => {
+const MetaTags = ({ title, image, url = "", description = "" }) => {
+  const publicImageUrl = "https://" + window.location.hostname + image;
+  console.log("publicImageUrl", publicImageUrl);
   return (
     <Helmet>
       <title>{title}</title>
