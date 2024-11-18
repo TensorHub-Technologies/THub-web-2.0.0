@@ -6,7 +6,7 @@ import ShareButtons from "../components/sharebuttons/ShareButtons";
 
 const BlogDetails = () => {
   return (
-    <div className="border-red-400 dark:bg-secondary">
+    <div className="border-red-400 dark:bg-secondary text-justify container mx-auto px-4">
       <div className="text-center py-5">
         <h3 className="text-secondary text-3xl font-bold dark:text-background">
           Blog Posts
@@ -55,7 +55,7 @@ const BlogDetails = () => {
 
                     <ul className="list-none flex items-center text-sm space-x-4 text-black dark:text-secondary-dark">
                       <li>Thu Jul 04 2024</li>
-                      <li>5 Min. Read</li>
+                      <li>2 Min. Read</li>
                     </ul>
                   </div>
 

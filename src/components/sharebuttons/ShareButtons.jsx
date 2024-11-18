@@ -1,29 +1,30 @@
 const ShareButtons = () => {
   const shareOnLinkedIn = () => {
     const currentUrl = window.location.href; // Get the full URL including the query string
-    const linkedInShareUrl = `https://www.linkedin.com/shareArticle?mini=true&url=${encodeURIComponent(currentUrl)}`;
+    const linkedInShareUrl = `https://www.linkedin.com/sharing/share-offsite/?url=https://thub.tech`;
     window.open(linkedInShareUrl, "_blank");
     console.log("Share on LinkedIn:", currentUrl);
   };
 
-  const shareOnFacebook = (url) => {
-    const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
+  const shareOnFacebook = () => {
+    const currentUrl = window.location.href; // Get the current URL
+    const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(currentUrl)}`;
     window.open(facebookShareUrl, "_blank");
-    console.log("Share on Facebook:", url);
+    console.log("Share on Facebook:", currentUrl);
   };
 
   const shareOnTwitter = () => {
-    const currentUrl = window.location.href;
+    const currentUrl = window.location.href; // Get the current URL
     const twitterShareUrl = `https://twitter.com/intent/tweet?url=${encodeURIComponent(currentUrl)}`;
     window.open(twitterShareUrl, "_blank");
+    console.log("Share on Twitter:", currentUrl);
   };
-
   return (
     <div className="flex flex-col items-end space-y-3">
       <a
         href="#"
         onClick={shareOnLinkedIn}
-        className="text-black dark:text-secondary-dark hover:text-[#3c5ba4] dark:hover:text-[#e22a90] mr-4"
+        className="text-black dark:text-secondary-dark hover:text-[#3c5ba4] dark:hover:text-[#e22a90] transition-none fixed bottom-56 right-6 flex flex-col gap-1.5"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -51,7 +52,7 @@ const ShareButtons = () => {
           shareOnFacebook("https://abcd1234.ngrok.io/blog-details.html")
         }
         target="_blank"
-        className="text-black dark:text-secondary-dark hover:text-[#3c5ba4] dark:hover:text-[#e22a90] mr-4"
+        className="text-black dark:text-secondary-dark hover:text-[#3c5ba4] dark:hover:text-[#e22a90] fixed bottom-44 right-6 flex flex-col gap-1"
       >
         <svg
           fill="none"
@@ -79,7 +80,7 @@ const ShareButtons = () => {
       <a
         href="#"
         onClick={shareOnTwitter}
-        className="text-black dark:text-secondary-dark hover:text-[#3c5ba4] dark:hover:text-[#e22a90] mr-5"
+        className="text-black dark:text-secondary-dark hover:text-[#3c5ba4] dark:hover:text-[#e22a90] fixed bottom-32 right-7 flex flex-col gap-1"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -99,8 +100,8 @@ const ShareButtons = () => {
         </svg>
       </a>
       <a
-        href="mailto:?subject=Check out this blog post&body=Here is a link to the blog post: [URL]"
-        className="text-black dark:text-secondary-dark hover:text-[#3c5ba4] dark:hover:text-[#e22a90] mr-5"
+        href="mailto:?subject=Check out this blog post&body=Here is a link to the blog post: https://thub.tech"
+        className="text-black dark:text-secondary-dark hover:text-[#3c5ba4] dark:hover:text-[#e22a90] fixed bottom-20 right-7 flex flex-col gap-1"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"

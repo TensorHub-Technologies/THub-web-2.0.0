@@ -9,6 +9,8 @@ import Pricing_Plan from "../components/home/Pricing_Plan";
 import UsecaseHome from "../components/usecases/UsecasesHome";
 
 const Home = () => {
+  console.log("*** env: ", import.meta.env.VITE_URL);
+  console.log(import.meta.env.VITE_SOME_KEY);
   return (
     <div className="w-full min-h-screen dark:bg-secondary" id="banner-main">
       <Banner />
