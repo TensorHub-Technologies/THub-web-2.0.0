@@ -10,7 +10,7 @@ const BlogDetails = () => {
     <div className="border-red-400 dark:bg-secondary text-justify container mx-auto px-4">
       <MetaTags
         title={"Understanding Retrieval-Augmented Generation (RAG)"}
-        image={rag_ai}
+        image={"/assets/rag_aii.png"}
       />
       <div className="text-center py-5">
         <h3 className="text-secondary text-3xl font-bold dark:text-background">
