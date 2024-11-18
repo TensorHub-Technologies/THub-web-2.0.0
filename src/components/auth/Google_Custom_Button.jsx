@@ -7,7 +7,7 @@ function Google_Custom_Button() {
 
   const login = useGoogleLogin({
     onSuccess: async (response) => {
-      setLoading(true); // Start loader
+      setLoading(true);
       console.log("Authorization Code:", response);
 
       const apiUrl =

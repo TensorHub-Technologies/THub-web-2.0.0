@@ -3,11 +3,13 @@ import { useSelector } from "react-redux";
 import { pricingData } from "./PricingData";
 import subStyle from "./subscription.module.css";
 import PriceDropdown from "./PriceDropdown";
+import { useNavigate } from "react-router-dom";
 
 function Pricing_Plan() {
   const isDarkMode = useSelector((state) => state.customization.isDarkMode);
   const [selectedPlan, setSelectedPlan] = useState("monthly");
   const [currency, setCurrency] = useState("INR");
+  const navigate = useNavigate();
 
   const handleMonthly = () => setSelectedPlan("monthly");
   const handleYearly = () => setSelectedPlan("yearly");
@@ -16,9 +18,13 @@ function Pricing_Plan() {
   const handleCurrencyChange = (selectedCurrency) =>
     setCurrency(selectedCurrency);
 
+  const handleClick = () => {
+    navigate("/auth/login");
+  };
+
   // Function to get the correct price based on selected plan and currency
   const getPrice = (plan) => {
-    return plan.prices[currency] || plan.prices["INR"]; // Default to INR if currency not found
+    return plan.prices[currency] || plan.prices["INR"];
   };
 
   return (
@@ -112,21 +118,26 @@ function Pricing_Plan() {
       </div>
 
       {/* Cards for pricing */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-5">
+      <div className="grid mx-2 grid-cols-1 lg:grid-cols-3 gap-20 dark:text-white">
         {pricingData[selectedPlan].map((plan, index) => (
           <div
             key={index}
-            className={`group p-6 bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700 relative hover:shadow-xl ${isDarkMode ? subStyle.card_selection_dark : subStyle.card_selection_light}`}
+            className={`group p-6 bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700 relative hover:shadow-black ${isDarkMode ? subStyle.card_selection_dark : subStyle.card_selection_light}`}
           >
-            <p className="mb-3 text-4xl text-primary dark:text-primary-dark">
+            <p className="mb-5 text-3xl text-primary dark:text-primary-dark">
               {plan.title}
             </p>
-            <p className="text-4xl my-5 dark:text-white">{getPrice(plan)}</p>
-            <p className="text-xl dark:text-white">{plan.description}</p>
+            <p className="text-3xl my-2  dark:text-gray-500 text-gray-600">
+              {getPrice(plan)}
+            </p>
+            <p className=" dark:text-gray-500 text-gray-600">
+              {plan.description}
+            </p>
             <div className="flex justify-center items-center">
               <button
+                onClick={handleClick}
                 type="button"
-                className="text-secondary group-hover:bg-primary group-hover:text-white rounded-lg text-2xl px-5 py-4 me-2 my-5 dark:bg-[#191A28] dark:group-hover:bg-primary-dark focus:outline-none w-[90%] dark:text-white"
+                className="text-primary group-hover:bg-primary dark:border-none border group-hover:text-white rounded font-medium text-lg w-full py-2 me-2 my-5 dark:bg-black shadow-md dark:group-hover:bg-primary-dark focus:outline-none dark:text-white"
               >
                 {plan.buttonInfo}
               </button>
