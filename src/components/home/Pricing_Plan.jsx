@@ -118,7 +118,7 @@ function Pricing_Plan() {
       </div>
 
       {/* Cards for pricing */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-20  dark:text-white">
+      <div className="grid mx-2 grid-cols-1 lg:grid-cols-3 gap-20 dark:text-white">
         {pricingData[selectedPlan].map((plan, index) => (
           <div
             key={index}
@@ -137,7 +137,7 @@ function Pricing_Plan() {
               <button
                 onClick={handleClick}
                 type="button"
-                className="text-primary group-hover:bg-primary dark:border-none border group-hover:text-white rounded font-medium text-lg w-full py-2 me-2 my-5 dark:bg-black shadow dark:group-hover:bg-primary-dark focus:outline-none dark:text-white"
+                className="text-primary group-hover:bg-primary dark:border-none border group-hover:text-white rounded font-medium text-lg w-full py-2 me-2 my-5 dark:bg-black shadow-md dark:group-hover:bg-primary-dark focus:outline-none dark:text-white"
               >
                 {plan.buttonInfo}
               </button>
