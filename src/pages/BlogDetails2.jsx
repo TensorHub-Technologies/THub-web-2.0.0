@@ -1,10 +1,16 @@
 import profile from "../assets/images/blog/ganapathi _profile.jpg";
 import ShareButtons from "../components/sharebuttons/ShareButtons";
 import evo_rag from "../assets/images/blog/evo_rag.png";
+import MetaTags from "../components/common/Metatags";
 
 const BlogDetails2 = () => {
   return (
     <div className="text-justify container mx-auto px-4 border-red-400 dark:bg-secondary">
+      <MetaTags
+        title={"The Evolution and Impact of Retrieval-Augmented (RAG)"}
+        image={evo_rag}
+      />
+
       <div className="text-center py-5">
         <h3 className="text-secondary text-3xl font-bold dark:text-background">
           Blog Posts
