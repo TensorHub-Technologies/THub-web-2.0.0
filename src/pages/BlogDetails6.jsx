@@ -60,11 +60,11 @@ const BlogDetails6 = () => {
                   </div>
 
                   {/* Blog Content */}
-                  <h4 className="text-black dark:text-secondary-dark font-medium mb-5 text-left text-2xl">
+                  <h4 className="text-black dark:text-secondary-dark font-medium mb-5 text-justify text-2xl">
                     Understanding the 5 Levels of AI Agents: A Journey from
                     Basic Automation to Advanced Digital Personas
                   </h4>
-                  <p className="font-medium mb-5 text-left text-black dark:text-secondary-dark space-y-6">
+                  <p className="font-medium mb-5 text-justify text-black dark:text-secondary-dark space-y-6">
                     The rapid advancement of Large Language Models (LLMs) and
                     AI-powered tools is transforming the landscape of
                     intelligent automation. LLM and tools-driven AI
@@ -79,7 +79,7 @@ const BlogDetails6 = () => {
                     from basic automation to advanced digital personas, and the
                     key differences between AI agents and traditional RPA.
                   </p>
-                  <article className="blog-post  font-medium mb-0 text-left text-black dark:text-secondary-dark space-y-6">
+                  <article className="blog-post  font-medium mb-0 text-justify text-black dark:text-secondary-dark space-y-6">
                     <h4>Introduction to LLM & Tools-Driven AI Agents </h4>
                     <p>
                       LLM and tools-driven AI agents are autonomous programs

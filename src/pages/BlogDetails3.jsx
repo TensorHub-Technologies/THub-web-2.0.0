@@ -64,10 +64,10 @@ const BlogDetails3 = () => {
                   </div>
 
                   {/* Blog Content */}
-                  <h4 className="text-black dark:text-secondary-dark font-medium mb-5 text-left text-2xl">
+                  <h4 className="text-black dark:text-secondary-dark font-medium mb-5 text-justify text-2xl">
                     6 Essential Techniques in Retrieval-Augmented Generation
                   </h4>
-                  <p className="font-medium mb-5 text-left text-black dark:text-secondary-dark space-y-6">
+                  <p className="font-medium mb-5 text-justify text-black dark:text-secondary-dark space-y-6">
                     Welcome to our RAG series! In this three-part journey, we’re
                     diving into the world of Retrieval-Augmented Generation, or
                     RAG. This technology is reshaping AI, enabling models to
@@ -76,7 +76,7 @@ const BlogDetails3 = () => {
                     and break down six of its core techniques. Ready to see how
                     RAG can make AI smarter? Let’s dive in!
                   </p>
-                  <article className="blog-post  font-medium mb-0 text-left text-black dark:text-secondary-dark space-y-6">
+                  <article className="blog-post  font-medium mb-0 text-justify text-black dark:text-secondary-dark space-y-6">
                     <h4>What is Retrieval-Augmented Generation (RAG)? </h4>
                     <p>
                       Imagine if AI could consult external sources in real time

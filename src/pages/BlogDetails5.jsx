@@ -64,11 +64,11 @@ const BlogDetails5 = () => {
                   </div>
 
                   {/* Blog Content */}
-                  <h4 className="text-black dark:text-secondary-dark font-medium mb-5 text-left text-2xl">
+                  <h4 className="text-black dark:text-secondary-dark font-medium mb-5 text-justify text-2xl">
                     Unpacking the Final 6 Techniques in Retrieval-Augmented
                     Generation
                   </h4>
-                  <p className="font-medium mb-5 text-left text-black dark:text-secondary-dark space-y-6">
+                  <p className="font-medium mb-5 text-justify text-black dark:text-secondary-dark space-y-6">
                     Welcome to Part 3 of our RAG series! In the first two parts,
                     we explored twelve techniques that power Retrieval-Augmented
                     Generation (RAG). Now, let’s delve into the final six
@@ -76,7 +76,7 @@ const BlogDetails5 = () => {
                     combining retrieval with enhanced reasoning, memory, and
                     interactivity.
                   </p>
-                  <article className="blog-post  font-medium mb-0 text-left text-black dark:text-secondary-dark space-y-6">
+                  <article className="blog-post  font-medium mb-0 text-justify text-black dark:text-secondary-dark space-y-6">
                     <h4>
                       The Final 6 RAG Techniques: Advanced Tools for Dynamic AI
                       Responses{" "}
