@@ -6,7 +6,7 @@ import ShareButtons from "../components/sharebuttons/ShareButtons";
 
 const BlogDetails = () => {
   return (
-    <div className="border-red-400 dark:bg-secondary text-justify container mx-auto px-4">
+    <div className="border-red-400 dark:bg-secondary text-justify px-4 sm:px-8">
       <div className="text-center py-5">
         <h3 className="text-secondary text-3xl font-bold dark:text-background">
           Blog Posts
