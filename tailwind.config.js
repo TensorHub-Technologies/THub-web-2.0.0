@@ -15,7 +15,7 @@ export default {
         },
         background: {
           DEFAULT: "#ffffff", // Light mode background color(white)
-          dark: "#11121C", // Dark mode background color(black)
+          dark: "#191B1F", // Dark mode background color(black)
         },
       },
       fontFamily: {
