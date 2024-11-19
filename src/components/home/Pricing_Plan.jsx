@@ -117,12 +117,11 @@ function Pricing_Plan() {
         </div>
       </div>
 
-      {/* Cards for pricing */}
       <div className="grid mx-2 grid-cols-1 lg:grid-cols-3 gap-20 dark:text-white">
         {pricingData[selectedPlan].map((plan, index) => (
           <div
             key={index}
-            className={`group p-6 bg-white dark:bg-secondary border border-gray-200 rounded-lg shadow dark:border-gray-700 relative hover:shadow-black ${isDarkMode ? subStyle.card_selection_dark : subStyle.card_selection_light}`}
+            className={`group p-6 bg-white dark:bg-background-dark border-black rounded-lg dark:border-gray-700 relative border hover:border-primary dark:hover:border-primary-dark ${isDarkMode ? subStyle.card_selection_dark : subStyle.card_selection_light}`}
           >
             <p className="mb-5 text-3xl text-primary dark:text-primary-dark">
               {plan.title}
@@ -137,7 +136,7 @@ function Pricing_Plan() {
               <button
                 onClick={handleClick}
                 type="button"
-                className="text-primary group-hover:bg-primary dark:border-none border group-hover:text-white rounded font-medium text-lg w-full py-2 me-2 my-5 dark:bg-black shadow-md dark:group-hover:bg-primary-dark focus:outline-none dark:text-white"
+                className="text-primary group-hover:bg-primary border dark:border-primary-dark border-primary group-hover:text-[#11121C] rounded font-medium text-lg w-full py-2 me-2 my-5 dark:bg-background-dark dark:group-hover:bg-primary-dark focus:outline-none dark:text-primary-dark"
               >
                 {plan.buttonInfo}
               </button>

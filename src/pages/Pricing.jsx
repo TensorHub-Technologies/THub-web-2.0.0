@@ -3,7 +3,7 @@ import Accordion from "../components/home/Accordion";
 import FooterImage from "../components/home/FooterImage";
 const Pricing = () => {
   return (
-    <div className="dark:bg-black">
+    <div className="dark:bg-[#11121C]">
       <div className="mb-8 text-center">
         <h2 className="text-3xl font-bold text-black dark:text-white">
           Pricing & Plan
