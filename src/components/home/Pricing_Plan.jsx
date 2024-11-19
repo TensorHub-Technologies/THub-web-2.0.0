@@ -4,11 +4,13 @@ import { pricingData } from "./PricingData";
 import subStyle from "./subscription.module.css";
 import PriceDropdown from "./PriceDropdown";
 import { useNavigate } from "react-router-dom";
+import Enterprice_Form from "./Enterprice_Form";
 
 function Pricing_Plan() {
   const isDarkMode = useSelector((state) => state.customization.isDarkMode);
   const [selectedPlan, setSelectedPlan] = useState("monthly");
   const [currency, setCurrency] = useState("INR");
+  const [showForm, setShowForm] = useState(false);
   const navigate = useNavigate();
 
   const handleMonthly = () => setSelectedPlan("monthly");
@@ -18,8 +20,12 @@ function Pricing_Plan() {
   const handleCurrencyChange = (selectedCurrency) =>
     setCurrency(selectedCurrency);
 
-  const handleClick = () => {
-    navigate("/auth/login");
+  const handleClick = (planTitle) => {
+    if (planTitle === "Enterprise") {
+      setShowForm(true);
+    } else {
+      navigate("/auth/login");
+    }
   };
 
   // Function to get the correct price based on selected plan and currency
@@ -134,9 +140,11 @@ function Pricing_Plan() {
             </p>
             <div className="flex justify-center items-center">
               <button
-                onClick={handleClick}
+                onClick={() => {
+                  handleClick(plan.title);
+                }}
                 type="button"
-                className="text-primary group-hover:bg-primary border dark:border-primary-dark border-primary group-hover:text-[#11121C] rounded font-medium text-lg w-full py-2 me-2 my-5 dark:bg-background-dark dark:group-hover:bg-primary-dark focus:outline-none dark:text-primary-dark"
+                className="text-primary group-hover:bg-primary border dark:border-primary-dark border-primary group-hover:text-[#11121C] rounded font-medium text-lg w-full py-2 me-2 my-5 dark:bg-background-dark dark:group-hover:bg-primary-dark focus:outline-none dark:text-primary-dark cursor-pointer"
               >
                 {plan.buttonInfo}
               </button>
@@ -158,6 +166,7 @@ function Pricing_Plan() {
           </div>
         ))}
       </div>
+      {showForm && <Enterprice_Form setShowForm={setShowForm} />}
     </section>
   );
 }
