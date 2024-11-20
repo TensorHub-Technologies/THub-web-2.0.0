@@ -20,30 +20,6 @@
 
     <!-- Script to apply dark mode based on local storage -->
     <script>
-      const blogData = {
-        "blog-1": {
-          title: "Blog 1: Exploring TensorHub",
-          description: "Discover the features of TensorHub's low-code platform.",
-          image: "/src/assets/images/type1_rag.png",
-        },
-      };
-
-      function updateMetaTags(blogKey) {
-        const blog = blogData[blogKey];
-        if (blog) {
-          document.querySelector('meta[property="og:title"]').setAttribute("content", blog.title);
-          document.querySelector('meta[property="og:description"]').setAttribute("content", blog.description);
-          document.querySelector('meta[property="og:image"]').setAttribute("content", blog.image);
-          document.title = blog.title; // Update the page title
-        }
-      }
-      document.addEventListener("DOMContentLoaded", () => {
-        const params = new URLSearchParams(window.location.search);
-        const blogKey = params.get("blog"); // Example: ?blog=blog-1
-        if (blogKey) {
-          updateMetaTags(blogKey);
-        }
-      });
       (function () {
         const isDarkMode = JSON.parse(localStorage.getItem("isDarkMode"));
         if (isDarkMode) {
