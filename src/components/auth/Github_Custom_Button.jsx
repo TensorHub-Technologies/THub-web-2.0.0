@@ -1,21 +1,35 @@
-import { useState } from "react";
+import { useEffect } from "react";
 import axios from "axios";
 
 function Github_Custom_Button() {
-  const [userData, setUserData] = useState({});
-  console.log(userData.uid, userData.name, userData.avatar_url, "****");
+  const clientIds = {
+    localhost: "Ov23liqiYh1YKRrTHr0s",
+    demo: "Ov23lif7mrkCVPKebB0G",
+    production: "Ov23li9nfbJfQ0N5XiFZ",
+  };
 
-  const client_id = "Ov23liXLGJx4h6LN9zZj";
+  const getClientId = () => {
+    switch (window.location.hostname) {
+      case "localhost":
+        return clientIds.localhost;
+      case "thub-web-2-0-0-378678297066.us-central1.run.app":
+        return clientIds.production;
+      default:
+        return clientIds.demo;
+    }
+  };
+
+  useEffect(() => {
+    handleGithubAuth();
+  }, []);
 
   const handleGithubAuth = async () => {
     const query = window.location.search;
     const urlParams = new URLSearchParams(query);
-    const searchParams = urlParams.get("code");
-    const access = localStorage.getItem("access_token");
+    const code = urlParams.get("code");
+    const accessToken = localStorage.getItem("access_token");
 
-    console.log(searchParams, "searchParams", access, "access");
-
-    if (searchParams && access === null) {
+    if (code && !accessToken) {
       try {
         const apiUrl =
           window.location.hostname === "localhost"
@@ -23,33 +37,31 @@ function Github_Custom_Button() {
             : "https://thub-web-server-2-0-378678297066.us-central1.run.app";
 
         const response = await axios.get(`${apiUrl}/getAccessToken`, {
-          params: { code: searchParams },
+          params: { code },
         });
 
-        const data = response.data;
-        console.log("data", data.access_token);
-
-        if (data.access_token) {
-          localStorage.setItem("access_token", data.access_token);
+        const { access_token } = response.data;
+        if (access_token) {
+          localStorage.setItem("access_token", access_token);
           await getUserData();
         } else {
-          console.error("Failed to get access token:", data.error_description);
+          console.error("Failed to retrieve access token");
         }
       } catch (error) {
-        console.error("Error fetching access token:", error);
+        console.error("Error during GitHub OAuth flow:", error);
       }
-    } else if (access) {
-      getUserData();
+    } else if (accessToken) {
+      await getUserData();
     }
   };
 
-  async function getUserData() {
-    const apiUrl =
-      window.location.hostname === "localhost"
-        ? "http://localhost:2000"
-        : "https://thub-web-server-2-0-378678297066.us-central1.run.app";
-
+  const getUserData = async () => {
     try {
+      const apiUrl =
+        window.location.hostname === "localhost"
+          ? "http://localhost:2000"
+          : "https://thub-web-server-2-0-378678297066.us-central1.run.app";
+
       const response = await axios.get(`${apiUrl}/getuserData`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("access_token")}`,
@@ -57,38 +69,30 @@ function Github_Custom_Button() {
       });
 
       const data = response.data;
-      setUserData(data);
+
       if (data.uid) {
-        const finalWorkspace = data?.workspace || "app";
         const theme =
           localStorage.getItem("isDarkMode") === "true" ? "dark" : "lite";
+        const finalWorkspace = data.workspace || "app";
 
-        let redirectUrl;
-        switch (window.location.hostname) {
-          case "localhost":
-            redirectUrl = `http://localhost:8080/?theme=${theme}&uid=${data?.uid}`;
-            break;
-          case "thub-web-2-0-0-378678297066.us-central1.run.app":
-            redirectUrl = `https://demo.thub.tech/?theme=${theme}&uid=${data?.uid}`;
-            break;
-          default:
-            redirectUrl = `https://${finalWorkspace}.thub.tech/?theme=${theme}&uid=${data?.uid}`;
-            break;
-        }
+        const redirectUrl =
+          window.location.hostname === "localhost"
+            ? `http://localhost:8080/?theme=${theme}&uid=${data.uid}`
+            : `https://${finalWorkspace}.thub.tech/?theme=${theme}&uid=${data.uid}`;
 
         window.location.href = redirectUrl;
       }
     } catch (error) {
-      console.error("Error getting user data:", error);
+      console.error("Error fetching user data:", error);
     }
-  }
-
-  const loginWithGithub = () => {
-    const link = `https://github.com/login/oauth/authorize?client_id=${client_id}`;
-    window.location.assign(link);
+    localStorage.removeItem("access_token");
   };
 
-  handleGithubAuth();
+  const loginWithGithub = () => {
+    const clientId = getClientId();
+    const gitRedirectUrl = `https://github.com/login/oauth/authorize?client_id=${clientId}`;
+    window.location.assign(gitRedirectUrl);
+  };
 
   return (
     <div>
