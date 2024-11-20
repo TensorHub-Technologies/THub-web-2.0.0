@@ -127,17 +127,15 @@ function Pricing_Plan() {
         {pricingData[selectedPlan].map((plan, index) => (
           <div
             key={index}
-            className={`group p-6 bg-white dark:bg-background-dark border-black rounded-lg dark:border-gray-700 relative border hover:border-primary dark:hover:border-primary-dark ${isDarkMode ? subStyle.card_selection_dark : subStyle.card_selection_light}`}
+            className={`group p-6 bg-white  dark:bg-background-dark border-black rounded-lg dark:border-gray-700 relative border hover:border-primary dark:hover:border-primary-dark ${isDarkMode ? subStyle.card_selection_dark : subStyle.card_selection_light}`}
           >
             <p className="mb-5 text-3xl text-primary dark:text-primary-dark">
               {plan.title}
             </p>
-            <p className="text-3xl my-2  dark:text-gray-500 text-gray-600">
+            <p className="text-3xl my-2 text-black dark:text-white">
               {getPrice(plan)}
             </p>
-            <p className=" dark:text-gray-500 text-gray-600">
-              {plan.description}
-            </p>
+            <p className=" text-black dark:text-white">{plan.description}</p>
             <div className="flex justify-center items-center">
               <button
                 onClick={() => {
