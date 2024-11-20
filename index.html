@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="en">
   <head>
-   
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/src/assets/images/Thub.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,13 +8,8 @@
 
     <meta property="og:title" content="TensorHub Technologies" />
     <meta property="og:description" content="TensorHub A Low Code No Code Platform" />
-    <meta
-      property="og:image"
-      content="https://thub.tech/assets/Thub-B_uTYg3u.png"
-    />
-    
+    <meta property="og:image" content="https://thub.tech/assets/Thub-B_uTYg3u.png" />
     <meta property="og:type" content="website" />
- 
     <meta name="twitter:card" content="summary_large_image" />
 
     <!-- Script to apply dark mode based on local storage -->
@@ -28,84 +22,59 @@
       })();
     </script>
     <script type="module">
-      import Chatbot from "https://cdn.jsdelivr.net/npm/thub-embed@1.5.8/dist/web.js"
+      import Chatbot from "https://cdn.jsdelivr.net/npm/thub-embed@1.5.8/dist/web.js";
       Chatbot.init({
-          chatflowid: "03da9841-eabd-48f2-bc05-813de1fe4a83",
-          apiHost: "https://demo.thub.tech",
-          chatflowConfig: {
-            // topK: 2
+        chatflowid: "03da9841-eabd-48f2-bc05-813de1fe4a83",
+        apiHost: "https://demo.thub.tech",
+        theme: {
+          button: {
+            backgroundColor:
+              "linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%)",
+            right: 20,
+            bottom: 20,
+            size: "medium",
+            iconColor: "white",
           },
-          observersConfig: {
-            // (optional) Allows you to execute code in parent based upon signal observations within the chatbot.
-            // The userinput field submitted to bot ("" when reset by bot)
-            observeUserInput: (userInput) => {
-              console.log({ userInput });
+          chatWindow: {
+            title: "THub Bot",
+            welcomeMessage: "Hello! This is custom welcome message",
+            errorMessage: "This is a custom error message",
+            backgroundColor: "#ffffff",
+            height: 700,
+            width: 400,
+            fontSize: 16,
+            poweredByTextColor: "#303235",
+            botMessage: {
+              backgroundColor: "#f7f8ff",
+              textColor: "#303235",
+              showAvatar: true,
+              avatarSrc: "svg/thub_icon.svg",
             },
-            // The bot message stack has changed
-            observeMessages: (messages) => {
-              console.log({ messages });
+            footer: {
+              text: "Powered by THub",
+              companyLink: "https://docs.thub.tech/",
             },
-            // The bot loading signal changed
-            observeLoading: (loading) => {
-              console.log({ loading });
+            userMessage: {
+              backgroundColor: "#3B81F6",
+              textColor: "#ffffff",
+              showAvatar: true,
+              avatarSrc: "svg/profile.svg",
+              borderRadius: "1px",
             },
-          },
-          theme: {
-            button: {
-              backgroundColor: "rgb(63,94,251)",
-              backgroundColor:
-                "linear-gradient(90deg, rgba(63,94,251,1) 0%, rgba(252,70,107,1) 100%)",
-              right: 20,
-              bottom: 20,
-              size: "medium",
-              iconColor: "white",
-            },
-            chatWindow: {
-              title: "THub Bot",
-              welcomeMessage: "Hello! This is custom welcome message",
-              errorMessage: "This is a custom error message",
+            textInput: {
+              placeholder: "Type your question",
               backgroundColor: "#ffffff",
-              height: 700,
-              width: 400,
-              fontSize: 16,
-              poweredByTextColor: "#303235",
-              botMessage: {
-                backgroundColor: "#f7f8ff",
-                textColor: "#303235",
-                showAvatar: true,
-                avatarSrc: "svg/thub_icon.svg",
-              },
-              footer: {
-                text: "Powered by THub",
-                companyLink: "https://docs.thub.tech/",
-                
-                
-                
-              },
-  
-              userMessage: {
-                backgroundColor: "#3B81F6",
-                textColor: "#ffffff",
-                showAvatar: true,
-                avatarSrc: "svg/profile.svg",
-                borderRadius: "1px",
-              },
-              textInput: {
-                placeholder: "Type your question",
-                backgroundColor: "#ffffff",
-                textColor: "#303235",
-                sendButtonColor: "#E22A90",
-                borderRadius: "12px",
-              },
-              feedback: {
-                color: "#303235",
-              },
+              textColor: "#303235",
+              sendButtonColor: "#E22A90",
+              borderRadius: "12px",
+            },
+            feedback: {
+              color: "#303235",
             },
           },
-        });
-  </script>
-
-
+        },
+      });
+    </script>
 
     <!-- Moved the main script here -->
     <script type="module" src="/src/main.jsx"></script>
@@ -113,5 +82,77 @@
 
   <body>
     <div id="root"></div>
+
+    <!-- Static Blog List -->
+    <section class="blog-list">
+      <article class="blog-item">
+        <img src="/src/assets/images/blog1-thumbnail.jpg" alt="Blog 1 Thumbnail" class="blog-thumbnail" />
+        <h2 class="blog-title">Blog Title 1</h2>
+        <p class="blog-description">This is a description for Blog 1. It covers interesting topics in tech.</p>
+      </article>
+
+      <article class="blog-item">
+        <img src="/src/assets/images/blog2-thumbnail.jpg" alt="Blog 2 Thumbnail" class="blog-thumbnail" />
+        <h2 class="blog-title">Blog Title 2</h2>
+        <p class="blog-description">This is a description for Blog 2. It covers cutting-edge developments in AI.</p>
+      </article>
+
+      <article class="blog-item">
+        <img src="/src/assets/images/blog3-thumbnail.jpg" alt="Blog 3 Thumbnail" class="blog-thumbnail" />
+        <h2 class="blog-title">Blog Title 3</h2>
+        <p class="blog-description">This is a description for Blog 3. Learn about the future of web development.</p>
+      </article>
+
+      <!-- Add more blog items here as needed -->
+    </section>
+
+    <!-- Add styling to arrange the blog items -->
+    <style>
+      .blog-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+        padding: 20px;
+      }
+
+      .blog-item {
+        background-color: #f4f4f4;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .blog-thumbnail {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+      }
+
+      .blog-title {
+        font-size: 1.5rem;
+        color: #333;
+        margin-top: 15px;
+      }
+
+      .blog-description {
+        font-size: 1rem;
+        color: #666;
+        margin-top: 10px;
+      }
+
+      /* Add dark mode support */
+      .dark .blog-item {
+        background-color: #333;
+        color: #fff;
+      }
+
+      .dark .blog-title {
+        color: #fff;
+      }
+
+      .dark .blog-description {
+        color: #ccc;
+      }
+    </style>
   </body>
 </html>
