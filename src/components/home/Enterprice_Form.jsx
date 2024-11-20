@@ -1,15 +1,16 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
+import axios from "axios";
 import PropTypes from "prop-types";
 import { AiOutlineUser, AiOutlineMail, AiOutlinePhone } from "react-icons/ai";
-import { ToastContainer } from "react-toastify";
 import { useEffect, useRef } from "react";
 import { HiOutlineBuildingOffice } from "react-icons/hi2";
 import { PiSuitcaseSimple } from "react-icons/pi";
 import { TbFileDescription } from "react-icons/tb";
 
-const Enterprice_Form = ({ setShowForm, handleSubmit }) => {
+const Enterprice_Form = ({ setShowForm, handleLoading, handleError }) => {
   const formRef = useRef(null);
+
   const initialValues = {
     firstName: "",
     lastName: "",
@@ -48,6 +49,42 @@ const Enterprice_Form = ({ setShowForm, handleSubmit }) => {
     };
   }, [setShowForm]);
 
+  const handleSubmit = async (values) => {
+    const {
+      firstName,
+      lastName,
+      companyName,
+      designation,
+      email,
+      contactNumber,
+      description,
+    } = values;
+    const apiUrl =
+      window.location.hostname === "localhost"
+        ? "http://localhost:2000"
+        : "https://thub-web-server-2-0-378678297066.us-central1.run.app";
+
+    try {
+      handleLoading("Form Submitted Successfully");
+      const response = await axios.post(`${apiUrl}/enterprice-mail`, {
+        firstName,
+        lastName,
+        companyName,
+        designation,
+        email,
+        contactNumber,
+        description,
+      });
+      console.log(response.status, "response status");
+      if (response.status === 200 || response.status === "ok") {
+        handleLoading("We'll reach out shortly!");
+      }
+    } catch (error) {
+      handleError("Form Submission Failed");
+      console.error("Error submitting form:", error);
+    }
+  };
+
   return (
     <div className="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center z-50 px-4 py-6">
       <div
@@ -59,12 +96,10 @@ const Enterprice_Form = ({ setShowForm, handleSubmit }) => {
           validationSchema={validationSchema}
           onSubmit={(values) => {
             handleSubmit(values);
-            setShowForm(false);
           }}
         >
           {() => (
             <Form>
-              <ToastContainer />
               <h2 className="text-xl font-semibold text-center mb-4 dark:text-white ">
                 Enterprise Inquiry Form
               </h2>
@@ -214,7 +249,8 @@ const Enterprice_Form = ({ setShowForm, handleSubmit }) => {
 };
 
 Enterprice_Form.propTypes = {
-  handleSubmit: PropTypes.func,
-  setShowForm: PropTypes.isRequired,
+  setShowForm: PropTypes.func.isRequired,
+  handleLoading: PropTypes.func.isRequired,
+  handleError: PropTypes.func.isRequired,
 };
 export default Enterprice_Form;
