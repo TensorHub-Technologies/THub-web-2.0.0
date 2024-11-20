@@ -4,6 +4,7 @@ import { pricingData } from "./PricingData";
 import subStyle from "./subscription.module.css";
 import PriceDropdown from "./PriceDropdown";
 import { useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
 import Enterprice_Form from "./Enterprice_Form";
 
 function Pricing_Plan() {
@@ -28,6 +29,26 @@ function Pricing_Plan() {
     }
   };
 
+  const handleLoading = (message) => {
+    toast.success(message, {
+      theme: "colored",
+      style: {
+        background: isDarkMode ? "#e22a90" : "#3c5ba4",
+        color: "white",
+      },
+    });
+  };
+
+  const handleError = (message) => {
+    toast.error(message, {
+      theme: "colored",
+      style: {
+        background: "red",
+        color: "white",
+      },
+    });
+  };
+
   // Function to get the correct price based on selected plan and currency
   const getPrice = (plan) => {
     return plan.prices[currency] || plan.prices["INR"];
@@ -35,6 +56,8 @@ function Pricing_Plan() {
 
   return (
     <section className="px-4 sm:px-8 lg:px-16 pb-10 py-10">
+      <ToastContainer />
+
       <div className="flex flex-col justify-center items-center gap-5">
         <p className="text-primary dark:text-primary-dark text-4xl">
           Pricing Plan
@@ -119,7 +142,10 @@ function Pricing_Plan() {
         </div>
         {/* Dropdown for currency selection */}
         <div className="absolute right-5 mr-12">
-          <PriceDropdown onCurrencyChange={handleCurrencyChange} />
+          <PriceDropdown
+            onCurrencyChange={handleCurrencyChange}
+            handleError={handleError}
+          />
         </div>
       </div>
 
@@ -164,7 +190,13 @@ function Pricing_Plan() {
           </div>
         ))}
       </div>
-      {showForm && <Enterprice_Form setShowForm={setShowForm} />}
+      {showForm && (
+        <Enterprice_Form
+          setShowForm={setShowForm}
+          handleLoading={handleLoading}
+          handleError={handleError}
+        />
+      )}
     </section>
   );
 }
