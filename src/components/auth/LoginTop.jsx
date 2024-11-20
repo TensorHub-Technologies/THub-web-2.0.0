@@ -2,6 +2,8 @@ import ThubLogo from "../../assets/images/THub.svg";
 import { GoogleOAuthProvider } from "@react-oauth/google";
 import Google_Custom_Button from "./Google_Custom_Button";
 import Github_Custom_Button from "./Github_Custom_Button";
+import ProfileContent from "./microsoftLogin/ProfileContent";
+import { SignInButton } from "./microsoftLogin/SignInButton";
 
 const LoginTop = () => {
   return (
@@ -13,6 +15,10 @@ const LoginTop = () => {
         </GoogleOAuthProvider>
         <div>
           <Github_Custom_Button />
+        </div>
+        <div>
+          <SignInButton />
+          <ProfileContent />
         </div>
         <div className="flex items-center justify-center my-6 w-full">
           <hr className="border dark:border-gray-600 w-24 " />
