@@ -15,7 +15,7 @@ const getRedirectUri = () => {
   ) {
     return "https://thub-web-2-0-0-378678297066.us-central1.run.app/";
   } else {
-    return "https://yourapp.thub.tech/";
+    return "https://thub.tech/";
   }
 };
 
