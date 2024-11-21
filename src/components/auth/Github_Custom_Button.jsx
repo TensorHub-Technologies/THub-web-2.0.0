@@ -13,9 +13,9 @@ function Github_Custom_Button() {
       case "localhost":
         return clientIds.localhost;
       case "thub-web-2-0-0-378678297066.us-central1.run.app":
-        return clientIds.production;
-      default:
         return clientIds.demo;
+      default:
+        return clientIds.production;
     }
   };
 
