@@ -29,7 +29,7 @@ function Forgot_Password() {
   const handleSubmit = async (values) => {
     const apiUrl =
       window.location.hostname === "localhost"
-        ? "http://localhost:8080"
+        ? "http://localhost:2000"
         : "https://thub-web-server-2-0-378678297066.us-central1.run.app";
 
     setLoading(true);

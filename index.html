@@ -28,24 +28,20 @@
       })();
     </script>
     <script type="module">
-      import Chatbot from "https://cdn.jsdelivr.net/npm/thub-embed@1.5.8/dist/web.js"
+      import Chatbot from "https://cdn.jsdelivr.net/npm/thub-embed@9.1.2/dist/web.js"
       Chatbot.init({
-          chatflowid: "03da9841-eabd-48f2-bc05-813de1fe4a83",
-          apiHost: "https://demo.thub.tech",
+        chatflowid: "2b414cd1-cded-4915-be17-31e256246765",
+        apiHost: "https://demo.thub.tech",
           chatflowConfig: {
             // topK: 2
           },
           observersConfig: {
-            // (optional) Allows you to execute code in parent based upon signal observations within the chatbot.
-            // The userinput field submitted to bot ("" when reset by bot)
             observeUserInput: (userInput) => {
               console.log({ userInput });
             },
-            // The bot message stack has changed
             observeMessages: (messages) => {
               console.log({ messages });
             },
-            // The bot loading signal changed
             observeLoading: (loading) => {
               console.log({ loading });
             },
@@ -65,8 +61,8 @@
               welcomeMessage: "Hello! welcome to THub",
               errorMessage: "This is a custom error message",
               backgroundColor: "#ffffff",
-              height: 700,
-              width: 400,
+              height: 500,
+              width: 350,
               fontSize: 16,
               poweredByTextColor: "#303235",
               botMessage: {
@@ -104,6 +100,15 @@
           },
         });
   </script>
+
+<!-- 
+  <script type="module">
+    import Chatbot from "https://cdn.jsdelivr.net/npm/thub-embed@9.1.1/dist/web.js"
+    Chatbot.init({
+        chatflowid: "212b0a36-130e-4459-acdb-d08d6c3c25e7",
+        apiHost: "http://localhost:8080",
+    })
+</script> -->
 
 
 
