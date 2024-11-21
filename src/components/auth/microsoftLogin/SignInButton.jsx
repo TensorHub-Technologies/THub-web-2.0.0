@@ -15,16 +15,25 @@ export const SignInButton = () => {
       <button
         type="button"
         onClick={handleLogin}
-        className="px-12 text-black bg-white border dark:border-gray-500 dark:hover:border-primary-dark hover:border-primary focus:outline-none font-medium rounded-lg text-lg py-2.5 text-center inline-flex items-center dark:bg-black dark:text-white"
+        className="px-12  text-black bg-white border dark:border-gray-500 dark:hover:border-primary-dark hover:border-primary focus:outline-none font-medium rounded-lg text-lg py-2.5 text-center inline-flex items-center dark:bg-black dark:text-white gap-4"
       >
         <svg
-          className="w-5 h-5 me-5 ml-5"
-          aria-hidden="true"
           xmlns="http://www.w3.org/2000/svg"
-          fill="currentColor"
-          viewBox="0 0 18 19"
+          xmlSpace="preserve"
+          viewBox="0 0 16 16"
+          id="microsoft"
+          className="w-4 ml-4"
         >
-          <path d="M3 0C1.343 0 0 1.343 0 3v13c0 1.657 1.343 3 3 3h12c1.657 0 3-1.343 3-3V3c0-1.657-1.343-3-3-3H3zm0 1h12c1.104 0 2 .896 2 2v12c0 1.104-.896 2-2 2H3c-1.104 0-2-.896-2-2V3c0-1.104.896-2 2-2zm3 4h2v4H6V5zm4 0h2v4h-2V5zm-4 5h2v4H6v-4zm4 0h2v4h-2v-4z" />
+          <path
+            fill="#4CAF50"
+            d="M8.5 7.5H16v-7a.5.5 0 0 0-.5-.5h-7v7.5z"
+          ></path>
+          <path fill="#F44336" d="M7.5 7.5V0h-7a.5.5 0 0 0-.5.5v7h7.5z"></path>
+          <path fill="#2196F3" d="M7.5 8.5H0v7a.5.5 0 0 0 .5.5h7V8.5z"></path>
+          <path
+            fill="#FFC107"
+            d="M8.5 8.5V16h7a.5.5 0 0 0 .5-.5v-7H8.5z"
+          ></path>
         </svg>
         Continue with Microsoft
       </button>
