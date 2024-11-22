@@ -2,11 +2,7 @@ import { Formik, Form, Field, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import axios from "axios";
 import PropTypes from "prop-types";
-import { AiOutlineUser, AiOutlineMail, AiOutlinePhone } from "react-icons/ai";
 import { useEffect, useRef } from "react";
-import { HiOutlineBuildingOffice } from "react-icons/hi2";
-import { PiSuitcaseSimple } from "react-icons/pi";
-import { TbFileDescription } from "react-icons/tb";
 
 const Enterprice_Form = ({ setShowForm, handleLoading, handleError }) => {
   const formRef = useRef(null);
@@ -50,15 +46,7 @@ const Enterprice_Form = ({ setShowForm, handleLoading, handleError }) => {
   }, [setShowForm]);
 
   const handleSubmit = async (values) => {
-    const {
-      firstName,
-      lastName,
-      companyName,
-      designation,
-      email,
-      contactNumber,
-      description,
-    } = values;
+    console.log(values, "submitting");
     const apiUrl =
       window.location.hostname === "localhost"
         ? "http://localhost:2000"
@@ -66,16 +54,7 @@ const Enterprice_Form = ({ setShowForm, handleLoading, handleError }) => {
 
     try {
       handleLoading("Form Submitted Successfully");
-      const response = await axios.post(`${apiUrl}/enterprice-mail`, {
-        firstName,
-        lastName,
-        companyName,
-        designation,
-        email,
-        contactNumber,
-        description,
-      });
-      console.log(response.status, "response status");
+      const response = await axios.post(`${apiUrl}/enterprice-mail`, values);
       if (response.status === 200 || response.status === "ok") {
         handleLoading("We'll reach out shortly!");
       }
@@ -89,153 +68,117 @@ const Enterprice_Form = ({ setShowForm, handleLoading, handleError }) => {
     <div className="fixed inset-0 bg-black bg-opacity-80 flex justify-center items-center z-50 px-4 py-6">
       <div
         ref={formRef}
-        className="bg-white dark:bg-secondary p-6 rounded-lg shadow-lg w-full max-w-md max-h-[90vh] overflow-y-auto"
+        className="bg-white dark:bg-secondary p-6 rounded-lg shadow-lg w-full max-w-xl max-h-[90vh] overflow-y-auto "
       >
         <Formik
           initialValues={initialValues}
           validationSchema={validationSchema}
-          onSubmit={(values) => {
-            handleSubmit(values);
-          }}
+          onSubmit={(values) => handleSubmit(values)}
         >
           {() => (
             <Form>
-              <h2 className="text-xl font-semibold text-center mb-4 dark:text-white ">
+              <h2 className="text-3xl font-semibold text-primary dark:text-primary-dark text-left mb-8">
                 Enterprise Inquiry Form
               </h2>
-              <div className="space-y-4">
-                {/* First Name */}
-                <div className="relative">
-                  <span className="absolute left-4 top-[12px] dark:text-white">
-                    <AiOutlineUser />
-                  </span>
-                  <Field
-                    type="text"
-                    name="firstName"
-                    placeholder="First Name"
-                    className="block w-full pl-10  dark:text-white py-2 border rounded-md dark:bg-black dark:focus:border-primary-dark focus:border-primary focus:ring-primary dark:focus:ring-primary-dark"
-                  />
-                  <ErrorMessage
-                    name="firstName"
-                    component="div"
-                    className="text-red-500 text-sm mt-1"
-                  />
+              <div className="space-y-6">
+                <div className="flex gap-6">
+                  <div className="relative z-0 w-full group">
+                    <Field
+                      type="text"
+                      name="firstName"
+                      id="firstName"
+                      className="block px-0 w-full text-lg text-gray-900 bg-transparent border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                      placeholder=" "
+                      required
+                    />
+                    <label
+                      htmlFor="firstName"
+                      className="peer-focus:text-lg absolute pl-0 text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-primary-dark peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y peer-focus:scale-75 peer-focus:-translate-y-14"
+                    >
+                      First Name
+                    </label>
+                    <ErrorMessage
+                      name="firstName"
+                      component="div"
+                      className="text-red-500 text-sm mt-1"
+                    />
+                  </div>
+                  <div className="relative z-0 w-full group">
+                    <Field
+                      type="text"
+                      name="lastName"
+                      id="lastName"
+                      className="block px-0 w-full text-lg text-gray-900 bg-transparent border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                      placeholder=" "
+                      required
+                    />
+                    <label
+                      htmlFor="lastName"
+                      className="peer-focus:text-lg absolute pl-0 text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-primary-dark peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y peer-focus:scale-75 peer-focus:-translate-y-14"
+                    >
+                      Last Name
+                    </label>
+                    <ErrorMessage
+                      name="lastName"
+                      component="div"
+                      className="text-red-500 text-sm mt-1"
+                    />
+                  </div>
                 </div>
-                {/* Last Name */}
-                <div className="relative">
-                  <span className="absolute left-4 top-[12px] dark:text-white">
-                    <AiOutlineUser />
-                  </span>
-                  <Field
-                    type="text"
-                    name="lastName"
-                    placeholder="Last Name"
-                    className="block w-full pl-10 py-2  dark:text-white border rounded-md dark:bg-black dark:focus:border-primary-dark focus:border-primary focus:ring-primary dark:focus:ring-primary-dark"
-                  />
-                  <ErrorMessage
-                    name="lastName"
-                    component="div"
-                    className="text-red-500 text-sm mt-1"
-                  />
-                </div>
-                {/* Company Name */}
-                <div className="relative">
-                  <span className="absolute left-4 top-[12px] dark:text-white">
-                    <HiOutlineBuildingOffice />
-                  </span>
-                  <Field
-                    type="text"
-                    name="companyName"
-                    placeholder="Company Name"
-                    className="block w-full pl-10 py-2  dark:text-white border rounded-md dark:bg-black dark:focus:border-primary-dark focus:border-primary focus:ring-primary dark:focus:ring-primary-dark"
-                  />
-                  <ErrorMessage
-                    name="companyName"
-                    component="div"
-                    className="text-red-500 text-sm mt-1"
-                  />
-                </div>
-                {/* Designation */}
-                <div className="relative">
-                  <span className="absolute left-4 top-[12px] dark:text-white">
-                    <PiSuitcaseSimple />
-                  </span>
-                  <Field
-                    type="text"
-                    name="designation"
-                    placeholder="Designation"
-                    className="block w-full pl-10 py-2  dark:text-white border rounded-md dark:bg-black dark:focus:border-primary-dark focus:border-primary focus:ring-primary dark:focus:ring-primary-dark"
-                  />
-                  <ErrorMessage
-                    name="designation"
-                    component="div"
-                    className="text-red-500 text-sm mt-1"
-                  />
-                </div>
-                {/* Email */}
-                <div className="relative">
-                  <span className="absolute left-4 top-[12px] dark:text-white">
-                    <AiOutlineMail />
-                  </span>
-                  <Field
-                    type="email"
-                    name="email"
-                    placeholder="Email"
-                    className="block w-full pl-10 py-2 dark:text-white  border rounded-md dark:bg-black dark:focus:border-primary-dark focus:border-primary focus:ring-primary dark:focus:ring-primary-dark"
-                  />
-                  <ErrorMessage
-                    name="email"
-                    component="div"
-                    className="text-red-500 text-sm mt-1"
-                  />
-                </div>
-                {/* Contact Number */}
-                <div className="relative">
-                  <span className="absolute left-4 top-[12px] dark:text-white">
-                    <AiOutlinePhone />
-                  </span>
-                  <Field
-                    type="tel"
-                    name="contactNumber"
-                    placeholder="Contact Number"
-                    className="block w-full pl-10 py-2 dark:text-white  border rounded-md dark:bg-black dark:focus:border-primary-dark focus:border-primary focus:ring-primary dark:focus:ring-primary-dark"
-                  />
-                  <ErrorMessage
-                    name="contactNumber"
-                    component="div"
-                    className="text-red-500 text-sm mt-1"
-                  />
-                </div>
-                {/* Description */}
-                <div className="relative">
-                  <span className="absolute left-4 top-[12px] dark:text-white">
-                    <TbFileDescription />
-                  </span>
-                  <Field
-                    as="textarea"
-                    name="description"
-                    placeholder="Details of what you want from TensorHub"
-                    rows="4"
-                    className="block w-full pl-10 py-2 dark:text-white  border rounded-md dark:bg-black dark:focus:border-primary-dark focus:border-primary focus:ring-primary dark:focus:ring-primary-dark"
-                  />
-                  <ErrorMessage
-                    name="description"
-                    component="div"
-                    className="text-red-500 text-sm mt-1"
-                  />
-                </div>
+                {[
+                  "companyName",
+                  "designation",
+                  "email",
+                  "contactNumber",
+                  "description",
+                ].map((fieldName) => (
+                  <div key={fieldName} className="relative z-0 w-full group">
+                    {fieldName === "description" ? (
+                      <Field
+                        as="textarea"
+                        name={fieldName}
+                        id={fieldName}
+                        rows="4"
+                        className="block px-0 w-full text-lg text-gray-900 bg-transparent border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                        placeholder=" "
+                        required
+                      />
+                    ) : (
+                      <Field
+                        type={fieldName === "email" ? "email" : "text"}
+                        name={fieldName}
+                        id={fieldName}
+                        className="block px-0 w-full text-lg text-gray-900 bg-transparent border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                        placeholder=" "
+                        required
+                      />
+                    )}
+                    <label
+                      htmlFor={fieldName}
+                      className="peer-focus:text-lg absolute pl-0 text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-primary-dark peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y peer-focus:scale-75 peer-focus:-translate-y-14"
+                    >
+                      {fieldName.charAt(0).toUpperCase() + fieldName.slice(1)}
+                    </label>
+                    <ErrorMessage
+                      name={fieldName}
+                      component="div"
+                      className="text-red-500 text-sm mt-1"
+                    />
+                  </div>
+                ))}
               </div>
+
               <div className="flex justify-center gap-10 mt-4 space-x-2">
                 <button
                   type="button"
-                  className="px-10 py-2 hover:bg-primary border-primary hover:text-white text-primary dark:text-primary-dark dark:bg-black border hover:dark:bg-primary-dark hover:dark:text-black dark:border-primary-dark rounded-lg"
+                  className="px-10 py-2 border-primary hover:bg-gray-100 text-primary dark:text-primary-dark dark:bg-secondary border  dark:border-primary-dark rounded-lg"
                   onClick={() => setShowForm(false)}
                 >
                   Cancel
                 </button>
                 <button
                   type="submit"
-                  className="px-10 py-2 hover:bg-primary border-primary hover:text-white text-primary dark:text-primary-dark dark:bg-black border hover:dark:bg-primary-dark hover:dark:text-black dark:border-primary-dark rounded-lg"
+                  className="px-10 py-2 hover:bg-blue-900 bg-primary dark:bg-primary-dark text-white border-primary hover:text-white  border hover:dark:bg-primary-dark hover:dark:text-black dark:border-primary-dark shadow-lg rounded-lg"
                 >
                   Submit
                 </button>
@@ -253,4 +196,5 @@ Enterprice_Form.propTypes = {
   handleLoading: PropTypes.func.isRequired,
   handleError: PropTypes.func.isRequired,
 };
+
 export default Enterprice_Form;
