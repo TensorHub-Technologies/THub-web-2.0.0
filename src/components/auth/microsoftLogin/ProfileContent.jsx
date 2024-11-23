@@ -39,8 +39,8 @@ const ProfileContent = () => {
                 .post(`${apiUrl}/microuser`, payload)
                 .then((response) => {
                   const data = response.data;
-                  const userId = data.data?.uid;
-                  const finalWorkspace = data.data?.workspace || "app";
+                  const userId = data.user?.uid;
+                  const finalWorkspace = data.user?.workspace || "app";
                   const theme =
                     localStorage.getItem("isDarkMode") === "true"
                       ? "dark"
