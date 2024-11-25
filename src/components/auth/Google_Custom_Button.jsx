@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useGoogleLogin } from "@react-oauth/google";
 import axios from "axios";
+// import index from "../auth/index.css";
+import "./index.css";
 
 function Google_Custom_Button() {
   const [loading, setLoading] = useState(false);
@@ -56,9 +58,35 @@ function Google_Custom_Button() {
   return (
     <div>
       {loading && (
-        <div className="fixed top-0 left-0 w-full h-1 bg-primary dark:bg-primary-dark animate-pulse z-50" />
+        <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-white dark:bg-gray-900 z-50">
+          {/* Logo Animation */}
+          <div className="relative w-32 h-[12.5rem] flex flex-col items-start gap-2">
+            <div className="logo-part top">
+              <img
+                src="/assets/thub_top.png"
+                alt="Loading Part 1"
+                className="min-w-32 h-6"
+              />
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="logo-part left">
+                <img
+                  src="/assets/thub_left.png"
+                  alt="Loading Part 2"
+                  className="w-[3.75rem]"
+                />
+              </div>
+              <div className="logo-part right">
+                <img
+                  src="/assets/thub_right.png"
+                  alt="Loading Part 3"
+                  className="w-[3.75rem]"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
       )}
-
       <button
         type="button"
         onClick={login}
