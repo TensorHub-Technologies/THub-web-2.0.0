@@ -21,6 +21,25 @@ export default {
       fontFamily: {
         sans: ["'Cambria Math'", "sans-serif"],
       },
+      keyframes: {
+        slideInTop: {
+          "0%": { transform: "translateY(-100%)" },
+          "100%": { transform: "translateY(0)" },
+        },
+        slideInLeft: {
+          "0%": { transform: "translateX(-100%)" },
+          "100%": { transform: "translateX(0)" },
+        },
+        slideInRight: {
+          "0%": { transform: "translateX(100%)" },
+          "100%": { transform: "translateX(0)" },
+        },
+      },
+      animation: {
+        slideInTop: "slideInTop 1s ease-in-out forwards",
+        slideInLeft: "slideInLeft 1s ease-in-out 0.5s forwards",
+        slideInRight: "slideInRight 1s ease-in-out 1s forwards",
+      },
     },
     plugins: [],
   },
