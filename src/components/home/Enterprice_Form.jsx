@@ -93,7 +93,7 @@ const Enterprice_Form = ({ setShowForm, handleLoading, handleError }) => {
                     />
                     <label
                       htmlFor="firstName"
-                      className="peer-focus:text-lg absolute pl-0 text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-10 scale-75 top-3 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-primary-dark peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y peer-focus:scale-75 peer-focus:-translate-y-14"
+                      className="peer-focus:text-lg peer-hover:text-primary dark:peer-hover:text-primary-dark absolute pl-0 text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-10 scale-75 top-3 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-primary-dark peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y peer-focus:scale-75 peer-focus:-translate-y-14"
                     >
                       First Name
                     </label>
@@ -114,7 +114,7 @@ const Enterprice_Form = ({ setShowForm, handleLoading, handleError }) => {
                     />
                     <label
                       htmlFor="lastName"
-                      className="peer-focus:text-lg absolute pl-0 text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-10 scale-75 top-3 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-primary-dark peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y peer-focus:scale-75 peer-focus:-translate-y-14"
+                      className="peer-focus:text-lg peer-hover:text-primary dark:peer-hover:text-primary-dark absolute pl-0 text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-10 scale-75 top-3 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-primary-dark peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y peer-focus:scale-75 peer-focus:-translate-y-14"
                     >
                       Last Name
                     </label>
@@ -157,8 +157,8 @@ const Enterprice_Form = ({ setShowForm, handleLoading, handleError }) => {
                       htmlFor={fieldName}
                       className={
                         fieldName === "email"
-                          ? "peer-focus:text-lg absolute pl-0 text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-10 scale-75 top-3 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-primary-dark peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y peer-focus:scale-75 peer-focus:-translate-y-14 left-[-16px]"
-                          : "peer-focus:text-lg absolute pl-0 text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-10 scale-75 top-3 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-primary-dark peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y peer-focus:scale-75 peer-focus:-translate-y-14"
+                          ? "peer-focus:text-lg absolute pl-0 text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-10 scale-75 top-3 origin-[0] peer-focus:left-0 peer-hover:text-primary peer-focus:text-primary dark:peer-hover:text-primary-dark peer-focus:dark:text-primary-dark peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y peer-focus:scale-75 peer-focus:-translate-y-14 left-[-16px]"
+                          : "peer-focus:text-lg absolute pl-0 text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-10 scale-75 top-3 origin-[0] peer-focus:left-0 peer-hover:text-primary peer-focus:text-primary dark:peer-hover:text-primary-dark peer-focus:dark:text-primary-dark peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y peer-focus:scale-75 peer-focus:-translate-y-14"
                       }
                     >
                       {fieldName.charAt(0).toUpperCase() + fieldName.slice(1)}
