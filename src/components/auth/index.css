@@ -1,0 +1,47 @@
+
+.logo-part {
+    position: absolute;
+    transition: transform 1s ease-in-out infinite;
+}
+
+.top {
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -100%);
+    animation: slide-in-top 1s ease-in-out forwards infinite;
+}
+
+.left {
+
+    left: 0;
+    top: 50%;
+    transform: translate(-100%, -50%);
+    animation: slide-in-left 1s ease-in-out forwards infinite;
+}
+
+.right {
+
+    right: 0;
+    top: 50%;
+    transform: translate(100%, -50%);
+    animation: slide-in-right 1s ease-in-out forwards infinite;
+}
+
+/* Keyframes for animations */
+@keyframes slide-in-top {
+    to {
+        transform: translate(-50%, 0);
+    }
+}
+
+@keyframes slide-in-left {
+    to {
+        transform: translate(0, -50%);
+    }
+}
+
+@keyframes slide-in-right {
+    to {
+        transform: translate(0, -50%);
+    }
+}
