@@ -1,12 +1,12 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useMsal } from "@azure/msal-react";
 import { loginRequest } from "../../../config/msalConfig";
 import { callMsGraph } from "./graph";
 import axios from "axios";
+import { toast, ToastContainer } from "react-toastify";
 
 const ProfileContent = () => {
   const { instance, accounts } = useMsal();
-  const [error, setError] = useState(null);
 
   useEffect(() => {
     if (accounts && accounts.length > 0) {
@@ -27,7 +27,7 @@ const ProfileContent = () => {
                 subscription_type: "free",
                 subscription_duration: "yearly",
                 subscription_date: new Date().toISOString().split("T")[0],
-                workspace: "app",
+                workspace: "",
               };
 
               const apiUrl =
@@ -63,22 +63,27 @@ const ProfileContent = () => {
                 })
                 .catch((error) => {
                   console.error("Error storing data:", error);
-                  setError("Error storing data: " + error.message);
+                  toast.error("Error storing data: " + error.message);
                 });
             })
             .catch((error) => {
-              console.error("Error fetching data from Graph API:", error);
-              setError("Error fetching data from Graph API: " + error.message);
+              toast.error(
+                "Error fetching data from Graph API: " + error.message,
+              );
             });
         })
         .catch((error) => {
           console.error("Error acquiring token silently", error);
-          setError("Error acquiring token silently: " + error.message);
+          toast.error("Error acquiring token silently: " + error.message);
         });
     }
   }, [accounts, instance]);
 
-  return <div className="page-layout">{error && <h3>{error}</h3>}</div>;
+  return (
+    <div className="page-layout">
+      <ToastContainer />
+    </div>
+  );
 };
 
 export default ProfileContent;
