@@ -36,9 +36,9 @@ export default {
         },
       },
       animation: {
-        slideInTop: "slideInTop 1s ease-in-out forwards",
-        slideInLeft: "slideInLeft 1s ease-in-out 0.5s forwards",
-        slideInRight: "slideInRight 1s ease-in-out 1s forwards",
+        slideInTop: "slideInTop 20s ease-in-out forwards",
+        slideInLeft: "slideInLeft 20s ease-in-out 0.5s forwards",
+        slideInRight: "slideInRight 20s ease-in-out 1s forwards",
       },
     },
     plugins: [],
