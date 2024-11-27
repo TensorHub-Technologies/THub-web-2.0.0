@@ -43,13 +43,14 @@ function Google_Custom_Button() {
             break;
         }
 
-        window.location.href = redirectUrl;
+        setTimeout(() => {
+          window.location.href = redirectUrl;
+        }, 100);
       } catch (error) {
         console.error("Failed to exchange code:", error);
-      } finally {
-        setLoading(false);
       }
     },
+
     scope: "openid profile email",
     flow: "auth-code",
     access_type: "offline",
