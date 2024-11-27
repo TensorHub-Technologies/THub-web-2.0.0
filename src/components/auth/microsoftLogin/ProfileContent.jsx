@@ -115,7 +115,7 @@ const ProfileContent = () => {
           </div>
         </div>
       )}
-      <div className="page-layout">{error && <h3>{error}</h3>}</div>;
+      <div className="page-layout">{error && <h3>{error}</h3>}</div>
     </>
   );
 };
