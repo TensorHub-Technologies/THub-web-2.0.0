@@ -1,16 +1,14 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useMsal } from "@azure/msal-react";
 import { loginRequest } from "../../../config/msalConfig";
 import { callMsGraph } from "./graph";
 import axios from "axios";
 import { toast, ToastContainer } from "react-toastify";
 
-
 import "../../auth/index.css";
 
 const ProfileContent = () => {
   const { instance, accounts } = useMsal();
-  const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
   console.log("loading", loading);
   useEffect(() => {
@@ -89,6 +87,7 @@ const ProfileContent = () => {
 
   return (
     <>
+      <ToastContainer />
       {loading && (
         <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-white dark:bg-gray-900 z-50">
           {/* Logo Animation */}
@@ -119,7 +118,6 @@ const ProfileContent = () => {
           </div>
         </div>
       )}
-      <div className="page-layout">{error && <h3>{error}</h3>}</div>
     </>
   );
 };
