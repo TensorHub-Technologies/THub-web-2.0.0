@@ -1,7 +1,10 @@
 import { useEffect } from "react";
 import axios from "axios";
+import { useState } from "react";
+import "./index.css";
 
 function Github_Custom_Button() {
+  const [loading, setLoading] = useState(false);
   const clientIds = {
     localhost: "Ov23liqiYh1YKRrTHr0s",
     demo: "Ov23lif7mrkCVPKebB0G",
@@ -42,6 +45,7 @@ function Github_Custom_Button() {
 
         const { access_token } = response.data;
         if (access_token) {
+          setLoading(true);
           localStorage.setItem("access_token", access_token);
           await getUserData();
         } else {
@@ -80,7 +84,9 @@ function Github_Custom_Button() {
             ? `http://localhost:8080/?theme=${theme}&uid=${data.uid}`
             : `https://${finalWorkspace}.thub.tech/?theme=${theme}&uid=${data.uid}`;
 
-        window.location.href = redirectUrl;
+        setTimeout(() => {
+          window.location.href = redirectUrl;
+        }, 100);
       }
     } catch (error) {
       console.error("Error fetching user data:", error);
@@ -96,6 +102,36 @@ function Github_Custom_Button() {
 
   return (
     <div>
+      {loading && (
+        <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-white dark:bg-gray-900 z-50">
+          {/* Logo Animation */}
+          <div className="relative w-32 h-[12.5rem] flex flex-col items-start gap-2">
+            <div className="logo-part top">
+              <img
+                src="/assets/thub_top.png"
+                alt="Loading Part 1"
+                className="min-w-32 h-6"
+              />
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="logo-part left">
+                <img
+                  src="/assets/thub_left.png"
+                  alt="Loading Part 2"
+                  className="w-[3.75rem]"
+                />
+              </div>
+              <div className="logo-part right">
+                <img
+                  src="/assets/thub_right.png"
+                  alt="Loading Part 3"
+                  className="w-[3.75rem]"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
       <button
         onClick={loginWithGithub}
         type="button"
