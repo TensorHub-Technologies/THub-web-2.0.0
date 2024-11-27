@@ -79,10 +79,21 @@ function Github_Custom_Button() {
           localStorage.getItem("isDarkMode") === "true" ? "dark" : "lite";
         const finalWorkspace = data.workspace || "app";
 
-        const redirectUrl =
-          window.location.hostname === "localhost"
-            ? `http://localhost:8080/?theme=${theme}&uid=${data.uid}`
-            : `https://${finalWorkspace}.thub.tech/?theme=${theme}&uid=${data.uid}`;
+        let redirectUrl;
+
+        switch (window.location.hostname) {
+          case "localhost":
+            redirectUrl = `http://localhost:8080/?theme=${theme}&uid=${data?.uid}`;
+            break;
+          case "thub-web-2-0-0-378678297066.us-central1.run.app":
+            redirectUrl = `https://demo.thub.tech/?theme=${theme}&uid=${data?.uid}`;
+            break;
+          default:
+            redirectUrl = `https://${finalWorkspace}.thub.tech/?theme=${theme}&uid=${data?.uid}`;
+            break;
+        }
+
+        console.log(redirectUrl, "redirectUrl");
 
         setTimeout(() => {
           window.location.href = redirectUrl;
