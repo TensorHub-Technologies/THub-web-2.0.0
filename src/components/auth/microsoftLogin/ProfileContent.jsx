@@ -3,13 +3,16 @@ import { useMsal } from "@azure/msal-react";
 import { loginRequest } from "../../../config/msalConfig";
 import { callMsGraph } from "./graph";
 import axios from "axios";
+import "../../auth/index.css";
 
 const ProfileContent = () => {
   const { instance, accounts } = useMsal();
   const [error, setError] = useState(null);
-
+  const [loading, setLoading] = useState(false);
+  console.log("loading", loading);
   useEffect(() => {
     if (accounts && accounts.length > 0) {
+      setLoading(true);
       instance
         .acquireTokenSilent({
           ...loginRequest,
@@ -59,7 +62,9 @@ const ProfileContent = () => {
                       break;
                   }
                   sessionStorage.clear();
-                  window.location.href = redirectUrl;
+                  setTimeout(() => {
+                    window.location.href = redirectUrl;
+                  }, 100);
                 })
                 .catch((error) => {
                   console.error("Error storing data:", error);
@@ -78,7 +83,41 @@ const ProfileContent = () => {
     }
   }, [accounts, instance]);
 
-  return <div className="page-layout">{error && <h3>{error}</h3>}</div>;
+  return (
+    <>
+      {loading && (
+        <div className="fixed top-0 left-0 w-full h-full flex items-center justify-center bg-white dark:bg-gray-900 z-50">
+          {/* Logo Animation */}
+          <div className="relative w-32 h-[12.5rem] flex flex-col items-start gap-2">
+            <div className="logo-part top">
+              <img
+                src="/assets/thub_top.png"
+                alt="Loading Part 1"
+                className="min-w-32 h-6"
+              />
+            </div>
+            <div className="flex items-center gap-2">
+              <div className="logo-part left">
+                <img
+                  src="/assets/thub_left.png"
+                  alt="Loading Part 2"
+                  className="w-[3.75rem]"
+                />
+              </div>
+              <div className="logo-part right">
+                <img
+                  src="/assets/thub_right.png"
+                  alt="Loading Part 3"
+                  className="w-[3.75rem]"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+      <div className="page-layout">{error && <h3>{error}</h3>}</div>
+    </>
+  );
 };
 
 export default ProfileContent;
