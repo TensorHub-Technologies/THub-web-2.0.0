@@ -8,18 +8,20 @@ import darkLogo4 from "../../assets/icons/llama_3.1.png";
 import darkLogo5 from "../../assets/icons/azure.png";
 import darkLogo6 from "../../assets/icons/ollama_lite.png";
 import darkLogo7 from "../../assets/icons/hugging.png";
-import darkLogo8 from "../../assets/icons/fireworks.png";
-import darkLogo9 from "../../assets/icons/aws_lite.png";
-import darkLogo10 from "../../assets/icons/palm.png";
-import darkLogo11 from "../../assets/icons/pine_lite.png";
-import darkLogo12 from "../../assets/icons/qdrant_logo.png";
-import darkLogo13 from "../../assets/icons/mongo.png";
-import darkLogo14 from "../../assets/icons/faisis.png";
-import darkLogo15 from "../../assets/icons/upstash.png";
-import darkLogo16 from "../../assets/icons/vectara.png";
-import darkLogo17 from "../../assets/icons/chroma.png";
-import darkLogo18 from "../../assets/icons/redis.png";
-import darkLogo19 from "../../assets/icons/milvus.png";
+import darkLogo8 from "../../assets/icons/grok_dark.png";
+import darkLogo9 from "../../assets/icons/fireworks.png";
+import darkLogo10 from "../../assets/icons/aws_lite.png";
+import darkLogo11 from "../../assets/icons/palm.png";
+import darkLogo12 from "../../assets/icons/pine_lite.png";
+import darkLogo13 from "../../assets/icons/qdrant_logo.png";
+import darkLogo14 from "../../assets/icons/mongo.png";
+import darkLogo15 from "../../assets/icons/faisis.png";
+import darkLogo16 from "../../assets/icons/upstash.png";
+import darkLogo17 from "../../assets/icons/vectara.png";
+import darkLogo18 from "../../assets/icons/chroma.png";
+import darkLogo19 from "../../assets/icons/redis.png";
+import darkLogo20 from "../../assets/icons/milvus.png";
+import darkLogo21 from "../../assets/icons/opens.png";
 
 import lightLogo1 from "../../assets/icons/chatgpt.png";
 import lightLogo2 from "../../assets/icons/anthropic.png";
@@ -28,18 +30,20 @@ import lightLogo4 from "../../assets/icons/llama_3.1-lite-1.png";
 import lightLogo5 from "../../assets/icons/azure.png";
 import lightLogo6 from "../../assets/icons/ollama.png";
 import lightLogo7 from "../../assets/icons/hugging.png";
-import lightLogo8 from "../../assets/icons/fireworks.png";
-import lightLogo9 from "../../assets/icons/aws_dark.png";
-import lightLogo10 from "../../assets/icons/palm.png";
-import lightLogo11 from "../../assets/icons/pine_dark.png";
-import lightLogo12 from "../../assets/icons/qdrant_logo.png";
-import lightLogo13 from "../../assets/icons/mongo.png";
-import lightLogo14 from "../../assets/icons/faisis.png";
-import lightLogo15 from "../../assets/icons/upstash.png";
-import lightLogo16 from "../../assets/icons/vectara.png";
-import lightLogo17 from "../../assets/icons/chroma.png";
-import lightLogo18 from "../../assets/icons/redis.png";
-import lightLogo19 from "../../assets/icons/milvus.png";
+import lightLogo8 from "../../assets/icons/grok_lite.png";
+import lightLogo9 from "../../assets/icons/fireworks.png";
+import lightLogo10 from "../../assets/icons/aws_dark.png";
+import lightLogo11 from "../../assets/icons/palm.png";
+import lightLogo12 from "../../assets/icons/pine_dark.png";
+import lightLogo13 from "../../assets/icons/qdrant_logo.png";
+import lightLogo14 from "../../assets/icons/mongo.png";
+import lightLogo15 from "../../assets/icons/faisis.png";
+import lightLogo16 from "../../assets/icons/upstash.png";
+import lightLogo17 from "../../assets/icons/vectara.png";
+import lightLogo18 from "../../assets/icons/chroma.png";
+import lightLogo19 from "../../assets/icons/redis.png";
+import lightLogo20 from "../../assets/icons/milvus.png";
+import lightLogo21 from "../../assets/icons/opens.png";
 
 function Features_First() {
   const navigate = useNavigate();
@@ -69,7 +73,8 @@ function Features_First() {
     darkLogo17,
     darkLogo18,
     darkLogo19,
-    // darkLogo20,
+    darkLogo20,
+    darkLogo21,
   ];
   const lightLogos = [
     lightLogo1,
@@ -91,19 +96,20 @@ function Features_First() {
     lightLogo17,
     lightLogo18,
     lightLogo19,
-    // lightLogo20,
+    lightLogo20,
+    lightLogo21,
   ];
 
   const logos = isDarkMode ? darkLogos : lightLogos;
 
-  const firstBlockLogos = logos.slice(0, 10);
-  const secondBlockLogos = logos.slice(10);
+  const firstBlockLogos = logos.slice(0, 11);
+  const secondBlockLogos = logos.slice(11);
 
   return (
     <section className="px-5 py-4 lg:px-16">
       <div className="w-full my-8">
         <h2 className="w-3/4 mx-auto text-center text-4xl font-semibold text-gray-800 dark:text-gray-100 mb-8">
-          200+ Integrated Tools
+          250+ Integrated Tools
         </h2>
 
         <div className="w-3/4 mx-auto py-4 relative">
