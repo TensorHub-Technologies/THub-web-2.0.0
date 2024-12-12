@@ -34,23 +34,13 @@ export default {
           "0%": { transform: "translateX(100%)" },
           "100%": { transform: "translateX(0)" },
         },
-        "scroll-ltr": {
-          "0%": { transform: "translateX(-100%)" },
-          "100%": { transform: "translateX(0)" },
-        },
-        "scroll-rtl": {
-          "0%": { transform: "translateX(100%)" },
-          "100%": { transform: "translateX(0)" },
-        },
       },
       animation: {
         slideInTop: "slideInTop 20s ease-in-out forwards",
         slideInLeft: "slideInLeft 20s ease-in-out 0.5s forwards",
         slideInRight: "slideInRight 20s ease-in-out 1s forwards",
-        "scroll-ltr": "scroll-ltr 30s linear infinite",
-        "scroll-rtl": "scroll-rtl 30s linear infinite",
       },
     },
+    plugins: [],
   },
-  plugins: [],
 };
