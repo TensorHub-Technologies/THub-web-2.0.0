@@ -8,7 +8,9 @@ import { SignInButton } from "./microsoftLogin/SignInButton";
 const LoginTop = () => {
   return (
     <div className=" flex flex-col items-center gap-10">
-      <img className="w-40" src={ThubLogo} alt="THub Logo" />
+      <a href="https://thub.tech/">
+        <img className="w-40" src={ThubLogo} alt="THub Logo" />
+      </a>
       <div className=" flex flex-col w-96 justify-center items-center gap-10">
         <GoogleOAuthProvider clientId="378678297066-q6qeqtpfh0ih4e99lv887o1rgduehs9u.apps.googleusercontent.com">
           <Google_Custom_Button />

@@ -158,7 +158,7 @@ const SignUp = () => {
     };
 
     try {
-      const response = await axios.post(`${apiUrl}/user`, payload);
+      const response = await axios.post(`${apiUrl}/user/register`, payload);
       if (response.status === 200) {
         const { userId, workspace } = response.data;
         const finalWorkspace = workspace || "app";
