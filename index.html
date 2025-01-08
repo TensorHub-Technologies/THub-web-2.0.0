@@ -107,15 +107,21 @@
 
   <script>
     window.addEventListener("load", () => {
-      const convaiElement = document.querySelector("elevenlabs-convai");
-      if (convaiElement && convaiElement.shadowRoot) {
-        const poweredByElement = convaiElement.shadowRoot.querySelector("._poweredBy_4hrb0_310");
-        if (poweredByElement) {
-          poweredByElement.remove();
+      const observer = new MutationObserver(() => {
+        const convaiElement = document.querySelector("body > elevenlabs-convai");
+        if (convaiElement && convaiElement.shadowRoot) {
+          const poweredByElement = convaiElement.shadowRoot.querySelector("div._poweredBy_4hrb0_310");
+          if (poweredByElement) {
+            poweredByElement.remove();
+            observer.disconnect(); 
+          }
         }
-      }
+      });
+  
+      observer.observe(document.body, { childList: true, subtree: true });
     });
   </script>
+  
     <!-- Moved the main script here -->
     <script type="module" src="/src/main.jsx"></script>
   </head>
