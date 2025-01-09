@@ -153,7 +153,7 @@ const SignUp = () => {
       password: tempUserData.password,
       subscription_type: "free",
       login_type: "email",
-      subscription_duration: "yearly",
+      subscription_duration: null,
       subscription_date: new Date().toISOString().split("T")[0],
     };
 
