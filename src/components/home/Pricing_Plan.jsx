@@ -158,9 +158,27 @@ function Pricing_Plan() {
             <p className="mb-5 text-3xl text-primary dark:text-primary-dark">
               {plan.title}
             </p>
-            <p className="text-3xl my-2 text-black dark:text-white">
-              {getPrice(plan)}
-            </p>
+            {plan.title === "Pro" ? (
+              <p className="text-3xl my-2 text-black dark:text-white">
+                {getPrice(plan)}
+                <span
+                  style={{
+                    fontSize: "16px",
+                    verticalAlign: "super",
+                    marginLeft: "4px",
+                    fontWeight: "bolder",
+                    color: isDarkMode ? "white" : "black",
+                  }}
+                >
+                  /seat
+                </span>
+              </p>
+            ) : (
+              <p className="text-3xl my-2 text-black dark:text-white">
+                {getPrice(plan)}
+              </p>
+            )}
+
             <p className=" text-black dark:text-white">{plan.description}</p>
             <div className="flex justify-center items-center">
               <button

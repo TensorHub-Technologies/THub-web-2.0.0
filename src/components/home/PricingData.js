@@ -3,7 +3,7 @@ export const pricingData = {
     {
       title: "Free",
       prices: {
-        INR: "₹ 0",
+        INR: "₹0",
         USD: "$0",
         GBP: "£0",
         Euro: "€0",
