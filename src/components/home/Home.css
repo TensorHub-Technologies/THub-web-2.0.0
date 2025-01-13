@@ -19,7 +19,7 @@
   }
   
   .Typewriter__cursor {
-    animation: blink 1s infinite; /* Adjust the duration as needed */
+    animation: blink 1s infinite;
   }
   
 
@@ -33,6 +33,20 @@
   }
   
   .animate-slide {
-    animation: slide 20s linear infinite;
+    animation: slide 22s linear infinite;
   }
   
+
+/* New slide animation for left to right */
+@keyframes slide-reverse {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-reverse {
+  animation: slide-reverse 22s linear infinite;
+}
