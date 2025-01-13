@@ -29,7 +29,6 @@ const ProfileContent = () => {
                 phone: data.mobilePhone || "",
                 login_type: "azure_ad",
                 subscription_type: "free",
-                subscription_duration: "yearly",
                 subscription_date: new Date().toISOString().split("T")[0],
                 workspace: "",
               };
