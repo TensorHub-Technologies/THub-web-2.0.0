@@ -160,9 +160,9 @@ const Footer = () => {
             </div>
             <div className="flex columns-5 mt-6 mr-24">
               <Link
-                to="#"
+                // to="#"
                 className="text-gray-500 hover:text-secondary dark:hover:text-white"
-                target="_blank"
+                // target="_blank"
                 rel="noopener noreferrer"
               >
                 <FiGithub className="w-5 h-5" />
@@ -187,9 +187,9 @@ const Footer = () => {
                 <span className="sr-only">Facebook page</span>
               </Link>
               <Link
-                to="#"
+                // to="#"
                 className="text-gray-500 hover:text-secondary dark:hover:text-white ms-5"
-                target="_blank"
+                // target="_blank"
                 rel="noopener noreferrer"
               >
                 <FaXTwitter className="w-5 h-5" />
