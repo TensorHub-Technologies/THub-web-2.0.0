@@ -101,10 +101,11 @@ function LogoSlider() {
   const logos = isDarkMode ? darkLogos : lightLogos;
   const firstBlockLogos = logos.slice(0, 11);
   const secondBlockLogos = logos.slice(11);
+
   return (
     <div>
       <section className={`py-12 ${isDarkMode ? "#11121C" : "#fffff"}`}>
-        <div className="relative overflow-hidden before:absolute before:left-0 before:top-0 before:z-10 before:h-full before:w-32 before:bg-gradient-to-r dark:before:from-gray-900 after:absolute after:right-0 after:top-0 after:z-10 after:h-full after:w-32 after:bg-gradient-to-l dark:after:from-gray-900">
+        <div className="relative overflow-hidden before:absolute before:left-0 before:top-0 before:z-10 before:h-full before:w-32 before:bg-gradient-to-r  after:absolute after:right-0 after:top-0 after:z-10 after:h-full after:w-32 after:bg-gradient-to-l">
           <div className="animate-slide flex w-[calc(125px*18)]">
             {[...firstBlockLogos, ...firstBlockLogos].map((logo, index) => (
               <div
@@ -123,7 +124,7 @@ function LogoSlider() {
       </section>
       {/* second section */}
       <section className={`py-12 ${isDarkMode ? "#11121C" : "#fffff"}`}>
-        <div className="relative overflow-hidden before:absolute before:left-0 before:top-0 before:z-10 before:h-full before:w-32 before:bg-gradient-to-r dark:before:from-gray-900 after:absolute after:right-0 after:top-0 after:z-10 after:h-full after:w-32 after:bg-gradient-to-l dark:after:from-gray-900">
+        <div className="relative overflow-hidden before:absolute before:left-0 before:top-0 before:z-10 before:h-full before:w-32 before:bg-gradient-to-r after:absolute after:right-0 after:top-0 after:z-10 after:h-full after:w-32 after:bg-gradient-to-l">
           <div className="animate-slide-reverse flex w-[calc(125px*18)]">
             {[...secondBlockLogos, ...secondBlockLogos].map((logo, index) => (
               <div
