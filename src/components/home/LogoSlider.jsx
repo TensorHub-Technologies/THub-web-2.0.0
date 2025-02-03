@@ -12,17 +12,18 @@ import darkLogo7 from "/assets/llm_vector/hugging.png";
 import darkLogo8 from "/assets/llm_vector/grok_dark.png";
 import darkLogo9 from "/assets/llm_vector/fireworks.png";
 import darkLogo10 from "/assets/llm_vector/aws_lite.png";
-import darkLogo11 from "/assets/llm_vector/palm.png";
-import darkLogo12 from "/assets/llm_vector/pine_lite.png";
-import darkLogo13 from "/assets/llm_vector/qdrant_logo.png";
-import darkLogo14 from "/assets/llm_vector/mongo.png";
-import darkLogo15 from "/assets/llm_vector/faisis.png";
-import darkLogo16 from "/assets/llm_vector/upstash.png";
-import darkLogo17 from "/assets/llm_vector/vectara.png";
-import darkLogo18 from "/assets/llm_vector/chroma.png";
-import darkLogo19 from "/assets/llm_vector/redis.png";
-import darkLogo20 from "/assets/llm_vector/milvus.png";
-import darkLogo21 from "/assets/llm_vector/opens.png";
+import darkLogo11 from "/assets/llm_vector/deepseek.png";
+import darkLogo12 from "/assets/llm_vector/palm.png";
+import darkLogo13 from "/assets/llm_vector/pine_lite.png";
+import darkLogo14 from "/assets/llm_vector/qdrant_logo.png";
+import darkLogo15 from "/assets/llm_vector/mongo.png";
+import darkLogo16 from "/assets/llm_vector/faisis.png";
+import darkLogo17 from "/assets/llm_vector/upstash.png";
+import darkLogo18 from "/assets/llm_vector/vectara.png";
+import darkLogo19 from "/assets/llm_vector/chroma.png";
+import darkLogo20 from "/assets/llm_vector/redis.png";
+import darkLogo21 from "/assets/llm_vector/milvus.png";
+import darkLogo22 from "/assets/llm_vector/opens.png";
 
 // Import light mode logos
 import lightLogo1 from "/assets/llm_vector/chatgpt.png";
@@ -35,17 +36,18 @@ import lightLogo7 from "/assets/llm_vector/hugging.png";
 import lightLogo8 from "/assets/llm_vector/grok_lite.png";
 import lightLogo9 from "/assets/llm_vector/fireworks.png";
 import lightLogo10 from "/assets/llm_vector/aws_dark.png";
-import lightLogo11 from "/assets/llm_vector/palm.png";
-import lightLogo12 from "/assets/llm_vector/pine_dark.png";
-import lightLogo13 from "/assets/llm_vector/qdrant_logo.png";
-import lightLogo14 from "/assets/llm_vector/mongo.png";
-import lightLogo15 from "/assets/llm_vector/faisis.png";
-import lightLogo16 from "/assets/llm_vector/upstash.png";
-import lightLogo17 from "/assets/llm_vector/vectara.png";
-import lightLogo18 from "/assets/llm_vector/chroma.png";
-import lightLogo19 from "/assets/llm_vector/redis.png";
-import lightLogo20 from "/assets/llm_vector/milvus.png";
-import lightLogo21 from "/assets/llm_vector/opens.png";
+import lightLogo11 from "/assets/llm_vector/deepseek.png";
+import lightLogo12 from "/assets/llm_vector/palm.png";
+import lightLogo13 from "/assets/llm_vector/pine_dark.png";
+import lightLogo14 from "/assets/llm_vector/qdrant_logo.png";
+import lightLogo15 from "/assets/llm_vector/mongo.png";
+import lightLogo16 from "/assets/llm_vector/faisis.png";
+import lightLogo17 from "/assets/llm_vector/upstash.png";
+import lightLogo18 from "/assets/llm_vector/vectara.png";
+import lightLogo19 from "/assets/llm_vector/chroma.png";
+import lightLogo20 from "/assets/llm_vector/redis.png";
+import lightLogo21 from "/assets/llm_vector/milvus.png";
+import lightLogo22 from "/assets/llm_vector/opens.png";
 
 function LogoSlider() {
   const isDarkMode = useSelector((state) => state.customization.isDarkMode);
@@ -72,6 +74,7 @@ function LogoSlider() {
     darkLogo19,
     darkLogo20,
     darkLogo21,
+    darkLogo22,
   ];
 
   const lightLogos = [
@@ -96,12 +99,12 @@ function LogoSlider() {
     lightLogo19,
     lightLogo20,
     lightLogo21,
+    lightLogo22,
   ];
 
   const logos = isDarkMode ? darkLogos : lightLogos;
-  const firstBlockLogos = logos.slice(0, 11);
-  const secondBlockLogos = logos.slice(11);
-
+  const firstBlockLogos = logos.slice(0, 12);
+  const secondBlockLogos = logos.slice(12);
   return (
     <div>
       <section className={`py-12 ${isDarkMode ? "#11121C" : "#fffff"}`}>
