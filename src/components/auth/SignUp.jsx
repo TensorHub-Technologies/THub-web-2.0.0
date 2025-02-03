@@ -58,7 +58,7 @@ const SignUp = () => {
 
       const response = await axios.post(`${apiUrl}/send-otp`, { email });
       if (response.status === 200) {
-        toast.success("OTP Sent Successfully", {
+        toast.success("OTP Sent To Email Successfully", {
           theme: "colored",
           style: {
             background: isDarkMode ? "#e22a90" : "#3c5ba4",
@@ -86,7 +86,7 @@ const SignUp = () => {
 
   // Verify the OTP
   const verifyOtp = async (otp) => {
-    console.log("Verifying OTP for email:", email);
+    console.log("OTP Sent to email:", email);
     console.log("OTP provided:", otp);
     try {
       const response = await axios.post(`${apiUrl}/verify-otp`, { email, otp });
