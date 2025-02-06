@@ -54,6 +54,13 @@ function Pricing_Plan() {
     return plan.prices[currency] || plan.prices["INR"];
   };
 
+  const getExtraPrice = (plan) => {
+    if (plan.extraPrice) {
+      return plan.extraPrice[currency] || plan.extraPrice["INR"];
+    }
+    return null;
+  };
+
   return (
     <section className="px-4 sm:px-8 lg:px-16 pb-10 py-10">
       <ToastContainer />
@@ -170,7 +177,7 @@ function Pricing_Plan() {
                     color: isDarkMode ? "white" : "black",
                   }}
                 >
-                  /seat
+                  /agent
                 </span>
               </p>
             ) : (
@@ -201,7 +208,10 @@ function Pricing_Plan() {
                   }
                   key={i}
                 >
-                  {planList}
+                  {planList.includes("₹ 17,999/per Additional Agents") &&
+                  plan.title === "Pro"
+                    ? `${getExtraPrice(plan)}/Per Additional Agents`
+                    : planList}
                 </li>
               ))}
             </ul>
