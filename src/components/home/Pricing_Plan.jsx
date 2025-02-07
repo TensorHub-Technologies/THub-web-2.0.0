@@ -78,7 +78,7 @@ function Pricing_Plan() {
           </h1>
         </div>
         <p className="text-lg dark:text-white ">
-          Get started with a 30-day trial, Cancel anytime.
+          Get started with a 90-day trial, Cancel anytime.
         </p>
       </div>
 
