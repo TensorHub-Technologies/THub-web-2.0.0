@@ -44,6 +44,7 @@ const SignUp = () => {
     console.log("Checkemail function executed");
     try {
       const response = await axios.post(`${apiUrl}/check-email`, { email });
+      console.log(response, "response");
       return response.data.exists;
     } catch (error) {
       console.error("Error checking email:", error);
