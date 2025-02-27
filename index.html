@@ -1,109 +1,191 @@
 <!doctype html>
 <html lang="en">
-  <head>
-   
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/src/assets/images/Thub.png" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TensorHub A Low Code No Code Platform</title>
 
-    <meta property="og:title" content="TensorHub Technologies" />
-    <meta property="og:description" content="TensorHub A Low Code No Code Platform" />
-    <meta
-      property="og:image"
-      content="https://thub.tech/assets/Thub-B_uTYg3u.png"
-    />
-    
-    <meta property="og:type" content="website" />
- 
-    <meta name="twitter:card" content="summary_large_image" />
+<head>
 
-    <!-- Script to apply dark mode based on local storage -->
-    <script>
-      (function () {
-        const isDarkMode = JSON.parse(localStorage.getItem("isDarkMode"));
-        if (isDarkMode) {
-          document.documentElement.classList.add("dark");
-        }
-      })();
-    </script>
-    <script type="module">
-      import Chatbot from "https://cdn.jsdelivr.net/npm/thub-embed@9.1.2/dist/web.js"
-      Chatbot.init({
-        chatflowid: "2b414cd1-cded-4915-be17-31e256246765",
-        apiHost: "https://demo.thub.tech",
-          chatflowConfig: {
-            // topK: 2
-          },
-          observersConfig: {
-            observeUserInput: (userInput) => {
-              console.log({ userInput });
-            },
-            observeMessages: (messages) => {
-              console.log({ messages });
-            },
-            observeLoading: (loading) => {
-              console.log({ loading });
-            },
-          },
-          theme: {
-            button: {
-              backgroundColor: "rgb(63,94,251)",
-              backgroundColor:
-                "linear-gradient(90deg, #e22a90 0%, #3c5ba4 100%)",
-              right: 40,
-              bottom: 120,
-              size: "medium",
-              iconColor: "white",
-            },
-            chatWindow: {
-              title: "THub Bot",
-              welcomeMessage: "Hello! welcome to THub",
-              errorMessage: "This is a custom error message",
-              backgroundColor: "#ffffff",
-              height: 500,
-              width: 350,
-              fontSize: 16,
-              poweredByTextColor: "#303235",
-              botMessage: {
-                backgroundColor: "#f7f8ff",
-                textColor: "#303235",
-                showAvatar: true,
-                avatarSrc: "svg/thub_icon.svg",
-              },
-              footer: {
-                text: "Powered by",
-                companyLink: "https://docs.thub.tech/",
-                
-                
-                
-              },
-  
-              userMessage: {
-                backgroundColor: "#3B81F6",
-                textColor: "#ffffff",
-                showAvatar: true,
-                avatarSrc: "svg/profile.svg",
-                borderRadius: "1px",
-              },
-              textInput: {
-                placeholder: "Type your question",
-                backgroundColor: "#ffffff",
-                textColor: "#303235",
-                sendButtonColor: "#E22A90",
-                borderRadius: "12px",
-              },
-              feedback: {
-                color: "#303235",
-              },
-            },
-          },
-        });
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/src/assets/images/Thub.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TensorHub A Low Code No Code Platform</title>
+
+  <meta property="og:title" content="TensorHub Technologies" />
+  <meta property="og:description" content="TensorHub A Low Code No Code Platform" />
+  <meta property="og:image" content="https://thub.tech/assets/Thub-B_uTYg3u.png" />
+
+  <meta property="og:type" content="website" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <!-- Script to apply dark mode based on local storage -->
+  <script>
+    (function () {
+      const isDarkMode = JSON.parse(localStorage.getItem("isDarkMode"));
+      if (isDarkMode) {
+        document.documentElement.classList.add("dark");
+      }
+    })();
   </script>
 
-  <elevenlabs-convai agent-id="IOPTV28SyLcLCQMxqpJ7"></elevenlabs-convai><script src="
-  https://elevenlabs.io/convai-widget/index.js"
-  async type="text/javascript"></script>
+
+
+  <script type="module">
+    import Chatbot from "https://cdn.jsdelivr.net/npm/thub-embed@9.1.8/dist/web.js"
+    Chatbot.init({
+      chatflowid: "2b414cd1-cded-4915-be17-31e256246765",
+      apiHost: "https://demo.thub.tech",
+      chatflowConfig: {
+        // topK: 2
+      },
+      observersConfig: {
+        // (optional) Allows you to execute code in parent based upon signal observations within the chatbot.
+        // The userinput field submitted to bot ("" when reset by bot)
+        observeUserInput: (userInput) => {
+          console.log({ userInput });
+        },
+        // The bot message stack has changed
+        observeMessages: (messages) => {
+          console.log({ messages });
+        },
+        // The bot loading signal changed
+        observeLoading: (loading) => {
+          console.log({ loading });
+        },
+      },
+      theme: {
+        button: {
+          backgroundColor: '#E22A90',
+          right: 40,
+          bottom: 120,
+          size: "medium",
+          dragAndDrop: true,
+          iconColor: 'white',
+          // customIconSrc: 'https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg',
+          autoWindowOpen: {
+            autoOpen: true, //parameter to control automatic window opening
+            openDelay: 2, // Optional parameter for delay time in seconds
+            autoOpenOnMobile: false, //parameter to control automatic window opening in mobile
+          },
+        },
+        tooltip: {
+          showTooltip: true,
+          tooltipMessage: 'Hi There 👋!',
+          tooltipBackgroundColor: 'black',
+          tooltipTextColor: 'white',
+          tooltipFontSize: 16,
+        },
+        disclaimer: {
+          title: 'Disclaimer',
+          message: 'By using this chatbot, you agree to the <a target="_blank" href="https://flowiseai.com/terms">Terms & Condition</a>',
+          textColor: 'black',
+          buttonColor: '#3b82f6',
+          buttonText: 'Start Chatting',
+          buttonTextColor: 'white',
+          blurredBackgroundColor: 'rgba(0, 0, 0, 0.4)', //The color of the blurred background that overlays the chat interface
+          backgroundColor: 'white',
+          denyButtonText: 'Cancel',
+          denyButtonBgColor: '#ef4444',
+        },
+        customCSS: ``, // Add custom CSS styles. Use !important to override default styles
+        chatWindow: {
+          showTitle: true,
+          showAgentMessages: true,
+          title: "THub Bot",
+          welcomeMessage: `Hello! ${localStorage.getItem("name")
+              ? localStorage.getItem("name") + " "
+              : "Guest" + " "
+            }welcome to THub`,
+          //  titleAvatarSrc: 'svg/thub_icon.svg',
+          titleBackgroundColor: 'linear-gradient(90deg, #e22a90 0%, #3c5ba4 100%)',
+          titleTextColor: '#ffffff',
+          welcomeMessage: "THub Bot",
+          welcomeMessage: `Hello! ${localStorage.getItem("name")
+              ? localStorage.getItem("name") + " "
+              : "Guest" + " "
+            }welcome to THub`,
+          errorMessage: 'This is a custom error message',
+          backgroundColor: '#ffffff',
+          backgroundImage: 'svg/thub_icon.svg', // If set, this will overlap the background color of the chat window.
+          height: 470,
+          width: 380,
+          fontSize: 16,
+          // starterPrompts: ['What is a bot?', 'Who are you?'], // It overrides the starter prompts set by the chat flow passed
+          starterPromptFontSize: 15,
+          clearChatOnReload: false, // If set to true, the chat will be cleared when the page reloads
+          sourceDocsTitle: 'Sources:',
+          renderHTML: true,
+          botMessage: {
+            backgroundColor: '#f7f8ff',
+            textColor: '#303235',
+            showAvatar: true,
+            avatarSrc: 'svg/thub_icon.svg',
+          },
+          userMessage: {
+            backgroundColor: '#E22A90',
+            textColor: '#ffffff',
+            showAvatar: true,
+            avatarSrc: 'svg/profile.svg',
+          },
+          textInput: {
+            placeholder: 'Type your question',
+            backgroundColor: '#ffffff',
+            textColor: '#303235',
+            sendButtonColor: '#E22A90',
+            maxChars: 50,
+            maxCharsWarningMessage: 'You exceeded the characters limit. Please input less than 50 characters.',
+            autoFocus: true, // If not used, autofocus is disabled on mobile and enabled on desktop. true enables it on both, false disables it on both.
+            sendMessageSound: true,
+            // sendSoundLocation: "send_message.mp3", // If this is not used, the default sound effect will be played if sendSoundMessage is true.
+            receiveMessageSound: true,
+            // receiveSoundLocation: "receive_message.mp3", // If this is not used, the default sound effect will be played if receiveSoundMessage is true.
+          },
+          feedback: {
+            color: '#303235',
+          },
+          dateTimeToggle: {
+            date: true,
+            time: true,
+          },
+          footer: {
+            textColor: '#303235',
+            text: 'Powered by',
+            company: 'THub',
+            // companyLink: 'svg/thub_icon.svg',
+          },
+        },
+      },
+    });
+  </script>
+
+
+  <script>
+    function onChatbotButtonClick() {
+      const name = localStorage.getItem("name");
+      if (name) {
+        console.log(`Hello, ${name}! DOM Button clicked!`);
+      } else {
+        alert("Name not found in local storage. Shadow DOM Button clicked!");
+      }
+    }
+
+    // Attach event listener after DOM and chatbot content is loaded
+    document.addEventListener("DOMContentLoaded", () => {
+      const interval = setInterval(() => {
+        const thubChatbot = document.querySelector("body > thub-chatbot");
+        if (thubChatbot?.shadowRoot) {
+          const button = thubChatbot.shadowRoot.querySelector("button");
+          if (button) {
+            clearInterval(interval);
+            button.addEventListener("click", onChatbotButtonClick);
+          }
+        }
+      }, 500);
+    });
+  </script>
+
+
+  <elevenlabs-convai agent-id="IOPTV28SyLcLCQMxqpJ7"></elevenlabs-convai>
+  <script src="
+  https://elevenlabs.io/convai-widget/index.js" async type="text/javascript"></script>
 
   <script>
     window.addEventListener("load", () => {
@@ -113,20 +195,21 @@
           const poweredByElement = convaiElement.shadowRoot.querySelector("div._poweredBy_4hrb0_310");
           if (poweredByElement) {
             poweredByElement.remove();
-            observer.disconnect(); 
+            observer.disconnect();
           }
         }
       });
-  
+
       observer.observe(document.body, { childList: true, subtree: true });
     });
   </script>
-  
-    <!-- Moved the main script here -->
-    <script type="module" src="/src/main.jsx"></script>
-  </head>
 
-  <body>
-    <div id="root"></div>
-  </body>
+  <!-- Moved the main script here -->
+  <script type="module" src="/src/main.jsx"></script>
+</head>
+
+<body>
+  <div id="root"></div>
+</body>
+
 </html>
