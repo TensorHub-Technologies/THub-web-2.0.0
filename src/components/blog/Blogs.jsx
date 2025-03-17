@@ -5,6 +5,7 @@ import type1 from "../../assets/images/blog/type1_rag.png";
 import type2 from "../../assets/images/blog/type2_rag.png";
 import type3 from "../../assets/images/blog/type3_rag.png";
 import level from "../../assets/images/blog/levels.png";
+import voicebot from "../../assets/images/blog/voicebot.png";
 
 const Blogs = () => {
   const navigate = useNavigate();
@@ -169,6 +170,33 @@ const Blogs = () => {
               </h4>
               <h4 className="text-secondary dark:text-secondary-dark">
                 Thu Jul 04 2024
+              </h4>
+            </div>
+          </div>
+        </div>
+
+        <div
+          className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-black dark:border-gray-700 cursor-pointer"
+          onClick={() => {
+            handleClick(() => navigate("/voicebot"));
+          }}
+        >
+          <img
+            className="p-5 rounded-t-lg w-[550px]"
+            src={voicebot}
+            alt="product image"
+          />
+          <div className="px-5 pb-2">
+            <h5 className="text-xl font-semibold tracking-tight text-secondary dark:text-secondary-dark">
+              The Rise of &nbsp; Voice Bots
+            </h5>
+            <div className="flex items-center mb-4"></div>
+            <div className="flex items-center justify-between">
+              <h4 className="text-secondary dark:text-secondary-dark">
+                5 Min Read{" "}
+              </h4>
+              <h4 className="text-secondary dark:text-secondary-dark">
+                Thur Mar 06 2025
               </h4>
             </div>
           </div>
