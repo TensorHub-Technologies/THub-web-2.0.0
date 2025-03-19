@@ -1,5 +1,5 @@
 import ShareButtons from "../components/sharebuttons/ShareButtons";
-import VoiceAI from "../assets/images/video/voiceAI.mp4";
+import VoiceAI from "../assets/images/video/voiceAI.png";
 import saiPic from "../assets/images/team/Saikumar1.png";
 import KeyIndustriesL from "../assets/images/blog/KeyIndustriesL.png";
 import KeyIndustriesD from "../assets/images/blog/KeyIndustriesD.png";
@@ -96,15 +96,11 @@ const BlogVoiceBots = () => {
                     </p>
 
                     <div className="flex items-center justify-center h-screen">
-                      <video
+                      <img
                         className="w-[800px] h-[600px] object-cover"
-                        autoPlay
-                        loop
-                        muted
-                        playsInline
-                      >
-                        <source src={VoiceAI} type="video/mp4" />
-                      </video>
+                        src={VoiceAI}
+                        alt="Voice AI"
+                      />
                     </div>
                     <h4> Why Businesses Are Embracing Voice Technology</h4>
                     <h4>1. Enhanced Customer Experience</h4>
