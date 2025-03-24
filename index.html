@@ -29,7 +29,7 @@
 
 
   <script type="module">
-    import Chatbot from "https://cdn.jsdelivr.net/npm/thub-embed@9.2.2/dist/web.js"
+    import Chatbot from "https://cdn.jsdelivr.net/npm/thub-embed@9.2.6/dist/web.js"
     Chatbot.init({
       chatflowid: "2b414cd1-cded-4915-be17-31e256246765",
       apiHost: "https://demo.thub.tech",
@@ -93,8 +93,8 @@
           errorMessage: 'This is a custom error message',
           backgroundColor: '#ffffff',
           backgroundImage: 'svg/thub_icon.svg', // If set, this will overlap the background color of the chat window.
-          height: 510,
-          width: 390,
+          height: 550,
+          width: 400,
           fontSize: 16,
           // starterPrompts: ['What is a bot?', 'Who are you?'], // It overrides the starter prompts set by the chat flow passed
           starterPromptFontSize: 15,
@@ -120,7 +120,7 @@
             sendButtonColor: '#E22A90',
             maxChars: 50,
             maxCharsWarningMessage: 'You exceeded the characters limit. Please input less than 50 characters.',
-            autoFocus: true, // If not used, autofocus is disabled on mobile and enabled on desktop. true enables it on both, false disables it on both.
+            autoFocus: false, // If not used, autofocus is disabled on mobile and enabled on desktop. true enables it on both, false disables it on both.
             sendMessageSound: true,
             // sendSoundLocation: "send_message.mp3", // If this is not used, the default sound effect will be played if sendSoundMessage is true.
             receiveMessageSound: true,
