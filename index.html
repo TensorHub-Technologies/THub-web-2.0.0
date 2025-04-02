@@ -29,7 +29,7 @@
 
 
   <script type="module">
-    import Chatbot from "https://cdn.jsdelivr.net/npm/thub-embed@9.1.8/dist/web.js"
+    import Chatbot from "https://cdn.jsdelivr.net/npm/thub-embed@9.2.6/dist/web.js"
     Chatbot.init({
       chatflowid: "2b414cd1-cded-4915-be17-31e256246765",
       apiHost: "https://demo.thub.tech",
@@ -54,14 +54,14 @@
       theme: {
         button: {
           backgroundColor: '#E22A90',
-          right: 40,
-          bottom: 120,
+          right: 20,
+          bottom: 20,
           size: "medium",
           dragAndDrop: true,
           iconColor: 'white',
           // customIconSrc: 'https://raw.githubusercontent.com/walkxcode/dashboard-icons/main/svg/google-messages.svg',
           autoWindowOpen: {
-            autoOpen: true, //parameter to control automatic window opening
+            autoOpen: false, //parameter to control automatic window opening
             openDelay: 2, // Optional parameter for delay time in seconds
             autoOpenOnMobile: false, //parameter to control automatic window opening in mobile
           },
@@ -72,18 +72,6 @@
           tooltipBackgroundColor: 'black',
           tooltipTextColor: 'white',
           tooltipFontSize: 16,
-        },
-        disclaimer: {
-          title: 'Disclaimer',
-          message: 'By using this chatbot, you agree to the <a target="_blank" href="https://flowiseai.com/terms">Terms & Condition</a>',
-          textColor: 'black',
-          buttonColor: '#3b82f6',
-          buttonText: 'Start Chatting',
-          buttonTextColor: 'white',
-          blurredBackgroundColor: 'rgba(0, 0, 0, 0.4)', //The color of the blurred background that overlays the chat interface
-          backgroundColor: 'white',
-          denyButtonText: 'Cancel',
-          denyButtonBgColor: '#ef4444',
         },
         customCSS: ``, // Add custom CSS styles. Use !important to override default styles
         chatWindow: {
@@ -105,8 +93,8 @@
           errorMessage: 'This is a custom error message',
           backgroundColor: '#ffffff',
           backgroundImage: 'svg/thub_icon.svg', // If set, this will overlap the background color of the chat window.
-          height: 470,
-          width: 380,
+          height: 550,
+          width: 400,
           fontSize: 16,
           // starterPrompts: ['What is a bot?', 'Who are you?'], // It overrides the starter prompts set by the chat flow passed
           starterPromptFontSize: 15,
@@ -132,8 +120,8 @@
             sendButtonColor: '#E22A90',
             maxChars: 50,
             maxCharsWarningMessage: 'You exceeded the characters limit. Please input less than 50 characters.',
-            autoFocus: true, // If not used, autofocus is disabled on mobile and enabled on desktop. true enables it on both, false disables it on both.
-            sendMessageSound: true,
+            autoFocus: false, // If not used, autofocus is disabled on mobile and enabled on desktop. true enables it on both, false disables it on both.
+           // sendMessageSound: true,
             // sendSoundLocation: "send_message.mp3", // If this is not used, the default sound effect will be played if sendSoundMessage is true.
             receiveMessageSound: true,
             // receiveSoundLocation: "receive_message.mp3", // If this is not used, the default sound effect will be played if receiveSoundMessage is true.
@@ -183,7 +171,7 @@
   </script>
 
 
-  <elevenlabs-convai agent-id="IOPTV28SyLcLCQMxqpJ7"></elevenlabs-convai>
+  <!-- <elevenlabs-convai agent-id="IOPTV28SyLcLCQMxqpJ7"></elevenlabs-convai>
   <script src="
   https://elevenlabs.io/convai-widget/index.js" async type="text/javascript"></script>
 
@@ -202,7 +190,7 @@
 
       observer.observe(document.body, { childList: true, subtree: true });
     });
-  </script>
+  </script> -->
 
   <!-- Moved the main script here -->
   <script type="module" src="/src/main.jsx"></script>

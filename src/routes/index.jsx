@@ -2,6 +2,7 @@ import { createBrowserRouter } from "react-router-dom";
 import loadable from "@loadable/component";
 import Forgot_Password from "../components/auth/Forgot_Password";
 import ResetPassword from "../components/auth/Reset_Password";
+import BlogVoiceBots from "../pages/BlogVoiceBots";
 
 const Home = loadable(() => import("../pages/Home"));
 const UseCases = loadable(() => import("../pages/UseCases"));
@@ -74,6 +75,10 @@ export const router = createBrowserRouter([
       {
         path: "blog/6",
         element: <BlogDetails6 />,
+      },
+      {
+        path: "voicebot",
+        element: <BlogVoiceBots />,
       },
       {
         path: "academy",
