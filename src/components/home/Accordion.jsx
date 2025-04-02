@@ -11,27 +11,23 @@ const Accordion = () => {
     {
       question: "What is THub?",
       answer:
-        "THub is a low code/no code platform for creating Generative AI applications, using a drag-and-drop interface with various Language Model Embeddings and Vector Databases.",
+        "Your gateway to AI apps. Drag, drop, and deploy—innovation, simplified.",
     },
     {
-      question: "Is THub suitable for non-coders?",
-      answer:
-        "Yes, THub's drag-and-drop interface allows individuals with no coding experience to build sophisticated AI applications.",
+      question: "For Non-Coders",
+      answer: "Yes. From beginners to pros, THub welcomes all.",
     },
     {
-      question: "What sets THub apart from others?",
-      answer:
-        "THub stands out for its user-friendly interface, seamless integration of LLMs and vector databases, and a broad feature set catering to all levels of coding expertise.",
+      question: "What Makes THub Different?",
+      answer: "Simplicity with strength. Speed with sophistication.",
     },
     {
-      question: "What kind of applications can be built using THub?",
-      answer:
-        "THub empowers users to create a variety of Generative AI applications, including retrieval augmented generation, fine-tuning, document summarization, recommender systems, and chatbots. With its versatile features and integrations, the possibilities are endless.",
+      question: "What Can You Build",
+      answer: "Chatbots. Recommenders. Summaries. Anything you imagine.",
     },
     {
-      question: "Is THub suitable for businesses of all sizes?",
-      answer:
-        "Yes, THub caters to businesses of all sizes, from startups to enterprises. Its flexible pricing plans and scalable features make it an ideal choice for projects and businesses at any stage of development. Additionally, THub offers enterprise-level support and customization options for larger organizations.",
+      question: "For Every Business?",
+      answer: "Startups to giants—THub grows with you.",
     },
   ];
 

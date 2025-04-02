@@ -1,15 +1,15 @@
 export const pricingData = {
   monthly: [
     {
-      title: "Free",
+      title: "Free Forever",
       prices: {
         INR: "₹0",
         USD: "$0",
         GBP: "£0",
         Euro: "€0",
       },
-      description: "For starters to explore and integrate",
-      buttonInfo: "Start for Free",
+      description: "For starters: one user, 3 agents, endless potential.",
+      buttonInfo: "Start Free",
       list: [
         "Single User",
         "3 Agents",
@@ -22,7 +22,7 @@ export const pricingData = {
       ],
     },
     {
-      title: "Pro",
+      title: "Pro Power",
       prices: {
         INR: "₹ 19,999",
         USD: "$199",
@@ -35,7 +35,7 @@ export const pricingData = {
         GBP: "£149",
         Euro: "€159",
       },
-      description: "For small & medium businesses",
+      description: "For teams: 5 users, 25 agents, tools to scale.",
       buttonInfo: "Choose Plan",
       list: [
         "All Free Features",
@@ -50,28 +50,28 @@ export const pricingData = {
       ],
     },
     {
-      title: "Enterprise",
+      title: "Enterprise Excellence",
       prices: {
-        INR: "Contact for Price",
-        USD: "Contact for Price",
-        GBP: "Contact for Price",
-        Euro: "Contact for Price",
+        INR: "Contact Us",
+        USD: "Contact Us",
+        GBP: "Contact Us",
+        Euro: "Contact Us",
       },
-      description: "For large teams and enterprises.",
+      description: "For giants: unlimited users, unlimited possibilities.",
       buttonInfo: "Get in Touch",
       list: ["All Pro Features", "Unlimited Users", "Unlimited Agents"],
     },
   ],
   yearly: [
     {
-      title: "Free",
+      title: "Free Forever",
       prices: {
         INR: "₹ 0",
         USD: "$0",
         GBP: "£0",
         Euro: "€0",
       },
-      description: "For starters to explore and integrate",
+      description: "For starters: one user, 3 agents, endless potential.",
       buttonInfo: "Start for Free",
       list: [
         "Single User",
@@ -85,7 +85,7 @@ export const pricingData = {
       ],
     },
     {
-      title: "Pro",
+      title: "Pro Power",
       prices: {
         INR: "₹ 2,19,999",
         USD: "$2,518",
@@ -98,7 +98,7 @@ export const pricingData = {
         GBP: "£1,599",
         Euro: "€1,899",
       },
-      description: "For small & medium businesses",
+      description: "For teams: 5 users, 25 agents, tools to scale.",
       buttonInfo: "Choose Plan",
       list: [
         "All Free Features",
@@ -120,7 +120,7 @@ export const pricingData = {
         GBP: "Contact for Price",
         Euro: "Contact for Price",
       },
-      description: "For large teams and enterprises.",
+      description: "For giants: unlimited users, unlimited possibilities.",
       buttonInfo: "Get in Touch",
       list: ["All Pro Features", "Unlimited Users", "Unlimited Agents"],
     },
