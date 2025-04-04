@@ -17,9 +17,9 @@ function Banner() {
   const strings = [
     "Agentic Workflows",
     "RAG Systems",
-    "Retrieval Augmented Fine Tuning",
     "GenAI Apps",
     "Vector Embeddings",
+    "Retrieval Augmented Fine Tuning",
   ];
   const cursorColor = isDarkMode ? "white" : "black";
 
@@ -49,11 +49,11 @@ function Banner() {
   return (
     <section id={isDarkMode ? "" : "hero-main-light"}>
       <div id="hero-container" className=" py-5">
-        <p className="text-center text-primary dark:text-primary-dark mt-24">
-          Best Agents and GenAI Apps Builder
-        </p>
+        <h1 className="text-center text-primary dark:text-primary-dark mt-24 text-5xl">
+          Build Smarter. Build Faster. Build with THub.
+        </h1>
         <h1 className="text-center text-secondary dark:text-white mt-4 text-5xl">
-          A 30X Faster Way To Build
+          The 30X Faster Way to Launch
         </h1>
         <div className="flex justify-center my-4">
           <span
@@ -73,7 +73,7 @@ function Banner() {
           className="text-white bg-gradient-to-r from-[#B425D5] to-[#FB5582] hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 font-medium rounded-lg px-8 py-4 text-center me-2 mb-2 text-lg mt-5"
           onClick={() => handleClick()}
         >
-          Start Building
+          Start Now
         </button>
       </div>
       <div className="flex justify-center">

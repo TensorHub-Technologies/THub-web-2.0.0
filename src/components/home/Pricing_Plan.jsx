@@ -64,12 +64,11 @@ function Pricing_Plan() {
   return (
     <section className="px-4 sm:px-8 lg:px-16 pb-10 py-10">
       <ToastContainer />
-
-      <div className="flex flex-col justify-center items-center gap-5">
-        <p className="text-primary dark:text-primary-dark text-4xl">
+      <div className="flex flex-col justify-center items-center">
+        <p className="text-primary dark:text-primary-dark text-4xl mb-5">
           Pricing Plan
         </p>
-        <div className="flex flex-col gap-1 justify-center items-center">
+        <div className="flex flex-col gap-1 justify-center items-center mb-5">
           <h1 className="text-4xl dark:text-white text-left sm:text-center w-full">
             Ready to Get Started?
           </h1>
@@ -77,9 +76,12 @@ function Pricing_Plan() {
             Don&apos;t Worry, We&apos;ll Keep You Under Budget
           </h1>
         </div>
-        <p className="text-lg dark:text-white ">
-          Get started with a 90-day trial, Cancel anytime.
+        <p className="text-lg dark:text-white">
+          No risk. All reward. Discover what’s possible.
         </p>
+        <h2 className="text-lg dark:text-primary-dark text-primary mt-2">
+          Your 90-Day Trial Starts Now
+        </h2>
       </div>
 
       {/* Switch button */}
@@ -165,7 +167,7 @@ function Pricing_Plan() {
             <p className="mb-5 text-3xl text-primary dark:text-primary-dark">
               {plan.title}
             </p>
-            {plan.title === "Pro" ? (
+            {plan.title === "Pro Power" ? (
               <p className="text-3xl my-2 text-black dark:text-white">
                 {getPrice(plan)}
                 <span
@@ -186,7 +188,9 @@ function Pricing_Plan() {
               </p>
             )}
 
-            <p className=" text-black dark:text-white">{plan.description}</p>
+            <p className=" text-black dark:text-white text-lg">
+              {plan.description}
+            </p>
             <div className="flex justify-center items-center">
               <button
                 onClick={() => {

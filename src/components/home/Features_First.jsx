@@ -32,9 +32,14 @@ function Features_First() {
         <LogoSlider />
       </div>
       {/* Heading Section */}
-      <div className="flex justify-center text-center my-10">
-        <h1
-          className="dark:text-white text-secondary mt-5 mb-12  text-3xl md:text-4xl lg:text-5xl font-bold w-[60rem]"
+      <div className="flex justify-center text-center mt-5">
+        <h1 className="dark:text-white text-secondary text-3xl md:text-4xl lg:text-5xl font-bold w-[60rem]">
+          One Platform. Infinite Possibilities
+        </h1>
+      </div>
+      <div className="flex justify-center text-center mt-1">
+        <h2
+          className="dark:text-white text-secondary mt-5 mb-12  text-2xl md:text-3xl lg:text-4xl font-bold w-[60rem]"
           style={{ lineHeight: "4rem" }}
         >
           Build{" "}
@@ -46,7 +51,7 @@ function Features_First() {
             GenAI
           </span>{" "}
           Apps at Rapid Pace Across Your Favorite LLMs
-        </h1>
+        </h2>
       </div>
 
       {/* Features Grid */}
@@ -62,11 +67,11 @@ function Features_First() {
           </div>
           <div className="flex flex-col gap-5">
             <h4 className="text-2xl font-semibold dark:text-white">
-              No Code-Low Code Platform
+              Agents. RAG. Fine-Tuning. All in One Place.
             </h4>
             <p className="text-lg dark:text-secondary-dark text-justify">
-              Build production-ready GenAI apps at scale & speed with a no
-              code-low code platform.
+              Forget complexity. THub gives you everything you need to build
+              powerful GenAI workflows—without writing a single line of code.
             </p>
           </div>
         </div>
@@ -82,11 +87,11 @@ function Features_First() {
           </div>
           <div className="flex flex-col gap-5">
             <h4 className="text-2xl font-semibold dark:text-white">
-              Drag & Drop Features
+              Drag. Drop. Done.
             </h4>
-            <p className="text-lg dark:text-secondary-dark text-justify">
-              Simply drag & drop data loaders, LLMs, agents, chains, and
-              embedding models to build your custom GenAI Apps.
+            <p className="text-lg dark:text-secondary-dark text-justify mt-9">
+              Your ideas. Your flow. Your way. No-code. Low-code. No limits.
+              Design apps visually—just drag, drop, and deploy.
             </p>
           </div>
         </div>
@@ -102,14 +107,143 @@ function Features_First() {
           </div>
           <div className="flex flex-col gap-5">
             <h4 className="text-2xl font-semibold dark:text-white">
-              Automated Data Pipeline
+              Turn Data Into Decisions.
             </h4>
-            <p className="text-lg dark:text-secondary-dark text-justify">
-              Build end-to-end pipelines for structured, semi-structured, and
-              unstructured data all in one platform.
+            <p className="text-lg dark:text-secondary-dark  text-start">
+              Structured.&nbsp; Semi-Structured.&nbsp; Unstructured. With THub’s
+              automated data pipeline, your data flows where it matters—into
+              action.
             </p>
           </div>
         </div>
+        {/* feature 4 */}
+        {/* <div className="lg:flex gap-5 items-start w-full">
+          <div className="w-16 h-16 border border-primary bg-slate-200 dark:bg-slate-800 dark:border dark:border-slate-950 p-2 rounded-lg flex-shrink-0">
+            <img
+              src={isDarkMode ? dark_app_image : light_app_image}
+              alt="low code"
+              className="w-full h-full object-contain"
+            />
+          </div>
+          <div className="flex flex-col gap-5">
+            <h4 className="text-2xl font-semibold dark:text-white">
+              Build Agents that Work Like You Do.
+            </h4>
+            <p className="text-lg dark:text-secondary-dark text-justify">
+              Autonomous Agents. Multi-Agents. From support to strategy—let them
+              think, decide, and act.
+            </p>
+          </div>
+        </div> */}
+        {/* feature 5 */}
+        {/* <div className="lg:flex gap-5 items-start w-full">
+          <div className="w-16 h-16 border border-primary bg-slate-200 dark:bg-slate-800 dark:border dark:border-slate-950 p-2 rounded-lg flex-shrink-0">
+            <img
+              src={isDarkMode ? dark_app_image : light_app_image}
+              alt="low code"
+              className="w-full h-full object-contain"
+            />
+          </div>
+          <div className="flex flex-col gap-5">
+            <h4 className="text-2xl font-semibold dark:text-white">
+              Agents. RAG. Fine-Tuning. All in One Place.
+            </h4>
+            <p className="text-lg dark:text-secondary-dark text-justify">
+              Forget complexity. THub gives you everything you need to build
+              powerful GenAI workflows—without writing a single line of code.
+            </p>
+          </div>
+        </div> */}
+        {/* feature 6 */}
+        {/* <div className="lg:flex gap-5 items-start w-full">
+          <div className="w-16 h-16 border border-primary bg-slate-200 dark:bg-slate-800 dark:border dark:border-slate-950 p-2 rounded-lg flex-shrink-0">
+            <img
+              src={isDarkMode ? dark_app_image : light_app_image}
+              alt="low code"
+              className="w-full h-full object-contain"
+            />
+          </div>
+          <div className="flex flex-col gap-5">
+            <h4 className="text-2xl font-semibold dark:text-white">
+              Create with Intelligence.
+            </h4>
+            <p className="text-lg dark:text-secondary-dark text-justify mt-9">
+              Agents.RAG. RAFT. Recommenders. Whatever your use case, build apps
+              with real-world impact in minutes.
+            </p>
+          </div>
+        </div> */}
+        {/* feature 7 */}
+        {/* <div className="lg:flex gap-5 items-start w-full">
+          <div className="w-16 h-16 border border-primary bg-slate-200 dark:bg-slate-800 dark:border dark:border-slate-950 p-2 rounded-lg flex-shrink-0">
+            <img
+              src={isDarkMode ? dark_app_image : light_app_image}
+              alt="low code"
+              className="w-full h-full object-contain"
+            />
+          </div>
+          <div className="flex flex-col gap-5">
+            <h4 className="text-2xl font-semibold dark:text-white">
+              From Text to Task. Instantly.
+            </h4>
+            <p className="text-lg dark:text-secondary-dark text-justify mt-6">
+              Document generation. Description writing. Speed up everything you
+              used to do manually.
+            </p>
+          </div>
+        </div> */}
+        {/* feature 8 */}
+        {/* <div className="lg:flex gap-5 items-start w-full">
+          <div className="w-16 h-16 border border-primary bg-slate-200 dark:bg-slate-800 dark:border dark:border-slate-950 p-2 rounded-lg flex-shrink-0">
+            <img
+              src={isDarkMode ? dark_app_image : light_app_image}
+              alt="low code"
+              className="w-full h-full object-contain"
+            />
+          </div>
+          <div className="flex flex-col gap-5">
+            <h4 className="text-2xl font-semibold dark:text-white">
+              Powered by Possibility.
+            </h4>
+            <p className="text-lg dark:text-secondary-dark text-justify mt-6">
+              <ul className="list-disc ml-3">
+                <li>250+ tools</li>
+                <li>OpenAI, Gemini, Claude, and more</li>
+                <li>Pinecone. Weaviate. Faiss. Qdrant.</li>
+                <li>Train. Tune. Embed. Query. All in THub.</li>
+              </ul>
+            </p>
+          </div>
+        </div> */}
+        {/* feature 9 */}
+        {/* <div className="lg:flex gap-5 items-start w-full">
+          <div className="w-16 h-16 border border-primary bg-slate-200 dark:bg-slate-800 dark:border dark:border-slate-950 p-2 rounded-lg flex-shrink-0">
+            <img
+              src={isDarkMode ? dark_app_image : light_app_image}
+              alt="low code"
+              className="w-full h-full object-contain"
+            />
+          </div>
+          <div className="flex flex-col gap-5">
+            <h4 className="text-2xl font-semibold dark:text-white">
+              For Makers. For Teams. For Enterprises.
+            </h4>
+            <p className="text-lg dark:text-secondary-dark text-justify">
+              <p>
+                <b>Free</b> – Try and explore.
+              </p>
+              <p>
+                <b>Pro</b> – Build with teams.
+              </p>
+              <p>
+                <b>Enterprise</b> – Scale without limits.
+              </p>
+              <p>
+                <b>Start Free. Build Big. Cancel Anytime.</b>
+              </p>
+            </p>
+          </div>
+        </div> */}
       </div>
 
       <div className="flex justify-center">
