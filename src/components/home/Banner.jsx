@@ -49,9 +49,9 @@ function Banner() {
   return (
     <section id={isDarkMode ? "" : "hero-main-light"}>
       <div id="hero-container" className=" py-5">
-        <p className="text-center text-primary dark:text-primary-dark mt-24">
+        <h1 className="text-center text-primary dark:text-primary-dark mt-24 text-5xl">
           Build Smarter. Build Faster. Build with THub.
-        </p>
+        </h1>
         <h1 className="text-center text-secondary dark:text-white mt-4 text-5xl">
           The 30X Faster Way to Launch
         </h1>

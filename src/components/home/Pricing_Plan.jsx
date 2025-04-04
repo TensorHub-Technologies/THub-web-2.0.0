@@ -76,12 +76,12 @@ function Pricing_Plan() {
             Don&apos;t Worry, We&apos;ll Keep You Under Budget
           </h1>
         </div>
-        <h2 className="text-lg dark:text-white">
-          Your 90-Day Trial Starts Now
-        </h2>
         <p className="text-lg dark:text-white">
           No risk. All reward. Discover what’s possible.
         </p>
+        <h2 className="text-lg dark:text-primary-dark text-primary mt-2">
+          Your 90-Day Trial Starts Now
+        </h2>
       </div>
 
       {/* Switch button */}
