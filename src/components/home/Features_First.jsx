@@ -109,7 +109,7 @@ function Features_First() {
             <h4 className="text-2xl font-semibold dark:text-white">
               Turn Data Into Decisions.
             </h4>
-            <p className="text-lg dark:text-secondary-dark  text-start mt-9">
+            <p className="text-lg dark:text-secondary-dark  text-start">
               Structured.&nbsp; Semi-Structured.&nbsp; Unstructured. With THub’s
               automated data pipeline, your data flows where it matters—into
               action.
@@ -117,7 +117,7 @@ function Features_First() {
           </div>
         </div>
         {/* feature 4 */}
-        <div className="lg:flex gap-5 items-start w-full">
+        {/* <div className="lg:flex gap-5 items-start w-full">
           <div className="w-16 h-16 border border-primary bg-slate-200 dark:bg-slate-800 dark:border dark:border-slate-950 p-2 rounded-lg flex-shrink-0">
             <img
               src={isDarkMode ? dark_app_image : light_app_image}
@@ -134,9 +134,9 @@ function Features_First() {
               think, decide, and act.
             </p>
           </div>
-        </div>
+        </div> */}
         {/* feature 5 */}
-        <div className="lg:flex gap-5 items-start w-full">
+        {/* <div className="lg:flex gap-5 items-start w-full">
           <div className="w-16 h-16 border border-primary bg-slate-200 dark:bg-slate-800 dark:border dark:border-slate-950 p-2 rounded-lg flex-shrink-0">
             <img
               src={isDarkMode ? dark_app_image : light_app_image}
@@ -153,9 +153,9 @@ function Features_First() {
               powerful GenAI workflows—without writing a single line of code.
             </p>
           </div>
-        </div>
+        </div> */}
         {/* feature 6 */}
-        <div className="lg:flex gap-5 items-start w-full">
+        {/* <div className="lg:flex gap-5 items-start w-full">
           <div className="w-16 h-16 border border-primary bg-slate-200 dark:bg-slate-800 dark:border dark:border-slate-950 p-2 rounded-lg flex-shrink-0">
             <img
               src={isDarkMode ? dark_app_image : light_app_image}
@@ -172,9 +172,9 @@ function Features_First() {
               with real-world impact in minutes.
             </p>
           </div>
-        </div>
+        </div> */}
         {/* feature 7 */}
-        <div className="lg:flex gap-5 items-start w-full">
+        {/* <div className="lg:flex gap-5 items-start w-full">
           <div className="w-16 h-16 border border-primary bg-slate-200 dark:bg-slate-800 dark:border dark:border-slate-950 p-2 rounded-lg flex-shrink-0">
             <img
               src={isDarkMode ? dark_app_image : light_app_image}
@@ -191,9 +191,9 @@ function Features_First() {
               used to do manually.
             </p>
           </div>
-        </div>
+        </div> */}
         {/* feature 8 */}
-        <div className="lg:flex gap-5 items-start w-full">
+        {/* <div className="lg:flex gap-5 items-start w-full">
           <div className="w-16 h-16 border border-primary bg-slate-200 dark:bg-slate-800 dark:border dark:border-slate-950 p-2 rounded-lg flex-shrink-0">
             <img
               src={isDarkMode ? dark_app_image : light_app_image}
@@ -214,9 +214,9 @@ function Features_First() {
               </ul>
             </p>
           </div>
-        </div>
+        </div> */}
         {/* feature 9 */}
-        <div className="lg:flex gap-5 items-start w-full">
+        {/* <div className="lg:flex gap-5 items-start w-full">
           <div className="w-16 h-16 border border-primary bg-slate-200 dark:bg-slate-800 dark:border dark:border-slate-950 p-2 rounded-lg flex-shrink-0">
             <img
               src={isDarkMode ? dark_app_image : light_app_image}
@@ -243,7 +243,7 @@ function Features_First() {
               </p>
             </p>
           </div>
-        </div>
+        </div> */}
       </div>
 
       <div className="flex justify-center">

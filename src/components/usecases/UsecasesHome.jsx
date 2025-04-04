@@ -54,7 +54,7 @@ const UsecaseHome = () => {
             <h4 className="text-xl font-semibold dark:text-white">
               Agents for Every Task
             </h4>
-            <p className="text-md dark:text-secondary-dark max-w-xs text-justify">
+            <p className="text-md dark:text-secondary-dark max-w-xs">
               Support. Analysis. Audits. Agents as tireless as you.
             </p>
             <div className="flex items-center mt-0 group">
@@ -94,7 +94,7 @@ const UsecaseHome = () => {
             <h4 className="text-xl font-semibold dark:text-white">
               Smarter Apps, Instantly
             </h4>
-            <p className="text-md dark:text-secondary-dark max-w-xs text-justify">
+            <p className="text-md dark:text-secondary-dark max-w-xs">
               Data retrieval that thinks ahead. Brilliance, built in.
             </p>
             <div className="flex items-center mt-0 group">
@@ -134,7 +134,7 @@ const UsecaseHome = () => {
             <h4 className="text-xl font-semibold dark:text-white">
               Fine-Tune with Flair
             </h4>
-            <p className="text-md dark:text-secondary-dark max-w-xs text-justify">
+            <p className="text-md dark:text-secondary-dark max-w-xs">
               Precision, a drag away. Performance, perfected.
             </p>
             <div className="flex items-center mt-0 group">
@@ -166,46 +166,6 @@ const UsecaseHome = () => {
           <div className="flex flex-col items-start text-left gap-5 w-full">
             <div className="w-12 h-12 border border-primary bg-slate-200 dark:bg-slate-800 dark:border-slate-950 p-2 rounded-lg flex items-center justify-center">
               <img
-                src={isDarkMode ? dark_app_image : light_app_image}
-                alt="automated data pipeline"
-                className="h-full object-contain"
-              />
-            </div>
-            <h4 className="text-xl font-semibold dark:text-white">
-              Recommendations That Wow
-            </h4>
-            <p className="text-md dark:text-secondary-dark max-w-xs text-justify">
-              Personal. Perfect. Delight in every suggestion. Try Recommender
-            </p>
-            <div className="flex items-center mt-0 group">
-              <button
-                className="text-[#11121c] dark:text-secondary-dark cursor-pointer group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90] group-hover:underline"
-                onClick={handleClick}
-              >
-                Try Recommender
-              </button>
-              <div className="w-4 ml-2 text-[#11121c] dark:text-secondary-dark group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90]">
-                <svg
-                  className="icon"
-                  fill="none"
-                  viewBox="0 0 16 16"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M4 12.6667L12.6667 4M12.6667 4V12.32M12.6667 4H4.34667"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="1.21"
-                  />
-                </svg>
-              </div>
-            </div>
-          </div>
-
-          <div className="flex flex-col items-start text-left gap-5 w-full">
-            <div className="w-12 h-12 border border-primary bg-slate-200 dark:bg-slate-800 dark:border-slate-950 p-2 rounded-lg flex items-center justify-center">
-              <img
                 src={isDarkMode ? sqldark : sqllite}
                 alt="sql management"
                 className="h-full object-contain"
@@ -214,7 +174,7 @@ const UsecaseHome = () => {
             <h4 className="text-xl font-semibold dark:text-white">
               SQL, Simplified
             </h4>
-            <p className="text-md dark:text-secondary-dark max-w-xs text-justify">
+            <p className="text-md dark:text-secondary-dark max-w-xs">
               Queries flow fast. Results, real-time.
             </p>
             <div className="flex items-center mt-0 group">
@@ -246,6 +206,46 @@ const UsecaseHome = () => {
           <div className="flex flex-col items-start text-left gap-5 w-full">
             <div className="w-12 h-12 border border-primary bg-slate-200 dark:bg-slate-800 dark:border-slate-950 p-2 rounded-lg flex items-center justify-center">
               <img
+                src={isDarkMode ? dark_app_image : light_app_image}
+                alt="automated data pipeline"
+                className="h-full object-contain"
+              />
+            </div>
+            <h4 className="text-xl font-semibold dark:text-white">
+              Recommendations That Wow
+            </h4>
+            <p className="text-md dark:text-secondary-dark max-w-xs">
+              Personal. Perfect. Delight in every suggestion. Try Recommender
+            </p>
+            <div className="flex items-center mt-0 group">
+              <button
+                className="text-[#11121c] dark:text-secondary-dark cursor-pointer group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90] group-hover:underline"
+                onClick={handleClick}
+              >
+                Try Recommender
+              </button>
+              <div className="w-4 ml-2 text-[#11121c] dark:text-secondary-dark group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90]">
+                <svg
+                  className="icon"
+                  fill="none"
+                  viewBox="0 0 16 16"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M4 12.6667L12.6667 4M12.6667 4V12.32M12.6667 4H4.34667"
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="1.21"
+                  />
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex flex-col items-start text-left gap-5 w-full">
+            <div className="w-12 h-12 border border-primary bg-slate-200 dark:bg-slate-800 dark:border-slate-950 p-2 rounded-lg flex items-center justify-center">
+              <img
                 src={isDarkMode ? customerdark : customerlite}
                 alt="customer engagement"
                 className="h-full object-contain"
@@ -254,8 +254,9 @@ const UsecaseHome = () => {
             <h4 className="text-xl font-semibold dark:text-white">
               Know Your Customers
             </h4>
-            <p className="text-md dark:text-secondary-dark max-w-xs text-justify">
-              Insights that connect. Engagement that transforms.{" "}
+            <p className="text-md dark:text-secondary-dark max-w-xs mt-7">
+              Powerful insights that truly connect, engagement that genuinely
+              transforms.{" "}
             </p>
             <div className="flex items-center mt-0 group">
               <button
@@ -294,7 +295,7 @@ const UsecaseHome = () => {
             <h4 className="text-xl font-semibold dark:text-white">
               Documents, Done
             </h4>
-            <p className="text-md dark:text-secondary-dark max-w-xs text-justify">
+            <p className="text-md dark:text-secondary-dark max-w-xs mt-7">
               Automatic. Accurate. Time, saved. Try Document Generation{" "}
             </p>
             <div className="flex items-center mt-0 group">
@@ -334,7 +335,7 @@ const UsecaseHome = () => {
             <h4 className="text-xl font-semibold dark:text-white">
               Descriptions That Captivate
             </h4>
-            <p className="text-md dark:text-secondary-dark max-w-xs text-justify">
+            <p className="text-md dark:text-secondary-dark max-w-xs">
               Words that sell, crafted instantly. Try Description Generation
             </p>
             <div className="flex items-center mt-0 group">

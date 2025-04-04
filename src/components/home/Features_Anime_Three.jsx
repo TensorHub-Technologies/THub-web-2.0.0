@@ -16,19 +16,19 @@ function Features_Anime_Three() {
       <div className="flex flex-col lg:flex-row gap-10 p-8 lg:p-16 mt-[-128px]">
         <div className="w-full lg:w-[40rem]">
           <p className="text-primary dark:text-primary-dark mt-5">Features 3</p>
-          <h1 className="text-4xl sm:text-5xl mt-5 dark:text-white">
-            Versatile Generative App
-          </h1>
-          <h1 className="text-4xl sm:text-5xl mt-2 dark:text-white">
-            Building <span className="dark:text-primary-dark">THub.</span>
-          </h1>
+          <h3 className="text-4xl sm:text-4xl mt-5 dark:text-primary-dark text-primary">
+            From Idea to Intelligence. Instantly.
+          </h3>
+          <h4 className="text-3xl sm:text-3xl mt-2 dark:text-white">
+            Versatile. Scalable. Effortless. Voice-Enabled.
+          </h4>
           <p className="my-5 dark:text-secondary-dark text-justify">
-            Transform Ideas into Reality with THub: From Chatbots to Document
-            Summaries, We&apos;ve Got You Covered!
+            THub powers it all—chatbots, document processors, voice agents,
+            recommendation engines, customer copilots, and more.
           </p>
           <ul className="list-disc flex flex-col gap-3">
             <li className="flex gap-2">
-              <div className="w-7 pt-1 dark:text-white">
+              <div className="w-6 pt-1 dark:text-white">
                 <svg
                   className="icon"
                   fill="none"
@@ -46,9 +46,7 @@ function Features_Anime_Three() {
               </div>
               <div>
                 <p className="dark:text-secondary-dark text-justify">
-                  Create a wide range of generative apps including retrieval
-                  augmented generation, document summary, recommender systems,
-                  and chatbots.
+                  Build Retrieval-Augmented Generation apps in clicks
                 </p>
               </div>
             </li>
@@ -71,8 +69,7 @@ function Features_Anime_Three() {
               </div>
               <div>
                 <p className="dark:text-secondary-dark text-justify">
-                  Customize and fine-tune your apps for specific use cases with
-                  features like retrieval augmented fine-tuning.
+                  Fine-tune models using RAFT workflows
                 </p>
               </div>
             </li>
@@ -95,14 +92,16 @@ function Features_Anime_Three() {
               </div>
               <div>
                 <p className="dark:text-secondary-dark text-justify">
-                  Empower your apps with dynamic data manipulation and querying
-                  capabilities.
+                  Automate data preprocessing, voice transcription, and
+                  orchestration
                 </p>
               </div>
             </li>
           </ul>
-
-          <div className="flex items-center mt-8">
+          <h4 className="text-3xl sm:text-3xl mt-6 dark:text-white">
+            One platform. Infinite potential.
+          </h4>
+          <div className="flex items-center mt-6">
             <button
               className="text-primary dark:text-primary-dark cursor-pointer"
               onClick={() => {
