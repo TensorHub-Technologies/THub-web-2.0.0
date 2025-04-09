@@ -34,3 +34,17 @@ body {
     }
   }
   
+#root {
+  width: 100%;
+  overflow-x: hidden;
+  position: relative;
+}
+
+.main-container, 
+.container, 
+main, 
+section {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}

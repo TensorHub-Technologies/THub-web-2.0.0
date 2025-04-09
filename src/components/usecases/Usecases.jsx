@@ -36,12 +36,14 @@ const Usecase = () => {
             <p className="text-gray-500 mt-1">Home / UseCases</p>
           </div>
           <h1 className="dark:text-white text-2xl md:text-3xl lg:text-4xl font-bold">
-            Build{" "}
+            Build
             <span className="dark:text-primary-dark text-primary">
-              Agents, Multi Agents, RAG Systems{" "}
+              Agents, Multi Agents, RAG Systems
+            </span>
+            Faster, The Future of
+            <span className="dark:text-primary-dark text-primary">
+              GenAI{" "}
             </span>{" "}
-            Faster, The Future of{" "}
-            <span className="dark:text-primary-dark text-primary">GenAI </span>{" "}
             <br />
             Builder Tools
           </h1>
