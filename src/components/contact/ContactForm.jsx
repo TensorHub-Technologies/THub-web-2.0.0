@@ -1,13 +1,44 @@
+import axios from "axios";
+import { useState } from "react";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { AiOutlineUser } from "react-icons/ai";
 import { FiPhoneCall } from "react-icons/fi";
 import { GoMail } from "react-icons/go";
 import { contactValidationSchema } from "../../schemas/contactValidationSchema";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const ContactForm = () => {
-  const handleSubmit = (values) => {
-    console.log("Form Data", values);
-    // Handle form submission (e.g., send to API)
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+
+  const handleSubmit = async (values, { resetForm }) => {
+    setError("");
+    const apiUrl =
+      window.location.hostname === "localhost"
+        ? "http://localhost:2000"
+        : "https://thub-web-server-2-0-378678297066.us-central1.run.app";
+
+    setLoading(true);
+    try {
+      const response = await axios.post(`${apiUrl}/api/contactmail`, {
+        values,
+      });
+
+      if (response.status === 200) {
+        toast.success("Our team will contact you shortly!", {
+          position: "bottom-left",
+          style: { whiteSpace: "nowrap" },
+          theme: "colored",
+        });
+        resetForm();
+      }
+    } catch (error) {
+      console.error("Error sending contact form:", error.message);
+      setError("Failed to send message. Please try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -27,8 +58,8 @@ const ContactForm = () => {
             <div className="mb-4">
               <div className="flex flex-col">
                 <label
-                  className="text-lg text-start font-medium text-secondary dark:text-secondary-dark mb-2 -ml-0"
                   htmlFor="firstName"
+                  className="text-lg text-start font-medium text-secondary dark:text-secondary-dark mb-2 -ml-0"
                 >
                   Your Name*
                 </label>
@@ -54,8 +85,8 @@ const ContactForm = () => {
             <div className="mb-4">
               <div className="flex flex-col">
                 <label
-                  className="text-lg text-start font-medium text-secondary dark:text-secondary-dark mb-2 -ml-0"
                   htmlFor="email"
+                  className="text-lg text-start font-medium text-secondary dark:text-secondary-dark mb-2 -ml-0"
                 >
                   Email*
                 </label>
@@ -81,8 +112,8 @@ const ContactForm = () => {
             <div className="mb-4">
               <div className="flex flex-col">
                 <label
-                  className="text-lg text-start font-medium text-secondary dark:text-secondary-dark mb-2 -ml-0"
                   htmlFor="mobileNumber"
+                  className="text-lg text-start font-medium text-secondary dark:text-secondary-dark mb-2 -ml-0"
                 >
                   Mobile Number*
                 </label>
@@ -108,8 +139,8 @@ const ContactForm = () => {
             <div className="mb-4">
               <div className="flex flex-col">
                 <label
-                  className="text-lg text-start font-medium text-secondary dark:text-secondary-dark mb-2 -ml-0"
                   htmlFor="YourMessage"
+                  className="text-lg text-start font-medium text-secondary dark:text-secondary-dark mb-2 -ml-0"
                 >
                   Your Message*
                 </label>
@@ -130,10 +161,15 @@ const ContactForm = () => {
 
             <button
               type="submit"
-              className="w-36 py-3 px-6 bg-primary dark:bg-primary-dark text-white dark:text-secondary rounded-lg hover:bg-[#31519b] dark:hover:bg-[#e65ca8]"
+              disabled={loading}
+              className="w-36 py-3 px-6 bg-primary dark:bg-primary-dark text-white dark:text-secondary rounded-lg hover:bg-[#31519b] dark:hover:bg-[#e65ca8] disabled:opacity-60"
             >
-              Send Message
+              {loading ? "Sending..." : "Send Message"}
             </button>
+
+            {error && <div className="text-red-500 text-sm mt-4">{error}</div>}
+
+            <ToastContainer />
           </Form>
         </div>
       )}
