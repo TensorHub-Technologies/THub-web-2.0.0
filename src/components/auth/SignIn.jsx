@@ -48,7 +48,7 @@ const SignIn = () => {
             window.location.href = `http://localhost:8080/?theme=${theme}&uid=${userId}`;
             break;
           case "thub-web-2-0-0-378678297066.us-central1.run.app":
-            window.location.href = `http://34.31.158.201/?theme=${theme}&uid=${userId}`;
+            window.location.href = `https://demo.thub.tech/?theme=${theme}&uid=${userId}`;
             break;
           default:
             window.location.href = `https://${finalWorkspace}.thub.tech/?theme=${theme}&uid=${userId}`;
