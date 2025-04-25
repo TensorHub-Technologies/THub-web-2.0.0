@@ -21,7 +21,6 @@ const SignIn = () => {
   };
 
   const handleSubmit = async (values) => {
-    console.log("Form Data", values);
     const { email, password } = values;
 
     const apiUrl =
@@ -37,23 +36,22 @@ const SignIn = () => {
         setLoading(true);
         console.log("User inserted successfully");
         const { token, userId, workspace } = response.data;
+        console.log("response :", response);
         localStorage.setItem("token", token);
-
         const finalWorkspace = workspace || "app";
         const theme =
           localStorage.getItem("isDarkMode") === "true" ? "dark" : "lite";
 
-        switch (window.location.hostname) {
-          case "localhost":
-            window.location.href = `http://localhost:8080/?theme=${theme}&uid=${userId}`;
-            break;
-          case "thub-web-2-0-0-378678297066.us-central1.run.app":
-            window.location.href = `http://34.31.158.201/?theme=${theme}&uid=${userId}`;
-            break;
-          default:
-            window.location.href = `https://${finalWorkspace}.thub.tech/?theme=${theme}&uid=${userId}`;
-            break;
-        }
+        const hostname = window.location.hostname;
+
+        const redirectUrl =
+          hostname === "thub.tech"
+            ? `https://${finalWorkspace}.thub.tech/?theme=${theme}&uid=${userId}`
+            : hostname === "thub-web-2-0-0-378678297066.us-central1.run.app"
+              ? `https://demo.thub.tech/?theme=${theme}&uid=${userId}`
+              : `http://localhost:8080/?theme=${theme}&uid=${userId}`;
+
+        window.location.replace(redirectUrl);
       } else {
         console.error("Error:", response.statusText);
       }
