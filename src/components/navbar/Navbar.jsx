@@ -54,7 +54,7 @@ const Navbar = () => {
     { name: "Blog", path: "/blog" },
     { name: "Academy", path: "/academy" },
     { name: "Document", path: "/document" },
-    { name: "Feedback", path: "/feedback" },
+    // { name: "Feedback", path: "/feedback" },
     { name: "Contact", path: "/contact" },
     { name: "About", path: "/about" },
     { name: "Login", path: "/auth/login" },

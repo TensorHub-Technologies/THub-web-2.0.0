@@ -6,6 +6,7 @@ import PriceDropdown from "./PriceDropdown";
 import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import Enterprice_Form from "./Enterprice_Form";
+import LogoSlider from "./LogoSlider";
 
 function Pricing_Plan() {
   const isDarkMode = useSelector((state) => state.customization.isDarkMode);
@@ -62,174 +63,182 @@ function Pricing_Plan() {
   };
 
   return (
-    <section className="px-4 sm:px-8 lg:px-16 pb-10 py-10">
-      <ToastContainer />
-      <div className="flex flex-col justify-center items-center">
-        <p className="text-primary dark:text-primary-dark text-4xl mb-5">
-          Pricing Plan
-        </p>
-        <div className="flex flex-col gap-1 justify-center items-center mb-5">
-          <h1 className="text-4xl dark:text-white text-left sm:text-center w-full">
-            Ready to Get Started?
-          </h1>
-          <h1 className="text-4xl dark:text-white text-left sm:text-center w-full">
-            Don&apos;t Worry, We&apos;ll Keep You Under Budget
-          </h1>
-        </div>
-        <p className="text-lg dark:text-white">
-          No risk. All reward. Discover what’s possible.
-        </p>
-        <h2 className="text-lg dark:text-primary-dark text-primary mt-2">
-          Your 90-Day Trial Starts Now
+    <>
+      <div className="w-full mt-14">
+        <h2 className="w-3/4 mx-auto text-center text-4xl font-semibold text-gray-800 dark:text-gray-100 mb-8">
+          250+ Integrated Tools
         </h2>
+        <LogoSlider />
       </div>
-
-      {/* Switch button */}
-      <div className={subStyle.switch_parent}>
-        <div className={subStyle.switch_wrapper}>
-          <button className={subStyle.switch_button} onClick={handleMonthly}>
-            <input
-              type="radio"
-              id="monthly"
-              name="subscription"
-              className={subStyle.radio}
-              checked={selectedPlan === "monthly"}
-              onChange={handleMonthly}
-            />
-            <label
-              htmlFor="monthly"
-              style={{
-                color: isDarkMode
-                  ? selectedPlan === "monthly"
-                    ? "black"
-                    : "white"
-                  : selectedPlan === "monthly"
-                    ? "white"
-                    : "black",
-              }}
-            >
-              Monthly
-            </label>
-          </button>
-          <button className={subStyle.switch_button} onClick={handleYearly}>
-            <input
-              type="radio"
-              id="yearly"
-              name="subscription"
-              className={subStyle.radio}
-              checked={selectedPlan === "yearly"}
-              onChange={handleYearly}
-            />
-            <label
-              htmlFor="yearly"
-              className={subStyle.switch_item}
-              style={{
-                color: isDarkMode
-                  ? selectedPlan === "yearly"
-                    ? "black"
-                    : "white"
-                  : selectedPlan === "yearly"
-                    ? "white"
-                    : "black",
-              }}
-            >
-              Yearly
-            </label>
-          </button>
-
-          <div
-            className={
-              isDarkMode
-                ? subStyle.highlighter_dark
-                : subStyle.highlighter_light
-            }
-            style={{
-              transform:
-                selectedPlan === "yearly" ? "translateX(100%)" : "none",
-            }}
-          ></div>
+      <section className="px-4 sm:px-8 lg:px-16 pb-10 py-10">
+        <ToastContainer />
+        <div className="flex flex-col justify-center items-center">
+          <p className="text-primary dark:text-primary-dark text-4xl mb-5">
+            Pricing Plan
+          </p>
+          <div className="flex flex-col gap-1 justify-center items-center mb-5">
+            <h1 className="text-4xl dark:text-white text-left sm:text-center w-full">
+              Ready to Get Started?
+            </h1>
+            <h1 className="text-4xl dark:text-white text-left sm:text-center w-full">
+              Don&apos;t Worry, We&apos;ll Keep You Under Budget
+            </h1>
+          </div>
+          <p className="text-lg dark:text-white">
+            No risk. All reward. Discover what’s possible.
+          </p>
+          <h2 className="text-lg dark:text-primary-dark text-primary mt-2">
+            Your 90-Day Trial Starts Now
+          </h2>
         </div>
-        {/* Dropdown for currency selection */}
-        <div className="absolute right-5 mr-12">
-          <PriceDropdown
-            onCurrencyChange={handleCurrencyChange}
+
+        {/* Switch button */}
+        <div className={subStyle.switch_parent}>
+          <div className={subStyle.switch_wrapper}>
+            <button className={subStyle.switch_button} onClick={handleMonthly}>
+              <input
+                type="radio"
+                id="monthly"
+                name="subscription"
+                className={subStyle.radio}
+                checked={selectedPlan === "monthly"}
+                onChange={handleMonthly}
+              />
+              <label
+                htmlFor="monthly"
+                style={{
+                  color: isDarkMode
+                    ? selectedPlan === "monthly"
+                      ? "black"
+                      : "white"
+                    : selectedPlan === "monthly"
+                      ? "white"
+                      : "black",
+                }}
+              >
+                Monthly
+              </label>
+            </button>
+            <button className={subStyle.switch_button} onClick={handleYearly}>
+              <input
+                type="radio"
+                id="yearly"
+                name="subscription"
+                className={subStyle.radio}
+                checked={selectedPlan === "yearly"}
+                onChange={handleYearly}
+              />
+              <label
+                htmlFor="yearly"
+                className={subStyle.switch_item}
+                style={{
+                  color: isDarkMode
+                    ? selectedPlan === "yearly"
+                      ? "black"
+                      : "white"
+                    : selectedPlan === "yearly"
+                      ? "white"
+                      : "black",
+                }}
+              >
+                Yearly
+              </label>
+            </button>
+
+            <div
+              className={
+                isDarkMode
+                  ? subStyle.highlighter_dark
+                  : subStyle.highlighter_light
+              }
+              style={{
+                transform:
+                  selectedPlan === "yearly" ? "translateX(100%)" : "none",
+              }}
+            ></div>
+          </div>
+          {/* Dropdown for currency selection */}
+          <div className="absolute right-5 mr-12">
+            <PriceDropdown
+              onCurrencyChange={handleCurrencyChange}
+              handleError={handleError}
+            />
+          </div>
+        </div>
+
+        <div className="grid mx-2 grid-cols-1 lg:grid-cols-3 gap-20 dark:text-white">
+          {pricingData[selectedPlan].map((plan, index) => (
+            <div
+              key={index}
+              className={`group p-6 bg-white  dark:bg-background-dark border-black rounded-lg dark:border-gray-700 relative border hover:border-primary dark:hover:border-primary-dark ${isDarkMode ? subStyle.card_selection_dark : subStyle.card_selection_light}`}
+            >
+              <p className="mb-5 text-3xl text-primary dark:text-primary-dark">
+                {plan.title}
+              </p>
+              {plan.title === "Pro Power" ? (
+                <p className="text-3xl my-2 text-black dark:text-white">
+                  {getPrice(plan)}
+                  <span
+                    style={{
+                      fontSize: "16px",
+                      verticalAlign: "super",
+                      marginLeft: "4px",
+                      fontWeight: "bolder",
+                      color: isDarkMode ? "white" : "black",
+                    }}
+                  >
+                    /agent
+                  </span>
+                </p>
+              ) : (
+                <p className="text-3xl my-2 text-black dark:text-white">
+                  {getPrice(plan)}
+                </p>
+              )}
+
+              <p className=" text-black dark:text-white text-lg">
+                {plan.description}
+              </p>
+              <div className="flex justify-center items-center">
+                <button
+                  onClick={() => {
+                    handleClick(plan.title);
+                  }}
+                  type="button"
+                  className="text-primary group-hover:bg-primary border dark:border-primary-dark border-primary group-hover:text-[#11121C] rounded font-medium text-lg w-full py-2 me-2 my-5 dark:bg-background-dark dark:group-hover:bg-primary-dark focus:outline-none dark:text-primary-dark cursor-pointer"
+                >
+                  {plan.buttonInfo}
+                </button>
+              </div>
+              <ul>
+                {plan.list.map((planList, i) => (
+                  <li
+                    className={
+                      isDarkMode
+                        ? subStyle.list_features_dark
+                        : subStyle.list_features_light
+                    }
+                    key={i}
+                  >
+                    {planList.includes("₹ 17,999/per Additional Agents") &&
+                    plan.title === "Pro"
+                      ? `${getExtraPrice(plan)}/Per Additional Agents`
+                      : planList}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+        {showForm && (
+          <Enterprice_Form
+            setShowForm={setShowForm}
+            handleLoading={handleLoading}
             handleError={handleError}
           />
-        </div>
-      </div>
-
-      <div className="grid mx-2 grid-cols-1 lg:grid-cols-3 gap-20 dark:text-white">
-        {pricingData[selectedPlan].map((plan, index) => (
-          <div
-            key={index}
-            className={`group p-6 bg-white  dark:bg-background-dark border-black rounded-lg dark:border-gray-700 relative border hover:border-primary dark:hover:border-primary-dark ${isDarkMode ? subStyle.card_selection_dark : subStyle.card_selection_light}`}
-          >
-            <p className="mb-5 text-3xl text-primary dark:text-primary-dark">
-              {plan.title}
-            </p>
-            {plan.title === "Pro Power" ? (
-              <p className="text-3xl my-2 text-black dark:text-white">
-                {getPrice(plan)}
-                <span
-                  style={{
-                    fontSize: "16px",
-                    verticalAlign: "super",
-                    marginLeft: "4px",
-                    fontWeight: "bolder",
-                    color: isDarkMode ? "white" : "black",
-                  }}
-                >
-                  /agent
-                </span>
-              </p>
-            ) : (
-              <p className="text-3xl my-2 text-black dark:text-white">
-                {getPrice(plan)}
-              </p>
-            )}
-
-            <p className=" text-black dark:text-white text-lg">
-              {plan.description}
-            </p>
-            <div className="flex justify-center items-center">
-              <button
-                onClick={() => {
-                  handleClick(plan.title);
-                }}
-                type="button"
-                className="text-primary group-hover:bg-primary border dark:border-primary-dark border-primary group-hover:text-[#11121C] rounded font-medium text-lg w-full py-2 me-2 my-5 dark:bg-background-dark dark:group-hover:bg-primary-dark focus:outline-none dark:text-primary-dark cursor-pointer"
-              >
-                {plan.buttonInfo}
-              </button>
-            </div>
-            <ul>
-              {plan.list.map((planList, i) => (
-                <li
-                  className={
-                    isDarkMode
-                      ? subStyle.list_features_dark
-                      : subStyle.list_features_light
-                  }
-                  key={i}
-                >
-                  {planList.includes("₹ 17,999/per Additional Agents") &&
-                  plan.title === "Pro"
-                    ? `${getExtraPrice(plan)}/Per Additional Agents`
-                    : planList}
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
-      </div>
-      {showForm && (
-        <Enterprice_Form
-          setShowForm={setShowForm}
-          handleLoading={handleLoading}
-          handleError={handleError}
-        />
-      )}
-    </section>
+        )}
+      </section>
+    </>
   );
 }
 

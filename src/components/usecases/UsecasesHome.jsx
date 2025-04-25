@@ -22,17 +22,17 @@ const UsecaseHome = () => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate("/blog");
+    navigate("/auth/login");
   };
 
   return (
     <div className="border-red-400 dark:bg-secondary">
-      <div className="text-center ">
+      <div className="text-center">
         <div className="flex flex-col items-center text-center">
-          <h1 className="dark:text-white text-secondary text-3xl md:text-4xl lg:text-5xl font-bold w-[60rem]">
+          <h1 className="dark:text-white text-secondary text-3xl md:text-4xl lg:text-5xl font-bold w-full max-w-4xl">
             Tools for Tomorrow
           </h1>
-          <h2 className="dark:text-white text-secondary mt-5 mb-12  text-2xl md:text-3xl lg:text-4xl font-bold w-[60rem]">
+          <h2 className="dark:text-white text-secondary mt-5 mb-12 text-2xl md:text-3xl lg:text-4xl font-bold w-full max-w-4xl">
             The Future of{" "}
             <span className="text-primary dark:text-primary-dark">
               Artificial Intelligence
@@ -42,8 +42,9 @@ const UsecaseHome = () => {
         </div>
       </div>
       <section className="px-5 py-10 lg:px-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-20">
-          <div className="flex flex-col items-start text-left gap-5 w-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          {/* Card 1 */}
+          <div className="flex flex-col items-start text-left w-full h-full">
             <div className="w-12 h-12 border border-primary bg-slate-200 dark:bg-slate-800 dark:border-slate-950 p-2 rounded-lg flex items-center justify-center">
               <img
                 src={isDarkMode ? productdark : productlite}
@@ -51,13 +52,13 @@ const UsecaseHome = () => {
                 className="h-full object-contain"
               />
             </div>
-            <h4 className="text-xl font-semibold dark:text-white">
+            <h4 className="text-xl font-semibold dark:text-white mt-5">
               Agents for Every Task
             </h4>
-            <p className="text-md dark:text-secondary-dark max-w-xs">
+            <p className="text-md dark:text-secondary-dark max-w-xs flex-grow">
               Support. Analysis. Audits. Agents as tireless as you.
             </p>
-            <div className="flex items-center mt-0 group">
+            <div className="flex items-center mt-6 group">
               <button
                 className="text-[#11121c] dark:text-secondary-dark cursor-pointer group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90] group-hover:underline"
                 onClick={handleClick}
@@ -83,7 +84,8 @@ const UsecaseHome = () => {
             </div>
           </div>
 
-          <div className="flex flex-col items-start text-left gap-5 w-full">
+          {/* Card 2 */}
+          <div className="flex flex-col items-start text-left w-full h-full">
             <div className="w-12 h-12 border border-primary bg-slate-200 dark:bg-slate-800 dark:border-slate-950 p-2 rounded-lg flex items-center justify-center">
               <img
                 src={isDarkMode ? ragdark : raglite}
@@ -91,13 +93,13 @@ const UsecaseHome = () => {
                 className="h-full object-contain"
               />
             </div>
-            <h4 className="text-xl font-semibold dark:text-white">
+            <h4 className="text-xl font-semibold dark:text-white mt-5">
               Smarter Apps, Instantly
             </h4>
-            <p className="text-md dark:text-secondary-dark max-w-xs">
+            <p className="text-md dark:text-secondary-dark max-w-xs flex-grow">
               Data retrieval that thinks ahead. Brilliance, built in.
             </p>
-            <div className="flex items-center mt-0 group">
+            <div className="flex items-center mt-auto group">
               <button
                 className="text-[#11121c] dark:text-secondary-dark cursor-pointer group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90] group-hover:underline"
                 onClick={handleClick}
@@ -123,7 +125,8 @@ const UsecaseHome = () => {
             </div>
           </div>
 
-          <div className="flex flex-col items-start text-left gap-5 w-full">
+          {/* Card 3 */}
+          <div className="flex flex-col items-start text-left w-full h-full">
             <div className="w-12 h-12 border border-primary bg-slate-200 dark:bg-slate-800 dark:border-slate-950 p-2 rounded-lg flex items-center justify-center">
               <img
                 src={isDarkMode ? tuningdark : tuninglite}
@@ -131,13 +134,13 @@ const UsecaseHome = () => {
                 className="h-full object-contain"
               />
             </div>
-            <h4 className="text-xl font-semibold dark:text-white">
+            <h4 className="text-xl font-semibold dark:text-white mt-5">
               Fine-Tune with Flair
             </h4>
-            <p className="text-md dark:text-secondary-dark max-w-xs">
+            <p className="text-md dark:text-secondary-dark max-w-xs flex-grow">
               Precision, a drag away. Performance, perfected.
             </p>
-            <div className="flex items-center mt-0 group">
+            <div className="flex items-center mt-auto group">
               <button
                 className="text-[#11121c] dark:text-secondary-dark cursor-pointer group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90] group-hover:underline"
                 onClick={handleClick}
@@ -163,7 +166,8 @@ const UsecaseHome = () => {
             </div>
           </div>
 
-          <div className="flex flex-col items-start text-left gap-5 w-full">
+          {/* Card 4 */}
+          <div className="flex flex-col items-start text-left w-full h-full">
             <div className="w-12 h-12 border border-primary bg-slate-200 dark:bg-slate-800 dark:border-slate-950 p-2 rounded-lg flex items-center justify-center">
               <img
                 src={isDarkMode ? sqldark : sqllite}
@@ -171,20 +175,20 @@ const UsecaseHome = () => {
                 className="h-full object-contain"
               />
             </div>
-            <h4 className="text-xl font-semibold dark:text-white">
+            <h4 className="text-xl font-semibold dark:text-white mt-5">
               SQL, Simplified
             </h4>
-            <p className="text-md dark:text-secondary-dark max-w-xs">
+            <p className="text-md dark:text-secondary-dark max-w-xs flex-grow">
               Queries flow fast. Results, real-time.
             </p>
-            <div className="flex items-center mt-0 group">
+            <div className="flex items-center mt-auto group">
               <button
-                className="text-[#11121c] dark:text-secondary-dark cursor-pointer group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90]  group-hover:underline"
+                className="text-[#11121c] dark:text-secondary-dark cursor-pointer group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90] group-hover:underline"
                 onClick={handleClick}
               >
                 Try SQL
               </button>
-              <div className="w-4 ml-2 text-[#11121c] dark:text-secondary-dark group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90] ">
+              <div className="w-4 ml-2 text-[#11121c] dark:text-secondary-dark group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90]">
                 <svg
                   className="icon"
                   fill="none"
@@ -203,7 +207,8 @@ const UsecaseHome = () => {
             </div>
           </div>
 
-          <div className="flex flex-col items-start text-left gap-5 w-full">
+          {/* Card 5 */}
+          <div className="flex flex-col items-start text-left w-full h-full mt-6">
             <div className="w-12 h-12 border border-primary bg-slate-200 dark:bg-slate-800 dark:border-slate-950 p-2 rounded-lg flex items-center justify-center">
               <img
                 src={isDarkMode ? dark_app_image : light_app_image}
@@ -211,13 +216,13 @@ const UsecaseHome = () => {
                 className="h-full object-contain"
               />
             </div>
-            <h4 className="text-xl font-semibold dark:text-white">
+            <h4 className="text-xl font-semibold dark:text-white mt-5">
               Recommendations That Wow
             </h4>
-            <p className="text-md dark:text-secondary-dark max-w-xs">
-              Personal. Perfect. Delight in every suggestion. Try Recommender
+            <p className="text-md dark:text-secondary-dark max-w-xs flex-grow">
+              Personal. Perfect. Delight in every suggestion.
             </p>
-            <div className="flex items-center mt-0 group">
+            <div className="flex items-center mt-2 group">
               <button
                 className="text-[#11121c] dark:text-secondary-dark cursor-pointer group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90] group-hover:underline"
                 onClick={handleClick}
@@ -243,7 +248,8 @@ const UsecaseHome = () => {
             </div>
           </div>
 
-          <div className="flex flex-col items-start text-left gap-5 w-full">
+          {/* Card 6 */}
+          <div className="flex flex-col items-start text-left w-full h-full mt-6">
             <div className="w-12 h-12 border border-primary bg-slate-200 dark:bg-slate-800 dark:border-slate-950 p-2 rounded-lg flex items-center justify-center">
               <img
                 src={isDarkMode ? customerdark : customerlite}
@@ -251,21 +257,21 @@ const UsecaseHome = () => {
                 className="h-full object-contain"
               />
             </div>
-            <h4 className="text-xl font-semibold dark:text-white">
+            <h4 className="text-xl font-semibold dark:text-white mt-5">
               Know Your Customers
             </h4>
-            <p className="text-md dark:text-secondary-dark max-w-xs mt-7">
+            <p className="text-md dark:text-secondary-dark max-w-xs flex-grow">
               Powerful insights that truly connect, engagement that genuinely
-              transforms.{" "}
+              transforms.
             </p>
-            <div className="flex items-center mt-0 group">
+            <div className="flex items-center mt-auto group">
               <button
-                className="text-[#11121c] dark:text-secondary-dark cursor-pointer group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90]  group-hover:underline"
+                className="text-[#11121c] dark:text-secondary-dark cursor-pointer group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90] group-hover:underline"
                 onClick={handleClick}
               >
                 Try Customer Engagement
               </button>
-              <div className="w-4 ml-2 text-[#11121c] dark:text-secondary-dark group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90] ">
+              <div className="w-4 ml-2 text-[#11121c] dark:text-secondary-dark group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90]">
                 <svg
                   className="icon"
                   fill="none"
@@ -284,7 +290,8 @@ const UsecaseHome = () => {
             </div>
           </div>
 
-          <div className="flex flex-col items-start text-left gap-5 w-full">
+          {/* Card 7 */}
+          <div className="flex flex-col items-start text-left w-full h-full mt-6">
             <div className="w-12 h-12 border border-primary bg-slate-200 dark:bg-slate-800 dark:border-slate-950 p-2 rounded-lg flex items-center justify-center">
               <img
                 src={isDarkMode ? docsdark : docslite}
@@ -292,20 +299,20 @@ const UsecaseHome = () => {
                 className="h-full object-contain"
               />
             </div>
-            <h4 className="text-xl font-semibold dark:text-white">
+            <h4 className="text-xl font-semibold dark:text-white mt-5">
               Documents, Done
             </h4>
-            <p className="text-md dark:text-secondary-dark max-w-xs mt-7">
-              Automatic. Accurate. Time, saved. Try Document Generation{" "}
+            <p className="text-md dark:text-secondary-dark max-w-xs flex-grow">
+              Automatic. Accurate. Time, saved.
             </p>
-            <div className="flex items-center mt-0 group">
+            <div className="flex items-center mt-auto group">
               <button
-                className="text-[#11121c] dark:text-secondary-dark cursor-pointer group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90]  group-hover:underline"
+                className="text-[#11121c] dark:text-secondary-dark cursor-pointer group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90] group-hover:underline"
                 onClick={handleClick}
               >
                 Try Document Generation
               </button>
-              <div className="w-4 ml-2 text-[#11121c] dark:text-secondary-dark group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90] ">
+              <div className="w-4 ml-2 text-[#11121c] dark:text-secondary-dark group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90]">
                 <svg
                   className="icon"
                   fill="none"
@@ -324,7 +331,8 @@ const UsecaseHome = () => {
             </div>
           </div>
 
-          <div className="flex flex-col items-start text-left gap-5 w-full">
+          {/* Card 8 */}
+          <div className="flex flex-col items-start text-left w-full h-full mt-6">
             <div className="w-12 h-12 border border-primary bg-slate-200 dark:bg-slate-800 dark:border-slate-950 p-2 rounded-lg flex items-center justify-center">
               <img
                 src={isDarkMode ? descdark : desclite}
@@ -332,20 +340,20 @@ const UsecaseHome = () => {
                 className="h-full object-contain"
               />
             </div>
-            <h4 className="text-xl font-semibold dark:text-white">
+            <h4 className="text-xl font-semibold dark:text-white mt-5">
               Descriptions That Captivate
             </h4>
-            <p className="text-md dark:text-secondary-dark max-w-xs">
-              Words that sell, crafted instantly. Try Description Generation
+            <p className="text-md dark:text-secondary-dark max-w-xs flex-grow">
+              Words that sell, crafted instantly.
             </p>
-            <div className="flex items-center mt-0 group">
+            <div className="flex items-center mt-auto group">
               <button
-                className="text-[#11121c] dark:text-secondary-dark cursor-pointer group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90]  group-hover:underline"
+                className="text-[#11121c] dark:text-secondary-dark cursor-pointer group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90] group-hover:underline"
                 onClick={handleClick}
               >
                 Try Description Generation
               </button>
-              <div className="w-4 ml-2 text-[#11121c] dark:text-secondary-dark group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90] ">
+              <div className="w-4 ml-2 text-[#11121c] dark:text-secondary-dark group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90]">
                 <svg
                   className="icon"
                   fill="none"
