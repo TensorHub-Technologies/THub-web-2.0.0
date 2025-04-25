@@ -1,7 +1,6 @@
 import { useSelector } from "react-redux";
 
 import { useNavigate } from "react-router-dom";
-import LogoSlider from "./LogoSlider";
 import dark_app_image from "../../assets/icons/home-icons/dark-app.png";
 import light_app_image from "../../assets/icons/home-icons/light-app.png";
 import dragdark from "../../assets/icons/home-icons/drag_dark.svg";
@@ -25,14 +24,8 @@ function Features_First() {
         <li>Build Retrieval Augmented Fine Tuning</li>
       </ul>
 
-      <div className="w-full my-8">
-        <h2 className="w-3/4 mx-auto text-center text-4xl font-semibold text-gray-800 dark:text-gray-100 mb-8">
-          250+ Integrated Tools
-        </h2>
-        <LogoSlider />
-      </div>
       {/* Heading Section */}
-      <div className="flex justify-center text-center mt-5">
+      <div className="flex justify-center text-center mt-10">
         <h1 className="dark:text-white text-secondary text-3xl md:text-4xl lg:text-5xl font-bold w-[60rem]">
           One Platform. Infinite Possibilities
         </h1>

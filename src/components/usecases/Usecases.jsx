@@ -22,7 +22,7 @@ const Usecase = () => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate("/blog");
+    navigate("/auth/login");
   };
 
   return (
