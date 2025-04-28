@@ -1,5 +1,5 @@
 import Accordion from "../components/home/Accordion";
-import Banner from "../components/home/Banner";
+import Hero from "../components/home/Hero";
 import Features_Anime_One from "../components/home/Features_Anime_One";
 import Features_Anime_Three from "../components/home/Features_Anime_Three";
 import Features_Anime_Two from "../components/home/Features_Anime_Two";
@@ -13,7 +13,7 @@ const Home = () => {
   console.log(import.meta.env.VITE_SOME_KEY);
   return (
     <div className="w-full min-h-screen dark:bg-secondary" id="banner-main">
-      <Banner />
+      <Hero />
       <Features_First />
       <Features_Anime_One />
       <Features_Anime_Two />
