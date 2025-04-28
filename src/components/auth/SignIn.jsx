@@ -34,10 +34,7 @@ const SignIn = () => {
       });
       if (response.status === 200) {
         setLoading(true);
-        console.log("User inserted successfully");
-        const { token, userId, workspace } = response.data;
-        console.log("response :", response);
-        localStorage.setItem("token", token);
+        const { userId, workspace } = response.data;
         const finalWorkspace = workspace || "app";
         const theme =
           localStorage.getItem("isDarkMode") === "true" ? "dark" : "lite";
