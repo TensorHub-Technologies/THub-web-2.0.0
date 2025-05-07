@@ -6,6 +6,7 @@ import type2 from "../../assets/images/blog/type2_rag.png";
 import type3 from "../../assets/images/blog/type3_rag.png";
 import level from "../../assets/images/blog/levels.png";
 import voicebot from "../../assets/images/blog/voicebot.png";
+import projectplaning from "../../assets/images/blog/project_planing.png";
 
 const Blogs = () => {
   const navigate = useNavigate();
@@ -197,6 +198,33 @@ const Blogs = () => {
               </h4>
               <h4 className="text-secondary dark:text-secondary-dark">
                 Thur Mar 06 2025
+              </h4>
+            </div>
+          </div>
+        </div>
+
+        <div
+          className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-black dark:border-gray-700 cursor-pointer"
+          onClick={() => {
+            handleClick(() => navigate("/blog/7"));
+          }}
+        >
+          <img
+            className="p-5 rounded-t-lg w-[550px]"
+            src={projectplaning}
+            alt="product image"
+          />
+          <div className="px-5 pb-2">
+            <h5 className="text-xl font-semibold tracking-tight text-secondary dark:text-secondary-dark">
+              Project Planing Automation Agent
+            </h5>
+            <div className="flex items-center mb-4"></div>
+            <div className="flex items-center justify-between">
+              <h4 className="text-secondary dark:text-secondary-dark">
+                4 Min Read{" "}
+              </h4>
+              <h4 className="text-secondary dark:text-secondary-dark">
+                Tue Apr 29 2025
               </h4>
             </div>
           </div>
