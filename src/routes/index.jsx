@@ -15,6 +15,7 @@ const BlogDetails3 = loadable(() => import("../pages/BlogDetails3"));
 const BlogDetails4 = loadable(() => import("../pages/BlogDetails4"));
 const BlogDetails5 = loadable(() => import("../pages/BlogDetails5"));
 const BlogDetails6 = loadable(() => import("../pages/BlogDetails6"));
+const BlogDetails7 = loadable(() => import("../pages/BlogDetails7"));
 const Academy = loadable(() => import("../pages/Academy"));
 const Contact = loadable(() => import("../pages/Contact"));
 const Login = loadable(() => import("../pages/Login"));
@@ -75,6 +76,10 @@ export const router = createBrowserRouter([
       {
         path: "blog/6",
         element: <BlogDetails6 />,
+      },
+      {
+        path: "blog/7",
+        element: <BlogDetails7 />,
       },
       {
         path: "voicebot",
