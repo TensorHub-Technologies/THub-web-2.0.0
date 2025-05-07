@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:news="http://www.google.com/schemas/sitemap-news/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:mobile="http://www.google.com/schemas/sitemap-mobile/1.0" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1" xmlns:video="http://www.google.com/schemas/sitemap-video/1.1">
+<url> <loc>https://thub.tech/</loc> </url>
+<url> <loc>https://thub.tech/about</loc> </url>
+<url> <loc>https://thub.tech/contact</loc> </url>
+<url> <loc>https://thub.tech/pricing</loc> </url>
+<url> <loc>https://thub.tech/use-cases</loc> </url>
+<url> <loc>https://thub.tech/voicebot</loc> </url>
+<url> <loc>https://thub.tech/academy</loc> </url>
+<url> <loc>https://thub.tech/academy/master-class</loc> </url>
+<url> <loc>https://thub.tech/academy/leadership</loc> </url>
+<url> <loc>https://thub.tech/academy/techie</loc> </url>
+<url> <loc>https://thub.tech/blog</loc> </url>
+<url> <loc>https://thub.tech/blog/1</loc> </url>
+<url> <loc>https://thub.tech/blog/2</loc> </url>
+<url> <loc>https://thub.tech/blog/3</loc> </url>
+<url> <loc>https://thub.tech/blog/4</loc> </url>
+<url> <loc>https://thub.tech/blog/5</loc> </url>
+<url> <loc>https://thub.tech/blog/6</loc> </url>
+<url> <loc>https://thub.tech/blog/7</loc> </url>
+</urlset>
