@@ -1,0 +1,29 @@
+User-agent: *
+Disallow: /auth/
+
+# Allow all other pages
+Allow: /
+
+# Specific page paths to ensure inclusion
+Allow: /use-cases
+Allow: /pricing
+Allow: /blog
+Allow: /blog/1
+Allow: /blog/2
+Allow: /blog/3
+Allow: /blog/4
+Allow: /blog/5
+Allow: /blog/6
+Allow: /voicebot
+Allow: /academy
+Allow: /contact
+Allow: /academy/master-class
+Allow: /academy/leadership
+Allow: /academy/techie
+Allow: /about
+
+# Auth pages are blocked for better security and to prevent indexing
+Disallow: /auth/register
+Disallow: /auth/login
+
+Sitemap: https://thub.tech/sitemap.xml
