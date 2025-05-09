@@ -1,0 +1,358 @@
+# Build Smarter. Build Faster. Build with THub.
+
+## The 30X Faster Way to Launch
+
+\|
+
+Start Now
+
+![THub AI Platform Hero Banner showing No-code GenAI Solutions](https://thub.tech/assets/Picture1-x5rk8VfZ.png)
+
+- Agentic Workflows
+- Build Agent and GenAI Apps 30X faster
+- Build RAG Systems
+- Build Retrieval Augmented Fine Tuning
+
+# One Platform. Infinite Possibilities
+
+## Build  Multi Agents & GenAI Apps at Rapid Pace Across Your Favorite LLMs
+
+![low code](https://thub.tech/assets/light-app-r2nzqVtu.png)
+
+#### Agents. RAG. Fine-Tuning. All in One Place.
+
+Forget complexity. THub gives you everything you need to build powerful GenAI workflows—without writing a single line of code.
+
+![drag and drop](data:image/svg+xml,%3csvg%20width='194'%20height='171'%20viewBox='0%200%20194%20171'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M31.068%2013.9974C22.8013%2017.5974%2022.668%2018.6641%2022.668%2072.5307C22.668%20106.531%2023.068%20122.264%2024.268%20124.531C27.3346%20131.597%2030.9346%20132.531%2053.468%20133.064L74.268%20133.597L72.9346%20139.864C72.268%20143.197%2071.468%20146.264%2071.068%20146.664C70.8013%20146.931%2067.7346%20147.597%2064.4013%20147.997C56.8013%20148.797%2054.268%20151.864%2057.868%20155.864C60.268%20158.531%2061.7346%20158.664%2094.668%20158.664C127.601%20158.664%20129.068%20158.531%20131.468%20155.864C135.201%20151.731%20132.535%20148.797%20124.935%20148.264C118.135%20147.864%20116.935%20146.531%20115.468%20138.397L114.535%20133.597L135.068%20133.064C152.001%20132.797%20156.135%20132.264%20159.201%20130.264C166.401%20125.464%20166.668%20122.931%20166.668%2071.9974C166.668%2020.2641%20166.535%2019.7307%20158.268%2014.6641C154.268%2012.1307%20151.201%2011.9974%2094.668%2011.9974C47.068%2012.1307%2034.5346%2012.5307%2031.068%2013.9974ZM156.001%2026.6641C156.935%2028.2641%20157.201%2042.3974%20157.068%2066.9307L156.668%20104.664L95.068%20105.064L33.3346%20105.331V64.6641V23.9974H94.0013C152.801%2023.9974%20154.668%2024.1307%20156.001%2026.6641ZM155.335%20119.331C155.335%20121.997%20154.268%20121.997%2095.2013%20122.397C43.6013%20122.664%2034.8013%20122.397%2033.3346%20120.797C32.5346%20119.597%2032.1346%20118.131%2032.668%20117.331C33.2013%20116.397%2052.8013%20116.131%2094.4013%20116.264C154.268%20116.664%20155.335%20116.664%20155.335%20119.331ZM104.401%20134.264C104.801%20134.931%20105.468%20138.131%20105.868%20141.597L106.801%20147.997H94.8013C81.3346%20147.997%2081.3346%20148.131%2084.1346%20138.264L85.468%20133.331H94.668C99.7346%20133.331%20104.135%20133.731%20104.401%20134.264Z'%20fill='%233c5ba4'/%3e%3cpath%20d='M45.7335%2033.1979C39.8668%2036.9312%2037.4668%2044.5312%2040.5335%2050.3979C42.9335%2055.0645%2048.8002%2058.6645%2053.8668%2058.6645C56.0002%2058.6645%2057.8668%2059.7312%2058.8002%2061.5979C59.6002%2063.3312%2061.4668%2065.9979%2062.9335%2067.5979C64.9335%2069.7312%2065.4668%2071.7312%2064.9335%2074.9312C63.6002%2083.5979%2070.4002%2091.9979%2078.8002%2091.9979C83.2002%2091.9979%2090.6668%2083.7312%2090.6668%2078.7979C90.6668%2075.4645%2091.8668%2073.7312%2097.3335%2069.4645C102.933%2065.0645%20104.533%2064.3979%20107.733%2065.1979C109.733%2065.7312%20112%2065.9979%20112.8%2065.7312C113.733%2065.4645%20116.533%2068.2645%20119.333%2071.9979C123.333%2077.4645%20124.133%2079.5979%20123.467%2082.7979C121.467%2092.6645%20131.467%20102.265%20140.133%2098.6645C146%2096.1312%20148.4%2092.6645%20148.533%2086.1312C148.667%2078.6645%20144.533%2073.5979%20137.067%2072.5312C129.2%2071.1979%20123.333%2063.1979%20123.333%2053.5979C123.2%2047.1979%20122.667%2045.8645%20118.933%2042.5312C113.467%2037.5979%20108.267%2037.4645%20102.8%2042.1312C100%2044.3979%2098.4002%2047.1979%2097.8668%2050.7979C97.2002%2054.7979%2095.6002%2057.0645%2091.0668%2060.7979C85.7335%2065.1979%2084.6668%2065.5979%2079.3335%2064.7979C74.2668%2063.9979%2072.8002%2062.9312%2069.0668%2057.5979C65.6002%2052.9312%2064.6668%2050.5312%2065.3335%2047.9979C68.1335%2036.9312%2055.3335%2027.3312%2045.7335%2033.1979ZM55.7335%2043.5979C55.2002%2046.5312%2049.3335%2047.7312%2049.3335%2044.9312C49.3335%2042.3979%2050.6668%2041.3312%2053.6002%2041.3312C55.3335%2041.3312%2056.0002%2042.1312%2055.7335%2043.5979ZM113.2%2051.1979C114.267%2052.5312%20114.267%2053.3312%20112.933%2054.3979C110.667%2056.2645%20107.333%2054.1312%20108.4%2051.4645C109.467%2048.7979%20111.2%2048.7979%20113.2%2051.1979ZM80.4002%2076.5312C81.4668%2079.0645%2078.4002%2081.4645%2076.1335%2079.9979C73.8668%2078.6645%2075.2002%2074.6645%2077.8668%2074.6645C78.8002%2074.6645%2080.0002%2075.4645%2080.4002%2076.5312ZM138.667%2086.7979C138.667%2088.3979%20137.733%2089.3312%20136%2089.3312C133.467%2089.3312%20132.267%2085.5979%20134.133%2083.5979C135.6%2082.1312%20138.667%2084.2645%20138.667%2086.7979Z'%20fill='%233c5ba4'/%3e%3c/svg%3e)
+
+#### Drag. Drop. Done.
+
+Your ideas. Your flow. Your way. No-code. Low-code. No limits. Design apps visually—just drag, drop, and deploy.
+
+![automated data pipeline](https://thub.tech/assets/pipe_lite-CU6vYrxM.svg)
+
+#### Turn Data Into Decisions.
+
+Structured.  Semi-Structured.  Unstructured. With THub’s automated data pipeline, your data flows where it matters—into action.
+
+Try a demo
+
+Features 1
+
+### Drag. Drop. Deploy.
+
+#### Create in Minutes. No Code Required.
+
+Build AI apps with the speed of thought. Just drag what you need—LLMs, agents, chains, embedding models, or voice agents—and drop it into place
+
+- From prototype to production in record time
+
+- Intuitive canvas interface
+
+- Voice-to-text and text-to-voice features baked in
+
+
+#### Think it. Build it. Ship it.
+
+Get Started Free
+
+![gif](https://thub.tech/assets/feature_first-2-CgjF-nI-.gif)
+
+![gif](https://thub.tech/assets/feature_second-2-B2nnrrgu.gif)
+
+Features 2
+
+### Smarter Data. Sharper Apps.
+
+#### Harness the Power of Vector Search and Voice Intelligence.
+
+Pinecone. Faiss. Weaviate. Qdrant. All integrated. All blazing fast.
+
+- Real-time semantic and voice search and discovery
+
+- Lightning-fast document, voice, and media retrieval
+
+- Efficient similarity search across text, audio, and images
+
+
+#### From raw data to real insight—THub delivers.
+
+Get Started Free
+
+Features 3
+
+### From Idea to Intelligence. Instantly.
+
+#### Versatile. Scalable. Effortless. Voice-Enabled.
+
+THub powers it all—chatbots, document processors, voice agents, recommendation engines, customer copilots, and more.
+
+- Build Retrieval-Augmented Generation apps in clicks
+
+- Fine-tune models using RAFT workflows
+
+- Automate data preprocessing, voice transcription, and orchestration
+
+
+#### One platform. Infinite potential.
+
+Get Started Free
+
+![gif](https://thub.tech/assets/feature_third-2-BaYplfOz.gif)
+
+# Tools for Tomorrow
+
+## The Future of Artificial Intelligence is Yours
+
+![drag and drop](<Base64-Image-Removed>)
+
+#### Agents for Every Task
+
+Support. Analysis. Audits. Agents as tireless as you.
+
+Try Agents
+
+![low code](<Base64-Image-Removed>)
+
+#### Smarter Apps, Instantly
+
+Data retrieval that thinks ahead. Brilliance, built in.
+
+Try RAG
+
+![drag and drop](<Base64-Image-Removed>)
+
+#### Fine-Tune with Flair
+
+Precision, a drag away. Performance, perfected.
+
+Try RAFT
+
+![sql management](<Base64-Image-Removed>)
+
+#### SQL, Simplified
+
+Queries flow fast. Results, real-time.
+
+Try SQL
+
+![automated data pipeline](https://thub.tech/assets/light-app-r2nzqVtu.png)
+
+#### Recommendations That Wow
+
+Personal. Perfect. Delight in every suggestion.
+
+Try Recommender
+
+![customer engagement](https://thub.tech/assets/customer_lite-DpCyAjD1.png)
+
+#### Know Your Customers
+
+Powerful insights that truly connect, engagement that genuinely transforms.
+
+Try Customer Engagement
+
+![document generation](<Base64-Image-Removed>)
+
+#### Documents, Done
+
+Automatic. Accurate. Time, saved.
+
+Try Document Generation
+
+![description generation](https://thub.tech/assets/desc_lite-DWrIShcC.png)
+
+#### Descriptions That Captivate
+
+Words that sell, crafted instantly.
+
+Try Description Generation
+
+## 250+ Integrated Tools
+
+![Logo 1](https://thub.tech/assets/llm_vector/chatgpt.png)
+
+![Logo 2](https://thub.tech/assets/llm_vector/anthropic.png)
+
+![Logo 3](https://thub.tech/assets/llm_vector/Google_Gemini_logo-lite.png)
+
+![Logo 4](https://thub.tech/assets/llm_vector/llama_3.1-lite-1.png)
+
+![Logo 5](https://thub.tech/assets/llm_vector/azure.png)
+
+![Logo 6](https://thub.tech/assets/llm_vector/ollama.png)
+
+![Logo 7](https://thub.tech/assets/llm_vector/hugging.png)
+
+![Logo 8](https://thub.tech/assets/llm_vector/grok_lite.png)
+
+![Logo 9](https://thub.tech/assets/llm_vector/fireworks.png)
+
+![Logo 10](https://thub.tech/assets/llm_vector/aws_dark.png)
+
+![Logo 11](https://thub.tech/assets/llm_vector/deepseek.png)
+
+![Logo 12](https://thub.tech/assets/llm_vector/palm.png)
+
+![Logo 13](https://thub.tech/assets/llm_vector/chatgpt.png)
+
+![Logo 14](https://thub.tech/assets/llm_vector/anthropic.png)
+
+![Logo 15](https://thub.tech/assets/llm_vector/Google_Gemini_logo-lite.png)
+
+![Logo 16](https://thub.tech/assets/llm_vector/llama_3.1-lite-1.png)
+
+![Logo 17](https://thub.tech/assets/llm_vector/azure.png)
+
+![Logo 18](https://thub.tech/assets/llm_vector/ollama.png)
+
+![Logo 19](https://thub.tech/assets/llm_vector/hugging.png)
+
+![Logo 20](https://thub.tech/assets/llm_vector/grok_lite.png)
+
+![Logo 21](https://thub.tech/assets/llm_vector/fireworks.png)
+
+![Logo 22](https://thub.tech/assets/llm_vector/aws_dark.png)
+
+![Logo 23](https://thub.tech/assets/llm_vector/deepseek.png)
+
+![Logo 24](https://thub.tech/assets/llm_vector/palm.png)
+
+![Logo 1](https://thub.tech/assets/llm_vector/pine_dark.png)
+
+![Logo 2](https://thub.tech/assets/llm_vector/qdrant_logo.png)
+
+![Logo 3](https://thub.tech/assets/llm_vector/mongo.png)
+
+![Logo 4](https://thub.tech/assets/llm_vector/faisis.png)
+
+![Logo 5](https://thub.tech/assets/llm_vector/upstash.png)
+
+![Logo 6](https://thub.tech/assets/llm_vector/vectara.png)
+
+![Logo 7](https://thub.tech/assets/llm_vector/chroma.png)
+
+![Logo 8](https://thub.tech/assets/llm_vector/redis.png)
+
+![Logo 9](https://thub.tech/assets/llm_vector/milvus.png)
+
+![Logo 10](https://thub.tech/assets/llm_vector/opens.png)
+
+![Logo 11](https://thub.tech/assets/llm_vector/pine_dark.png)
+
+![Logo 12](https://thub.tech/assets/llm_vector/qdrant_logo.png)
+
+![Logo 13](https://thub.tech/assets/llm_vector/mongo.png)
+
+![Logo 14](https://thub.tech/assets/llm_vector/faisis.png)
+
+![Logo 15](https://thub.tech/assets/llm_vector/upstash.png)
+
+![Logo 16](https://thub.tech/assets/llm_vector/vectara.png)
+
+![Logo 17](https://thub.tech/assets/llm_vector/chroma.png)
+
+![Logo 18](https://thub.tech/assets/llm_vector/redis.png)
+
+![Logo 19](https://thub.tech/assets/llm_vector/milvus.png)
+
+![Logo 20](https://thub.tech/assets/llm_vector/opens.png)
+
+Pricing Plan
+
+# Ready to Get Started?
+
+# Don't Worry, We'll Keep You Under Budget
+
+No risk. All reward. Discover what’s possible.
+
+## Your 90-Day Trial Starts Now
+
+MonthlyYearly
+
+INR
+
+Free Forever
+
+₹0
+
+For starters: one user, 3 agents, endless potential.
+
+Start Free
+
+- Single User
+- 3 Agents
+- API based access to LLM
+- Embedding Model
+- Vector Database
+- Bring your own API key
+- Basic Analytics
+- Standard Support
+
+Pro Power
+
+₹ 19,999/agent
+
+For teams: 5 users, 25 agents, tools to scale.
+
+Choose Plan
+
+- All Free Features
+- 5 Users
+- 25 Agents
+- ₹ 17,999/per Additional Agents
+- Team collaboration
+- Train your own local LLM
+- Fine Tune open source LLM
+- Advanced Analytics
+- Priority support
+
+Enterprise Excellence
+
+Contact Us
+
+For giants: unlimited users, unlimited possibilities.
+
+Get in Touch
+
+- All Pro Features
+- Unlimited Users
+- Unlimited Agents
+
+# Questions About our THub   We have Answers!
+
+### −
+
+### What is THub?
+
+Your gateway to AI apps. Drag, drop, and deploy—innovation, simplified.
+
+### +
+
+### For Non-Coders
+
+Yes. From beginners to pros, THub welcomes all.
+
+### +
+
+### What Makes THub Different?
+
+Simplicity with strength. Speed with sophistication.
+
+### +
+
+### What Can You Build
+
+Chatbots. Recommenders. Summaries. Anything you imagine.
+
+### +
+
+### For Every Business?
+
+Startups to giants—THub grows with you.
+
+# Using THub you can save hours each week
+
+# creating long-form content.
+
+Get Started Free![arrow image](data:image/svg+xml,%3csvg%20fill='%233c5ba4'%20viewBox='0%200%2034%2090'%20xmlns='http://www.w3.org/2000/svg'%20%3e%3cpath%20d='M3.724%202.303c8.095%204.54%2013.968%2013.648%2016.408%2022.434%202.336%208.415%202.426%2020.276-5.705%2025.79-2.961%202.01-7.092%202.24-8.781-1.444-1.571-3.422.29-7.096%203.683-8.452%209.162-3.663%2016.334%208.02%2018.234%2015.324a30.563%2030.563%200%200%201%20.279%2014.195c-.952%204.334-2.866%209.283-6.298%2012.254-.494.427-1.3-.29-.971-.84%201.77-2.928%203.677-5.571%204.79-8.851%201.155-3.405%201.62-7.048%201.44-10.626-.358-7.103-3.568-15.745-10.125-19.354-3.476-1.912-10.316-1.353-10.055%203.973.107%202.158%201.647%204.035%203.933%203.81%202.086-.209%204.001-1.766%205.333-3.279%205.427-6.16%204.857-15.89%202.67-23.215a39.21%2039.21%200%200%200-5.682-11.577c-2.69-3.76-6.017-6.61-9.592-9.472-.35-.277.039-.896.44-.67Z'%20fill='%233c5ba4'/%3e%3cpath%20d='M1.562.977c9.931%202.79%2017.058%2011.508%2019.312%2021.4%201.085%204.762%201.187%209.7.548%2014.54-.653%204.937-1.854%2010.549-4.949%2014.589-2.156%202.82-7.305%205.961-10.266%202.388-2.608-3.142-2.18-9.094.45-12.093%202.945-3.356%208.048-2.969%2011.491-.718%204.112%202.688%206.675%207.596%208.265%2012.12%203.48%209.905%202.395%2021.33-3.11%2030.327-.527.858-1.947.203-1.423-.676%203.935-6.565%205.559-14.253%204.688-21.84-.443-3.864-1.552-7.677-3.306-11.147-2.011-3.973-5.078-8.396-9.854-8.994-5.273-.66-7.99%204.089-7.3%208.82.403%202.76%201.938%204.99%205.042%204.079%202.519-.74%204.35-3.051%205.51-5.296%203.708-7.194%204.563-16.802%203.066-24.658C17.848%2013.969%2011.217%204.92%201.373%201.995.736%201.812.917.797%201.563.977Z'%20fill='%233c5ba4'/%3e%3cpath%20d='M21.218%2073.052c.375%202.062.446%204.204.634%206.29.088.987.18%201.975.266%202.964.04.457-.025%202.873.383%203.085.21.11%202.177-1.456%202.452-1.64l2.452-1.641c1.595-1.065%203.329-2.678%205.205-3.148.671-.169%201.174.542.746%201.106-.792%201.05-1.99%201.644-3.08%202.36-1.23.812-2.464%201.62-3.695%202.432-1.142.748-3.43%203.037-4.974%202.3-1.476-.7-.955-3.793-1.042-5.105-.198-2.945-.602-5.957-.531-8.906a.595.595%200%200%201%201.184-.097Z'%20fill='%233c5ba4'/%3e%3cpath%20d='M21.773%2073.169c-.032%202.254-.679%204.55-.972%206.789-.338%202.597-.601%205.224-.564%207.844-.465-.225-.933-.454-1.398-.68a76.772%2076.772%200%200%200%206.002-4.227c1.876-1.465%203.568-3.521%205.632-4.678.6-.336%201.581.26%201.137.983-1.181%201.924-3.415%203.456-5.165%204.844a64.808%2064.808%200%200%201-6.607%204.574c-.694.421-1.465-.14-1.385-.91.27-2.565.462-5.128.849-7.683.348-2.297.616-4.895%201.59-7.019.19-.398.887-.308.88.163Z'%20fill='%233c5ba4'/%3e%3cpath%20d='M22.85%2071.546c-.873%205.764-1.778%2011.525-2.588%2017.298-.462-.304-.922-.605-1.384-.91%202.439-1.254%204.864-2.527%207.207-3.954%202.158-1.317%204.212-3.127%206.536-4.109.733-.31%201.331.688.841%201.25-1.713%201.972-4.396%203.318-6.619%204.634-2.326%201.378-4.712%202.663-7.172%203.78-.633.287-1.294-.395-1.174-1.015%201.098-5.725%202.104-11.464%203.137-17.2.137-.79%201.337-.563%201.215.226Z'%20fill='%233c5ba4'/%3e%3c/svg%3e)![THub Workspace Mockup](https://thub.tech/assets/top-2-BAvfWpUq.png)
