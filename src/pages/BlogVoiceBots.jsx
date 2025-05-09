@@ -55,7 +55,7 @@ const BlogVoiceBots = () => {
                     </div>
 
                     <ul className="list-none flex items-center text-sm space-x-4 text-black dark:text-secondary-dark">
-                      <li>Thur Mar 06 2025</li>
+                      <li>Thu Mar 06 2025</li>
                       <li>5 Min. Read</li>
                     </ul>
                   </div>
