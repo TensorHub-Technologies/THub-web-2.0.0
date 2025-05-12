@@ -1,6 +1,5 @@
 import rag_ai from "../assets/images/blog/rag_aii.png";
 import profile from "../assets/images/blog/ganapathi _profile.jpg";
-import image_1 from "../assets/images/blog/article_img1.png";
 import image_2 from "../assets/images/blog/article_img2.png";
 import ShareButtons from "../components/sharebuttons/ShareButtons";
 
@@ -123,9 +122,6 @@ const BlogDetails = () => {
                     <h4>How RAG Processes Data</h4>
 
                     {/* First Image */}
-                    <div className="relative rounded-4 overflow-hidden w-130 h-120">
-                      <img src={image_1} alt="Article Image" className="" />
-                    </div>
 
                     <br />
 
