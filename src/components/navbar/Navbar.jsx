@@ -65,28 +65,45 @@ const Navbar = () => {
       <div className="mx-auto flex items-center justify-between">
         <img src={ThubLogo} className="h-10 w-38" alt="THub Logo" />
         <div className="flex-wrap items-center justify-between gap-8 ml-16 hidden md:flex">
-          {navItems.map((item) => (
-            <div
-              key={item.path}
-              className={`cursor-pointer ${
-                activePage === item.path
-                  ? "text-primary dark:text-primary-dark "
-                  : "text-black hover:text-primary dark:text-secondary-dark dark:hover:text-primary-dark"
-              }`}
-              onClick={() => handleNavigation(item.path)}
-            >
-              {item.name}
-            </div>
-          ))}
+          {navItems.map((item) =>
+            item.name === "Login" ? (
+              <a
+                key={item.path}
+                href={import.meta.env.VITE_APP_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`cursor-pointer ${
+                  activePage === item.path
+                    ? "text-primary dark:text-primary-dark"
+                    : "text-secondary hover:text-primary dark:text-secondary-dark dark:hover:text-primary-dark"
+                }`}
+              >
+                {item.name}
+              </a>
+            ) : (
+              <div
+                key={item.path}
+                className={`cursor-pointer ${
+                  activePage === item.path
+                    ? "text-primary dark:text-primary-dark"
+                    : "text-secondary hover:text-primary dark:text-secondary-dark dark:hover:text-primary-dark"
+                }`}
+                onClick={() => handleNavigation(item.path)}
+              >
+                {item.name}
+              </div>
+            ),
+          )}
+
           <div>
-            <button
-              className="border border-primary text-primary px-4 py-2 ml-3 rounded transition-all duration-300 hover:bg-primary hover:text-black hover:border-primary
-              dark:border-primary-dark dark:text-primary-dark dark:hover:bg-primary-dark dark:hover:text-black
-              "
-              onClick={() => handleNavigation("/auth/register")}
+            <a
+              href={import.meta.env.VITE_APP_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block border border-primary text-primary px-4 py-2 rounded transition-all duration-300 hover:bg-primary hover:text-black hover:border-primary dark:border-primary-dark dark:text-primary-dark dark:hover:bg-primary-dark dark:hover:text-black"
             >
               Get started
-            </button>
+            </a>
           </div>
           <div onClick={handleToggleClick} className="cursor-pointer">
             <img src={isDarkMode ? TogglMode1 : TogglMode2} alt="toggle_mode" />
@@ -119,14 +136,14 @@ const Navbar = () => {
         ))}
 
         <div>
-          <button
-            className="border border-primary text-primary px-4 py-2  rounded transition-all duration-300 hover:bg-primary hover:text-black hover:border-primary
-              dark:border-primary-dark dark:text-primary-dark dark:hover:bg-primary-dark dark:hover:text-black
-              "
-            onClick={() => handleNavigation("/auth/register")}
+          <a
+            href={import.meta.env.VITE_APP_URL}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block border border-primary text-primary px-4 py-2 rounded transition-all duration-300 hover:bg-primary hover:text-black hover:border-primary dark:border-primary-dark dark:text-primary-dark dark:hover:bg-primary-dark dark:hover:text-black"
           >
             Get started
-          </button>
+          </a>
         </div>
         <div
           onClick={handleToggleClick}
