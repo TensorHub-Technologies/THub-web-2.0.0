@@ -18,11 +18,9 @@ const BlogDetails6 = loadable(() => import("../pages/BlogDetails6"));
 const BlogDetails7 = loadable(() => import("../pages/BlogDetails7"));
 const Academy = loadable(() => import("../pages/Academy"));
 const Contact = loadable(() => import("../pages/Contact"));
-const Login = loadable(() => import("../pages/Login"));
 const ErrorPage = loadable(() => import("../pages/Error"));
 const RootLayout = loadable(() => import("../layouts/RootLayout"));
 const AuthLayout = loadable(() => import("../layouts/AuthLayout"));
-const Register = loadable(() => import("../pages/Register"));
 const MasterClass = loadable(
   () => import("../components/academy/details/MasterClass"),
 );
@@ -54,35 +52,35 @@ export const router = createBrowserRouter([
         element: <Blog />,
       },
       {
-        path: "blog/1",
+        path: "blog/rag-understanding",
         element: <BlogDetails />,
       },
       {
-        path: "blog/2",
+        path: "blog/rag-evolution",
         element: <BlogDetails2 />,
       },
       {
-        path: "blog/3",
+        path: "blog/rag-1",
         element: <BlogDetails3 />,
       },
       {
-        path: "blog/4",
+        path: "blog/rag-2",
         element: <BlogDetails4 />,
       },
       {
-        path: "blog/5",
+        path: "blog/rag-3",
         element: <BlogDetails5 />,
       },
       {
-        path: "blog/6",
+        path: "blog/ai-agents",
         element: <BlogDetails6 />,
       },
       {
-        path: "blog/7",
+        path: "blog/project-planning",
         element: <BlogDetails7 />,
       },
       {
-        path: "voicebot",
+        path: "blog/voicebot",
         element: <BlogVoiceBots />,
       },
       {
@@ -117,11 +115,11 @@ export const router = createBrowserRouter([
     children: [
       {
         path: "register",
-        element: <Register />,
+        element: <Home />,
       },
       {
         path: "login",
-        element: <Login />,
+        element: <Home />,
       },
       {
         path: "forgot-password",
