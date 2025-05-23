@@ -32,7 +32,6 @@ const LoginForm = () => {
             </button>
           </div>
         </div>
-
         <div className="mx-4 md:mx-28 bg-white dark:bg-secondary p-4 md:p-4">
           <SignIn />
         </div>
