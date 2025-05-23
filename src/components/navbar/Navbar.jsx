@@ -67,11 +67,11 @@ const Navbar = () => {
     case "localhost":
       url = `http://localhost:8080/?theme=${theme}`;
       break;
-    case "thub-web-2-0-0-378678297066.us-central1.run.app":
+    case "thub-web-demo-378678297066.europe-west1.run.app":
       url = `https://demo.thub.tech/?theme=${theme}`;
       break;
     default:
-      url = `https://thub.tech/?theme=${theme}`;
+      url = `https://app.thub.tech/?theme=${theme}`;
       break;
   }
 
