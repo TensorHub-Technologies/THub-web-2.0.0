@@ -68,7 +68,7 @@ const Navbar = () => {
       url = `http://localhost:8080/?theme=${theme}`;
       break;
     case "thub-web-demo-378678297066.europe-west1.run.app":
-      url = `https://demo.thub.tech/?theme=${theme}`;
+      url = `https://demo.thub.tech/`;
       break;
     default:
       url = `https://app.thub.tech/?theme=${theme}`;
