@@ -13,17 +13,11 @@ function Features_First() {
   const handleClick = () => {
     navigate("/auth/login");
   };
+
   const isDarkMode = useSelector((state) => state.customization.isDarkMode);
 
   return (
     <section className="px-5 py-4 lg:px-16">
-      <ul className="flex flex-col items-center lg:justify-center lg:flex-row lg:gap-8  dark:text-secondary-dark list-disc">
-        <li>Agentic Workflows</li>
-        <li>Build Agent and GenAI Apps 30X faster</li>
-        <li>Build RAG Systems</li>
-        <li>Build Retrieval Augmented Fine Tuning</li>
-      </ul>
-
       {/* Heading Section */}
       <div className="flex justify-center text-center mt-10">
         <h1 className="dark:text-white text-secondary text-3xl md:text-4xl lg:text-5xl font-bold w-[60rem]">

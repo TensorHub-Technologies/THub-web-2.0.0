@@ -101,6 +101,12 @@ function Hero() {
           </div>
         </div>
       </section>
+      <ul className="flex flex-col items-center lg:justify-center lg:flex-row lg:gap-8  dark:text-secondary-dark list-disc my-4">
+        <li>Agentic Workflows</li>
+        <li>Build Agent and GenAI Apps 30X faster</li>
+        <li>Build RAG Systems</li>
+        <li>Build Retrieval Augmented Fine Tuning</li>
+      </ul>
     </>
   );
 }

@@ -79,14 +79,14 @@ const Navbar = () => {
             </div>
           ))}
           <div>
-            <button
-              className="border border-primary text-primary px-4 py-2 ml-3 rounded transition-all duration-300 hover:bg-primary hover:text-black hover:border-primary
-              dark:border-primary-dark dark:text-primary-dark dark:hover:bg-primary-dark dark:hover:text-black
-              "
-              onClick={() => handleNavigation("/auth/register")}
+            <a
+              href="http://localhost:8080/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-block border border-primary text-primary px-4 py-2 rounded transition-all duration-300 hover:bg-primary hover:text-black hover:border-primary dark:border-primary-dark dark:text-primary-dark dark:hover:bg-primary-dark dark:hover:text-black"
             >
               Get started
-            </button>
+            </a>
           </div>
           <div onClick={handleToggleClick} className="cursor-pointer">
             <img src={isDarkMode ? TogglMode1 : TogglMode2} alt="toggle_mode" />
@@ -119,14 +119,14 @@ const Navbar = () => {
         ))}
 
         <div>
-          <button
-            className="border border-primary text-primary px-4 py-2  rounded transition-all duration-300 hover:bg-primary hover:text-black hover:border-primary
-              dark:border-primary-dark dark:text-primary-dark dark:hover:bg-primary-dark dark:hover:text-black
-              "
-            onClick={() => handleNavigation("/auth/register")}
+          <a
+            href="http://localhost:8080/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block border border-primary text-primary px-4 py-2 rounded transition-all duration-300 hover:bg-primary hover:text-black hover:border-primary dark:border-primary-dark dark:text-primary-dark dark:hover:bg-primary-dark dark:hover:text-black"
           >
             Get started
-          </button>
+          </a>
         </div>
         <div
           onClick={handleToggleClick}

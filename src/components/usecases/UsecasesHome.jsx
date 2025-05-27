@@ -15,18 +15,58 @@ import sqldark from "../../assets/icons/usecase-icons/sql_dark.png";
 import sqllite from "../../assets/icons/usecase-icons/sql_lite.png";
 import customerdark from "../../assets/icons/usecase-icons/customer_dark.png";
 import customerlite from "../../assets/icons/usecase-icons/customer_lite.png";
-import { useNavigate } from "react-router-dom";
+
+import { useState } from "react";
+
+// import RaftComponent from "./RaftComponent";
+// import SqlComponent from "./SqlComponent";
+// import RecommenderComponent from "./RecommenderComponent";
+// import CustomerEngagementComponent from "./CustomerEngagementComponent";
+// import DocumentGenerationComponent from "./DocumentGenerationComponent";
+// import DescriptionGenerationComponent from "./DescriptionGenerationComponent";
 
 const UsecaseHome = () => {
   const isDarkMode = useSelector((state) => state.customization.isDarkMode);
-  const navigate = useNavigate();
+  const [activeComponent, setActiveComponent] = useState("");
 
-  const handleClick = () => {
-    navigate("/auth/login");
+  console.log(activeComponent, "activeComponent");
+
+  const COMPONENT_URLS = {
+    agents:
+      "http://localhost:3000/chatbot/3c7f6af7-ca21-4018-8a80-77e8bb26c788",
+    rag: "http://localhost:3000/rag/dashboard",
+    raft: "http://localhost:3000/raft/interface",
+    sql: "http://localhost:3000/sql/query",
+    recommender: "http://localhost:3000/recommender/system",
+    "customer-engagement": "http://localhost:3000/customer-engagement/portal",
+    "document-generation": "http://localhost:3000/document-generation/tool",
+    "description-generation": "http://localhost:3000/description-generation/ai",
+  };
+
+  const handleClick = (componentName) => {
+    if (COMPONENT_URLS[componentName]) {
+      // Open link in new tab
+      window.open(
+        COMPONENT_URLS[componentName],
+        "_blank",
+        "noopener,noreferrer",
+      );
+
+      // Optional: Show brief feedback in current view
+      setActiveComponent(`${componentName}-opened`);
+
+      // Optional: Auto-close feedback after 2 seconds
+      setTimeout(() => {
+        setActiveComponent(null);
+      }, 2000);
+    } else {
+      // For components without URLs (like RagBot), show inline
+      setActiveComponent(componentName);
+    }
   };
 
   return (
-    <div className="border-red-400 dark:bg-secondary">
+    <div className="border-red-400 dark:bg-secondary mt-40">
       <div className="text-center">
         <div className="flex flex-col items-center text-center">
           <h1 className="dark:text-white text-secondary text-3xl md:text-4xl lg:text-5xl font-bold w-full max-w-4xl">
@@ -41,9 +81,10 @@ const UsecaseHome = () => {
           </h2>
         </div>
       </div>
+
       <section className="px-5 py-10 lg:px-20">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {/* Card 1 */}
+          {/* Card 1 - Agents */}
           <div className="flex flex-col items-start text-left w-full h-full">
             <div className="w-12 h-12 border border-primary bg-slate-200 dark:bg-slate-800 dark:border-slate-950 p-2 rounded-lg flex items-center justify-center">
               <img
@@ -61,7 +102,7 @@ const UsecaseHome = () => {
             <div className="flex items-center mt-6 group">
               <button
                 className="text-[#11121c] dark:text-secondary-dark cursor-pointer group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90] group-hover:underline"
-                onClick={handleClick}
+                onClick={() => handleClick("agents")}
               >
                 Try Agents
               </button>
@@ -84,7 +125,7 @@ const UsecaseHome = () => {
             </div>
           </div>
 
-          {/* Card 2 */}
+          {/* Card 2 - RAG */}
           <div className="flex flex-col items-start text-left w-full h-full">
             <div className="w-12 h-12 border border-primary bg-slate-200 dark:bg-slate-800 dark:border-slate-950 p-2 rounded-lg flex items-center justify-center">
               <img
@@ -102,7 +143,7 @@ const UsecaseHome = () => {
             <div className="flex items-center mt-auto group">
               <button
                 className="text-[#11121c] dark:text-secondary-dark cursor-pointer group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90] group-hover:underline"
-                onClick={handleClick}
+                onClick={() => handleClick("rag")}
               >
                 Try RAG
               </button>
@@ -125,7 +166,7 @@ const UsecaseHome = () => {
             </div>
           </div>
 
-          {/* Card 3 */}
+          {/* Card 3 - RAFT */}
           <div className="flex flex-col items-start text-left w-full h-full">
             <div className="w-12 h-12 border border-primary bg-slate-200 dark:bg-slate-800 dark:border-slate-950 p-2 rounded-lg flex items-center justify-center">
               <img
@@ -143,7 +184,7 @@ const UsecaseHome = () => {
             <div className="flex items-center mt-auto group">
               <button
                 className="text-[#11121c] dark:text-secondary-dark cursor-pointer group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90] group-hover:underline"
-                onClick={handleClick}
+                onClick={() => handleClick("raft")}
               >
                 Try RAFT
               </button>
@@ -166,7 +207,7 @@ const UsecaseHome = () => {
             </div>
           </div>
 
-          {/* Card 4 */}
+          {/* Card 4 - SQL */}
           <div className="flex flex-col items-start text-left w-full h-full">
             <div className="w-12 h-12 border border-primary bg-slate-200 dark:bg-slate-800 dark:border-slate-950 p-2 rounded-lg flex items-center justify-center">
               <img
@@ -184,7 +225,7 @@ const UsecaseHome = () => {
             <div className="flex items-center mt-auto group">
               <button
                 className="text-[#11121c] dark:text-secondary-dark cursor-pointer group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90] group-hover:underline"
-                onClick={handleClick}
+                onClick={() => handleClick("sql")}
               >
                 Try SQL
               </button>
@@ -207,7 +248,7 @@ const UsecaseHome = () => {
             </div>
           </div>
 
-          {/* Card 5 */}
+          {/* Card 5 - Recommender */}
           <div className="flex flex-col items-start text-left w-full h-full mt-6">
             <div className="w-12 h-12 border border-primary bg-slate-200 dark:bg-slate-800 dark:border-slate-950 p-2 rounded-lg flex items-center justify-center">
               <img
@@ -225,7 +266,7 @@ const UsecaseHome = () => {
             <div className="flex items-center mt-2 group">
               <button
                 className="text-[#11121c] dark:text-secondary-dark cursor-pointer group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90] group-hover:underline"
-                onClick={handleClick}
+                onClick={() => handleClick("recommender")}
               >
                 Try Recommender
               </button>
@@ -248,7 +289,7 @@ const UsecaseHome = () => {
             </div>
           </div>
 
-          {/* Card 6 */}
+          {/* Card 6 - Customer Engagement */}
           <div className="flex flex-col items-start text-left w-full h-full mt-6">
             <div className="w-12 h-12 border border-primary bg-slate-200 dark:bg-slate-800 dark:border-slate-950 p-2 rounded-lg flex items-center justify-center">
               <img
@@ -267,7 +308,7 @@ const UsecaseHome = () => {
             <div className="flex items-center mt-auto group">
               <button
                 className="text-[#11121c] dark:text-secondary-dark cursor-pointer group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90] group-hover:underline"
-                onClick={handleClick}
+                onClick={() => handleClick("customer-engagement")}
               >
                 Try Customer Engagement
               </button>
@@ -290,7 +331,7 @@ const UsecaseHome = () => {
             </div>
           </div>
 
-          {/* Card 7 */}
+          {/* Card 7 - Document Generation */}
           <div className="flex flex-col items-start text-left w-full h-full mt-6">
             <div className="w-12 h-12 border border-primary bg-slate-200 dark:bg-slate-800 dark:border-slate-950 p-2 rounded-lg flex items-center justify-center">
               <img
@@ -308,7 +349,7 @@ const UsecaseHome = () => {
             <div className="flex items-center mt-auto group">
               <button
                 className="text-[#11121c] dark:text-secondary-dark cursor-pointer group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90] group-hover:underline"
-                onClick={handleClick}
+                onClick={() => handleClick("document-generation")}
               >
                 Try Document Generation
               </button>
@@ -331,7 +372,7 @@ const UsecaseHome = () => {
             </div>
           </div>
 
-          {/* Card 8 */}
+          {/* Card 8 - Description Generation */}
           <div className="flex flex-col items-start text-left w-full h-full mt-6">
             <div className="w-12 h-12 border border-primary bg-slate-200 dark:bg-slate-800 dark:border-slate-950 p-2 rounded-lg flex items-center justify-center">
               <img
@@ -349,7 +390,7 @@ const UsecaseHome = () => {
             <div className="flex items-center mt-auto group">
               <button
                 className="text-[#11121c] dark:text-secondary-dark cursor-pointer group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90] group-hover:underline"
-                onClick={handleClick}
+                onClick={() => handleClick("description-generation")}
               >
                 Try Description Generation
               </button>
