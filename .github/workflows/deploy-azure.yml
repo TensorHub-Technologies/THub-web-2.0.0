@@ -35,4 +35,4 @@ jobs:
           az containerapp update \
             --name ${{ secrets.CONTAINER_APP_NAME }} \
             --resource-group ${{ secrets.RESOURCE_GROUP }} \
-            --image thubapp.azurecr.io/thub:${{ github.sha }}
+            --image ca7a4dd637e6acr.azurecr.io/thub:${{ github.sha }}
