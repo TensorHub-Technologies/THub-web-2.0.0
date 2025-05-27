@@ -1,26 +1,38 @@
-name: Azure Container Apps Deploy
+name: Deploy to Azure Container App
 
 on:
-    push:
-        branches:
-            - main
+  push:
+    branches:
+      - main
 
 jobs:
-    build:
-        runs-on: ubuntu-latest
+  build-and-deploy:
+    runs-on: ubuntu-latest
 
-        steps:
-            - uses: actions/checkout@v3
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
 
-            - name: 'Login via Service Principal'
-              uses: azure/login@v1
-              with:
-                  creds: ${{ secrets.AZURE_CREDENTIALS }}
+      - name: Login to Azure
+        uses: azure/login@v1
+        with:
+          creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-            - name: Build and deploy Container App
-              uses: azure/container-apps-deploy-action@v1
-              with:
-                  appSourcePath: ${{ github.workspace }}
-                  acrName: ca7a4dd637e6acr
-                  containerAppName: thub-web
-                  resourceGroup: gs_rg_0361
+      - name: Build and Push Container Image
+        uses: azure/docker-login@v1
+        with:
+          login-server: ca7a4dd637e6acr.azurecr.io
+          username: ca7a4dd637e6acr
+          password: ${{ secrets.ACR_PASSWORD }}
+
+      - name: Build and Push Docker image
+        run: |
+          docker build -t ca7a4dd637e6acr.azurecr.io/thub:${{ github.sha }} .
+          docker push ca7a4dd637e6acr.azurecr.io/thub:${{ github.sha }}
+
+      - name: Deploy to Azure Container Apps
+        run: |
+          az containerapp update \
+            --name ${{ secrets.CONTAINER_APP_NAME }} \
+            --resource-group ${{ secrets.RESOURCE_GROUP }} \
+            --image thubapp.azurecr.io/thub:${{ github.sha }}
