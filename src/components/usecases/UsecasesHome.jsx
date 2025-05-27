@@ -66,7 +66,7 @@ const UsecaseHome = () => {
   };
 
   return (
-    <div className="border-red-400 dark:bg-secondary mt-40">
+    <div className="border-red-400 dark:bg-secondary mt-4">
       <div className="text-center">
         <div className="flex flex-col items-center text-center">
           <h1 className="dark:text-white text-secondary text-3xl md:text-4xl lg:text-5xl font-bold w-full max-w-4xl">

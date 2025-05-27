@@ -62,8 +62,10 @@ const Navbar = () => {
 
   return (
     <nav className="h-auto fixed top-0 left-0 right-0 z-50 bg-white px-2 py-5 flex dark:bg-secondary shadow-lg">
-      <div className="mx-auto flex items-center justify-between">
-        <img src={ThubLogo} className="h-10 w-38" alt="THub Logo" />
+      <div className="mx-auto flex items-center justify-between w-[90%]">
+        <div>
+          <img src={ThubLogo} className="h-10 w-38" alt="THub Logo" />
+        </div>
         <div className="flex-wrap items-center justify-between gap-8 ml-16 hidden md:flex">
           {navItems.map((item) => (
             <div
@@ -100,23 +102,25 @@ const Navbar = () => {
         {open ? <IoMdClose /> : <GrMenu />}
       </div>
       <div
-        className={`gap-6 absolute top-16 right-0 bg-background dark:bg-secondary flex flex-col py-12 px-8 lg:hidden md:hidden duration-300 z-[-1] ease-in-out ${
+        className={`gap-6 absolute top-16 right-0  bg-background dark:bg-secondary flex flex-col py-12 px-8 lg:hidden md:hidden duration-300 z-[-1] ease-in-out ${
           open ? "top-16" : "top-[-700px]"
         }`}
       >
-        {navItems.map((item) => (
-          <div
-            key={item.path}
-            className={`cursor-pointer ${
-              activePage === item.path
-                ? "text-primary dark:text-primary-dark "
-                : "text-secondary hover:text-primary dark:text-secondary-dark dark:hover:text-primary-dark"
-            }`}
-            onClick={() => handleNavigation(item.path)}
-          >
-            {item.name}
-          </div>
-        ))}
+        <div>
+          {navItems.map((item) => (
+            <div
+              key={item.path}
+              className={`cursor-pointer ${
+                activePage === item.path
+                  ? "text-primary dark:text-primary-dark "
+                  : "text-secondary hover:text-primary dark:text-secondary-dark dark:hover:text-primary-dark"
+              }`}
+              onClick={() => handleNavigation(item.path)}
+            >
+              {item.name}
+            </div>
+          ))}
+        </div>
 
         <div>
           <a

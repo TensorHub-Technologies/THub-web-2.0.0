@@ -1,18 +1,19 @@
-import "./Home.css";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+import { useState } from "react";
 import { useSelector } from "react-redux";
-import Picture_dark from "../../assets/images/Picture2.png";
-import Picture_lite from "../../assets/images/Picture1.png";
 import { useNavigate } from "react-router-dom";
+import FirstPage from "./FirstPage";
 import { Helmet } from "react-helmet";
 
-function Hero() {
+// images
+import sparkels from "../../assets/images/button-logo/sparkles-white.svg";
+
+const Hero = () => {
   const navigate = useNavigate();
+  const isDarkMode = useSelector((state) => state.customization.isDarkMode);
   const handleClick = () => {
     navigate("/auth/login");
   };
-
-  const isDarkMode = useSelector((state) => state.customization.isDarkMode);
   const strings = [
     "Agentic Workflows",
     "RAG Systems",
@@ -46,7 +47,7 @@ function Hero() {
   }, [currentIndex, letterIndex]);
 
   return (
-    <>
+    <section className="mt-16">
       <Helmet>
         <title>THub - Build AI Apps 30X Faster | No-Code GenAI Platform</title>
         <meta
@@ -59,56 +60,42 @@ function Hero() {
         />
         <link rel="canonical" href="https://thub.tech/" />
       </Helmet>
-      <section id={isDarkMode ? "" : "hero-main-light"}>
-        <div id="hero-container" className=" py-5">
-          <h1 className="text-center text-primary dark:text-primary-dark mt-24 text-5xl">
-            Build Smarter. Build Faster. Build with THub.
-          </h1>
-          <h2 className="text-center text-secondary dark:text-white mt-4 text-5xl">
-            The 30X Faster Way to Launch
-          </h2>
-          <div className="flex justify-center my-4">
-            <span
-              className="text-center font-bold text-5xl bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent inline-block"
-              id="type-animation"
-            >
-              {currentText}
-              <span
-                className="Typewriter__cursor"
-                style={{ color: cursorColor }}
-              >
-                |
-              </span>
-            </span>
-          </div>
-        </div>
-        <div className="flex justify-center">
-          <button
-            type="button"
-            className="text-white bg-gradient-to-r from-[#B425D5] to-[#FB5582] hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 font-medium rounded-lg px-8 py-4 text-center me-2 mb-2 text-lg mt-5"
-            onClick={() => handleClick()}
+      <div id="hero-container" className=" py-5">
+        <h1 className="text-center text-primary dark:text-primary-dark  mt-20 text-7xl font-thin">
+          Build with{" "}
+          <span className="text-transparent bg-clip-text bg-[linear-gradient(to_right,_#3C5BA4,_#E22A90)]">
+            THub
+          </span>
+        </h1>
+        <div className="flex justify-center my-4">
+          <span
+            className="text-center font-bold text-5xl bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent inline-block"
+            id="type-animation"
           >
-            Start Now
-          </button>
+            {currentText}
+            <span className="Typewriter__cursor" style={{ color: cursorColor }}>
+              |
+            </span>
+          </span>
         </div>
-        <div className="flex justify-center">
-          <div className="border-2 dark:border-primary-dark border-primary w-8/12 my-10 rounded-3xl">
-            <img
-              src={isDarkMode ? Picture_dark : Picture_lite}
-              alt="THub AI Platform Hero Banner showing No-code GenAI Solutions"
-              loading="lazy"
-            />
+      </div>
+      <FirstPage />
+      <div className="flex justify-center ">
+        <button
+          type="button"
+          className="text-white bg-gradient-to-r from-[#B425D5] to-[#FB5582] hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 font-medium rounded-lg px-8 py-4 text-center me-2 mb-2 text-lg mt-2"
+          onClick={() => handleClick()}
+        >
+          <div className=" flex ">
+            <span className="mr-2">
+              <img src={sparkels} alt="sparkles" />
+            </span>
+            <span>Start Now</span>
           </div>
-        </div>
-      </section>
-      <ul className="flex flex-col items-center lg:justify-center lg:flex-row lg:gap-8  dark:text-secondary-dark list-disc my-4">
-        <li>Agentic Workflows</li>
-        <li>Build Agent and GenAI Apps 30X faster</li>
-        <li>Build RAG Systems</li>
-        <li>Build Retrieval Augmented Fine Tuning</li>
-      </ul>
-    </>
+        </button>
+      </div>
+    </section>
   );
-}
+};
 
 export default Hero;
