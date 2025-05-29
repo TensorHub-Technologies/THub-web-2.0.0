@@ -60,20 +60,20 @@ const Navbar = () => {
     { name: "Login", path: "/auth/login" },
   ];
   let url;
-  const theme = localStorage.getItem("isDarkMode") === "true" ? "dark" : "lite";
   const hostname = window.location.hostname;
-  console.log(hostname,"hostname");
+  console.log(hostname, "hostname");
   switch (hostname) {
     case "localhost":
-      url = `http://localhost:8080/?theme=${theme}`;
+      url = `http://localhost:8080`;
       break;
     case "thub-web-demo-378678297066.europe-west1.run.app":
-      url = `https://demo.thub.tech/`;
+      url = `https://demo.thub.tech`;
       break;
     default:
-      url = `https://app.thub.tech/?theme=${theme}`;
+      url = `https://app.thub.tech`;
       break;
   }
+  console.log(url, "url");
 
   return (
     <nav className="h-auto fixed top-0 left-0 right-0 z-50 bg-white px-2 py-5 flex dark:bg-secondary shadow-lg">
@@ -114,7 +114,7 @@ const Navbar = () => {
 
           <div>
             <a
-              href={url}
+              href={`${url}/signup`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block border border-primary text-primary px-4 py-2 rounded transition-all duration-300 hover:bg-primary hover:text-black hover:border-primary dark:border-primary-dark dark:text-primary-dark dark:hover:bg-primary-dark dark:hover:text-black"
