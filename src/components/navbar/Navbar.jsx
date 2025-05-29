@@ -153,7 +153,7 @@ const Navbar = () => {
 
         <div>
           <a
-            href={url}
+            href={`${url}/signup`}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block border border-primary text-primary px-4 py-2 rounded transition-all duration-300 hover:bg-primary hover:text-black hover:border-primary dark:border-primary-dark dark:text-primary-dark dark:hover:bg-primary-dark dark:hover:text-black"
