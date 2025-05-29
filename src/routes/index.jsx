@@ -52,35 +52,35 @@ export const router = createBrowserRouter([
         element: <Blog />,
       },
       {
-        path: "blog/rag-understanding",
+        path: "blog/understanding-retrieval-augmented-generation",
         element: <BlogDetails />,
       },
       {
-        path: "blog/rag-evolution",
+        path: "blog/retrieval-augmented-generation-evolution-impact",
         element: <BlogDetails2 />,
       },
       {
-        path: "blog/rag-1",
+        path: "blog/essential-6-rag-techniques-corrective-speculative-agentic-self-retrieval-augmented-generation",
         element: <BlogDetails3 />,
       },
       {
-        path: "blog/rag-2",
+        path: "blog/next-6-rag-techniques-advanced-retrieval-augmented-generation-complex-use-cases",
         element: <BlogDetails4 />,
       },
       {
-        path: "blog/rag-3",
+        path: "blog/techniques-in-retrieval-augmented-generation",
         element: <BlogDetails5 />,
       },
       {
-        path: "blog/ai-agents",
+        path: "blog/5-levels-of-ai-agents",
         element: <BlogDetails6 />,
       },
       {
-        path: "blog/project-planning",
+        path: "blog/project-planning-ai-agent",
         element: <BlogDetails7 />,
       },
       {
-        path: "blog/voicebot",
+        path: "blog/rise-of-voicebot-with-genai",
         element: <BlogVoiceBots />,
       },
       {
