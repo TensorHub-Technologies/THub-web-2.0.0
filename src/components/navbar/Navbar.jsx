@@ -11,7 +11,6 @@ import { toggleMode } from "../../store/modeSlice";
 const Navbar = () => {
   const [activePage, setActivePage] = useState("/");
   const [open, setOpen] = useState(false);
-
   // redux
   const dispatch = useDispatch();
   const isDarkMode = useSelector((state) => state.customization.isDarkMode);
