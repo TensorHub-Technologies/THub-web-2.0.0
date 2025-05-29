@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import { useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
 import FirstPage from "./FirstPage";
 import { Helmet } from "react-helmet";
 
@@ -9,11 +8,23 @@ import { Helmet } from "react-helmet";
 import sparkels from "../../assets/images/button-logo/sparkles-white.svg";
 
 const Hero = () => {
-  const navigate = useNavigate();
   const isDarkMode = useSelector((state) => state.customization.isDarkMode);
-  const handleClick = () => {
-    navigate("/auth/login");
-  };
+
+  let url;
+  const theme = localStorage.getItem("isDarkMode") === "true" ? "dark" : "lite";
+  const hostname = window.location.hostname;
+
+  switch (hostname) {
+    case "localhost":
+      url = `http://localhost:8080/?theme=${theme}`;
+      break;
+    case "thub-web-demo-378678297066.europe-west1.run.app":
+      url = `https://demo.thub.tech/`;
+      break;
+    default:
+      url = `https://app.thub.tech/?theme=${theme}`;
+      break;
+  }
   const strings = [
     "Agentic Workflows",
     "RAG Systems",
@@ -81,18 +92,19 @@ const Hero = () => {
       </div>
       <FirstPage />
       <div className="flex justify-center ">
-        <button
-          type="button"
-          className="text-white bg-gradient-to-r from-[#B425D5] to-[#FB5582] hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 font-medium rounded-lg px-8 py-4 text-center me-2 mb-2 text-lg mt-2"
-          onClick={() => handleClick()}
-        >
-          <div className=" flex ">
-            <span className="mr-2">
-              <img src={sparkels} alt="sparkles" />
-            </span>
-            <span>Start Now</span>
-          </div>
-        </button>
+        <a href={url} target="_blank">
+          <button
+            type="button"
+            className="text-white bg-gradient-to-r from-[#B425D5] to-[#FB5582] hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 font-medium rounded-lg px-8 py-4 text-center me-2 mb-2 text-lg mt-2"
+          >
+            <div className=" flex ">
+              <span className="mr-2">
+                <img src={sparkels} alt="sparkles" />
+              </span>
+              <span>Start Now</span>
+            </div>
+          </button>
+        </a>
       </div>
     </section>
   );

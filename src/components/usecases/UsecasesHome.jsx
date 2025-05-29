@@ -33,8 +33,8 @@ const UsecaseHome = () => {
 
   const COMPONENT_URLS = {
     agents:
-      "http://localhost:3000/chatbot/3c7f6af7-ca21-4018-8a80-77e8bb26c788",
-    rag: "http://localhost:3000/rag/dashboard",
+      "https://app.thub.tech/chatbot/953d0151-5356-41e3-9e79-ba8b429d064a",
+    rag: "https://app.thub.tech/chatbot/e85ee9d0-b094-4fde-8c57-bcc37f08bca2",
     raft: "http://localhost:3000/raft/interface",
     sql: "http://localhost:3000/sql/query",
     recommender: "http://localhost:3000/recommender/system",
