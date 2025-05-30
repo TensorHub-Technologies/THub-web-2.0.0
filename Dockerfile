@@ -15,6 +15,9 @@ COPY . .
 # Install dependencies
 RUN pnpm install
 
+ARG THUB_SERVER_URL
+ENV THUB_SERVER_URL=${THUB_SERVER_URL}
+
 # Build your app
 RUN pnpm build
 
