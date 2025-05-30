@@ -11,7 +11,7 @@ import projectplaning from "../../assets/images/blog/project_planing.png";
 export const blogPosts = [
   {
     title: "Project Planing Automation Agent",
-    path: "/blog/project-planning-ai-agent",
+    path: "/blog/project-planning-automation-multi-agent-model-ai-workflow",
     image: projectplaning,
     date: "Tue Apr 29 2025",
     readTime: "4 Min Read",
@@ -32,7 +32,7 @@ export const blogPosts = [
   },
   {
     title: "Types of RAG Part-3",
-    path: "/blog/techniques-in-retrieval-augmented-generation",
+    path: "/blog/techniques-in-retrieval-augmented-generation-reveal-replug-retro-atlas",
     image: type3,
     date: "Thu Nov 14 2024",
     readTime: "4 Min Read",

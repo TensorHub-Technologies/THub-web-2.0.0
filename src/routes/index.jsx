@@ -68,7 +68,7 @@ export const router = createBrowserRouter([
         element: <BlogDetails4 />,
       },
       {
-        path: "blog/techniques-in-retrieval-augmented-generation",
+        path: "blog/techniques-in-retrieval-augmented-generation-reveal-replug-retro-atlas",
         element: <BlogDetails5 />,
       },
       {
@@ -76,7 +76,7 @@ export const router = createBrowserRouter([
         element: <BlogDetails6 />,
       },
       {
-        path: "blog/project-planning-ai-agent",
+        path: "blog/project-planning-automation-multi-agent-model-ai-workflow",
         element: <BlogDetails7 />,
       },
       {
