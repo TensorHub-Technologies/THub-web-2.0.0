@@ -61,8 +61,6 @@ const Navbar = () => {
   let url;
   const hostname = window.location.hostname;
   console.log(hostname, "hostname");
-
-  console.log("VITE_GOOGLE_CLIENT_ID:", VITE_GOOGLE_CLIENT_ID);
   
   switch (hostname) {
     case "localhost":
