@@ -15,9 +15,6 @@ COPY . .
 # Install dependencies
 RUN pnpm install
 
-ARG VITE_GOOGLE_CLIENT_ID
-ENV VITE_GOOGLE_CLIENT_ID=${VITE_GOOGLE_CLIENT_ID}
-
 # Build your app
 RUN pnpm build
 
