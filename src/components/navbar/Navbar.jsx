@@ -61,6 +61,9 @@ const Navbar = () => {
   let url;
   const hostname = window.location.hostname;
   console.log(hostname, "hostname");
+
+  console.log("THUB_SERVER_URL: ", THUB_SERVER_URL);
+  
   switch (hostname) {
     case "localhost":
       url = `http://localhost:8080`;
