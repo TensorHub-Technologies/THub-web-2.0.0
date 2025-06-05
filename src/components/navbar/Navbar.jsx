@@ -15,6 +15,10 @@ const Navbar = () => {
   const dispatch = useDispatch();
   const isDarkMode = useSelector((state) => state.customization.isDarkMode);
 
+  console.log("THub local:", import.meta.env.VITE_THUB_WEB_SERVER_LOCAL_URL);
+  console.log("THub demo:", import.meta.env.VITE_THUB_WEB_SERVER_DEMO_URL);
+  console.log("THub prod:", import.meta.env.VITE_THUB_WEB_SERVER_PROD_URL);
+
   useEffect(() => {
     const root = window.document.documentElement;
     if (isDarkMode) {
@@ -61,16 +65,16 @@ const Navbar = () => {
   let url;
   const hostname = window.location.hostname;
   console.log(hostname, "hostname");
-  
+
   switch (hostname) {
     case "localhost":
-      url = `http://localhost:8080`;
+      url = import.meta.env.VITE_THUB_WEB_SERVER_LOCAL_URL;
       break;
     case "thub-web-demo-378678297066.europe-west1.run.app":
-      url = `https://demo.thub.tech`;
+      url = import.meta.env.VITE_THUB_WEB_SERVER_DEMO_URL;
       break;
     default:
-      url = `https://app.thub.tech`;
+      url = import.meta.env.VITE_THUB_WEB_SERVER_PROD_URL;
       break;
   }
   console.log(url, "url");
