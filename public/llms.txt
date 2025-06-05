@@ -356,3 +356,61 @@ Startups to giants—THub grows with you.
 # creating long-form content.
 
 Get Started Free![arrow image](data:image/svg+xml,%3csvg%20fill='%233c5ba4'%20viewBox='0%200%2034%2090'%20xmlns='http://www.w3.org/2000/svg'%20%3e%3cpath%20d='M3.724%202.303c8.095%204.54%2013.968%2013.648%2016.408%2022.434%202.336%208.415%202.426%2020.276-5.705%2025.79-2.961%202.01-7.092%202.24-8.781-1.444-1.571-3.422.29-7.096%203.683-8.452%209.162-3.663%2016.334%208.02%2018.234%2015.324a30.563%2030.563%200%200%201%20.279%2014.195c-.952%204.334-2.866%209.283-6.298%2012.254-.494.427-1.3-.29-.971-.84%201.77-2.928%203.677-5.571%204.79-8.851%201.155-3.405%201.62-7.048%201.44-10.626-.358-7.103-3.568-15.745-10.125-19.354-3.476-1.912-10.316-1.353-10.055%203.973.107%202.158%201.647%204.035%203.933%203.81%202.086-.209%204.001-1.766%205.333-3.279%205.427-6.16%204.857-15.89%202.67-23.215a39.21%2039.21%200%200%200-5.682-11.577c-2.69-3.76-6.017-6.61-9.592-9.472-.35-.277.039-.896.44-.67Z'%20fill='%233c5ba4'/%3e%3cpath%20d='M1.562.977c9.931%202.79%2017.058%2011.508%2019.312%2021.4%201.085%204.762%201.187%209.7.548%2014.54-.653%204.937-1.854%2010.549-4.949%2014.589-2.156%202.82-7.305%205.961-10.266%202.388-2.608-3.142-2.18-9.094.45-12.093%202.945-3.356%208.048-2.969%2011.491-.718%204.112%202.688%206.675%207.596%208.265%2012.12%203.48%209.905%202.395%2021.33-3.11%2030.327-.527.858-1.947.203-1.423-.676%203.935-6.565%205.559-14.253%204.688-21.84-.443-3.864-1.552-7.677-3.306-11.147-2.011-3.973-5.078-8.396-9.854-8.994-5.273-.66-7.99%204.089-7.3%208.82.403%202.76%201.938%204.99%205.042%204.079%202.519-.74%204.35-3.051%205.51-5.296%203.708-7.194%204.563-16.802%203.066-24.658C17.848%2013.969%2011.217%204.92%201.373%201.995.736%201.812.917.797%201.563.977Z'%20fill='%233c5ba4'/%3e%3cpath%20d='M21.218%2073.052c.375%202.062.446%204.204.634%206.29.088.987.18%201.975.266%202.964.04.457-.025%202.873.383%203.085.21.11%202.177-1.456%202.452-1.64l2.452-1.641c1.595-1.065%203.329-2.678%205.205-3.148.671-.169%201.174.542.746%201.106-.792%201.05-1.99%201.644-3.08%202.36-1.23.812-2.464%201.62-3.695%202.432-1.142.748-3.43%203.037-4.974%202.3-1.476-.7-.955-3.793-1.042-5.105-.198-2.945-.602-5.957-.531-8.906a.595.595%200%200%201%201.184-.097Z'%20fill='%233c5ba4'/%3e%3cpath%20d='M21.773%2073.169c-.032%202.254-.679%204.55-.972%206.789-.338%202.597-.601%205.224-.564%207.844-.465-.225-.933-.454-1.398-.68a76.772%2076.772%200%200%200%206.002-4.227c1.876-1.465%203.568-3.521%205.632-4.678.6-.336%201.581.26%201.137.983-1.181%201.924-3.415%203.456-5.165%204.844a64.808%2064.808%200%200%201-6.607%204.574c-.694.421-1.465-.14-1.385-.91.27-2.565.462-5.128.849-7.683.348-2.297.616-4.895%201.59-7.019.19-.398.887-.308.88.163Z'%20fill='%233c5ba4'/%3e%3cpath%20d='M22.85%2071.546c-.873%205.764-1.778%2011.525-2.588%2017.298-.462-.304-.922-.605-1.384-.91%202.439-1.254%204.864-2.527%207.207-3.954%202.158-1.317%204.212-3.127%206.536-4.109.733-.31%201.331.688.841%201.25-1.713%201.972-4.396%203.318-6.619%204.634-2.326%201.378-4.712%202.663-7.172%203.78-.633.287-1.294-.395-1.174-1.015%201.098-5.725%202.104-11.464%203.137-17.2.137-.79%201.337-.563%201.215.226Z'%20fill='%233c5ba4'/%3e%3c/svg%3e)![THub Workspace Mockup](https://thub.tech/assets/top-2-BAvfWpUq.png)
+
+# THub Agents & Core Components
+
+## Categories of Agents and Use Cases
+
+- **Low Code Builder**: Visually create workflows with drag-and-drop components.
+- **Multi-Agent Orchestrator**: Coordinate multiple AI agents across tasks.
+- **Sequential Agents**: Execute complex processes in sequence.
+
+## Industry-Specific Agents
+
+- **Insurance Underwriting Agent**: Evaluate risk and process policies.
+- **Insurance Claims Agent**: Automate and validate insurance claims.
+
+## Startup and Business Agents
+
+- **Startup Financial Projection Agent**: Generate detailed financial forecasts.
+- **Startup Idea Generation Agent**: Ideate and evaluate startup concepts.
+
+## Project and Product Agents
+
+- **Project Planning Agent**: Assist with timelines, task breakdowns, and Gantt charts.
+- **Product Comparison Agent**: Compare features, pricing, and specs.
+
+## Market & Competitor Intelligence
+
+- **Competitor Analysis Agent**: Monitor and analyze competitor activity.
+
+## Vision & Code Automation
+
+- **Visual Inspection Agent**: Identify issues from images or videos.
+- **Code Review Agent**: Analyze and give suggestions on code quality.
+- **Software Testing Agent**: Simulate test cases and generate reports.
+
+## Business Operations Agents
+
+- **Marketing Agent**: Run targeted campaigns and strategy generation.
+- **Sales Agent**: Lead scoring, outreach automation, and CRM updates.
+- **Customer Support Agent**: Chatbot-driven resolution and escalation.
+
+## Technical Workforce Agents
+
+- **Software Development Agent**: Code generation and task automation.
+- **Software Architect Agent**: Design scalable architecture patterns.
+
+## Financial Services Agents
+
+- **Financial Advisor Agent**: Personalized investment and budgeting guidance.
+
+## Core Protocol Components
+
+- **Model Context Protocol (MCP)**: Standard for sharing context across agents.
+- **MCP Server**: Central controller for context-aware agent coordination.
+- **MCP Client**: Lightweight client to interact with the MCP server.
+
+## Agent Collaboration
+
+- **Agent2Agent**: Inter-agent communication and decision-making protocol.
