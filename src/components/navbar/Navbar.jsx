@@ -138,23 +138,25 @@ const Navbar = () => {
         {open ? <IoMdClose /> : <GrMenu />}
       </div>
       <div
-        className={`gap-6 absolute top-16 right-0 bg-background dark:bg-secondary flex flex-col py-12 px-8 lg:hidden md:hidden duration-300 z-[-1] ease-in-out ${
+        className={`gap-6 absolute top-16 right-0  bg-background dark:bg-secondary flex flex-col py-12 px-8 lg:hidden md:hidden duration-300 z-[-1] ease-in-out ${
           open ? "top-16" : "top-[-700px]"
         }`}
       >
-        {navItems.map((item) => (
-          <div
-            key={item.path}
-            className={`cursor-pointer ${
-              activePage === item.path
-                ? "text-primary dark:text-primary-dark "
-                : "text-secondary hover:text-primary dark:text-secondary-dark dark:hover:text-primary-dark"
-            }`}
-            onClick={() => handleNavigation(item.path)}
-          >
-            {item.name}
-          </div>
-        ))}
+        <div>
+          {navItems.map((item) => (
+            <div
+              key={item.path}
+              className={`cursor-pointer ${
+                activePage === item.path
+                  ? "text-primary dark:text-primary-dark "
+                  : "text-secondary hover:text-primary dark:text-secondary-dark dark:hover:text-primary-dark"
+              }`}
+              onClick={() => handleNavigation(item.path)}
+            >
+              {item.name}
+            </div>
+          ))}
+        </div>
 
         <div>
           <a

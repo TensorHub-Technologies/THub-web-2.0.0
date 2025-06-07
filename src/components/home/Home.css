@@ -50,3 +50,23 @@
 .animate-slide-reverse {
   animation: slide-reverse 22s linear infinite;
 }
+
+@keyframes spin-border {
+  to {
+    --angle: 360deg;
+  }
+}
+
+.animated-border {
+  --angle: 0deg;
+  background: conic-gradient(from var(--angle), #B425D5, #FB5582, #B425D5);
+  padding: 2px; /* border width */
+  border-radius: 9999px; /* fully rounded */
+  animation: spin-border 2.5s linear infinite;
+  background-size: 100% 100%;
+}
+
+.animated-border-inner {
+  background: #000; /* or any solid background */
+  border-radius: inherit;
+}
