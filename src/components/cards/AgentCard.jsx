@@ -14,20 +14,22 @@ const AgentCard = ({ title, description, logo, agentUrl = "#" }) => {
             {title}
           </h3>
         </div>
-        {/* <p
-          className="h-20 overflow-hidden text-ellipsis whitespace-nowrap font-normal text-black dark:text-white"
-          title={description}
-        >
-          {description}
-        </p> */}
+
         <div className="h-20 relative group/desc">
-          <p className="line-clamp-2 overflow-hidden font-normal text-black dark:text-white">
-            {description}
-          </p>
-          <div className="absolute z-10 hidden group-hover/desc:block bg-[#616161] dark:bg-[#2a2d34f9] text-white text-xs rounded px-2 py-1 mt-1 left-[-18px] w-max max-w-[250px] break-words overflow-hidden whitespace-normal">
-            {description}
-          </div>
+          {description?.length > 0 && (
+            <>
+              <p className="line-clamp-2 overflow-hidden font-normal text-black dark:text-white">
+                {description}
+              </p>
+
+              <div className="absolute z-10 hidden group-hover/desc:block bg-[#616161] dark:bg-[#2a2d34f9] text-white text-xs rounded px-2 py-1 mt-1 left-1/2 -translate-x-1/2 w-max max-w-[250px] break-words whitespace-normal shadow-md">
+                <div className="tooltip-arrow absolute -top-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-[#616161] dark:bg-[#2a2d34f9] rotate-45"></div>
+                {description}
+              </div>
+            </>
+          )}
         </div>
+
         <hr className="mt-1" />
         <div className="flex mt-2 justify-between items-center text-[#3c5ba4] dark:text-[#e22a90]">
           <div>Try Agent</div>

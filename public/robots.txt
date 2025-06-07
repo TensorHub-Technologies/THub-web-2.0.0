@@ -21,6 +21,7 @@ Allow: /academy/master-class
 Allow: /academy/leadership
 Allow: /academy/techie
 Allow: /about
+Allow: /~gitbook/
 
 # Auth pages are blocked for better security and to prevent indexing
 Disallow: /auth/register

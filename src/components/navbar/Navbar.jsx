@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import ThubLogo from "../../assets/images/THub.svg";
 import TogglMode1 from "../../assets/icons/toggle_mode-1.svg";
 import TogglMode2 from "../../assets/icons/toggle_mode-2.svg";
@@ -11,10 +11,13 @@ import { toggleMode } from "../../store/modeSlice";
 const Navbar = () => {
   const [activePage, setActivePage] = useState("/");
   const [open, setOpen] = useState(false);
-
   // redux
   const dispatch = useDispatch();
   const isDarkMode = useSelector((state) => state.customization.isDarkMode);
+
+  console.log("THub local:", import.meta.env.VITE_THUB_WEB_SERVER_LOCAL_URL);
+  console.log("THub demo:", import.meta.env.VITE_THUB_WEB_SERVER_DEMO_URL);
+  console.log("THub prod:", import.meta.env.VITE_THUB_WEB_SERVER_PROD_URL);
 
   useEffect(() => {
     const root = window.document.documentElement;
@@ -60,27 +63,28 @@ const Navbar = () => {
     { name: "Login", path: "/auth/login" },
   ];
   let url;
-  const theme = localStorage.getItem("isDarkMode") === "true" ? "dark" : "lite";
   const hostname = window.location.hostname;
+  console.log(hostname, "hostname");
 
   switch (hostname) {
     case "localhost":
-      url = `http://localhost:8080/?theme=${theme}`;
+      url = import.meta.env.VITE_THUB_WEB_SERVER_LOCAL_URL;
       break;
     case "thub-web-demo-378678297066.europe-west1.run.app":
-      url = `https://demo.thub.tech/`;
+      url = import.meta.env.VITE_THUB_WEB_SERVER_DEMO_URL;
       break;
     default:
-      url = `https://app.thub.tech/?theme=${theme}`;
+      url = import.meta.env.VITE_THUB_WEB_SERVER_PROD_URL;
       break;
   }
+  console.log(url, "url");
 
   return (
     <nav className="h-auto fixed top-0 left-0 right-0 z-50 bg-white px-2 py-5 flex dark:bg-secondary shadow-lg">
-      <div className="mx-auto flex items-center justify-around w-full">
-        <div>
+      <div className="mx-auto flex items-center justify-between">
+        <Link to="/">
           <img src={ThubLogo} className="h-10 w-38" alt="THub Logo" />
-        </div>
+        </Link>
         <div className="flex-wrap items-center justify-between gap-8 ml-16 hidden md:flex">
           {navItems.map((item) =>
             item.name === "Login" ? (
@@ -114,7 +118,7 @@ const Navbar = () => {
 
           <div>
             <a
-              href={url}
+              href={`${url}/signup`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block border border-primary text-primary px-4 py-2 rounded transition-all duration-300 hover:bg-primary hover:text-black hover:border-primary dark:border-primary-dark dark:text-primary-dark dark:hover:bg-primary-dark dark:hover:text-black"
@@ -156,7 +160,7 @@ const Navbar = () => {
 
         <div>
           <a
-            href={url}
+            href={`${url}/signup`}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block border border-primary text-primary px-4 py-2 rounded transition-all duration-300 hover:bg-primary hover:text-black hover:border-primary dark:border-primary-dark dark:text-primary-dark dark:hover:bg-primary-dark dark:hover:text-black"
