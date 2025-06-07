@@ -5,7 +5,6 @@ import Features_Anime_Two from "../components/home/Features_Anime_Two";
 import Features_First from "../components/home/Features_First";
 import FooterImage from "../components/home/FooterImage";
 import Pricing_Plan from "../components/home/Pricing_Plan";
-import UsecaseHome from "../components/usecases/UsecasesHome";
 import Hero from "../components/home/Hero";
 
 const Home = () => {
@@ -17,8 +16,6 @@ const Home = () => {
       id="banner-main"
     >
       <Hero />
-      <UsecaseHome />
-
       <Features_First />
       <Features_Anime_One />
       <Features_Anime_Two />

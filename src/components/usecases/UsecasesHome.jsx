@@ -1,421 +1,136 @@
-import { useSelector } from "react-redux";
-import dark_app_image from "../../assets/icons/home-icons/dark-app.png";
-import light_app_image from "../../assets/icons/home-icons/light-app.png";
-import ragdark from "../../assets/icons/usecase-icons/rag_dark.png";
-import raglite from "../../assets/icons/usecase-icons/rag_lite.png";
-import tuningdark from "../../assets/icons/usecase-icons/tuning_dark.png";
-import tuninglite from "../../assets/icons/usecase-icons/tuning_lite.png";
-import docsdark from "../../assets/icons/usecase-icons/docs_dark.png";
-import docslite from "../../assets/icons/usecase-icons/docs_lite.png";
-import descdark from "../../assets/icons/usecase-icons/desc_dark.png";
-import desclite from "../../assets/icons/usecase-icons/desc_lite.png";
-import productdark from "../../assets/icons/usecase-icons/product_dark.png";
-import productlite from "../../assets/icons/usecase-icons/product_lite.png";
-import sqldark from "../../assets/icons/usecase-icons/sql_dark.png";
-import sqllite from "../../assets/icons/usecase-icons/sql_lite.png";
-import customerdark from "../../assets/icons/usecase-icons/customer_dark.png";
-import customerlite from "../../assets/icons/usecase-icons/customer_lite.png";
-
-import { useState } from "react";
-
-// import RaftComponent from "./RaftComponent";
-// import SqlComponent from "./SqlComponent";
-// import RecommenderComponent from "./RecommenderComponent";
-// import CustomerEngagementComponent from "./CustomerEngagementComponent";
-// import DocumentGenerationComponent from "./DocumentGenerationComponent";
-// import DescriptionGenerationComponent from "./DescriptionGenerationComponent";
+import AgentCard from "../cards/AgentCard";
+import props from "prop-types";
+// images
+import startUpIdeaLogo from "../../assets/agent-logos/startup-idea-agent.png";
+import codeReviewAgent from "../../assets/agent-logos/code-review-agent.png";
+import competetitorAnalysisAgent from "../../assets/agent-logos/competitor_analysis_agent.png";
+import projectPlanningAgent from "../../assets/agent-logos/project_planning_agent.png";
+import insuranceUnderwritingLogo from "../../assets/agent-logos/insurance-underwriting-agent.png";
+import productComparisonAgent from "../../assets/agent-logos/product_comparison_agent.png";
+import softwareDevelopmentAgent from "../../assets/agent-logos/software_development_agent.png";
+import financialAnalysisAgent from "../../assets/agent-logos/Financial_Analyst_Agent.png";
 
 const UsecaseHome = () => {
-  const isDarkMode = useSelector((state) => state.customization.isDarkMode);
-  const [activeComponent, setActiveComponent] = useState("");
-
-  console.log(activeComponent, "activeComponent");
-
-  const COMPONENT_URLS = {
-    agents:
-      "http://localhost:3000/chatbot/3c7f6af7-ca21-4018-8a80-77e8bb26c788",
-    rag: "http://localhost:3000/rag/dashboard",
-    raft: "http://localhost:3000/raft/interface",
-    sql: "http://localhost:3000/sql/query",
-    recommender: "http://localhost:3000/recommender/system",
-    "customer-engagement": "http://localhost:3000/customer-engagement/portal",
-    "document-generation": "http://localhost:3000/document-generation/tool",
-    "description-generation": "http://localhost:3000/description-generation/ai",
-  };
-
-  const handleClick = (componentName) => {
-    if (COMPONENT_URLS[componentName]) {
-      // Open link in new tab
-      window.open(
-        COMPONENT_URLS[componentName],
-        "_blank",
-        "noopener,noreferrer",
-      );
-
-      // Optional: Show brief feedback in current view
-      setActiveComponent(`${componentName}-opened`);
-
-      // Optional: Auto-close feedback after 2 seconds
-      setTimeout(() => {
-        setActiveComponent(null);
-      }, 2000);
-    } else {
-      // For components without URLs (like RagBot), show inline
-      setActiveComponent(componentName);
-    }
-  };
+  const chatFlowData = [
+    {
+      id: "ac291b9a-6ed1-40ec-b857-6fddb9c1299a",
+      name: "Insurance Underwriting Agent",
+      icon: insuranceUnderwritingLogo,
+      tenantId: "9bf57af6-4020-4e53-951d-647d2db86070",
+      workspaceUid: "9bf57af6-4020-4e53-951d-647d2db86070",
+      description:
+        "The Insurance Underwriting Agent is an AI-powered assistant that automates the underwriting process by analyzing customer data, medical history, policy documents, and risk factors.",
+      agentUrl:
+        "https://app.thub.tech/chatbot/ac291b9a-6ed1-40ec-b857-6fddb9c1299a",
+    },
+    {
+      id: "d6266541-acae-4fea-8f0b-18c887ba130e",
+      name: "Startup Idea Generator Agent",
+      tenantId: "9bf57af6-4020-4e53-951d-647d2db86070",
+      icon: startUpIdeaLogo,
+      workspaceUid: "9bf57af6-4020-4e53-951d-647d2db86070",
+      description:
+        "The Startup Idea Generator Agent is an AI-powered brainstorming assistant designed to help entrepreneurs, innovators, and venture studios discover unique and viable startup ideas. It analyzes market trends, user pain points, emerging technologies, and successful business models to generate validated startup concepts across industries.",
+      agentUrl:
+        "https://app.thub.tech/chatbot/d6266541-acae-4fea-8f0b-18c887ba130e",
+    },
+    {
+      id: "7358dce3-838e-40f6-aea6-4f6ee5cd5c22",
+      name: "Project Planning Agent",
+      tenantId: "9bf57af6-4020-4e53-951d-647d2db86070",
+      icon: projectPlanningAgent,
+      workspaceUid: "9bf57af6-4020-4e53-951d-647d2db86070",
+      description:
+        "The Project Planning Agent is an AI-driven assistant that helps teams design, schedule, and manage projects with greater speed and accuracy. It automates the creation of project charters, timelines, resource allocation plans, and risk assessments by synthesizing inputs from requirement documents, stakeholder interviews, and historical data.",
+      agentUrl:
+        "https://app.thub.tech/chatbot/7358dce3-838e-40f6-aea6-4f6ee5cd5c22",
+    },
+    {
+      id: "5b3484d7-deb1-498c-b91b-aefd9199df75",
+      name: "Code Review Agent",
+      tenantId: "9bf57af6-4020-4e53-951d-647d2db86070",
+      icon: codeReviewAgent,
+      workspaceUid: "9bf57af6-4020-4e53-951d-647d2db86070",
+      description:
+        "The Code Review Agent is an AI-powered assistant designed to automatically analyze, review, and provide feedback on source code across multiple languages.",
+      agentUrl:
+        "https://app.thub.tech/chatbot/5b3484d7-deb1-498c-b91b-aefd9199df75",
+    },
+    {
+      id: "3e63c8ad-ea5b-4897-b7d0-0cfbf38424d5",
+      name: "Product Comparison Agent",
+      tenantId: "9bf57af6-4020-4e53-951d-647d2db86070",
+      icon: productComparisonAgent,
+      workspaceUid: "9bf57af6-4020-4e53-951d-647d2db86070",
+      description:
+        "The Product Comparison Agent is an AI-powered assistant that automates side-by-side evaluations of competing products based on features, pricing, specifications, customer reviews, and third-party benchmarks. Ideal for sales teams, procurement units, or end-users, it delivers objective, data-driven comparisons to aid faster and smarter decision-making.",
+      agentUrl:
+        "https://app.thub.tech/chatbot/3e63c8ad-ea5b-4897-b7d0-0cfbf38424d5",
+    },
+    {
+      id: "953d0151-5356-41e3-9e79-ba8b429d064a",
+      name: "Software Development Agent",
+      tenantId: "9bf57af6-4020-4e53-951d-647d2db86070",
+      icon: softwareDevelopmentAgent,
+      workspaceUid: "9bf57af6-4020-4e53-951d-647d2db86070",
+      description: "",
+      agentUrl:
+        "https://app.thub.tech/chatbot/953d0151-5356-41e3-9e79-ba8b429d064a",
+    },
+    {
+      id: "57fef7e4-6024-45fd-bc95-c244ebf70c63",
+      name: "Investment Analysis Agent",
+      tenantId: "9bf57af6-4020-4e53-951d-647d2db86070",
+      icon: financialAnalysisAgent,
+      workspaceUid: "9bf57af6-4020-4e53-951d-647d2db86070",
+      description:
+        "The Investment Analysis Agent is an AI-powered assistant that streamlines financial due diligence by analyzing company reports, market trends, investor presentations, news, and financial statements. It assists analysts and fund managers in identifying opportunities, assessing risks, and generating investment memos with data-driven insights.",
+      agentUrl:
+        "https://app.thub.tech/chatbot/57fef7e4-6024-45fd-bc95-c244ebf70c63",
+    },
+    {
+      id: "140f20ce-101d-483a-bca8-f55a5d937761",
+      name: "Competitor Analysis Agent",
+      tenantId: "9bf57af6-4020-4e53-951d-647d2db86070",
+      icon: competetitorAnalysisAgent,
+      workspaceUid: "9bf57af6-4020-4e53-951d-647d2db86070",
+      description:
+        "The Competitor Analysis Agent is an AI-driven assistant that continuously monitors, extracts, and analyzes competitive intelligence from public sources such as websites, press releases, financial filings, job postings, social media, and news. It helps strategy, product, and sales teams stay informed on market movements, product updates, pricing strategies, and emerging threats.",
+      agentUrl:
+        "https://app.thub.tech/chatbot/140f20ce-101d-483a-bca8-f55a5d937761",
+    },
+  ];
 
   return (
-    <div className="border-red-400 dark:bg-secondary mt-4">
-      <div className="text-center">
-        <div className="flex flex-col items-center text-center">
-          <h1 className="dark:text-white text-secondary text-3xl md:text-4xl lg:text-5xl font-bold w-full max-w-4xl">
-            Tools for Tomorrow
-          </h1>
-          <h2 className="dark:text-white text-secondary mt-5 mb-12 text-2xl md:text-3xl lg:text-4xl font-bold w-full max-w-4xl">
-            The Future of{" "}
-            <span className="text-primary dark:text-primary-dark">
-              Artificial Intelligence
-            </span>{" "}
-            is Yours
-          </h2>
-        </div>
-      </div>
-
+    <div className="border-red-400 dark:bg-secondary mt-16">
       <section className="px-5 py-10 lg:px-20">
+        <div className="mb-4">
+          <p className="font-sans text-2xl dark:text-white">Agents Gallery</p>
+        </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {/* Card 1 - Agents */}
-          <div className="flex flex-col items-start text-left w-full h-full">
-            <div className="w-12 h-12 border border-primary bg-slate-200 dark:bg-slate-800 dark:border-slate-950 p-2 rounded-lg flex items-center justify-center">
-              <img
-                src={isDarkMode ? productdark : productlite}
-                alt="drag and drop"
-                className="h-full object-contain"
-              />
-            </div>
-            <h4 className="text-xl font-semibold dark:text-white mt-5">
-              Agents for Every Task
-            </h4>
-            <p className="text-md dark:text-secondary-dark max-w-xs flex-grow">
-              Support. Analysis. Audits. Agents as tireless as you.
-            </p>
-            <div className="flex items-center mt-6 group">
-              <button
-                className="text-[#11121c] dark:text-secondary-dark cursor-pointer group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90] group-hover:underline"
-                onClick={() => handleClick("agents")}
-              >
-                Try Agents
-              </button>
-              <div className="w-4 ml-2 text-[#11121c] dark:text-secondary-dark group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90]">
-                <svg
-                  className="icon"
-                  fill="none"
-                  viewBox="0 0 16 16"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M4 12.6667L12.6667 4M12.6667 4V12.32M12.6667 4H4.34667"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="1.21"
-                  />
-                </svg>
-              </div>
-            </div>
-          </div>
-
-          {/* Card 2 - RAG */}
-          <div className="flex flex-col items-start text-left w-full h-full">
-            <div className="w-12 h-12 border border-primary bg-slate-200 dark:bg-slate-800 dark:border-slate-950 p-2 rounded-lg flex items-center justify-center">
-              <img
-                src={isDarkMode ? ragdark : raglite}
-                alt="low code"
-                className="h-full object-contain"
-              />
-            </div>
-            <h4 className="text-xl font-semibold dark:text-white mt-5">
-              Smarter Apps, Instantly
-            </h4>
-            <p className="text-md dark:text-secondary-dark max-w-xs flex-grow">
-              Data retrieval that thinks ahead. Brilliance, built in.
-            </p>
-            <div className="flex items-center mt-auto group">
-              <button
-                className="text-[#11121c] dark:text-secondary-dark cursor-pointer group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90] group-hover:underline"
-                onClick={() => handleClick("rag")}
-              >
-                Try RAG
-              </button>
-              <div className="w-4 ml-2 text-[#11121c] dark:text-secondary-dark group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90]">
-                <svg
-                  className="icon"
-                  fill="none"
-                  viewBox="0 0 16 16"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M4 12.6667L12.6667 4M12.6667 4V12.32M12.6667 4H4.34667"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="1.21"
-                  />
-                </svg>
-              </div>
-            </div>
-          </div>
-
-          {/* Card 3 - RAFT */}
-          <div className="flex flex-col items-start text-left w-full h-full">
-            <div className="w-12 h-12 border border-primary bg-slate-200 dark:bg-slate-800 dark:border-slate-950 p-2 rounded-lg flex items-center justify-center">
-              <img
-                src={isDarkMode ? tuningdark : tuninglite}
-                alt="drag and drop"
-                className="h-full object-contain"
-              />
-            </div>
-            <h4 className="text-xl font-semibold dark:text-white mt-5">
-              Fine-Tune with Flair
-            </h4>
-            <p className="text-md dark:text-secondary-dark max-w-xs flex-grow">
-              Precision, a drag away. Performance, perfected.
-            </p>
-            <div className="flex items-center mt-auto group">
-              <button
-                className="text-[#11121c] dark:text-secondary-dark cursor-pointer group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90] group-hover:underline"
-                onClick={() => handleClick("raft")}
-              >
-                Try RAFT
-              </button>
-              <div className="w-4 ml-2 text-[#11121c] dark:text-secondary-dark group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90]">
-                <svg
-                  className="icon"
-                  fill="none"
-                  viewBox="0 0 16 16"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M4 12.6667L12.6667 4M12.6667 4V12.32M12.6667 4H4.34667"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="1.21"
-                  />
-                </svg>
-              </div>
-            </div>
-          </div>
-
-          {/* Card 4 - SQL */}
-          <div className="flex flex-col items-start text-left w-full h-full">
-            <div className="w-12 h-12 border border-primary bg-slate-200 dark:bg-slate-800 dark:border-slate-950 p-2 rounded-lg flex items-center justify-center">
-              <img
-                src={isDarkMode ? sqldark : sqllite}
-                alt="sql management"
-                className="h-full object-contain"
-              />
-            </div>
-            <h4 className="text-xl font-semibold dark:text-white mt-5">
-              SQL, Simplified
-            </h4>
-            <p className="text-md dark:text-secondary-dark max-w-xs flex-grow">
-              Queries flow fast. Results, real-time.
-            </p>
-            <div className="flex items-center mt-auto group">
-              <button
-                className="text-[#11121c] dark:text-secondary-dark cursor-pointer group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90] group-hover:underline"
-                onClick={() => handleClick("sql")}
-              >
-                Try SQL
-              </button>
-              <div className="w-4 ml-2 text-[#11121c] dark:text-secondary-dark group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90]">
-                <svg
-                  className="icon"
-                  fill="none"
-                  viewBox="0 0 16 16"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M4 12.6667L12.6667 4M12.6667 4V12.32M12.6667 4H4.34667"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="1.21"
-                  />
-                </svg>
-              </div>
-            </div>
-          </div>
-
-          {/* Card 5 - Recommender */}
-          <div className="flex flex-col items-start text-left w-full h-full mt-6">
-            <div className="w-12 h-12 border border-primary bg-slate-200 dark:bg-slate-800 dark:border-slate-950 p-2 rounded-lg flex items-center justify-center">
-              <img
-                src={isDarkMode ? dark_app_image : light_app_image}
-                alt="automated data pipeline"
-                className="h-full object-contain"
-              />
-            </div>
-            <h4 className="text-xl font-semibold dark:text-white mt-5">
-              Recommendations That Wow
-            </h4>
-            <p className="text-md dark:text-secondary-dark max-w-xs flex-grow">
-              Personal. Perfect. Delight in every suggestion.
-            </p>
-            <div className="flex items-center mt-2 group">
-              <button
-                className="text-[#11121c] dark:text-secondary-dark cursor-pointer group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90] group-hover:underline"
-                onClick={() => handleClick("recommender")}
-              >
-                Try Recommender
-              </button>
-              <div className="w-4 ml-2 text-[#11121c] dark:text-secondary-dark group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90]">
-                <svg
-                  className="icon"
-                  fill="none"
-                  viewBox="0 0 16 16"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M4 12.6667L12.6667 4M12.6667 4V12.32M12.6667 4H4.34667"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="1.21"
-                  />
-                </svg>
-              </div>
-            </div>
-          </div>
-
-          {/* Card 6 - Customer Engagement */}
-          <div className="flex flex-col items-start text-left w-full h-full mt-6">
-            <div className="w-12 h-12 border border-primary bg-slate-200 dark:bg-slate-800 dark:border-slate-950 p-2 rounded-lg flex items-center justify-center">
-              <img
-                src={isDarkMode ? customerdark : customerlite}
-                alt="customer engagement"
-                className="h-full object-contain"
-              />
-            </div>
-            <h4 className="text-xl font-semibold dark:text-white mt-5">
-              Know Your Customers
-            </h4>
-            <p className="text-md dark:text-secondary-dark max-w-xs flex-grow">
-              Powerful insights that truly connect, engagement that genuinely
-              transforms.
-            </p>
-            <div className="flex items-center mt-auto group">
-              <button
-                className="text-[#11121c] dark:text-secondary-dark cursor-pointer group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90] group-hover:underline"
-                onClick={() => handleClick("customer-engagement")}
-              >
-                Try Customer Engagement
-              </button>
-              <div className="w-4 ml-2 text-[#11121c] dark:text-secondary-dark group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90]">
-                <svg
-                  className="icon"
-                  fill="none"
-                  viewBox="0 0 16 16"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M4 12.6667L12.6667 4M12.6667 4V12.32M12.6667 4H4.34667"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="1.21"
-                  />
-                </svg>
-              </div>
-            </div>
-          </div>
-
-          {/* Card 7 - Document Generation */}
-          <div className="flex flex-col items-start text-left w-full h-full mt-6">
-            <div className="w-12 h-12 border border-primary bg-slate-200 dark:bg-slate-800 dark:border-slate-950 p-2 rounded-lg flex items-center justify-center">
-              <img
-                src={isDarkMode ? docsdark : docslite}
-                alt="document generation"
-                className="h-full object-contain"
-              />
-            </div>
-            <h4 className="text-xl font-semibold dark:text-white mt-5">
-              Documents, Done
-            </h4>
-            <p className="text-md dark:text-secondary-dark max-w-xs flex-grow">
-              Automatic. Accurate. Time, saved.
-            </p>
-            <div className="flex items-center mt-auto group">
-              <button
-                className="text-[#11121c] dark:text-secondary-dark cursor-pointer group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90] group-hover:underline"
-                onClick={() => handleClick("document-generation")}
-              >
-                Try Document Generation
-              </button>
-              <div className="w-4 ml-2 text-[#11121c] dark:text-secondary-dark group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90]">
-                <svg
-                  className="icon"
-                  fill="none"
-                  viewBox="0 0 16 16"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M4 12.6667L12.6667 4M12.6667 4V12.32M12.6667 4H4.34667"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="1.21"
-                  />
-                </svg>
-              </div>
-            </div>
-          </div>
-
-          {/* Card 8 - Description Generation */}
-          <div className="flex flex-col items-start text-left w-full h-full mt-6">
-            <div className="w-12 h-12 border border-primary bg-slate-200 dark:bg-slate-800 dark:border-slate-950 p-2 rounded-lg flex items-center justify-center">
-              <img
-                src={isDarkMode ? descdark : desclite}
-                alt="description generation"
-                className="h-full object-contain"
-              />
-            </div>
-            <h4 className="text-xl font-semibold dark:text-white mt-5">
-              Descriptions That Captivate
-            </h4>
-            <p className="text-md dark:text-secondary-dark max-w-xs flex-grow">
-              Words that sell, crafted instantly.
-            </p>
-            <div className="flex items-center mt-auto group">
-              <button
-                className="text-[#11121c] dark:text-secondary-dark cursor-pointer group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90] group-hover:underline"
-                onClick={() => handleClick("description-generation")}
-              >
-                Try Description Generation
-              </button>
-              <div className="w-4 ml-2 text-[#11121c] dark:text-secondary-dark group-hover:text-[#3c5ba4] dark:group-hover:text-[#e22a90]">
-                <svg
-                  className="icon"
-                  fill="none"
-                  viewBox="0 0 16 16"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M4 12.6667L12.6667 4M12.6667 4V12.32M12.6667 4H4.34667"
-                    stroke="currentColor"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="1.21"
-                  />
-                </svg>
-              </div>
-            </div>
-          </div>
+          {chatFlowData.map(({ id, name, description, agentUrl, icon }) => (
+            <AgentCard
+              key={id}
+              title={name}
+              logo={icon}
+              description={description}
+              agentUrl={agentUrl}
+            />
+          ))}
         </div>
       </section>
     </div>
   );
+};
+
+UsecaseHome.propTypes = {
+  isDarkMode: props.bool,
+  activeComponent: props.string,
+  title: props.string,
+  description: props.string,
+  buttonText: props.string,
+  agentUrl: props.string,
+  setActiveComponent: props.func,
 };
 
 export default UsecaseHome;

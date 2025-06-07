@@ -59,30 +59,62 @@ const Navbar = () => {
     { name: "About", path: "/about" },
     { name: "Login", path: "/auth/login" },
   ];
+  let url;
+  const theme = localStorage.getItem("isDarkMode") === "true" ? "dark" : "lite";
+  const hostname = window.location.hostname;
+
+  switch (hostname) {
+    case "localhost":
+      url = `http://localhost:8080/?theme=${theme}`;
+      break;
+    case "thub-web-demo-378678297066.europe-west1.run.app":
+      url = `https://demo.thub.tech/`;
+      break;
+    default:
+      url = `https://app.thub.tech/?theme=${theme}`;
+      break;
+  }
 
   return (
     <nav className="h-auto fixed top-0 left-0 right-0 z-50 bg-white px-2 py-5 flex dark:bg-secondary shadow-lg">
-      <div className="mx-auto flex items-center justify-between w-[90%]">
+      <div className="mx-auto flex items-center justify-around w-full">
         <div>
           <img src={ThubLogo} className="h-10 w-38" alt="THub Logo" />
         </div>
         <div className="flex-wrap items-center justify-between gap-8 ml-16 hidden md:flex">
-          {navItems.map((item) => (
-            <div
-              key={item.path}
-              className={`cursor-pointer ${
-                activePage === item.path
-                  ? "text-primary dark:text-primary-dark "
-                  : "text-black hover:text-primary dark:text-secondary-dark dark:hover:text-primary-dark"
-              }`}
-              onClick={() => handleNavigation(item.path)}
-            >
-              {item.name}
-            </div>
-          ))}
+          {navItems.map((item) =>
+            item.name === "Login" ? (
+              <a
+                key={item.path}
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`cursor-pointer ${
+                  activePage === item.path
+                    ? "text-primary dark:text-primary-dark"
+                    : "text-secondary hover:text-primary dark:text-secondary-dark dark:hover:text-primary-dark"
+                }`}
+              >
+                {item.name}
+              </a>
+            ) : (
+              <div
+                key={item.path}
+                className={`cursor-pointer ${
+                  activePage === item.path
+                    ? "text-primary dark:text-primary-dark"
+                    : "text-secondary hover:text-primary dark:text-secondary-dark dark:hover:text-primary-dark"
+                }`}
+                onClick={() => handleNavigation(item.path)}
+              >
+                {item.name}
+              </div>
+            ),
+          )}
+
           <div>
             <a
-              href="http://localhost:8080/"
+              href={url}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block border border-primary text-primary px-4 py-2 rounded transition-all duration-300 hover:bg-primary hover:text-black hover:border-primary dark:border-primary-dark dark:text-primary-dark dark:hover:bg-primary-dark dark:hover:text-black"
@@ -124,7 +156,7 @@ const Navbar = () => {
 
         <div>
           <a
-            href="http://localhost:8080/"
+            href={url}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block border border-primary text-primary px-4 py-2 rounded transition-all duration-300 hover:bg-primary hover:text-black hover:border-primary dark:border-primary-dark dark:text-primary-dark dark:hover:bg-primary-dark dark:hover:text-black"

@@ -1,19 +1,31 @@
 import { useEffect } from "react";
 import { useState } from "react";
 import { useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
 import FirstPage from "./FirstPage";
 import { Helmet } from "react-helmet";
 
 // images
 import sparkels from "../../assets/images/button-logo/sparkles-white.svg";
+import UsecaseHome from "../usecases/UsecasesHome";
 
 const Hero = () => {
-  const navigate = useNavigate();
   const isDarkMode = useSelector((state) => state.customization.isDarkMode);
-  const handleClick = () => {
-    navigate("/auth/login");
-  };
+
+  let url;
+  const theme = localStorage.getItem("isDarkMode") === "true" ? "dark" : "lite";
+  const hostname = window.location.hostname;
+
+  switch (hostname) {
+    case "localhost":
+      url = `http://localhost:8080/?theme=${theme}`;
+      break;
+    case "thub-web-demo-378678297066.europe-west1.run.app":
+      url = `https://demo.thub.tech/`;
+      break;
+    default:
+      url = `https://app.thub.tech/?theme=${theme}`;
+      break;
+  }
   const strings = [
     "Agentic Workflows",
     "RAG Systems",
@@ -61,12 +73,12 @@ const Hero = () => {
         <link rel="canonical" href="https://thub.tech/" />
       </Helmet>
       <div id="hero-container" className=" py-5">
-        <h1 className="text-center text-primary dark:text-primary-dark  mt-20 text-7xl font-thin">
-          Build with{" "}
-          <span className="text-transparent bg-clip-text bg-[linear-gradient(to_right,_#3C5BA4,_#E22A90)]">
-            THub
-          </span>
+        <h1 className="text-center text-primary dark:text-primary-dark mt-24 text-5xl">
+          Build Smarter. Build Faster. Build with THub.
         </h1>
+        <h3 className="text-center text-secondary dark:text-white mt-4 text-5xl">
+          The 30X Faster Way to Launch
+        </h3>
         <div className="flex justify-center my-4">
           <span
             className="text-center font-bold text-5xl bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent inline-block"
@@ -79,20 +91,22 @@ const Hero = () => {
           </span>
         </div>
       </div>
+      <UsecaseHome />
       <FirstPage />
       <div className="flex justify-center ">
-        <button
-          type="button"
-          className="text-white bg-gradient-to-r from-[#B425D5] to-[#FB5582] hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 font-medium rounded-lg px-8 py-4 text-center me-2 mb-2 text-lg mt-2"
-          onClick={() => handleClick()}
-        >
-          <div className=" flex ">
-            <span className="mr-2">
-              <img src={sparkels} alt="sparkles" />
-            </span>
-            <span>Start Now</span>
-          </div>
-        </button>
+        <a href={url} target="_blank">
+          <button
+            type="button"
+            className="text-white bg-gradient-to-r from-[#B425D5] to-[#FB5582] hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 font-medium rounded-lg px-8 py-4 text-center me-2 mb-2 text-lg mt-2"
+          >
+            <div className=" flex ">
+              <span className="mr-2">
+                <img src={sparkels} alt="sparkles" />
+              </span>
+              <span>Start Now</span>
+            </div>
+          </button>
+        </a>
       </div>
     </section>
   );
