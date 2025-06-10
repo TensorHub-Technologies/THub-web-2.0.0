@@ -11,7 +11,8 @@ function Features_First() {
   const theme = localStorage.getItem("isDarkMode") === "true" ? "dark" : "lite";
   const hostname = window.location.hostname;
   const isDarkMode = useSelector((state) => state.customization.isDarkMode);
-
+  
+ const handleClick = () => {
   switch (hostname) {
     case "localhost":
       url = `http://localhost:8080/?theme=${theme}`;
@@ -23,6 +24,8 @@ function Features_First() {
       url = `https://app.thub.tech/?theme=${theme}`;
       break;
   }
+       window.open(url, "_blank");
+  };
 
   return (
     <section className="px-5 py-4 lg:px-16">
