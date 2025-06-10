@@ -6,7 +6,6 @@ import feature_first_gif_light from "../../assets/illustrations/feature_first-2.
 import { useSelector } from "react-redux";
 
 function Features_Anime_One() {
-  const navigate = useNavigate();
   const handleClick = () => {
   const hostname = window.location.hostname;
   let url;
