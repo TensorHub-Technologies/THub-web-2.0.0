@@ -25,7 +25,6 @@ function Features_Anime_Three() {
   }
     window.open(url, "_blank");
   };
-  };
   return (
     <section>
       <div className="flex flex-col lg:flex-row gap-10 p-8 lg:p-16 mt-[-128px]">
