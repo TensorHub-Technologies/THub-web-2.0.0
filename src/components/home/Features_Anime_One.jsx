@@ -6,9 +6,22 @@ import feature_first_gif_light from "../../assets/illustrations/feature_first-2.
 import { useSelector } from "react-redux";
 
 function Features_Anime_One() {
-  const navigate = useNavigate();
   const handleClick = () => {
-    navigate("/auth/login");
+  const hostname = window.location.hostname;
+  let url;
+  console.log(hostname, "hostname");
+  switch (hostname) {
+    case "localhost":
+      url = import.meta.env.VITE_THUB_WEB_SERVER_LOCAL_URL;
+      break;
+    case "thub-web-demo-378678297066.europe-west1.run.app":
+      url = import.meta.env.VITE_THUB_WEB_SERVER_DEMO_URL;
+      break;
+    default:
+      url = import.meta.env.VITE_THUB_WEB_SERVER_PROD_URL;
+      break;
+  }
+    window.open(url, "_blank");
   };
 
   const isDarkMode = useSelector((state) => state.customization.isDarkMode);

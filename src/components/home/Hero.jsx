@@ -14,7 +14,7 @@ const Hero = () => {
   let url;
   const theme = localStorage.getItem("isDarkMode") === "true" ? "dark" : "lite";
   const hostname = window.location.hostname;
-
+  
   switch (hostname) {
     case "localhost":
       url = `http://localhost:8080/?theme=${theme}`;
@@ -26,6 +26,7 @@ const Hero = () => {
       url = `https://app.thub.tech/?theme=${theme}`;
       break;
   }
+
   const strings = [
     "Agentic Workflows",
     "RAG Systems",

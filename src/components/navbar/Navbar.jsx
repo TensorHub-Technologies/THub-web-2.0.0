@@ -15,10 +15,6 @@ const Navbar = () => {
   const dispatch = useDispatch();
   const isDarkMode = useSelector((state) => state.customization.isDarkMode);
 
-  console.log("THub local:", import.meta.env.VITE_THUB_WEB_SERVER_LOCAL_URL);
-  console.log("THub demo:", import.meta.env.VITE_THUB_WEB_SERVER_DEMO_URL);
-  console.log("THub prod:", import.meta.env.VITE_THUB_WEB_SERVER_PROD_URL);
-
   useEffect(() => {
     const root = window.document.documentElement;
     if (isDarkMode) {
