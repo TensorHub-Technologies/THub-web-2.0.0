@@ -21,7 +21,7 @@ const UsecaseHome = () => {
       description:
         "The Insurance Underwriting Agent is an AI-powered assistant that automates the underwriting process by analyzing customer data, medical history, policy documents, and risk factors.",
       agentUrl:
-        "https://app.thub.tech/chatbot/ac291b9a-6ed1-40ec-b857-6fddb9c1299a",
+        "http://localhost:8080/chatbot/ac291b9a-6ed1-40ec-b857-6fddb9c1299a",
     },
     {
       id: "d6266541-acae-4fea-8f0b-18c887ba130e",
@@ -32,7 +32,7 @@ const UsecaseHome = () => {
       description:
         "The Startup Idea Generator Agent is an AI-powered brainstorming assistant designed to help entrepreneurs, innovators, and venture studios discover unique and viable startup ideas. It analyzes market trends, user pain points, emerging technologies, and successful business models to generate validated startup concepts across industries.",
       agentUrl:
-        "https://app.thub.tech/chatbot/d6266541-acae-4fea-8f0b-18c887ba130e",
+        "https://demo.thub.tech/chatbot/d6266541-acae-4fea-8f0b-18c887ba130e",
     },
     {
       id: "7358dce3-838e-40f6-aea6-4f6ee5cd5c22",
@@ -43,7 +43,7 @@ const UsecaseHome = () => {
       description:
         "The Project Planning Agent is an AI-driven assistant that helps teams design, schedule, and manage projects with greater speed and accuracy. It automates the creation of project charters, timelines, resource allocation plans, and risk assessments by synthesizing inputs from requirement documents, stakeholder interviews, and historical data.",
       agentUrl:
-        "https://app.thub.tech/chatbot/7358dce3-838e-40f6-aea6-4f6ee5cd5c22",
+        "https://demo.thub.tech/chatbot/7358dce3-838e-40f6-aea6-4f6ee5cd5c22",
     },
     {
       id: "5b3484d7-deb1-498c-b91b-aefd9199df75",
@@ -54,7 +54,7 @@ const UsecaseHome = () => {
       description:
         "The Code Review Agent is an AI-powered assistant designed to automatically analyze, review, and provide feedback on source code across multiple languages.",
       agentUrl:
-        "https://app.thub.tech/chatbot/5b3484d7-deb1-498c-b91b-aefd9199df75",
+        "https://demo.thub.tech/chatbot/5b3484d7-deb1-498c-b91b-aefd9199df75",
     },
     {
       id: "3e63c8ad-ea5b-4897-b7d0-0cfbf38424d5",
@@ -65,7 +65,7 @@ const UsecaseHome = () => {
       description:
         "The Product Comparison Agent is an AI-powered assistant that automates side-by-side evaluations of competing products based on features, pricing, specifications, customer reviews, and third-party benchmarks. Ideal for sales teams, procurement units, or end-users, it delivers objective, data-driven comparisons to aid faster and smarter decision-making.",
       agentUrl:
-        "https://app.thub.tech/chatbot/3e63c8ad-ea5b-4897-b7d0-0cfbf38424d5",
+        "https://demo.thub.tech/chatbot/3e63c8ad-ea5b-4897-b7d0-0cfbf38424d5",
     },
     {
       id: "953d0151-5356-41e3-9e79-ba8b429d064a",
@@ -75,7 +75,7 @@ const UsecaseHome = () => {
       workspaceUid: "9bf57af6-4020-4e53-951d-647d2db86070",
       description: "",
       agentUrl:
-        "https://app.thub.tech/chatbot/953d0151-5356-41e3-9e79-ba8b429d064a",
+        "https://demo.thub.tech/chatbot/953d0151-5356-41e3-9e79-ba8b429d064a",
     },
     {
       id: "57fef7e4-6024-45fd-bc95-c244ebf70c63",
@@ -86,7 +86,7 @@ const UsecaseHome = () => {
       description:
         "The Investment Analysis Agent is an AI-powered assistant that streamlines financial due diligence by analyzing company reports, market trends, investor presentations, news, and financial statements. It assists analysts and fund managers in identifying opportunities, assessing risks, and generating investment memos with data-driven insights.",
       agentUrl:
-        "https://app.thub.tech/chatbot/57fef7e4-6024-45fd-bc95-c244ebf70c63",
+        "https://demo.thub.tech/chatbot/57fef7e4-6024-45fd-bc95-c244ebf70c63",
     },
     {
       id: "140f20ce-101d-483a-bca8-f55a5d937761",
@@ -97,7 +97,7 @@ const UsecaseHome = () => {
       description:
         "The Competitor Analysis Agent is an AI-driven assistant that continuously monitors, extracts, and analyzes competitive intelligence from public sources such as websites, press releases, financial filings, job postings, social media, and news. It helps strategy, product, and sales teams stay informed on market movements, product updates, pricing strategies, and emerging threats.",
       agentUrl:
-        "https://app.thub.tech/chatbot/140f20ce-101d-483a-bca8-f55a5d937761",
+        "https://demo.thub.tech/chatbot/140f20ce-101d-483a-bca8-f55a5d937761",
     },
   ];
 
