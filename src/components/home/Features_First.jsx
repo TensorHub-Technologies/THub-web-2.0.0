@@ -11,7 +11,7 @@ function Features_First() {
   const theme = localStorage.getItem("isDarkMode") === "true" ? "dark" : "lite";
   const hostname = window.location.hostname;
   const isDarkMode = useSelector((state) => state.customization.isDarkMode);
-  
+
   switch (hostname) {
     case "localhost":
       url = `http://localhost:8080/?theme=${theme}`;

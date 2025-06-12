@@ -8,25 +8,24 @@ import blurryImage from "/blurry-shape-4.svg";
 
 // import hooks
 import { useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
 
 function FooterImage() {
   const handleNavigation = () => {
     let url;
-  const hostname = window.location.hostname;
-  console.log(hostname, "hostname");
+    const hostname = window.location.hostname;
+    console.log(hostname, "hostname");
 
-  switch (hostname) {
-    case "localhost":
-      url = import.meta.env.VITE_THUB_WEB_SERVER_LOCAL_URL;
-      break;
-    case "thub-web-demo-378678297066.europe-west1.run.app":
-      url = import.meta.env.VITE_THUB_WEB_SERVER_DEMO_URL;
-      break;
-    default:
-      url = import.meta.env.VITE_THUB_WEB_SERVER_PROD_URL;
-      break;
-  }
+    switch (hostname) {
+      case "localhost":
+        url = import.meta.env.VITE_THUB_WEB_SERVER_LOCAL_URL;
+        break;
+      case "thub-web-demo-378678297066.europe-west1.run.app":
+        url = import.meta.env.VITE_THUB_WEB_SERVER_DEMO_URL;
+        break;
+      default:
+        url = import.meta.env.VITE_THUB_WEB_SERVER_PROD_URL;
+        break;
+    }
     window.open(url, "_blank");
   };
   const isDarkMode = useSelector((state) => state.customization.isDarkMode);
