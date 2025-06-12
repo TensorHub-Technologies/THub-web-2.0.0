@@ -21,7 +21,7 @@ const UsecaseHome = () => {
       description:
         "The Insurance Underwriting Agent is an AI-powered assistant that automates the underwriting process by analyzing customer data, medical history, policy documents, and risk factors.",
       agentUrl:
-        "http://localhost:8080/chatbot/ac291b9a-6ed1-40ec-b857-6fddb9c1299a",
+        "https://demo.thub.tech/chatbot/ac291b9a-6ed1-40ec-b857-6fddb9c1299a",
     },
     {
       id: "d6266541-acae-4fea-8f0b-18c887ba130e",
