@@ -1,4 +1,3 @@
-import { useNavigate } from "react-router-dom";
 import feature_second_gif_dark from "../../assets/illustrations/feature_second-1.gif";
 import feature_second_gif_light from "../../assets/illustrations/feature_second-2.gif";
 
@@ -6,10 +5,23 @@ import feature_second_gif_light from "../../assets/illustrations/feature_second-
 import { useSelector } from "react-redux";
 
 function Features_Anime_Two() {
-  const navigate = useNavigate();
   const handleNavigation = () => {
-    console.log("redirection");
-    navigate("/auth/login");
+    const hostname = window.location.hostname;
+    let url;
+    console.log(hostname, "hostname");
+
+    switch (hostname) {
+      case "localhost":
+        url = import.meta.env.VITE_THUB_WEB_SERVER_LOCAL_URL;
+        break;
+      case "thub-web-demo-378678297066.europe-west1.run.app":
+        url = import.meta.env.VITE_THUB_WEB_SERVER_DEMO_URL;
+        break;
+      default:
+        url = import.meta.env.VITE_THUB_WEB_SERVER_PROD_URL;
+        break;
+    }
+    window.open(url, "_blank");
   };
   const isDarkMode = useSelector((state) => state.customization.isDarkMode);
   return (

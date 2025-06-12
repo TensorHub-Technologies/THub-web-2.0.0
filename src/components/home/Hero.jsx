@@ -26,6 +26,7 @@ const Hero = () => {
       url = `https://app.thub.tech/?theme=${theme}`;
       break;
   }
+
   const strings = [
     "Agentic Workflows",
     "RAG Systems",
