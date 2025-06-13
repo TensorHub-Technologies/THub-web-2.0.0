@@ -13,6 +13,17 @@ import financialAnalysisAgent from "../../assets/agent-logos/Financial_Analyst_A
 const UsecaseHome = () => {
   const chatFlowData = [
     {
+      id: "3e63c8ad-ea5b-4897-b7d0-0cfbf38424d5",
+      name: "Product Comparison Agent",
+      tenantId: "9bf57af6-4020-4e53-951d-647d2db86070",
+      icon: productComparisonAgent,
+      workspaceUid: "9bf57af6-4020-4e53-951d-647d2db86070",
+      description:
+        "The Product Comparison Agent is an AI-powered assistant that automates side-by-side evaluations of competing products based on features, pricing, specifications, customer reviews, and third-party benchmarks. Ideal for sales teams, procurement units, or end-users, it delivers objective, data-driven comparisons to aid faster and smarter decision-making.",
+      agentUrl:
+        "https://demo.thub.tech/chatbot/3e63c8ad-ea5b-4897-b7d0-0cfbf38424d5",
+    },
+    {
       id: "ac291b9a-6ed1-40ec-b857-6fddb9c1299a",
       name: "Insurance Underwriting Agent",
       icon: insuranceUnderwritingLogo,
@@ -57,17 +68,6 @@ const UsecaseHome = () => {
         "https://demo.thub.tech/chatbot/5b3484d7-deb1-498c-b91b-aefd9199df75",
     },
     {
-      id: "3e63c8ad-ea5b-4897-b7d0-0cfbf38424d5",
-      name: "Product Comparison Agent",
-      tenantId: "9bf57af6-4020-4e53-951d-647d2db86070",
-      icon: productComparisonAgent,
-      workspaceUid: "9bf57af6-4020-4e53-951d-647d2db86070",
-      description:
-        "The Product Comparison Agent is an AI-powered assistant that automates side-by-side evaluations of competing products based on features, pricing, specifications, customer reviews, and third-party benchmarks. Ideal for sales teams, procurement units, or end-users, it delivers objective, data-driven comparisons to aid faster and smarter decision-making.",
-      agentUrl:
-        "https://demo.thub.tech/chatbot/3e63c8ad-ea5b-4897-b7d0-0cfbf38424d5",
-    },
-    {
       id: "953d0151-5356-41e3-9e79-ba8b429d064a",
       name: "Software Development Agent",
       tenantId: "9bf57af6-4020-4e53-951d-647d2db86070",
@@ -78,7 +78,7 @@ const UsecaseHome = () => {
         "https://demo.thub.tech/chatbot/953d0151-5356-41e3-9e79-ba8b429d064a",
     },
     {
-      id: "57fef7e4-6024-45fd-bc95-c244ebf70c63",
+      id: "7d8b5e28-6805-4d2a-b4c7-85008dc94b27",
       name: "Investment Analysis Agent",
       tenantId: "9bf57af6-4020-4e53-951d-647d2db86070",
       icon: financialAnalysisAgent,
@@ -86,10 +86,10 @@ const UsecaseHome = () => {
       description:
         "The Investment Analysis Agent is an AI-powered assistant that streamlines financial due diligence by analyzing company reports, market trends, investor presentations, news, and financial statements. It assists analysts and fund managers in identifying opportunities, assessing risks, and generating investment memos with data-driven insights.",
       agentUrl:
-        "https://demo.thub.tech/chatbot/57fef7e4-6024-45fd-bc95-c244ebf70c63",
+        "https://demo.thub.tech/chatbot/7d8b5e28-6805-4d2a-b4c7-85008dc94b27",
     },
     {
-      id: "140f20ce-101d-483a-bca8-f55a5d937761",
+      id: "3282cd95-4df4-4758-9766-a9cb862eed83",
       name: "Competitor Analysis Agent",
       tenantId: "9bf57af6-4020-4e53-951d-647d2db86070",
       icon: competetitorAnalysisAgent,
@@ -97,7 +97,7 @@ const UsecaseHome = () => {
       description:
         "The Competitor Analysis Agent is an AI-driven assistant that continuously monitors, extracts, and analyzes competitive intelligence from public sources such as websites, press releases, financial filings, job postings, social media, and news. It helps strategy, product, and sales teams stay informed on market movements, product updates, pricing strategies, and emerging threats.",
       agentUrl:
-        "https://demo.thub.tech/chatbot/140f20ce-101d-483a-bca8-f55a5d937761",
+        "https://demo.thub.tech/chatbot/3282cd95-4df4-4758-9766-a9cb862eed83",
     },
   ];
 
