@@ -35,20 +35,39 @@ function FirstPage() {
   }, [currentIndex, letterIndex]);
 
   return (
-    <>
-      <section id={isDarkMode ? "" : ""}>
-        <div className="flex justify-center">
-          <div className="border-2 dark:border-primary-dark border-primary w-8/12 my-10 rounded-3xl">
-            <img
-              src={isDarkMode ? Picture_dark : Picture_light}
-              alt="THub AI Platform Hero Banner showing No-code GenAI Solutions"
-              loading="lazy"
-              className="rounded-3xl"
-            />
-          </div>
+    <section>
+      <div className="flex justify-center text-center mt-8">
+        <h1 className="dark:text-white text-secondary text-5xl font-bold w-[60rem]">
+          One Platform. Infinite Possibilities
+        </h1>
+      </div>
+      <div className="flex justify-center text-center">
+        <h2
+          className="dark:text-white text-secondary mt-5   text-2xl md:text-3xl lg:text-4xl font-bold w-[60rem]"
+          style={{ lineHeight: "3rem" }}
+        >
+          Build{" "}
+          <span className="text-primary dark:text-primary-dark">
+            {" "}
+            Multi Agents
+          </span>{" "}
+          & <span className="text-primary dark:text-primary-dark">
+            GenAI
+          </span>{" "}
+          Apps at Rapid Pace Across Your Favorite LLMs
+        </h2>
+      </div>
+      <div className="flex justify-center">
+        <div className="border-2 dark:border-primary-dark border-primary w-8/12 mt-8 rounded-3xl">
+          <img
+            src={isDarkMode ? Picture_dark : Picture_light}
+            alt="THub AI Platform Hero Banner showing No-code GenAI Solutions"
+            loading="lazy"
+            className="rounded-3xl"
+          />
         </div>
-      </section>
-    </>
+      </div>
+    </section>
   );
 }
 

@@ -3,7 +3,6 @@ import Features_Anime_One from "../components/home/Features_Anime_One";
 import Features_Anime_Three from "../components/home/Features_Anime_Three";
 import Features_Anime_Two from "../components/home/Features_Anime_Two";
 import Features_First from "../components/home/Features_First";
-import FooterImage from "../components/home/FooterImage";
 import Pricing_Plan from "../components/home/Pricing_Plan";
 import Hero from "../components/home/Hero";
 
@@ -22,7 +21,7 @@ const Home = () => {
       <Features_Anime_Three />
       <Pricing_Plan />
       <Accordion />
-      <FooterImage />
+      {/* <FooterImage /> */}
     </div>
   );
 };

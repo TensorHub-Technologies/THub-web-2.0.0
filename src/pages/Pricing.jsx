@@ -1,6 +1,5 @@
 import Pricing_Plan from "../components/home/Pricing_Plan";
 import Accordion from "../components/home/Accordion";
-import FooterImage from "../components/home/FooterImage";
 const Pricing = () => {
   return (
     <div className="dark:bg-[#11121C]">
@@ -12,7 +11,7 @@ const Pricing = () => {
       </div>
       <Pricing_Plan />
       <Accordion />
-      <FooterImage />
+      {/* <FooterImage /> */}
     </div>
   );
 };

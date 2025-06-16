@@ -1,11 +1,11 @@
 import CourseCard from "../components/academy/Academy";
-import FooterImage from "../components/home/FooterImage";
+// import FooterImage from "../components/home/FooterImage";
 
 const Academy = () => {
   return (
     <div className="dark:bg-secondary">
       <CourseCard />
-      <FooterImage />
+      {/* <FooterImage /> */}
     </div>
   );
 };

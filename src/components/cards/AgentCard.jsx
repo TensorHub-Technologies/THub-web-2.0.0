@@ -10,9 +10,11 @@ const AgentCard = ({ title, description, logo, agentUrl = "#" }) => {
       >
         <div>
           <img src={logo} alt="" className="w-12 rounded-lg" />
-          <h3 className="text-xl mt-4 mb-1 h-16 font-bold tracking-tight text-black dark:text-white  font-[cambria-math]">
-            {title}
-          </h3>
+          <a href={agentUrl} target="_blank" rel="noopener noreferrer">
+            <h3 className="text-xl mt-4 mb-1 h-16 font-bold tracking-tight text-black dark:text-white  font-[cambria-math]">
+              {title}
+            </h3>
+          </a>
         </div>
 
         <div className="h-20 relative group/desc">
