@@ -7,11 +7,11 @@ import Picture_light from "../../assets/images/hero-pic-full.png";
 function FirstPage() {
   const isDarkMode = useSelector((state) => state.customization.isDarkMode);
   const strings = [
-    "Agentic Workflows",
-    "RAG Systems",
-    "GenAI Apps",
-    "Vector Embeddings",
-    "Retrieval Augmented Fine Tuning",
+    "Agentic AI",
+    "Multi Agents",
+    "Sequential Agents",
+    "Vertical Agents",
+    "Agent to Agent Call",
   ];
 
   const [currentIndex, setCurrentIndex] = useState(0);

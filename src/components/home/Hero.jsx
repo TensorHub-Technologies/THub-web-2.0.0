@@ -28,11 +28,11 @@ const Hero = () => {
   }
 
   const strings = [
-    "Agentic Workflows",
-    "RAG Systems",
-    "GenAI Apps",
-    "Vector Embeddings",
-    "Retrieval Augmented Fine Tuning",
+    "Agentic AI",
+    "Multi Agents",
+    "Sequential Agents",
+    "Vertical Agents",
+    "Agent to Agent Call",
   ];
   const cursorColor = isDarkMode ? "white" : "black";
 
