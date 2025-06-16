@@ -25,9 +25,9 @@ function Features_Anime_Three() {
   };
   return (
     <section>
-      <div className="flex flex-col lg:flex-row gap-10 p-8 lg:p-16 mt-[-128px]">
+      <div className="flex flex-col lg:flex-row gap-10 pr-8 pl-8">
         <div className="w-full lg:w-[40rem]">
-          <p className="text-primary dark:text-primary-dark mt-5">Features 3</p>
+          <p className="text-primary dark:text-primary-dark">Features 3</p>
           <h3 className="text-4xl sm:text-4xl mt-5 dark:text-primary-dark text-primary">
             From Idea to Intelligence. Instantly.
           </h3>

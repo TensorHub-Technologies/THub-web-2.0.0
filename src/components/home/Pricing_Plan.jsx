@@ -78,7 +78,7 @@ function Pricing_Plan() {
 
   return (
     <>
-      <div className="w-full mt-14">
+      <div className="w-full">
         <h2 className="w-3/4 mx-auto text-center text-4xl font-semibold text-gray-800 dark:text-gray-100 mb-8">
           250+ Integrated Tools
         </h2>

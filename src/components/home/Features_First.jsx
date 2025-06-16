@@ -7,48 +7,25 @@ import pipedark from "../../assets/icons/home-icons/pipe_dark.svg";
 import pipelite from "../../assets/icons/home-icons/pipe_lite.svg";
 
 function Features_First() {
-  let url;
-  const theme = localStorage.getItem("isDarkMode") === "true" ? "dark" : "lite";
-  const hostname = window.location.hostname;
+  // let url;
+  // const theme = localStorage.getItem("isDarkMode") === "true" ? "dark" : "lite";
+  // const hostname = window.location.hostname;
   const isDarkMode = useSelector((state) => state.customization.isDarkMode);
 
-  switch (hostname) {
-    case "localhost":
-      url = `http://localhost:8080/?theme=${theme}`;
-      break;
-    case "thub-web-demo-378678297066.europe-west1.run.app":
-      url = `https://demo.thub.tech/`;
-      break;
-    default:
-      url = `https://app.thub.tech/?theme=${theme}`;
-      break;
-  }
+  // switch (hostname) {
+  //   case "localhost":
+  //     url = `http://localhost:8080/?theme=${theme}`;
+  //     break;
+  //   case "thub-web-demo-378678297066.europe-west1.run.app":
+  //     url = `https://demo.thub.tech/`;
+  //     break;
+  //   default:
+  //     url = `https://app.thub.tech/?theme=${theme}`;
+  //     break;
+  // }
 
   return (
     <section className="px-5 py-4 lg:px-16">
-      {/* Heading Section */}
-      <div className="flex justify-center text-center mt-10">
-        <h1 className="dark:text-white text-secondary text-3xl md:text-4xl lg:text-5xl font-bold w-[60rem]">
-          One Platform. Infinite Possibilities
-        </h1>
-      </div>
-      <div className="flex justify-center text-center mt-1">
-        <h2
-          className="dark:text-white text-secondary mt-5 mb-12  text-2xl md:text-3xl lg:text-4xl font-bold w-[60rem]"
-          style={{ lineHeight: "4rem" }}
-        >
-          Build{" "}
-          <span className="text-primary dark:text-primary-dark">
-            {" "}
-            Multi Agents
-          </span>{" "}
-          & <span className="text-primary dark:text-primary-dark">
-            GenAI
-          </span>{" "}
-          Apps at Rapid Pace Across Your Favorite LLMs
-        </h2>
-      </div>
-
       {/* Features Grid */}
       <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
         {/* Feature 1 */}
@@ -113,16 +90,16 @@ function Features_First() {
         </div>
       </div>
 
-      <div className="flex justify-center">
+      {/* <div className="flex justify-center">
         <a href={url} target="_blank">
           <button
             type="button"
-            className="text-white dark:text-secondary bg-primary hover:bg-blue-900 font-lg rounded-lg text-lg px-5 py-2.5 me-2 mt-10 dark:bg-primary-dark dark:hover:bg-pink-600 focus:outline-none"
+            className="text-white dark:text-secondary bg-primary hover:bg-blue-900 font-lg rounded-lg text-lg px-5 py-2.5 me-2  dark:bg-primary-dark dark:hover:bg-pink-600 focus:outline-none"
           >
             Try a demo
           </button>
         </a>
-      </div>
+      </div> */}
     </section>
   );
 }

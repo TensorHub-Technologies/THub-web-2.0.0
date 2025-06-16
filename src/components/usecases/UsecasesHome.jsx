@@ -73,7 +73,8 @@ const UsecaseHome = () => {
       tenantId: "9bf57af6-4020-4e53-951d-647d2db86070",
       icon: softwareDevelopmentAgent,
       workspaceUid: "9bf57af6-4020-4e53-951d-647d2db86070",
-      description: "",
+      description:
+        "The Software Development Agent is an AI-powered assistant that accelerates the end-to-end software development lifecycle—from requirements gathering to code generation, testing, and deployment. It supports product managers, developers, and DevOps teams by automating repetitive tasks, improving code quality, and ensuring faster delivery cycles.",
       agentUrl:
         "https://demo.thub.tech/chatbot/953d0151-5356-41e3-9e79-ba8b429d064a",
     },
@@ -102,8 +103,8 @@ const UsecaseHome = () => {
   ];
 
   return (
-    <div className="border-red-400 dark:bg-secondary mt-16">
-      <section className="px-5 py-10 lg:px-20">
+    <div className="border-red-400 dark:bg-secondary mt-8">
+      <section className="px-5 pb-10 lg:px-20">
         <div className="mb-4">
           <p className="font-sans text-2xl dark:text-white">Agents Gallery</p>
         </div>

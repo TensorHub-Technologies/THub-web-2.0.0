@@ -26,7 +26,7 @@ function Features_Anime_Two() {
   const isDarkMode = useSelector((state) => state.customization.isDarkMode);
   return (
     <section>
-      <div className="flex flex-col-reverse lg:flex-row gap-10 p-8 lg:p-16 mt-[-88px] pb-20">
+      <div className="flex flex-col-reverse lg:flex-row gap-10 lg:pl-16 lg:pr-16">
         <div className="w-full lg:w-auto flex justify-center items-center">
           <img
             className="gif-anime object-contain max-w-full h-auto"

@@ -1,6 +1,5 @@
 import Usecase from "../components/usecases/Usecases";
 import Accordion from "../components/home/Accordion";
-import FooterImage from "../components/home/FooterImage";
 
 const Usecases = () => {
   return (
@@ -17,7 +16,7 @@ const Usecases = () => {
 
       <Usecase />
       <Accordion />
-      <FooterImage />
+      {/* <FooterImage /> */}
     </div>
   );
 };

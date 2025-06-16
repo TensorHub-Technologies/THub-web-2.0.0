@@ -60,7 +60,7 @@ const Hero = () => {
   }, [currentIndex, letterIndex]);
 
   return (
-    <section className="mt-16">
+    <section className="mt-8">
       <Helmet>
         <title>THub - Build AI Apps 30X Faster | No-Code GenAI Platform</title>
         <meta
@@ -98,7 +98,7 @@ const Hero = () => {
         <a href={url} target="_blank">
           <button
             type="button"
-            className="text-white bg-gradient-to-r from-[#B425D5] to-[#FB5582] hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 font-medium rounded-lg px-8 py-4 text-center me-2 mb-2 text-lg mt-2"
+            className="text-white bg-gradient-to-r from-[#B425D5] to-[#FB5582] hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 font-medium rounded-lg px-8 py-4 text-center me-2 my-8 text-lg "
           >
             <div className=" flex ">
               <span className="mr-2">
