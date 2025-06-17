@@ -71,10 +71,10 @@ const Navbar = () => {
       url = import.meta.env.VITE_THUB_WEB_URL;
       break;
     case "thub-web-demo-378678297066.europe-west1.run.app":
-      url = import.meta.env.VITE_THUB_WEB_APP_URL;
+      url = import.meta.env.VITE_THUB_WEB_DEMO_URL;
       break;
     default:
-      url = import.meta.env.VITE_THUB_WEB_DEMO_URL;
+      url = import.meta.env.VITE_THUB_WEB_APP_URL;
       break;
   }
   console.log(url, "url");
