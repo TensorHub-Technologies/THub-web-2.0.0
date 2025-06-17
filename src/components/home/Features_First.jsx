@@ -79,7 +79,7 @@ function Features_First() {
           </div>
           <div className="flex flex-col gap-5">
             <h4 className="text-2xl font-semibold dark:text-white">
-              Turn Data Into Decisions.
+              Turn Data Into Actions.
             </h4>
             <p className="text-lg dark:text-secondary-dark  text-start">
               Structured.&nbsp; Semi-Structured.&nbsp; Unstructured. With THub’s
