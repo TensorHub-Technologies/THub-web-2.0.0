@@ -54,7 +54,7 @@ function FirstPage() {
           & <span className="text-primary dark:text-primary-dark">
             GenAI
           </span>{" "}
-          Apps at Rapid Pace Across Your Favorite LLMs
+          Apps at Rapid Pace Across Your Favorite Tools
         </h2>
       </div>
       <div className="flex justify-center">

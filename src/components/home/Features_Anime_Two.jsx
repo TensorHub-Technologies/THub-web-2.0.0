@@ -39,7 +39,7 @@ function Features_Anime_Two() {
         <div className="w-full lg:w-[40rem]">
           <p className="text-primary dark:text-primary-dark mt-5">Features 2</p>
           <h3 className="text-4xl sm:text-4xl mt-5 dark:text-primary-dark text-primary">
-            Smarter Data. Sharper Apps.
+            Smarter Data. Sharper Actions.
           </h3>
           <h4 className="text-3xl sm:text-3xl mt-2 dark:text-white">
             Harness the Power of Vector Search and Voice Intelligence.

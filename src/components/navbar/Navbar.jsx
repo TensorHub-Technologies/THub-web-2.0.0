@@ -143,19 +143,35 @@ const Navbar = () => {
         }`}
       >
         <div>
-          {navItems.map((item) => (
-            <div
-              key={item.path}
-              className={`cursor-pointer ${
-                activePage === item.path
-                  ? "text-primary dark:text-primary-dark "
-                  : "text-secondary hover:text-primary dark:text-secondary-dark dark:hover:text-primary-dark"
-              }`}
-              onClick={() => handleNavigation(item.path)}
-            >
-              {item.name}
-            </div>
-          ))}
+          {navItems.map((item) =>
+            item.name === "Login" ? (
+              <a
+                key={item.path}
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`cursor-pointer ${
+                  activePage === item.path
+                    ? "text-primary dark:text-primary-dark"
+                    : "text-secondary hover:text-primary dark:text-secondary-dark dark:hover:text-primary-dark"
+                }`}
+              >
+                {item.name}
+              </a>
+            ) : (
+              <div
+                key={item.path}
+                className={`cursor-pointer ${
+                  activePage === item.path
+                    ? "text-primary dark:text-primary-dark"
+                    : "text-secondary hover:text-primary dark:text-secondary-dark dark:hover:text-primary-dark"
+                }`}
+                onClick={() => handleNavigation(item.path)}
+              >
+                {item.name}
+              </div>
+            ),
+          )}
         </div>
 
         <div>
