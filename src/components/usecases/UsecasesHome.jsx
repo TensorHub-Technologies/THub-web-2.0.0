@@ -13,37 +13,14 @@ import financialAnalysisAgent from "../../assets/agent-logos/Financial_Analyst_A
 const UsecaseHome = () => {
   const chatFlowData = [
     {
-      id: "3e63c8ad-ea5b-4897-b7d0-0cfbf38424d5",
-      name: "Product Comparison Agent",
+      id: "e49090f8-566a-4a66-a006-64af2325627f",
+      name: "Customer Support and Sales Agent",
       tenantId: "9bf57af6-4020-4e53-951d-647d2db86070",
-      icon: productComparisonAgent,
-      workspaceUid: "9bf57af6-4020-4e53-951d-647d2db86070",
-      description:
-        "The Product Comparison Agent is an AI-powered assistant that automates side-by-side evaluations of competing products based on features, pricing, specifications, customer reviews, and third-party benchmarks. Ideal for sales teams, procurement units, or end-users, it delivers objective, data-driven comparisons to aid faster and smarter decision-making.",
-      agentUrl:
-        "https://demo.thub.tech/chatbot/3e63c8ad-ea5b-4897-b7d0-0cfbf38424d5",
-    },
-    {
-      id: "ac291b9a-6ed1-40ec-b857-6fddb9c1299a",
-      name: "Insurance Underwriting Agent",
       icon: insuranceUnderwritingLogo,
-      tenantId: "9bf57af6-4020-4e53-951d-647d2db86070",
       workspaceUid: "9bf57af6-4020-4e53-951d-647d2db86070",
-      description:
-        "The Insurance Underwriting Agent is an AI-powered assistant that automates the underwriting process by analyzing customer data, medical history, policy documents, and risk factors.",
+      description: "Workflow for RAG on Music and Arts website.",
       agentUrl:
-        "https://demo.thub.tech/chatbot/ac291b9a-6ed1-40ec-b857-6fddb9c1299a",
-    },
-    {
-      id: "d6266541-acae-4fea-8f0b-18c887ba130e",
-      name: "Startup Idea Generator Agent",
-      tenantId: "9bf57af6-4020-4e53-951d-647d2db86070",
-      icon: startUpIdeaLogo,
-      workspaceUid: "9bf57af6-4020-4e53-951d-647d2db86070",
-      description:
-        "The Startup Idea Generator Agent is an AI-powered brainstorming assistant designed to help entrepreneurs, innovators, and venture studios discover unique and viable startup ideas. It analyzes market trends, user pain points, emerging technologies, and successful business models to generate validated startup concepts across industries.",
-      agentUrl:
-        "https://demo.thub.tech/chatbot/d6266541-acae-4fea-8f0b-18c887ba130e",
+        "https://demo.thub.tech/chatbot/e49090f8-566a-4a66-a006-64af2325627f",
     },
     {
       id: "7358dce3-838e-40f6-aea6-4f6ee5cd5c22",
@@ -57,26 +34,26 @@ const UsecaseHome = () => {
         "https://demo.thub.tech/chatbot/7358dce3-838e-40f6-aea6-4f6ee5cd5c22",
     },
     {
-      id: "5b3484d7-deb1-498c-b91b-aefd9199df75",
-      name: "Code Review Agent",
+      id: "d6266541-acae-4fea-8f0b-18c887ba130e",
+      name: "Startup Idea Generator Agent",
       tenantId: "9bf57af6-4020-4e53-951d-647d2db86070",
-      icon: codeReviewAgent,
+      icon: startUpIdeaLogo,
       workspaceUid: "9bf57af6-4020-4e53-951d-647d2db86070",
       description:
-        "The Code Review Agent is an AI-powered assistant designed to automatically analyze, review, and provide feedback on source code across multiple languages.",
+        "The Startup Idea Generator Agent is an AI-powered brainstorming assistant designed to help entrepreneurs, innovators, and venture studios discover unique and viable startup ideas. It analyzes market trends, user pain points, emerging technologies, and successful business models to generate validated startup concepts across industries.",
       agentUrl:
-        "https://demo.thub.tech/chatbot/5b3484d7-deb1-498c-b91b-aefd9199df75",
+        "https://demo.thub.tech/chatbot/d6266541-acae-4fea-8f0b-18c887ba130e",
     },
     {
-      id: "953d0151-5356-41e3-9e79-ba8b429d064a",
-      name: "Software Development Agent",
+      id: "3e63c8ad-ea5b-4897-b7d0-0cfbf38424d5",
+      name: "Product Comparison Agent",
       tenantId: "9bf57af6-4020-4e53-951d-647d2db86070",
-      icon: softwareDevelopmentAgent,
+      icon: productComparisonAgent,
       workspaceUid: "9bf57af6-4020-4e53-951d-647d2db86070",
       description:
-        "The Software Development Agent is an AI-powered assistant that accelerates the end-to-end software development lifecycle—from requirements gathering to code generation, testing, and deployment. It supports product managers, developers, and DevOps teams by automating repetitive tasks, improving code quality, and ensuring faster delivery cycles.",
+        "The Product Comparison Agent is an AI-powered assistant that automates side-by-side evaluations of competing products based on features, pricing, specifications, customer reviews, and third-party benchmarks. Ideal for sales teams, procurement units, or end-users, it delivers objective, data-driven comparisons to aid faster and smarter decision-making.",
       agentUrl:
-        "https://demo.thub.tech/chatbot/953d0151-5356-41e3-9e79-ba8b429d064a",
+        "https://demo.thub.tech/chatbot/3e63c8ad-ea5b-4897-b7d0-0cfbf38424d5",
     },
     {
       id: "7d8b5e28-6805-4d2a-b4c7-85008dc94b27",
@@ -99,6 +76,39 @@ const UsecaseHome = () => {
         "The Competitor Analysis Agent is an AI-driven assistant that continuously monitors, extracts, and analyzes competitive intelligence from public sources such as websites, press releases, financial filings, job postings, social media, and news. It helps strategy, product, and sales teams stay informed on market movements, product updates, pricing strategies, and emerging threats.",
       agentUrl:
         "https://demo.thub.tech/chatbot/3282cd95-4df4-4758-9766-a9cb862eed83",
+    },
+    // {
+    //   id: "ac291b9a-6ed1-40ec-b857-6fddb9c1299a",
+    //   name: "Insurance Underwriting Agent",
+    //   icon: insuranceUnderwritingLogo,
+    //   tenantId: "9bf57af6-4020-4e53-951d-647d2db86070",
+    //   workspaceUid: "9bf57af6-4020-4e53-951d-647d2db86070",
+    //   description:
+    //     "The Insurance Underwriting Agent is an AI-powered assistant that automates the underwriting process by analyzing customer data, medical history, policy documents, and risk factors.",
+    //   agentUrl:
+    //     "https://demo.thub.tech/chatbot/ac291b9a-6ed1-40ec-b857-6fddb9c1299a",
+    // },
+    {
+      id: "5b3484d7-deb1-498c-b91b-aefd9199df75",
+      name: "Code Review Agent",
+      tenantId: "9bf57af6-4020-4e53-951d-647d2db86070",
+      icon: codeReviewAgent,
+      workspaceUid: "9bf57af6-4020-4e53-951d-647d2db86070",
+      description:
+        "The Code Review Agent is an AI-powered assistant designed to automatically analyze, review, and provide feedback on source code across multiple languages.",
+      agentUrl:
+        "https://demo.thub.tech/chatbot/5b3484d7-deb1-498c-b91b-aefd9199df75",
+    },
+    {
+      id: "953d0151-5356-41e3-9e79-ba8b429d064a",
+      name: "Software Development Agent",
+      tenantId: "9bf57af6-4020-4e53-951d-647d2db86070",
+      icon: softwareDevelopmentAgent,
+      workspaceUid: "9bf57af6-4020-4e53-951d-647d2db86070",
+      description:
+        "The Software Development Agent is an AI-powered assistant that accelerates the end-to-end software development lifecycle—from requirements gathering to code generation, testing, and deployment. It supports product managers, developers, and DevOps teams by automating repetitive tasks, improving code quality, and ensuring faster delivery cycles.",
+      agentUrl:
+        "https://demo.thub.tech/chatbot/953d0151-5356-41e3-9e79-ba8b429d064a",
     },
   ];
 
