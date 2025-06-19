@@ -5,7 +5,7 @@ const AgentCard = ({ title, description, logo, agentUrl = "#" }) => {
   return (
     <div>
       <div
-        className="group max-w-sm p-6 h-80 bg-gray-50 border border-gray-200 rounded-lg shadow-sm dark:bg-[#191B1F] dark:border-gray-700
+        className="group max-w-sm p-6 h-80 bg-gray-50/30 border border-gray-200 rounded-lg shadow-sm dark:bg-[#191B1F] dark:border-gray-700
         transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-lg"
       >
         <div>
