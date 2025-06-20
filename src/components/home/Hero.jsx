@@ -1,24 +1,38 @@
-import "./Home.css";
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
+import { useState } from "react";
 import { useSelector } from "react-redux";
-import Picture_dark from "../../assets/images/Picture2.png";
-import Picture_lite from "../../assets/images/Picture1.png";
-import { useNavigate } from "react-router-dom";
+import FirstPage from "./FirstPage";
 import { Helmet } from "react-helmet";
 
-function Hero() {
-  const navigate = useNavigate();
-  const handleClick = () => {
-    navigate("/auth/login");
-  };
+// images
+import sparkels from "../../assets/images/button-logo/sparkles-white.svg";
+import UsecaseHome from "../usecases/UsecasesHome";
 
+const Hero = () => {
   const isDarkMode = useSelector((state) => state.customization.isDarkMode);
+
+  let url;
+  const theme = localStorage.getItem("isDarkMode") === "true" ? "dark" : "lite";
+  const hostname = window.location.hostname;
+
+  switch (hostname) {
+    case "localhost":
+      url = `http://localhost:8080/?theme=${theme}`;
+      break;
+    case "thub-web-demo-378678297066.europe-west1.run.app":
+      url = `https://demo.thub.tech/`;
+      break;
+    default:
+      url = `https://app.thub.tech/?theme=${theme}`;
+      break;
+  }
+
   const strings = [
-    "Agentic Workflows",
-    "RAG Systems",
-    "GenAI Apps",
-    "Vector Embeddings",
-    "Retrieval Augmented Fine Tuning",
+    "Agentic AI",
+    "Multi Agents",
+    "Sequential Agents",
+    "Vertical Agents",
+    "Agent to Agent Call",
   ];
   const cursorColor = isDarkMode ? "white" : "black";
 
@@ -46,7 +60,7 @@ function Hero() {
   }, [currentIndex, letterIndex]);
 
   return (
-    <>
+    <section className="mt-8">
       <Helmet>
         <title>THub - Build AI Apps 30X Faster | No-Code GenAI Platform</title>
         <meta
@@ -59,50 +73,44 @@ function Hero() {
         />
         <link rel="canonical" href="https://thub.tech/" />
       </Helmet>
-      <section id={isDarkMode ? "" : "hero-main-light"}>
-        <div id="hero-container" className=" py-5">
-          <h1 className="text-center text-primary dark:text-primary-dark mt-24 text-5xl">
-            Build Smarter. Build Faster. Build with THub.
-          </h1>
-          <h2 className="text-center text-secondary dark:text-white mt-4 text-5xl">
-            The 30X Faster Way to Launch
-          </h2>
-          <div className="flex justify-center my-4">
-            <span
-              className="text-center font-bold text-5xl bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent inline-block"
-              id="type-animation"
-            >
-              {currentText}
-              <span
-                className="Typewriter__cursor"
-                style={{ color: cursorColor }}
-              >
-                |
-              </span>
+      <div id="hero-container" className=" py-5">
+        <h1 className="text-center text-primary dark:text-primary-dark mt-24 text-5xl">
+          Build Smarter. Build Faster. Build with THub.
+        </h1>
+        <h3 className="text-center text-secondary dark:text-white mt-4 text-5xl">
+          The 30X Faster Way to Launch
+        </h3>
+        <div className="flex justify-center my-4">
+          <span
+            className="text-center font-bold text-5xl bg-gradient-to-r from-primary to-primary-dark bg-clip-text text-transparent inline-block"
+            id="type-animation"
+          >
+            {currentText}
+            <span className="Typewriter__cursor" style={{ color: cursorColor }}>
+              |
             </span>
-          </div>
+          </span>
         </div>
-        <div className="flex justify-center">
+      </div>
+      <UsecaseHome />
+      <FirstPage />
+      <div className="flex justify-center ">
+        <a href={url} target="_blank">
           <button
             type="button"
-            className="text-white bg-gradient-to-r from-[#B425D5] to-[#FB5582] hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 font-medium rounded-lg px-8 py-4 text-center me-2 mb-2 text-lg mt-5"
-            onClick={() => handleClick()}
+            className="text-white bg-gradient-to-r from-[#B425D5] to-[#FB5582] hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 font-medium rounded-lg px-8 py-4 text-center me-2 my-8 text-lg "
           >
-            Start Now
+            <div className=" flex ">
+              <span className="mr-2">
+                <img src={sparkels} alt="sparkles" />
+              </span>
+              <span>Start Now</span>
+            </div>
           </button>
-        </div>
-        <div className="flex justify-center">
-          <div className="border-2 dark:border-primary-dark border-primary w-8/12 my-10 rounded-3xl">
-            <img
-              src={isDarkMode ? Picture_dark : Picture_lite}
-              alt="THub AI Platform Hero Banner showing No-code GenAI Solutions"
-              loading="lazy"
-            />
-          </div>
-        </div>
-      </section>
-    </>
+        </a>
+      </div>
+    </section>
   );
-}
+};
 
 export default Hero;

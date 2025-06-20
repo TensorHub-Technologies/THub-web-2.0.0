@@ -3,7 +3,6 @@ import { useSelector } from "react-redux";
 import { pricingData } from "./PricingData";
 import subStyle from "./subscription.module.css";
 import PriceDropdown from "./PriceDropdown";
-import { useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
 import Enterprice_Form from "./Enterprice_Form";
 import LogoSlider from "./LogoSlider";
@@ -13,20 +12,35 @@ function Pricing_Plan() {
   const [selectedPlan, setSelectedPlan] = useState("monthly");
   const [currency, setCurrency] = useState("INR");
   const [showForm, setShowForm] = useState(false);
-  const navigate = useNavigate();
 
   const handleMonthly = () => setSelectedPlan("monthly");
   const handleYearly = () => setSelectedPlan("yearly");
+  const hostname = window.location.hostname;
+  let url;
+  switch (hostname) {
+    case "localhost":
+      url = `http://localhost:8080`;
+      break;
+    case "thub-web-demo-378678297066.europe-west1.run.app":
+      url = `https://demo.thub.tech`;
+      break;
+    default:
+      url = `https://app.thub.tech`;
+      break;
+  }
 
   // Handler to update the currency based on dropdown selection
   const handleCurrencyChange = (selectedCurrency) =>
     setCurrency(selectedCurrency);
 
   const handleClick = (planTitle) => {
-    if (planTitle === "Enterprise") {
+    console.log(planTitle);
+    if (planTitle === "Pro Power") {
+      window.open(url, "_blank");
+    } else if (planTitle === "Free Forever") {
+      window.open(url, "_blank");
+    } else if (planTitle === "Enterprise Excellence") {
       setShowForm(true);
-    } else {
-      navigate("/auth/login");
     }
   };
 
@@ -64,7 +78,7 @@ function Pricing_Plan() {
 
   return (
     <>
-      <div className="w-full mt-14">
+      <div className="w-full">
         <h2 className="w-3/4 mx-auto text-center text-4xl font-semibold text-gray-800 dark:text-gray-100 mb-8">
           250+ Integrated Tools
         </h2>

@@ -15,6 +15,10 @@ const Navbar = () => {
   const dispatch = useDispatch();
   const isDarkMode = useSelector((state) => state.customization.isDarkMode);
 
+  console.log("THub local:", import.meta.env.VITE_THUB_WEB_URL);
+  console.log("THub demo:", import.meta.env.VITE_THUB_WEB_DEMO_URL);
+  console.log("THub prod:", import.meta.env.VITE_THUB_WEB_APP_URL);
+
   useEffect(() => {
     const root = window.document.documentElement;
     if (isDarkMode) {
@@ -61,16 +65,16 @@ const Navbar = () => {
   let url;
   const hostname = window.location.hostname;
   console.log(hostname, "hostname");
-  
+
   switch (hostname) {
     case "localhost":
-      url = `http://localhost:8080`;
+      url = import.meta.env.VITE_THUB_WEB_URL;
       break;
     case "thub-web-demo-378678297066.europe-west1.run.app":
-      url = `https://demo.thub.tech`;
+      url = import.meta.env.VITE_THUB_WEB_DEMO_URL;
       break;
     default:
-      url = `https://app.thub.tech`;
+      url = import.meta.env.VITE_THUB_WEB_APP_URL;
       break;
   }
   console.log(url, "url");
@@ -134,23 +138,41 @@ const Navbar = () => {
         {open ? <IoMdClose /> : <GrMenu />}
       </div>
       <div
-        className={`gap-6 absolute top-16 right-0 bg-background dark:bg-secondary flex flex-col py-12 px-8 lg:hidden md:hidden duration-300 z-[-1] ease-in-out ${
+        className={`gap-6 absolute top-16 right-0  bg-background dark:bg-secondary flex flex-col py-12 px-8 lg:hidden md:hidden duration-300 z-[-1] ease-in-out ${
           open ? "top-16" : "top-[-700px]"
         }`}
       >
-        {navItems.map((item) => (
-          <div
-            key={item.path}
-            className={`cursor-pointer ${
-              activePage === item.path
-                ? "text-primary dark:text-primary-dark "
-                : "text-secondary hover:text-primary dark:text-secondary-dark dark:hover:text-primary-dark"
-            }`}
-            onClick={() => handleNavigation(item.path)}
-          >
-            {item.name}
-          </div>
-        ))}
+        <div>
+          {navItems.map((item) =>
+            item.name === "Login" ? (
+              <a
+                key={item.path}
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`cursor-pointer ${
+                  activePage === item.path
+                    ? "text-primary dark:text-primary-dark"
+                    : "text-secondary hover:text-primary dark:text-secondary-dark dark:hover:text-primary-dark"
+                }`}
+              >
+                {item.name}
+              </a>
+            ) : (
+              <div
+                key={item.path}
+                className={`cursor-pointer ${
+                  activePage === item.path
+                    ? "text-primary dark:text-primary-dark"
+                    : "text-secondary hover:text-primary dark:text-secondary-dark dark:hover:text-primary-dark"
+                }`}
+                onClick={() => handleNavigation(item.path)}
+              >
+                {item.name}
+              </div>
+            ),
+          )}
+        </div>
 
         <div>
           <a

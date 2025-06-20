@@ -6,7 +6,6 @@ import screen8 from "../../assets/screens/screen-8.png";
 import screen6 from "../../assets/screens/screen-6.jpg";
 
 import Accordion from "../home/Accordion";
-import FooterImage from "../home/FooterImage";
 
 const UsecasesDetails = () => {
   const isDarkMode = useSelector((state) => state.customization.isDarkMode);
@@ -208,7 +207,7 @@ const UsecasesDetails = () => {
 
       <Accordion />
 
-      <FooterImage />
+      {/* <FooterImage /> */}
     </div>
   );
 };

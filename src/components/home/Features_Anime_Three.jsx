@@ -3,19 +3,31 @@ import feature_third_gif_light from "../../assets/illustrations/feature_third-2.
 
 // redux
 import { useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
 
 function Features_Anime_Three() {
   const isDarkMode = useSelector((state) => state.customization.isDarkMode);
-  const navigate = useNavigate();
   const handleNavigation = () => {
-    navigate("/auth/login");
+    const hostname = window.location.hostname;
+    let url;
+    console.log(hostname, "hostname");
+    switch (hostname) {
+      case "localhost":
+        url = import.meta.env.VITE_THUB_WEB_SERVER_LOCAL_URL;
+        break;
+      case "thub-web-demo-378678297066.europe-west1.run.app":
+        url = import.meta.env.VITE_THUB_WEB_SERVER_DEMO_URL;
+        break;
+      default:
+        url = import.meta.env.VITE_THUB_WEB_SERVER_PROD_URL;
+        break;
+    }
+    window.open(url, "_blank");
   };
   return (
     <section>
-      <div className="flex flex-col lg:flex-row gap-10 p-8 lg:p-16 mt-[-128px]">
+      <div className="flex flex-col lg:flex-row gap-10 pr-8 pl-8">
         <div className="w-full lg:w-[40rem]">
-          <p className="text-primary dark:text-primary-dark mt-5">Features 3</p>
+          <p className="text-primary dark:text-primary-dark">Features 3</p>
           <h3 className="text-4xl sm:text-4xl mt-5 dark:text-primary-dark text-primary">
             From Idea to Intelligence. Instantly.
           </h3>

@@ -93,7 +93,7 @@
 
 
   <script type="module">
-    import Chatbot from "https://cdn.jsdelivr.net/npm/thub-embed@9.2.6/dist/web.js"
+    import Chatbot from "https://cdn.jsdelivr.net/npm/thub-embed@9.3.3/dist/web.js"
     Chatbot.init({
       chatflowid: "2b414cd1-cded-4915-be17-31e256246765",
       apiHost: "https://demo.thub.tech",
@@ -117,24 +117,17 @@
       },
       theme: {
         button: {
-          backgroundColor: 'white',
           right: 20,
           bottom: 20,
-          size: "large",
-          dragAndDrop: false,
+          size: "small",
+          dragAndDrop: true,
           iconColor: 'black',
+          customIconSrc: 'assets/robo1.mp4', 
           autoWindowOpen: {
             autoOpen: false, 
             openDelay: 2, 
             autoOpenOnMobile: false,
           },
-        },
-        tooltip: {
-          showTooltip: true,
-          tooltipMessage: 'Hi There 👋!',
-          tooltipBackgroundColor: 'black',
-          tooltipTextColor: 'white',
-          tooltipFontSize: 16,
         },
         customCSS: ``, // Add custom CSS styles. Use !important to override default styles
         chatWindow: {
@@ -145,7 +138,7 @@
               ? localStorage.getItem("name") + " "
               : "Guest" + " "
             }welcome to THub`,
-          //  titleAvatarSrc: 'svg/thub_icon.svg',
+          //titleAvatarSrc: 'svg/thub_icon.svg',
           titleBackgroundColor: 'linear-gradient(90deg, #e22a90 0%, #3c5ba4 100%)',
           titleTextColor: '#ffffff',
           welcomeMessage: "THub Bot",

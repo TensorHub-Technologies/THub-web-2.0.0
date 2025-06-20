@@ -1,4 +1,3 @@
-import { useNavigate } from "react-router-dom";
 import feature_second_gif_dark from "../../assets/illustrations/feature_second-1.gif";
 import feature_second_gif_light from "../../assets/illustrations/feature_second-2.gif";
 
@@ -6,15 +5,28 @@ import feature_second_gif_light from "../../assets/illustrations/feature_second-
 import { useSelector } from "react-redux";
 
 function Features_Anime_Two() {
-  const navigate = useNavigate();
   const handleNavigation = () => {
-    console.log("redirection");
-    navigate("/auth/login");
+    const hostname = window.location.hostname;
+    let url;
+    console.log(hostname, "hostname");
+
+    switch (hostname) {
+      case "localhost":
+        url = import.meta.env.VITE_THUB_WEB_SERVER_LOCAL_URL;
+        break;
+      case "thub-web-demo-378678297066.europe-west1.run.app":
+        url = import.meta.env.VITE_THUB_WEB_SERVER_DEMO_URL;
+        break;
+      default:
+        url = import.meta.env.VITE_THUB_WEB_SERVER_PROD_URL;
+        break;
+    }
+    window.open(url, "_blank");
   };
   const isDarkMode = useSelector((state) => state.customization.isDarkMode);
   return (
     <section>
-      <div className="flex flex-col-reverse lg:flex-row gap-10 p-8 lg:p-16 mt-[-88px] pb-20">
+      <div className="flex flex-col-reverse lg:flex-row gap-10 lg:pl-16 lg:pr-16">
         <div className="w-full lg:w-auto flex justify-center items-center">
           <img
             className="gif-anime object-contain max-w-full h-auto"
@@ -27,7 +39,7 @@ function Features_Anime_Two() {
         <div className="w-full lg:w-[40rem]">
           <p className="text-primary dark:text-primary-dark mt-5">Features 2</p>
           <h3 className="text-4xl sm:text-4xl mt-5 dark:text-primary-dark text-primary">
-            Smarter Data. Sharper Apps.
+            Smarter Data. Sharper Actions.
           </h3>
           <h4 className="text-3xl sm:text-3xl mt-2 dark:text-white">
             Harness the Power of Vector Search and Voice Intelligence.
