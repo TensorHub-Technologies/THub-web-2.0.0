@@ -8,7 +8,6 @@ import Hero from "../components/home/Hero";
 
 const Home = () => {
   console.log("*** env: ", import.meta.env.VITE_URL);
-  console.log(import.meta.env.VITE_SOME_KEY);
   return (
     <div
       className="w-full min-h-screen dark:bg-secondary bg-[#FEFEFE]"
