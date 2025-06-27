@@ -15,10 +15,6 @@ const Navbar = () => {
   const dispatch = useDispatch();
   const isDarkMode = useSelector((state) => state.customization.isDarkMode);
 
-  console.log("THub local:", import.meta.env.VITE_THUB_WEB_URL);
-  console.log("THub demo:", import.meta.env.VITE_THUB_WEB_DEMO_URL);
-  console.log("THub prod:", import.meta.env.VITE_THUB_WEB_APP_URL);
-
   useEffect(() => {
     const root = window.document.documentElement;
     if (isDarkMode) {
@@ -82,9 +78,15 @@ const Navbar = () => {
   return (
     <nav className="h-auto fixed top-0 left-0 right-0 z-50 bg-white px-2 py-5 flex dark:bg-secondary shadow-lg">
       <div className="mx-auto flex items-center justify-between">
-        <Link to="/">
+        <Link
+          to="/"
+          onClick={() => {
+            window.location.href = "/";
+          }}
+        >
           <img src={ThubLogo} className="h-10 w-38" alt="THub Logo" />
         </Link>
+
         <div className="flex-wrap items-center justify-between gap-8 ml-16 hidden md:flex">
           {navItems.map((item) =>
             item.name === "Login" ? (
