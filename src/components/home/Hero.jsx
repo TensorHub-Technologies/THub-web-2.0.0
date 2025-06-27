@@ -12,18 +12,17 @@ const Hero = () => {
   const isDarkMode = useSelector((state) => state.customization.isDarkMode);
 
   let url;
-  const theme = localStorage.getItem("isDarkMode") === "true" ? "dark" : "lite";
   const hostname = window.location.hostname;
 
   switch (hostname) {
     case "localhost":
-      url = `http://localhost:8080/?theme=${theme}`;
+      url = `http://localhost:8080/signup`;
       break;
     case "thub-web-demo-378678297066.europe-west1.run.app":
-      url = `https://demo.thub.tech/`;
+      url = `https://demo.thub.tech/signup`;
       break;
     default:
-      url = `https://app.thub.tech/?theme=${theme}`;
+      url = `https://app.thub.tech/signup`;
       break;
   }
 

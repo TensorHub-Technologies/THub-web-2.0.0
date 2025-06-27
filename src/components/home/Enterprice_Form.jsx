@@ -45,7 +45,7 @@ const Enterprice_Form = ({ setShowForm, handleLoading, handleError }) => {
     };
   }, [setShowForm]);
 
-  const handleSubmit = async (values) => {
+  const handleSubmit = async (values, resetForm) => {
     console.log(values, "submitting");
     const apiUrl =
       window.location.hostname === "localhost"
@@ -53,10 +53,11 @@ const Enterprice_Form = ({ setShowForm, handleLoading, handleError }) => {
         : "https://thub-web-server-2-0-378678297066.us-central1.run.app";
 
     try {
-      handleLoading("Form Submitted Successfully");
       const response = await axios.post(`${apiUrl}/enterprice-mail`, values);
       if (response.status === 200 || response.status === "ok") {
         handleLoading("We'll reach out shortly!");
+        resetForm();
+        setShowForm(false);
       }
     } catch (error) {
       handleError("Form Submission Failed");
@@ -73,7 +74,7 @@ const Enterprice_Form = ({ setShowForm, handleLoading, handleError }) => {
         <Formik
           initialValues={initialValues}
           validationSchema={validationSchema}
-          onSubmit={(values) => handleSubmit(values)}
+          onSubmit={(values, { resetForm }) => handleSubmit(values, resetForm)}
         >
           {() => (
             <Form>
