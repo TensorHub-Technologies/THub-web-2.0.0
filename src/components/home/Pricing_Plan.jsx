@@ -5,7 +5,6 @@ import subStyle from "./subscription.module.css";
 import PriceDropdown from "./PriceDropdown";
 import { ToastContainer, toast } from "react-toastify";
 import Enterprice_Form from "./Enterprice_Form";
-import LogoSlider from "./LogoSlider";
 
 function Pricing_Plan() {
   const isDarkMode = useSelector((state) => state.customization.isDarkMode);
@@ -78,12 +77,6 @@ function Pricing_Plan() {
 
   return (
     <>
-      <div className="w-full">
-        <h2 className="w-3/4 mx-auto text-center text-4xl font-semibold text-gray-800 dark:text-gray-100 mb-8">
-          250+ Integrated Tools
-        </h2>
-        <LogoSlider />
-      </div>
       <section className="px-4 sm:px-8 lg:px-16 pb-10 py-10">
         <ToastContainer />
         <div className="flex flex-col justify-center items-center">

@@ -106,7 +106,10 @@ function LogoSlider() {
   const firstBlockLogos = logos.slice(0, 12);
   const secondBlockLogos = logos.slice(12);
   return (
-    <div>
+    <div className="w-full">
+      <h2 className="w-3/4 mx-auto text-center text-4xl font-semibold text-gray-800 dark:text-gray-100 mb-8">
+        250+ Integrated Tools
+      </h2>
       <section className={`py-12 ${isDarkMode ? "#11121C" : "#fffff"}`}>
         <div className="relative overflow-hidden before:absolute before:left-0 before:top-0 before:z-10 before:h-full before:w-32 before:bg-gradient-to-r  after:absolute after:right-0 after:top-0 after:z-10 after:h-full after:w-32 after:bg-gradient-to-l">
           <div className="animate-slide flex w-[calc(125px*18)]">
