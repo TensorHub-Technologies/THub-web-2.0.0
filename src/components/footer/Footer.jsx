@@ -7,6 +7,21 @@ import { FaLinkedinIn } from "react-icons/fa6";
 import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
+  let url;
+  const hostname = window.location.hostname;
+
+  switch (hostname) {
+    case "localhost":
+      url = import.meta.env.VITE_THUB_WEB_URL;
+      break;
+    case "thub-web-demo-378678297066.europe-west1.run.app":
+      url = import.meta.env.VITE_THUB_WEB_DEMO_URL;
+      break;
+    default:
+      url = import.meta.env.VITE_THUB_WEB_APP_URL;
+      break;
+  }
+
   return (
     <footer className="relative z-10 text-black dark:bg-secondary border-t border-gray-200 dark:border-gray-700">
       <div
@@ -59,20 +74,24 @@ const Footer = () => {
                 </Link>
               </li>
               <li className="mb-2">
-                <Link
-                  to="auth/login"
+                <a
+                  href={`${url}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className=" transition-all duration-300 hover:text-primary dark:hover:text-primary-dark hover:ml-1 dark:text-secondary-dark"
                 >
                   Sign in
-                </Link>
+                </a>
               </li>
               <li className="mb-2">
-                <Link
-                  to="auth/register"
-                  className="relative transition-all duration-300 hover:text-primary dark:hover:text-primary-dark hover:left-1"
+                <a
+                  href={`${url}/signup`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className=" transition-all duration-300 hover:text-primary dark:hover:text-primary-dark hover:ml-1 dark:text-secondary-dark"
                 >
                   Register
-                </Link>
+                </a>
               </li>
 
               <li className="mb-2">

@@ -35,10 +35,10 @@ function Pricing_Plan() {
   const handleClick = (planTitle) => {
     console.log(planTitle);
     if (planTitle === "Pro Power") {
-      window.open(url, "_blank");
+      window.open(`${url}/signup`, "_blank");
     } else if (planTitle === "Free Forever") {
-      window.open(url, "_blank");
-    } else if (planTitle === "Enterprise Excellence") {
+      window.open(`${url}/signup`, "_blank");
+    } else if (planTitle === "Enterprise") {
       setShowForm(true);
     }
   };
