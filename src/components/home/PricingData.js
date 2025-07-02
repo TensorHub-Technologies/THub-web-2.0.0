@@ -50,7 +50,7 @@ export const pricingData = {
       ],
     },
     {
-      title: "Enterprise Excellence",
+      title: "Enterprise",
       prices: {
         INR: "Contact Us",
         USD: "Contact Us",
