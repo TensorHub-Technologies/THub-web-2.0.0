@@ -92,7 +92,7 @@ const Navbar = () => {
             item.name === "Login" ? (
               <a
                 key={item.path}
-                href={url}
+                href={`${url}?theme=${isDarkMode ? "dark" : "light"}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`cursor-pointer ${
@@ -120,7 +120,7 @@ const Navbar = () => {
 
           <div>
             <a
-              href={`${url}/signup`}
+              href={`${url}/signup?theme=${isDarkMode ? "dark" : "light"}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block border border-primary text-primary px-4 py-2 rounded transition-all duration-300 hover:bg-primary hover:text-black hover:border-primary dark:border-primary-dark dark:text-primary-dark dark:hover:bg-primary-dark dark:hover:text-black"
@@ -149,7 +149,7 @@ const Navbar = () => {
             item.name === "Login" ? (
               <a
                 key={item.path}
-                href={url}
+                href={`${url}?theme=${isDarkMode ? "dark" : "light"}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`cursor-pointer ${
@@ -178,7 +178,7 @@ const Navbar = () => {
 
         <div>
           <a
-            href={`${url}/signup`}
+            href={`${url}/signup?theme=${isDarkMode ? "dark" : "light"}`}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block border border-primary text-primary px-4 py-2 rounded transition-all duration-300 hover:bg-primary hover:text-black hover:border-primary dark:border-primary-dark dark:text-primary-dark dark:hover:bg-primary-dark dark:hover:text-black"
