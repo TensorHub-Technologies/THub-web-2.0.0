@@ -9,6 +9,7 @@ import insuranceUnderwritingLogo from "../../assets/agent-logos/insurance-underw
 import productComparisonAgent from "../../assets/agent-logos/product_comparison_agent.png";
 import softwareDevelopmentAgent from "../../assets/agent-logos/software_development_agent.png";
 import financialAnalysisAgent from "../../assets/agent-logos/Financial_Analyst_Agent.png";
+import "./Cards.css";
 
 const UsecaseHome = () => {
   const chatFlowData = [
@@ -113,12 +114,12 @@ const UsecaseHome = () => {
   ];
 
   return (
-    <div className="border-red-400 dark:bg-secondary mt-8">
-      <section className="px-5 pb-10 lg:px-20">
+    <div className="mt-8 ">
+      <section className=" pb-10 ">
         <div className="mb-4">
           <p className="font-sans text-2xl dark:text-white">Agents Gallery</p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
           {chatFlowData.map(({ id, name, description, agentUrl, icon }) => (
             <AgentCard
               key={id}

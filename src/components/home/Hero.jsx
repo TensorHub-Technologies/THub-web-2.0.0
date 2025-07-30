@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useSelector } from "react-redux";
 import FirstPage from "./FirstPage";
 import { Helmet } from "react-helmet";
+import "../../index.css";
 
 // images
 import sparkels from "../../assets/images/button-logo/sparkles-white.svg";
@@ -59,7 +60,7 @@ const Hero = () => {
   }, [currentIndex, letterIndex]);
 
   return (
-    <section className="mt-8">
+    <section className="mt-8 parent-card-global-subtle">
       <Helmet>
         <title>THub - Build AI Apps 30X Faster | No-Code GenAI Platform</title>
         <meta

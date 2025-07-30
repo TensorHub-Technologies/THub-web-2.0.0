@@ -1,0 +1,8 @@
+.parent-card {
+    background: radial-gradient(circle,rgba(46, 66, 112, 0.87) 2%, rgba(0, 0, 0, 1) 59%);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px); /* Safari support */
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Optional: for more glassy look */
+    padding: 1rem;
+  }  

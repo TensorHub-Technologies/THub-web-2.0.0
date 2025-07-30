@@ -6,16 +6,20 @@ export default {
     extend: {
       colors: {
         primary: {
-          DEFAULT: "#3c5ba4", // Light mode primary color(blue)
-          dark: "#e22a90", // Dark mode primary color(pink)
+          DEFAULT: "#3c5ba4",
+          dark: "#e22a90",
         },
         secondary: {
-          DEFAULT: "#11121c", // Light mode secondary color(black)
-          dark: "#bdbfd4", // Dark mode secondary color(grey)
+          DEFAULT: "#11121c",
+          dark: "#bdbfd4",
         },
         background: {
-          DEFAULT: "#ffffff", // Light mode background color(white)
-          dark: "#191B1F", // Dark mode background color(black)
+          DEFAULT: "#ffffff",
+          dark: "#191B1F",
+        },
+        glass: {
+          primary: "hsl(var(--glass-primary) / <alpha-value>)",
+          secondary: "hsl(var(--glass-secondary) / <alpha-value>)",
         },
       },
       fontFamily: {
@@ -42,6 +46,12 @@ export default {
           "0%": { transform: "translateX(100%)" },
           "100%": { transform: "translateX(0)" },
         },
+
+        // ✅ Add this float animation
+        float: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-8px)" },
+        },
       },
       animation: {
         slideInTop: "slideInTop 20s ease-in-out forwards",
@@ -49,6 +59,9 @@ export default {
         slideInRight: "slideInRight 20s ease-in-out 1s forwards",
         "scroll-ltr": "scroll-ltr 30s linear infinite",
         "scroll-rtl": "scroll-rtl 30s linear infinite",
+
+        // ✅ Add this float animation class
+        float: "float 4s ease-in-out infinite",
       },
     },
   },
