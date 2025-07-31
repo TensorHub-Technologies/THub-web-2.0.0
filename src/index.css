@@ -40,6 +40,25 @@ body {
   position: relative;
 }
 
+:root {
+  --glass-primary: 240 100% 70%;   /* Blue-ish */
+  --glass-secondary: 300 80% 60%;  /* Purple-ish */
+}
+
+.parent-card-global-subtle {
+  background: radial-gradient(
+    circle at top center,
+    rgba(60, 91, 164, 0) 10%,
+    rgba(60, 91, 164, 0.4) 30%,
+    rgba(60, 91, 164, 0) 70%
+  );
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 1rem;
+}
+
+
 .main-container, 
 .container, 
 main, 
