@@ -1,8 +1,9 @@
 import UsecaseHome from "./UsecasesHome";
+import "./Cards.css";
 
 const Usecase = () => {
   return (
-    <div className="border-red-400 dark:bg-secondary">
+    <div className=" dark:bg-secondary parent-card">
       <div className="text-center py-5">
         <div className="flex flex-col items-center text-center">
           <div className="mb-8 text-center">
