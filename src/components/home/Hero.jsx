@@ -98,7 +98,7 @@ const Hero = () => {
         <a href={url} target="_blank">
           <button
             type="button"
-            className="text-white backdrop-blur-xl bg-white/10 border-white/30 dark:bg-black/50 shadow-2xl h-[22rem] transition-all duration-300 rounded-lg px-8 py-4 text-center me-2 my-8 text-lg "
+            className="text-white bg-gradient-to-r from-[#B425D5] to-[#FB5582] hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 font-medium rounded-lg px-8 py-4 text-center me-2 my-8 text-lg "
           >
             <div className=" flex ">
               <span className="mr-2">
