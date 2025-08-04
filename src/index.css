@@ -45,19 +45,27 @@ body {
   --glass-secondary: 300 80% 60%;  /* Purple-ish */
 }
 
-.parent-card-global-subtle {
-  background: radial-gradient(
+.parent-card-global-subtle-light {
+  background: linear-gradient(90deg,rgba(60, 91, 164, 0.4) 30%, rgb(255, 255, 255,0.6) 70%);
+  /* background: radial-gradient(
     circle at top center,
     rgba(60, 91, 164, 0) 10%,
     rgba(60, 91, 164, 0.4) 30%,
     rgba(60, 91, 164, 0) 70%
-  );
+  ); */
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-radius: 16px;
   padding: 1rem;
 }
 
+.parent-card-global-subtle-dark {
+    background: linear-gradient(90deg,rgba(60, 91, 164, 0.4) 30%, rgba(0, 0, 0, 1) 70%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 1rem;
+}
 
 .main-container, 
 .container, 

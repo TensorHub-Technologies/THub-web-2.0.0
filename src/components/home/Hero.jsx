@@ -60,7 +60,9 @@ const Hero = () => {
   }, [currentIndex, letterIndex]);
 
   return (
-    <section className="mt-8 parent-card-global-subtle">
+    <section
+      className={`mt-8 ${isDarkMode ? "parent-card-global-subtle-dark" : "parent-card-global-subtle-light"}`}
+    >
       <Helmet>
         <title>THub - Build AI Apps 30X Faster | No-Code GenAI Platform</title>
         <meta
