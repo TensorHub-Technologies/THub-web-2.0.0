@@ -60,12 +60,14 @@ body {
 }
 
 .parent-card-global-subtle-dark {
-    background: linear-gradient(90deg,rgba(60, 91, 164, 0.4) 30%, rgba(0, 0, 0, 1) 70%);
+  background: linear-gradient(90deg,rgba(60, 91, 164, 0.4) 30%, rgba(0, 0, 0, 1) 70%);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-radius: 16px;
   padding: 1rem;
 }
+
+
 
 .main-container, 
 .container, 

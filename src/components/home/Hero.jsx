@@ -61,6 +61,7 @@ const Hero = () => {
 
   return (
     <section
+      // className="mt-8 "
       className={`mt-8 ${isDarkMode ? "parent-card-global-subtle-dark" : "parent-card-global-subtle-light"}`}
     >
       <Helmet>
@@ -79,6 +80,8 @@ const Hero = () => {
         <h1 className="text-center text-primary dark:text-primary-dark mt-24 text-5xl">
           Build Smarter. Build Faster. Build with THub.
         </h1>
+        {/* <div className="absolute  mt-24 left-80 top-96 -translate-x-1/2 w-72 h-72 rounded-xl bg-[#E22A90] opacity-30 blur-2xl -z-10">
+        </div> */}
         <h3 className="text-center text-secondary dark:text-white mt-4 text-5xl">
           The 30X Faster Way to Launch
         </h3>
