@@ -13,7 +13,7 @@ const AgentCard = ({
       <div className="relative z-10 max-w-7xl mx-auto">
         <div className="group relative transform animate-float transition-all duration-500">
           {/* Consistent Glass Card - Same styling for all themes */}
-          <div className="relative border rounded-xl backdrop-blur-xl bg-white/10 border-white/30 dark:bg-black/50 shadow-2xl h-[22rem] transition-all duration-300">
+          <div className="relative border rounded-xl backdrop-blur-xl bg-white/10 border-white/30 dark:bg-black/50 shadow-2xl h-[20rem] transition-all duration-300">
             {/* Content */}
             <div className="relative z-10 px-6 pt-6">
               {/* Header */}
@@ -51,20 +51,25 @@ const AgentCard = ({
                 >
                   Tools
                 </h4>
-                <div className="flex flex-wrap items-start justify-start gap-2 my-1 w-[100%] h-auto pr-2 py-2">
+                <div className="flex flex-wrap items-start justify-start gap-2 my-1 w-full h-auto pr-2 py-2">
                   {tools &&
-                    Object.entries(tools).map(([toolName, toolIcon], index) => (
+                    Object.entries(tools).map(([toolName, toolData], index) => (
                       <span
                         key={index}
-                        className="relative group/tool border border-white/50 p-1 rounded-lg flex justify-center items-center gap-1 bg-white/50 dark:bg-black/50"
+                        className="relative group/tool px-1 rounded-lg flex justify-center items-center gap-1"
                       >
-                        <img
-                          src={toolIcon}
-                          alt={toolName}
-                          className="w-6 h-6"
-                        />
+                        {/* Conditional render for image or component */}
+                        {toolData.type === "image" ? (
+                          <img
+                            src={toolData.icon}
+                            alt={toolName}
+                            className="w-6 h-6"
+                          />
+                        ) : (
+                          <toolData.icon className="w-6 h-6" />
+                        )}
 
-                        {/* Tooltip for this specific icon */}
+                        {/* Tooltip - only for this icon */}
                         <div className="absolute bottom-full mb-1 left-1/2 -translate-x-1/2 opacity-0 invisible group-hover/tool:opacity-100 group-hover/tool:visible transition-all duration-200 bg-black text-white text-xs px-2 py-1 rounded shadow-lg z-20 whitespace-nowrap pointer-events-none">
                           {toolName}
                         </div>

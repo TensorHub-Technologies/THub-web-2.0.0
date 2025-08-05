@@ -45,19 +45,19 @@ body {
   --glass-secondary: 300 80% 60%;  /* Purple-ish */
 }
 
-.parent-card-global-subtle {
-  background: radial-gradient(
-    circle at top center,
-    rgba(60, 91, 164, 0) 10%,
-    rgba(60, 91, 164, 0.4) 30%,
-    rgba(60, 91, 164, 0) 70%
-  );
+.parent-card-global-subtle-light {
+  background: radial-gradient(circle,rgb(186, 198, 225) 24%, rgb(255, 255, 255) 82%);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-radius: 16px;
-  padding: 1rem;
 }
 
+.parent-card-global-subtle-dark {
+  background: radial-gradient(circle,rgba(60, 91, 164, 1) 24%, rgba(0, 0, 0, 1) 82%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 16px;
+}
 
 .main-container, 
 .container, 
@@ -66,4 +66,8 @@ section {
   width: 100%;
   max-width: 100%;
   overflow-x: hidden;
+}
+
+.radial-gradient-button {
+  background: linear-gradient(90deg, rgba(60, 91, 164, 0.4) 30%, rgba(0, 0, 0, 1) 70%);
 }

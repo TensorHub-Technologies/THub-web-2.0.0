@@ -2,7 +2,7 @@ import "./Home.css";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import Picture_dark from "../../assets/images/Picture2.png";
-import Picture_light from "../../assets/images/hero-pic-full.png";
+import Picture_light from "../../assets/screens/THub_Arch.svg";
 
 function FirstPage() {
   const isDarkMode = useSelector((state) => state.customization.isDarkMode);
@@ -35,7 +35,9 @@ function FirstPage() {
   }, [currentIndex, letterIndex]);
 
   return (
-    <section>
+    <section
+      className={`mt-8 ${isDarkMode ? "gradient-fill-dark" : "gradient-fill-light"} `}
+    >
       <div className="flex justify-center text-center mt-8">
         <h1 className="dark:text-white text-secondary text-5xl font-bold w-[60rem]">
           One Platform. Infinite Possibilities
@@ -58,7 +60,7 @@ function FirstPage() {
         </h2>
       </div>
       <div className="flex justify-center">
-        <div className="border-2 dark:border-primary-dark border-primary w-8/12 mt-8 rounded-3xl">
+        <div className="border-2 dark:border-primary-dark border-primary w-[90%] mt-8 rounded-3xl">
           <img
             src={isDarkMode ? Picture_dark : Picture_light}
             alt="THub AI Platform Hero Banner showing No-code GenAI Solutions"

@@ -4,8 +4,6 @@
 }
 
 .gif-anime{
-    /* border: 2px solid yellow; */
-    /* height: 42rem; */
     width: 34rem;
 }
 
@@ -70,3 +68,24 @@
   background: #000; /* or any solid background */
   border-radius: inherit;
 }
+
+.gradient-fill-dark {
+  background: linear-gradient(
+    180deg,
+    rgba(25, 27, 31, 0.0) 0%,      /* Fully transparent at the top */
+    rgba(25, 27, 31, 0.4) 10%,     /* Slightly darker */
+    rgba(25, 27, 31, 0.64) 30%,    /* Mid-dark */
+    rgba(0, 0, 0, 1) 67%           /* Fully black at bottom */
+  );
+}
+
+.gradient-fill-light {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.0) 0%,      /* Fully transparent at the top */
+    rgba(255, 255, 255, 0.4) 10%,     /* Slight white tint */
+    rgba(255, 255, 255, 0.64) 30%,    /* Mid-opacity white */
+    rgba(255, 255, 255, 1) 67%        /* Fully white at the bottom */
+  );
+}
+

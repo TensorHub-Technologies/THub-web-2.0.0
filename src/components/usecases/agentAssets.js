@@ -20,9 +20,10 @@ import serpApi from "../../assets/tools/serp.svg";
 import supervisorAgent from "../../assets/tools/supervisor.svg";
 import worker from "../../assets/tools/worker.svg";
 import customTool from "../../assets/tools/customtool.svg";
-import agentmemory from "../../assets/tools/agentmemory.svg";
+import agentMemoryLogo from "../../assets/custom-tools/AgentMemoryLogo.jsx";
+import seqAgent from "../../assets/tools/Agent_dark.png";
 import start from "../../assets/tools/start.svg";
-import seqAgent from "../../assets/tools/seqAgent.png";
+// import seqAgent from "../../assets/tools/seqAgent.png";
 import sqlllmNode from "../../assets/tools/llmNode.svg";
 import seqState from "../../assets/tools/state.svg";
 import seqloop from "../../assets/tools/loop.svg";
@@ -41,26 +42,28 @@ export const agentLogos = {
   softwareDevelopmentAgent,
   financialAnalysisAgent,
 };
-
 export const toolIcons = {
-  textSplitter,
-  openAIEmbeddings,
-  conversationalRetrievalQAChain,
-  chatopenAI,
-  qdrant,
-  bufferMemory,
-  inMemoryCache,
-  serpApi,
-  supervisorAgent,
-  worker,
-  customTool,
-  agentmemory,
-  seqAgent,
-  sqlllmNode,
-  seqState,
-  start,
-  seqloop,
-  seqEnd,
-  seqCondition,
-  cheerio,
+  textSplitter: { type: "image", icon: textSplitter },
+  openAIEmbeddings: { type: "image", icon: openAIEmbeddings },
+  conversationalRetrievalQAChain: {
+    type: "image",
+    icon: conversationalRetrievalQAChain,
+  },
+  chatopenAI: { type: "image", icon: chatopenAI },
+  qdrant: { type: "image", icon: qdrant },
+  bufferMemory: { type: "image", icon: bufferMemory },
+  inMemoryCache: { type: "image", icon: inMemoryCache },
+  serpApi: { type: "image", icon: serpApi },
+  supervisorAgent: { type: "image", icon: supervisorAgent },
+  worker: { type: "image", icon: worker },
+  customTool: { type: "image", icon: customTool },
+  agentMemoryLogo: { type: "component", icon: agentMemoryLogo }, // JSX component
+  seqAgent: { type: "image", icon: seqAgent },
+  sqlllmNode: { type: "image", icon: sqlllmNode },
+  seqState: { type: "image", icon: seqState },
+  start: { type: "image", icon: start },
+  seqloop: { type: "image", icon: seqloop },
+  seqEnd: { type: "image", icon: seqEnd },
+  seqCondition: { type: "image", icon: seqCondition },
+  cheerio: { type: "image", icon: cheerio },
 };

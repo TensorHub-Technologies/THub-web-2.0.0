@@ -19,7 +19,7 @@ const UsecaseHome = () => {
           toolIcons.conversationalRetrievalQAChain,
         Qdrant: toolIcons.qdrant,
         "Buffer Memory": toolIcons.bufferMemory,
-        cheerio: toolIcons.cheerio,
+        Cheerio: toolIcons.cheerio,
       },
       workspaceUid: "9bf57af6-4020-4e53-951d-647d2db86070",
       description: "Workflow for RAG on Music and Arts website.",
@@ -106,7 +106,7 @@ const UsecaseHome = () => {
       icon: agentLogos.competetitorAnalysisAgent,
       tools: {
         "Chat OpenAI": toolIcons.chatopenAI,
-        "Agent Memory": toolIcons.agentmemory,
+        "Agent Memory": toolIcons.agentMemoryLogo,
         "In Memory Cache": toolIcons.inMemoryCache,
         "custom Tool": toolIcons.customTool,
         "Supervisor Agent": toolIcons.supervisorAgent,
@@ -140,7 +140,7 @@ const UsecaseHome = () => {
         "Seq LLM Node": toolIcons.sqlllmNode,
         "Sequential Agent": toolIcons.seqAgent,
         "Sequential Condition": toolIcons.seqCondition,
-        "Agent Memory": toolIcons.agentmemory,
+        "Agent Memory": toolIcons.agentMemoryLogo,
         "Sequential State": toolIcons.seqState,
         "Sequential Loop": toolIcons.seqloop,
         "Sequential End": toolIcons.seqEnd,
@@ -173,11 +173,11 @@ const UsecaseHome = () => {
 
   return (
     <div className="mt-8 ">
-      <section className=" pb-10 ">
-        <div className="mb-4">
+      <section className=" pb-10 flex-row ">
+        <div className="mb-4 px-4">
           <p className="font-sans text-2xl dark:text-white">Agents Gallery</p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
           {chatFlowData.map(
             ({ id, name, description, agentUrl, icon, tools, toolName }) => (
               <AgentCard

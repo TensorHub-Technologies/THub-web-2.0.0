@@ -25,7 +25,7 @@ function Features_First() {
   // }
 
   return (
-    <section className="px-5 py-4 lg:px-16">
+    <section className={`px-5 py-4 lg:px-16v`}>
       {/* Features Grid */}
       <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
         {/* Feature 1 */}

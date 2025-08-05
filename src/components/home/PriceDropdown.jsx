@@ -30,7 +30,7 @@ const PriceDropdown = ({ onCurrencyChange }) => {
     <div className="relative inline-block text-left">
       <button
         onClick={toggleDropdown}
-        className="inline-flex justify-between items-center w-44 px-6 py-4 text-sm font-medium bg-background dark:bg-background-dark border border-gray-300 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none text-primary dark:text-primary-dark"
+        className="inline-flex justify-between items-center w-44 px-6 py-4 text-sm font-medium bg-white/10 dark:bg-black/10 border border-gray-500 rounded-md shadow-sm hover:bg-gray-50 focus:outline-none text-primary dark:text-primary-dark"
       >
         {selectedOption}
         {isOpen ? (

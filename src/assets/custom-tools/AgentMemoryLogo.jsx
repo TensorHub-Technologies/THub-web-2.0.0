@@ -1,0 +1,27 @@
+import PropTypes from "prop-types";
+function AgentMemoryLogo({ color = "#3c5ba4" }) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke={color}
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="icon icon-tabler icons-tabler-outline icon-tabler-database"
+    >
+      <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+      <path d="M12 6m-8 0a8 3 0 1 0 16 0a8 3 0 1 0 -16 0" />
+      <path d="M4 6v6a8 3 0 0 0 16 0v-6" />
+      <path d="M4 12v6a8 3 0 0 0 16 0v-6" />
+    </svg>
+  );
+}
+
+AgentMemoryLogo.propTypes = {
+  color: PropTypes.color,
+};
+export default AgentMemoryLogo;
