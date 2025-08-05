@@ -173,11 +173,11 @@ const UsecaseHome = () => {
 
   return (
     <div className="mt-8 ">
-      <section className=" pb-10 ">
-        <div className="mb-4">
+      <section className=" pb-10 flex-row ">
+        <div className="mb-4 px-4">
           <p className="font-sans text-2xl dark:text-white">Agents Gallery</p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 px-4">
           {chatFlowData.map(
             ({ id, name, description, agentUrl, icon, tools, toolName }) => (
               <AgentCard

@@ -35,7 +35,9 @@ function FirstPage() {
   }, [currentIndex, letterIndex]);
 
   return (
-    <section>
+    <section
+      className={`mt-8 ${isDarkMode ? "gradient-fill-dark" : "gradient-fill-light"} `}
+    >
       <div className="flex justify-center text-center mt-8">
         <h1 className="dark:text-white text-secondary text-5xl font-bold w-[60rem]">
           One Platform. Infinite Possibilities

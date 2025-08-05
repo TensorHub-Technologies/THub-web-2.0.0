@@ -1,9 +1,14 @@
 import UsecaseHome from "./UsecasesHome";
-import "./Cards.css";
+import "../../index.css";
+import { useSelector } from "react-redux";
 
 const Usecase = () => {
+  const isDarkMode = useSelector((state) => state.customization.isDarkMode);
+
   return (
-    <div className=" dark:bg-secondary parent-card">
+    <div
+      className={` ${isDarkMode ? "parent-card-global-subtle-dark" : "parent-card-global-subtle-light"} relative`}
+    >
       <div className="text-center py-5">
         <div className="flex flex-col items-center text-center">
           <div className="mb-8 text-center">
