@@ -13,7 +13,7 @@ const AgentCard = ({
       <div className="relative z-10 max-w-7xl mx-auto">
         <div className="group relative transform animate-float transition-all duration-500">
           {/* Consistent Glass Card - Same styling for all themes */}
-          <div className="relative border rounded-xl backdrop-blur-xl bg-white/10 border-white/30 dark:bg-black/50 shadow-2xl h-[20rem] transition-all duration-300">
+          <div className="relative rounded-xl bg-white/10 dark:bg-black/50 backdrop-blur-xl shadow-2xl h-[20rem] transition-all duration-300 border border-white/20 dark:border-white/10">
             {/* Content */}
             <div className="relative z-10 px-6 pt-6">
               {/* Header */}
@@ -80,11 +80,11 @@ const AgentCard = ({
             </div>
             <div>
               <div className="flex-col justify-between items-center py-6 pr-9 pl-6 absolute bottom-0 left-0 right-0">
-                <hr className="w-[98%]" />
+                <hr className="w-[98%] border-t border-white dark:border-black/80" />
                 <div className="flex mt-2 justify-between items-center text-[#3c5ba4] dark:text-[#e22a90]">
                   <div>Try Agent</div>
                   <a href={agentUrl} target="_blank" rel="noopener noreferrer">
-                    <div className="border border-black dark:border-white p-2 rounded-full group-hover:bg-[#3C5BA4] dark:group-hover:bg-[#e22a90] ">
+                    <div className="border backdrop-blur-xl shadow-lg dark:border-white p-2 rounded-full group-hover:bg-[#3C5BA4] dark:group-hover:bg-[#e22a90] ">
                       <Arrow_Right className="transition-transform duration-300 group-hover:rotate-[-30deg] group-hover:text-white dark:text-white" />
                     </div>
                   </a>

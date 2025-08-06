@@ -62,7 +62,7 @@ const Hero = () => {
   return (
     <section
       // className="mt-8 "
-      className={`mt-8 ${isDarkMode ? "parent-card-global-subtle-dark" : "parent-card-global-subtle-light"} relative`}
+      className={`mt-8 relative`}
     >
       <Helmet>
         <title>THub - Build AI Apps 30X Faster | No-Code GenAI Platform</title>
@@ -76,7 +76,9 @@ const Hero = () => {
         />
         <link rel="canonical" href="https://thub.tech/" />
       </Helmet>
-      <div id="hero-container" className=" py-5">
+      <div
+        className={`py-5 ${isDarkMode ? "parent-card-global-subtle-dark" : "parent-card-global-subtle-light"}`}
+      >
         <h1 className="text-center text-primary dark:text-primary-dark mt-24 text-5xl">
           Build Smarter. Build Faster. Build with THub.
         </h1>

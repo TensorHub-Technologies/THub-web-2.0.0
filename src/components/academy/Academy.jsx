@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom/dist";
 
 import PropTypes from "prop-types";
+import "../../index.css";
 
 // import logo
 import webinarImage from "../../assets/images/Webinar-dark.gif";
@@ -47,7 +48,7 @@ const CourseCard = ({ imgSrc, title, description, logos, path }) => {
   return (
     <div className="max-w-md mx-auto border w-full" data-aos="fade-up-sm">
       {/* <div className="card w-full bg-white shadow-md rounded-lg overflow-hidden border-2 border-gray-800"> */}
-      <div className="bg-background  w-full">
+      <div className=" w-full">
         <div className="image-container object-contain">
           <img src={imgSrc} className="card_image w-full" alt={title} />
         </div>
@@ -201,7 +202,9 @@ const CoursesSection = () => {
   ];
 
   return (
-    <section className="bg-background dark:bg-background-dark ">
+    <section
+      className={`${isDarkMode ? "parent-card-global-subtle-dark" : "parent-card-global-subtle-light"}`}
+    >
       <div className="text-center py-5 mt-20">
         <div className="container mx-auto px-4">
           <div className="mb-8 text-center">
@@ -211,7 +214,7 @@ const CoursesSection = () => {
             <p className="text-gray-500 mt-1">Home / Academy</p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 ">
             {courses.map((course, index) => (
               <div className="p-2" key={index}>
                 {" "}

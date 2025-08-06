@@ -1,10 +1,15 @@
 import AgentCard from "../cards/AgentCard";
 import props from "prop-types";
+import { useSelector } from "react-redux";
+
 // images
 import { agentLogos, toolIcons } from "./agentAssets";
 import "./Cards.css";
+import "../home/Home.css";
 
 const UsecaseHome = () => {
+  const isDarkMode = useSelector((state) => state.customization.isDarkMode);
+
   const chatFlowData = [
     {
       id: "e49090f8-566a-4a66-a006-64af2325627f",
@@ -172,8 +177,10 @@ const UsecaseHome = () => {
   ];
 
   return (
-    <div className="mt-8 ">
-      <section className=" pb-10 flex-row ">
+    <div className={` `}>
+      <section
+        className={` pb-10 flex-row ${isDarkMode ? "parent-card-global-subtle-dark" : "parent-card-global-subtle-light"}`}
+      >
         <div className="mb-4 px-4">
           <p className="font-sans text-2xl dark:text-white">Agents Gallery</p>
         </div>
