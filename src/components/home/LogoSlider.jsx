@@ -106,7 +106,7 @@ function LogoSlider() {
   const firstBlockLogos = logos.slice(0, 12);
   const secondBlockLogos = logos.slice(12);
   return (
-    <div className="w-full">
+    <div className="pt-5 w-full">
       <h2 className="w-3/4 mx-auto text-center text-4xl font-semibold text-gray-800 dark:text-gray-100 mb-8">
         250+ Integrated Tools
       </h2>

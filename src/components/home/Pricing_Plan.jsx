@@ -79,7 +79,7 @@ function Pricing_Plan() {
   return (
     <>
       <section
-        className={`px-4 sm:px-8 lg:px-16 pb-10 py-10 ${isDarkMode ? "parent-card-global-subtle-dark" : "parent-card-global-subtle-light"} `}
+        className={`px-4 sm:px-8 lg:px-16 pb-10 py-10 ${isDarkMode ? "hero-card-global-subtle-dark" : "hero-card-global-subtle-light"} `}
       >
         <ToastContainer />
         <div className="flex flex-col justify-center items-center">

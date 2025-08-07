@@ -203,7 +203,7 @@ const CoursesSection = () => {
 
   return (
     <section
-      className={`${isDarkMode ? "parent-card-global-subtle-dark" : "parent-card-global-subtle-light"}`}
+      className={`${isDarkMode ? "hero-card-global-subtle-dark" : "hero-card-global-subtle-light"}`}
     >
       <div className="text-center py-5 mt-20">
         <div className="container mx-auto px-4">
