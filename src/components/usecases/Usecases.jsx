@@ -7,7 +7,7 @@ const Usecase = () => {
 
   return (
     <div
-      className={` ${isDarkMode ? "parent-card-global-subtle-dark" : "parent-card-global-subtle-light"} relative`}
+      className={`${isDarkMode ? "hero-card-global-subtle-dark" : "hero-card-global-subtle-light"} relative`}
     >
       <div className="text-center py-5">
         <div className="flex flex-col items-center text-center">

@@ -6,26 +6,11 @@ import { Helmet } from "react-helmet";
 import "../../index.css";
 
 // images
-import sparkels from "../../assets/images/button-logo/sparkles-white.svg";
 import UsecaseHome from "../usecases/UsecasesHome";
+import Features_First from "./Features_First";
 
 const Hero = () => {
   const isDarkMode = useSelector((state) => state.customization.isDarkMode);
-
-  let url;
-  const hostname = window.location.hostname;
-
-  switch (hostname) {
-    case "localhost":
-      url = `http://localhost:8080/signup`;
-      break;
-    case "thub-web-demo-378678297066.europe-west1.run.app":
-      url = `https://demo.thub.tech/signup`;
-      break;
-    default:
-      url = `https://app.thub.tech/signup`;
-      break;
-  }
 
   const strings = [
     "Agentic AI",
@@ -61,8 +46,7 @@ const Hero = () => {
 
   return (
     <section
-      // className="mt-8 "
-      className={`mt-8 relative`}
+      className={`mt-8 relative ${isDarkMode ? "hero-card-global-subtle-dark" : "hero-card-global-subtle-light"}`}
     >
       <Helmet>
         <title>THub - Build AI Apps 30X Faster | No-Code GenAI Platform</title>
@@ -76,9 +60,7 @@ const Hero = () => {
         />
         <link rel="canonical" href="https://thub.tech/" />
       </Helmet>
-      <div
-        className={`py-5 ${isDarkMode ? "parent-card-global-subtle-dark" : "parent-card-global-subtle-light"}`}
-      >
+      <div className={`py-5`}>
         <h1 className="text-center text-primary dark:text-primary-dark mt-24 text-5xl">
           Build Smarter. Build Faster. Build with THub.
         </h1>
@@ -99,21 +81,7 @@ const Hero = () => {
       </div>
       <UsecaseHome />
       <FirstPage />
-      <div className="flex justify-center ">
-        <a href={url} target="_blank">
-          <button
-            type="button"
-            className="text-white bg-gradient-to-r from-[#B425D5] to-[#FB5582] hover:bg-gradient-to-br focus:ring-4 focus:outline-none focus:ring-pink-300 dark:focus:ring-pink-800 font-medium rounded-lg px-8 py-4 text-center me-2 my-8 text-lg "
-          >
-            <div className=" flex ">
-              <span className="mr-2">
-                <img src={sparkels} alt="sparkles" />
-              </span>
-              <span>Start Now</span>
-            </div>
-          </button>
-        </a>
-      </div>
+      <Features_First />
     </section>
   );
 };

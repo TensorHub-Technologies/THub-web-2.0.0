@@ -1,11 +1,16 @@
 import { useNavigate } from "react-router-dom";
 import { blogPosts } from "./blogData";
+import "../../index.css";
+import { useSelector } from "react-redux";
 
 const Blogs = () => {
   const navigate = useNavigate();
+  const isDarkMode = useSelector((state) => state.customization.isDarkMode);
 
   return (
-    <div className="border-red-400 dark:bg-secondary py-5 mt-20">
+    <div
+      className={`border-red-400 dark:bg-secondary py-5 mt-20 ${isDarkMode ? "hero-card-global-subtle-dark" : "hero-card-global-subtle-light"}`}
+    >
       <div className="text-center">
         <h3 className="text-secondary text-3xl font-bold dark:text-background">
           Blog Posts

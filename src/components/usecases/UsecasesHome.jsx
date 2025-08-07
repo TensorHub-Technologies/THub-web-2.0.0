@@ -1,6 +1,5 @@
 import AgentCard from "../cards/AgentCard";
 import props from "prop-types";
-import { useSelector } from "react-redux";
 
 // images
 import { agentLogos, toolIcons } from "./agentAssets";
@@ -8,8 +7,6 @@ import "./Cards.css";
 import "../home/Home.css";
 
 const UsecaseHome = () => {
-  const isDarkMode = useSelector((state) => state.customization.isDarkMode);
-
   const chatFlowData = [
     {
       id: "e49090f8-566a-4a66-a006-64af2325627f",
@@ -39,8 +36,8 @@ const UsecaseHome = () => {
       tools: {
         "Supervisor Agent": toolIcons.supervisorAgent,
         "Worker Agent": toolIcons.worker,
-        "Serp api": toolIcons.serpApi,
-        "custom Tool": toolIcons.customTool,
+        "Serp API": toolIcons.serpApi,
+        "Custom Tool": toolIcons.customTool,
         "Chat OpenAI": toolIcons.chatopenAI,
       },
       workspaceUid: "9bf57af6-4020-4e53-951d-647d2db86070",
@@ -57,7 +54,7 @@ const UsecaseHome = () => {
       tools: {
         "Chat OpenAI": toolIcons.chatopenAI,
         "In Memory Cache": toolIcons.inMemoryCache,
-        "Serp api": toolIcons.serpApi,
+        "Serp API": toolIcons.serpApi,
         "Supervisor Agent": toolIcons.supervisorAgent,
         "Worker Agent": toolIcons.worker,
       },
@@ -77,8 +74,8 @@ const UsecaseHome = () => {
         "In Memory Cache": toolIcons.inMemoryCache,
         "Supervisor Agent": toolIcons.supervisorAgent,
         "Worker Agent": toolIcons.worker,
-        "custom Tool": toolIcons.customTool,
-        "Serp api": toolIcons.serpApi,
+        "Custom Tool": toolIcons.customTool,
+        "Serp API": toolIcons.serpApi,
       },
       workspaceUid: "9bf57af6-4020-4e53-951d-647d2db86070",
       description:
@@ -93,10 +90,10 @@ const UsecaseHome = () => {
       icon: agentLogos.financialAnalysisAgent,
       tools: {
         "Chat OpenAI": toolIcons.chatopenAI,
-        "custom Tool": toolIcons.customTool,
+        "Custom Tool": toolIcons.customTool,
         "Supervisor Agent": toolIcons.supervisorAgent,
         "Worker Agent": toolIcons.worker,
-        "Serp api": toolIcons.serpApi,
+        "Serp API": toolIcons.serpApi,
       },
       workspaceUid: "9bf57af6-4020-4e53-951d-647d2db86070",
       description:
@@ -113,10 +110,10 @@ const UsecaseHome = () => {
         "Chat OpenAI": toolIcons.chatopenAI,
         "Agent Memory": toolIcons.agentMemoryLogo,
         "In Memory Cache": toolIcons.inMemoryCache,
-        "custom Tool": toolIcons.customTool,
+        "Custom Tool": toolIcons.customTool,
         "Supervisor Agent": toolIcons.supervisorAgent,
         "Worker Agent": toolIcons.worker,
-        "Serp api": toolIcons.serpApi,
+        "Serp API": toolIcons.serpApi,
       },
       workspaceUid: "9bf57af6-4020-4e53-951d-647d2db86070",
       description:
@@ -124,17 +121,6 @@ const UsecaseHome = () => {
       agentUrl:
         "https://app.thub.tech/chatbot/3282cd95-4df4-4758-9766-a9cb862eed83",
     },
-    // {
-    //   id: "ac291b9a-6ed1-40ec-b857-6fddb9c1299a",
-    //   name: "Insurance Underwriting Agent",
-    //   icon: insuranceUnderwritingLogo,
-    //   tenantId: "9bf57af6-4020-4e53-951d-647d2db86070",
-    //   workspaceUid: "9bf57af6-4020-4e53-951d-647d2db86070",
-    //   description:
-    //     "The Insurance Underwriting Agent is an AI-powered assistant that automates the underwriting process by analyzing customer data, medical history, policy documents, and risk factors.",
-    //   agentUrl:
-    //     "https://demo.thub.tech/chatbot/ac291b9a-6ed1-40ec-b857-6fddb9c1299a",
-    // },
     {
       id: "5b3484d7-deb1-498c-b91b-aefd9199df75",
       name: "Code Review Agent",
@@ -178,9 +164,7 @@ const UsecaseHome = () => {
 
   return (
     <div className={` `}>
-      <section
-        className={` pb-10 flex-row ${isDarkMode ? "parent-card-global-subtle-dark" : "parent-card-global-subtle-light"}`}
-      >
+      <section className={`pb-10 flex-row `}>
         <div className="mb-4 px-4">
           <p className="font-sans text-2xl dark:text-white">Agents Gallery</p>
         </div>
