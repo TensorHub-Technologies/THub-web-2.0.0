@@ -1,8 +1,8 @@
 import "./Home.css";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
-import Picture_dark from "../../assets/illustrations/thub_arch_v1_dark_updated.gif";
-import Picture_light from "../../assets/illustrations/thub_arch_v2.gif";
+import Picture_dark from "../../assets/screens/THub_Arch_v1_dark_2.svg";
+import Picture_light from "../../assets/screens/THub_Arch_v1_light.svg";
 import sparkels from "../../assets/images/button-logo/sparkles-white.svg";
 
 function FirstPage() {
