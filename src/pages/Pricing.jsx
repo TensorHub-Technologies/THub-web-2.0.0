@@ -3,7 +3,7 @@ import Accordion from "../components/home/Accordion";
 const Pricing = () => {
   return (
     <div className="dark:bg-[#11121C]">
-      <div className="mb-8 text-center">
+      <div className=" text-center">
         <h2 className="text-3xl font-bold text-black dark:text-white">
           Pricing & Plan
         </h2>

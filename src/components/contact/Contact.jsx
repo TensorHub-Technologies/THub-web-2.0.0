@@ -1,17 +1,23 @@
 import { LiaMapMarkedAltSolid } from "react-icons/lia";
 import { FiPhoneCall } from "react-icons/fi";
 import ContactForm from "./ContactForm";
+import "../../index.css";
+import { useSelector } from "react-redux";
 
 const Contact = () => {
+  const isDarkMode = useSelector((state) => state.customization.isDarkMode);
+
   return (
-    <div className="border-red-400 dark:bg-secondary">
+    <div
+      className={`border-red-400 dark:bg-secondary ${isDarkMode ? "hero-card-global-subtle-dark" : "hero-card-global-subtle-light"}`}
+    >
       <div className="text-center py-5 mt-20">
         <h3 className="text-secondary text-2xl font-bold dark:text-background">
           Contact With Us
         </h3>
         <div className="mt-2">
-          <span className="dark:text-secondary-dark">Home / </span>
-          <span className="text-secondary-dark">contact</span>
+          <span className="text-black dark:text-white ">Home / </span>
+          <span className="text-black dark:text-white">contact</span>
         </div>
       </div>
 

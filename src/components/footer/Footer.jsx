@@ -1,14 +1,16 @@
 import { Link } from "react-router-dom";
 import ThubLogo from "../../assets/images/THub.svg";
-import StripeBackground from "../../assets/images/shapes/stripe-colored.svg";
+import "../../index.css";
 import { RiSendPlaneLine } from "react-icons/ri";
 import { FiFacebook, FiGithub } from "react-icons/fi";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { FaXTwitter } from "react-icons/fa6";
+import { useSelector } from "react-redux";
 
 const Footer = () => {
   let url;
   const hostname = window.location.hostname;
+  const isDarkMode = useSelector((state) => state.customization.isDarkMode);
 
   switch (hostname) {
     case "localhost":
@@ -23,18 +25,9 @@ const Footer = () => {
   }
 
   return (
-    <footer className="relative z-10 text-black dark:bg-secondary border-t border-gray-200 dark:border-gray-700">
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage: `url(${StripeBackground})`,
-          filter: "blur(100px)",
-          zIndex: -1,
-          inset: "0",
-          content: "",
-        }}
-      />
-
+    <footer
+      className={`relative z-10 text-black border-t border-gray-200 dark:border-gray-700 ${isDarkMode ? "hero-card-global-subtle-dark" : "hero-card-global-subtle-light"}`}
+    >
       <div className="relative z-20 mx-auto w-full max-w-screen-xl ">
         <div className="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
           <div className="">
@@ -163,8 +156,8 @@ const Footer = () => {
                   <input
                     type="email"
                     name="email"
-                    className="px-3 py-3 dark:bg-secondary text-secondary dark:text-background border rounded-e-none border-e-0 shadow-md border-secondary-dark placeholder-secondary-dark focus:outline-none dark:focus:border-primary-dark focus:border-primary focus:ring-primary  dark:focus:ring-primary-dark focus:right-0 block w-full rounded-md text-lg focus:ring-1"
-                    placeholder="Enter you email"
+                    className="px-3 py-3 dark:bg-white text-secondary dark:text-black border rounded-e-none border-e-0 shadow-md border-secondary-dark placeholder-black focus:outline-none dark:focus:border-primary-dark focus:border-primary focus:ring-primary  dark:focus:ring-primary-dark focus:right-0 block w-full rounded-md text-lg focus:ring-1"
+                    placeholder="Enter your email"
                   />
                 </div>
                 <button
