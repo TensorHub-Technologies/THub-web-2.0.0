@@ -16,8 +16,8 @@ const AboutUs = () => {
           About THub
         </h3>
         <div className="mt-2">
-          <span className="dark:text-secondary-dark">Home / </span>
-          <span className="text-secondary-dark">About Us</span>
+          <span className="text-black dark:text-white">Home / </span>
+          <span className="text-black dark:text-white">About Us</span>
         </div>
       </div>
       <About />
