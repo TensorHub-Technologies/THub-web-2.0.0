@@ -76,8 +76,8 @@ const Navbar = () => {
   console.log(url, "url");
 
   return (
-    <nav className="h-auto fixed top-0 left-0 right-0 z-50 bg-white px-2 py-5 flex dark:bg-secondary shadow-lg">
-      <div className="mx-auto flex items-center justify-between">
+    <nav className="h-auto fixed w-[100%] top-0 left-0 right-0 z-50  bg-white px-2 py-5 flex  dark:bg-secondary shadow-lg">
+      <div className="mx-auto flex items-center">
         <Link
           to="/"
           onClick={() => {
