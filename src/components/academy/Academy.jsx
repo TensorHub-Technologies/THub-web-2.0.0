@@ -58,16 +58,16 @@ const CourseCard = ({ imgSrc, title, description, logos, path }) => {
             alt={title}
           />
         </div>
-        <div className={`p-4 `}>
+        <div className={`p-4 text-left `}>
           <h5 className="text-xl font-bold mb-2 text-secondary dark:text-secondary-dark">
             {title}
           </h5>
           <p className="text-lg text-secondary dark:text-secondary-dark mb-10 text-justify">
             {description}
           </p>
-          <div className="text-center mt-4">
+          <div className="text-left mt-4">
             {logos.map((row, rowIndex) => (
-              <div key={rowIndex} className="flex justify-center gap-6 my-2">
+              <div key={rowIndex} className="flex justify-center  gap-6 my-2">
                 {row.map((logo, logoIndex) => (
                   <div
                     key={logoIndex}
@@ -77,7 +77,7 @@ const CourseCard = ({ imgSrc, title, description, logos, path }) => {
                     <img
                       src={logo.src}
                       alt={logo.alt}
-                      className="h-10 object-contain"
+                      className="h-8 object-contain"
                       style={{ maxWidth: logo.width }}
                     />
                   </div>
