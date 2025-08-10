@@ -15,7 +15,7 @@ const Usecase = () => {
             <h2 className="text-3xl font-bold text-black dark:text-white">
               Use Cases
             </h2>
-            <p className="text-gray-500 mt-1">Home / UseCases</p>
+            <p className="text-black dark:text-white mt-1">Home / UseCases</p>
           </div>
           <h1 className="dark:text-white text-2xl md:text-3xl lg:text-4xl font-bold">
             Build
