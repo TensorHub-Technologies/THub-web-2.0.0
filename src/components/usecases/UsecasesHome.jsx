@@ -8,6 +8,54 @@ import "../home/Home.css";
 
 const UsecaseHome = () => {
   const chatFlowData = [
+    // {
+    //   id: "701c21ea-1e25-4870-a512-847ab7bab5dc",
+    //   name: "Insurance Sales Audit Agent",
+    //   tenantId: "9bf57af6-4020-4e53-951d-647d2db86070",
+    //   icon: agentLogos.financialAnalysisAgent,
+    //   tools: {
+    //     "Supervisor Agent": toolIcons.supervisorAgent,
+    //     "Worker Agent": toolIcons.worker,
+    //     "Chat OpenAI": toolIcons.chatopenAI,
+    //     "Custom Tool": toolIcons.customTool,
+    //     "MCP": toolIcons.customMcp,
+    //     "Cheerio": toolIcons.cheerio,
+    //     "Qdrant": toolIcons.qdrant,
+    //     "Text Splitter": toolIcons.textSplitter,
+    //     "OpenAI Embeddings": toolIcons.openAIEmbeddings,
+    //     "Retriever Tool":toolIcons.retrievertool,
+    //     "Postgres":toolIcons.postgres
+    //   },
+    //   workspaceUid: "9bf57af6-4020-4e53-951d-647d2db86070",
+    //   description:
+    //     "This agent audit insurance policy sales data, checks GST rates with govt portal and check for the correctness of all the data.",
+    //   agentUrl:
+    //     "https://app.thub.tech/chatbot/701c21ea-1e25-4870-a512-847ab7bab5dc",
+    // },
+    {
+      id: "5d564b77-ee3c-4aaa-91aa-f121cdfcfd04",
+      name: "Expense Finance Audit Agent",
+      tenantId: "9bf57af6-4020-4e53-951d-647d2db86070",
+      icon: agentLogos.financialAnalysisAgent,
+      tools: {
+        "Supervisor Agent": toolIcons.supervisorAgent,
+        "Worker Agent": toolIcons.worker,
+        "Chat OpenAI": toolIcons.chatopenAI,
+        "Custom Tool": toolIcons.customTool,
+        MCP: toolIcons.customMcp,
+        Postgres: toolIcons.postgres,
+        // "Cheerio": toolIcons.cheerio,
+        // "Qdrant": toolIcons.qdrant,
+        // "Text Splitter": toolIcons.textSplitter,
+        // "OpenAI Embeddings": toolIcons.openAIEmbeddings,
+        // "Retriever Tool":toolIcons.retrievertool,
+      },
+      workspaceUid: "9bf57af6-4020-4e53-951d-647d2db86070",
+      description:
+        "This agent pulls data from PostgreSQL and performs financial audit and generate report.",
+      agentUrl:
+        "https://app.thub.tech/chatbot/5d564b77-ee3c-4aaa-91aa-f121cdfcfd04",
+    },
     {
       id: "e49090f8-566a-4a66-a006-64af2325627f",
       name: "Customer Support & Sales Agent",
