@@ -13,7 +13,7 @@ const AgentCard = ({
       <div className="relative z-10 max-w-7xl mx-auto">
         <div className="group relative transform animate-float transition-all duration-500">
           {/* Consistent Glass Card - Same styling for all themes */}
-          <div className="relative rounded-xl bg-white/10 dark:bg-black/50 backdrop-blur-xl shadow-2xl h-[20rem] transition-all duration-300 border border-white/20 dark:border-white/10">
+          <div className="relative rounded-xl bg-white/10 dark:bg-black/50 backdrop-blur-xl shadow-2xl h-[20.8rem] transition-all duration-300 border border-white/20 dark:border-white/10">
             {/* Content */}
             <div className="relative z-10 px-6 pt-6">
               {/* Header */}

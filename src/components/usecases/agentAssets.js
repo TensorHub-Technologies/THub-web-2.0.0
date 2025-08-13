@@ -12,6 +12,7 @@ import financialAnalysisAgent from "../../assets/agent-logos/Financial_Analyst_A
 import textSplitter from "../../assets/tools/textsplitter.svg";
 import openAIEmbeddings from "../../assets/tools/openaiEmbedding.svg";
 import conversationalRetrievalQAChain from "../../assets/tools/qa.svg";
+import customMcp from "../../assets/tools/customMCP.png";
 import chatopenAI from "../../assets/tools/openai.svg";
 import qdrant from "../../assets/tools/qdrant.png";
 import bufferMemory from "../../assets/tools/buffermemory.svg";
@@ -30,6 +31,8 @@ import seqloop from "../../assets/tools/loop.svg";
 import seqEnd from "../../assets/tools/end.svg";
 import seqCondition from "../../assets/tools/condition.svg";
 import cheerio from "../../assets/tools/cheerio.svg";
+import postgres from "../../assets/tools/postgres.svg";
+import retrievertool from "../../assets/tools/retrievertool.svg";
 
 // Exporting as grouped objects
 export const agentLogos = {
@@ -66,4 +69,7 @@ export const toolIcons = {
   seqEnd: { type: "image", icon: seqEnd },
   seqCondition: { type: "image", icon: seqCondition },
   cheerio: { type: "image", icon: cheerio },
+  customMcp: { type: "image", icon: customMcp },
+  postgres: { type: "image", icon: postgres },
+  retrievertool: { type: "image", icon: retrievertool },
 };
