@@ -69,13 +69,6 @@ function Pricing_Plan() {
     return plan.prices[currency] || plan.prices["INR"];
   };
 
-  const getExtraPrice = (plan) => {
-    if (plan.extraPrice) {
-      return plan.extraPrice[currency] || plan.extraPrice["INR"];
-    }
-    return null;
-  };
-
   return (
     <>
       <section
@@ -176,11 +169,11 @@ function Pricing_Plan() {
           </div>
         </div>
 
-        <div className="grid mx-2 grid-cols-1 lg:grid-cols-3 gap-20 dark:text-white ">
+        <div className="grid mx-2 grid-cols-1 lg:grid-cols-3 gap-20 dark:text-white">
           {pricingData[selectedPlan].map((plan, index) => (
             <div
               key={index}
-              className={`group p-6 backdrop-blur-xl bg-white/10 dark:bg-black/50 border-white/70 rounded-lg  relative border hover:border-primary dark:hover:border-primary-dark ${isDarkMode ? subStyle.card_selection_dark : subStyle.card_selection_light}`}
+              className={`group border p-6 backdrop-blur-xl bg-white/10 dark:bg-black/50 border-white/70 rounded-lg  relative border hover:border-primary dark:hover:border-primary-dark ${isDarkMode ? subStyle.card_selection_dark : subStyle.card_selection_light}`}
             >
               <p className="mb-5 text-3xl text-primary dark:text-primary-dark">
                 {plan.title}
@@ -229,13 +222,12 @@ function Pricing_Plan() {
                     }
                     key={i}
                   >
-                    {planList.includes("₹ 17,999/per Additional Agents") &&
-                    plan.title === "Pro"
-                      ? `${getExtraPrice(plan)}/Per Additional Agents`
-                      : planList}
+                    {planList}
                   </li>
                 ))}
               </ul>
+              {/* Soft Glow Effect */}
+              <div className="absolute overflow-hidden inset-0 rounded-xl bg-gradient-to-r from-[rgba(60,91,164,0.3)] to-[rgba(226,42,144,0.3)] opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-lg -z-10"></div>
             </div>
           ))}
         </div>
