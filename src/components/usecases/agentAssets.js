@@ -12,7 +12,7 @@ import financialAnalysisAgent from "../../assets/agent-logos/Financial_Analyst_A
 import textSplitter from "../../assets/tools/textsplitter.svg";
 import openAIEmbeddings from "../../assets/tools/openaiEmbedding.svg";
 import conversationalRetrievalQAChain from "../../assets/tools/qa.svg";
-import customMcp from "../../assets/tools/customMCP.png";
+import customMcp from "../../assets/tools/customMCP.svg";
 import chatopenAI from "../../assets/tools/openai.svg";
 import qdrant from "../../assets/tools/qdrant.png";
 import bufferMemory from "../../assets/tools/buffermemory.svg";
