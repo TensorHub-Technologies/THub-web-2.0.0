@@ -15,10 +15,6 @@ const Navbar = () => {
   const dispatch = useDispatch();
   const isDarkMode = useSelector((state) => state.customization.isDarkMode);
 
-  console.log("THub local:", import.meta.env.VITE_THUB_WEB_URL);
-  console.log("THub demo:", import.meta.env.VITE_THUB_WEB_DEMO_URL);
-  console.log("THub prod:", import.meta.env.VITE_THUB_WEB_APP_URL);
-
   useEffect(() => {
     const root = window.document.documentElement;
     if (isDarkMode) {
@@ -80,17 +76,26 @@ const Navbar = () => {
   console.log(url, "url");
 
   return (
-    <nav className="h-auto fixed top-0 left-0 right-0 z-50 bg-white px-2 py-5 flex dark:bg-secondary shadow-lg">
-      <div className="mx-auto flex items-center justify-between">
-        <Link to="/">
+    // className="h-auto fixed w-[100%] top-0 left-0 right-0 z-50   px-2 py-5 flex  border  shadow-lg"
+    <nav
+      className={`h-auto fixed w-[100%] top-0 left-0 right-0 z-50 px-2 py-5 flex shadow-lg ${isDarkMode ? "hero-card-global-subtle-dark" : "hero-card-global-subtle-light"}`}
+    >
+      <div className="mx-auto flex items-center">
+        <Link
+          to="/"
+          onClick={() => {
+            window.location.href = "/";
+          }}
+        >
           <img src={ThubLogo} className="h-10 w-38" alt="THub Logo" />
         </Link>
+
         <div className="flex-wrap items-center justify-between gap-8 ml-16 hidden md:flex">
           {navItems.map((item) =>
             item.name === "Login" ? (
               <a
                 key={item.path}
-                href={url}
+                href={`${url}?theme=${isDarkMode ? "dark" : "light"}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`cursor-pointer ${
@@ -118,7 +123,7 @@ const Navbar = () => {
 
           <div>
             <a
-              href={`${url}/signup`}
+              href={`${url}/signup?theme=${isDarkMode ? "dark" : "light"}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-block border border-primary text-primary px-4 py-2 rounded transition-all duration-300 hover:bg-primary hover:text-black hover:border-primary dark:border-primary-dark dark:text-primary-dark dark:hover:bg-primary-dark dark:hover:text-black"
@@ -147,7 +152,7 @@ const Navbar = () => {
             item.name === "Login" ? (
               <a
                 key={item.path}
-                href={url}
+                href={`${url}?theme=${isDarkMode ? "dark" : "light"}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className={`cursor-pointer ${
@@ -176,7 +181,7 @@ const Navbar = () => {
 
         <div>
           <a
-            href={`${url}/signup`}
+            href={`${url}/signup?theme=${isDarkMode ? "dark" : "light"}`}
             target="_blank"
             rel="noopener noreferrer"
             className="inline-block border border-primary text-primary px-4 py-2 rounded transition-all duration-300 hover:bg-primary hover:text-black hover:border-primary dark:border-primary-dark dark:text-primary-dark dark:hover:bg-primary-dark dark:hover:text-black"

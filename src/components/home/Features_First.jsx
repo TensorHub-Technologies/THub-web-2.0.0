@@ -7,41 +7,29 @@ import pipedark from "../../assets/icons/home-icons/pipe_dark.svg";
 import pipelite from "../../assets/icons/home-icons/pipe_lite.svg";
 
 function Features_First() {
-  // let url;
-  // const theme = localStorage.getItem("isDarkMode") === "true" ? "dark" : "lite";
-  // const hostname = window.location.hostname;
   const isDarkMode = useSelector((state) => state.customization.isDarkMode);
 
-  // switch (hostname) {
-  //   case "localhost":
-  //     url = `http://localhost:8080/?theme=${theme}`;
-  //     break;
-  //   case "thub-web-demo-378678297066.europe-west1.run.app":
-  //     url = `https://demo.thub.tech/`;
-  //     break;
-  //   default:
-  //     url = `https://app.thub.tech/?theme=${theme}`;
-  //     break;
-  // }
-
   return (
-    <section className="px-5 py-4 lg:px-16">
+    <section className={`px-5 py-4 lg:px-16v `}>
       {/* Features Grid */}
-      <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3">
+      <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-3 h-52">
         {/* Feature 1 */}
-        <div className="lg:flex gap-5 items-start w-full">
-          <div className="w-16 h-16 border border-primary bg-slate-200 dark:bg-slate-800 dark:border dark:border-slate-950 p-2 rounded-lg flex-shrink-0">
-            <img
-              src={isDarkMode ? dark_app_image : light_app_image}
-              alt="low code"
-              className="w-full h-full object-contain"
-            />
-          </div>
-          <div className="flex flex-col gap-5">
-            <h4 className="text-2xl font-semibold dark:text-white">
+        <div className="gap-5 w-full relative rounded-xl bg-white/10 dark:bg-black/50 backdrop-blur-xl shadow-2xl px-3 pt-3 border border-white/20 dark:border-white/10 ">
+          <div className="flex items-center gap-5">
+            <div className="w-16 h-20  p-2 rounded-lg flex-shrink-0 ">
+              <img
+                src={isDarkMode ? dark_app_image : light_app_image}
+                alt="low code"
+                className="w-full h-full object-contain"
+              />
+            </div>
+            <h4 className="text-xl font-bold dark:text-white ">
               Agents. RAG. Fine-Tuning. All in One Place.
             </h4>
-            <p className="text-lg dark:text-secondary-dark text-justify">
+          </div>
+
+          <div className="flex flex-col gap-5">
+            <p className="font-extralight dark:text-secondary-dark text-justify">
               Forget complexity. THub gives you everything you need to build
               powerful GenAI workflows—without writing a single line of code.
             </p>
@@ -49,19 +37,22 @@ function Features_First() {
         </div>
 
         {/* Feature 2 */}
-        <div className="lg:flex gap-5 items-start w-full">
-          <div className="w-16 h-16 border border-primary bg-slate-200 dark:bg-slate-800 dark:border dark:border-slate-950 p-2 rounded-lg flex-shrink-0">
-            <img
-              src={isDarkMode ? dragdark : draglite}
-              alt="drag and drop"
-              className="w-full h-full object-contain"
-            />
-          </div>
-          <div className="flex flex-col gap-5">
-            <h4 className="text-2xl font-semibold dark:text-white">
+        <div className="gap-5 w-full relative rounded-xl bg-white/10 dark:bg-black/50 backdrop-blur-xl shadow-2xl px-3 pt-3 border border-white/20 dark:border-white/10 ">
+          <div className="flex items-center gap-5">
+            <div className="w-16 h-20  p-2 rounded-lg flex-shrink-0 ">
+              <img
+                src={isDarkMode ? dragdark : draglite}
+                alt="drag and drop"
+                className="w-full h-full object-contain"
+              />
+            </div>
+            <h4 className="text-xl font-bold dark:text-white ">
               Drag. Drop. Done.
             </h4>
-            <p className="text-lg dark:text-secondary-dark text-justify mt-9">
+          </div>
+
+          <div className="flex flex-col gap-5">
+            <p className="font-extralight dark:text-secondary-dark text-justify">
               Your ideas. Your flow. Your way. No-code. Low-code. No limits.
               Design apps visually—just drag, drop, and deploy.
             </p>
@@ -69,19 +60,22 @@ function Features_First() {
         </div>
 
         {/* Feature 3 */}
-        <div className="lg:flex gap-5 items-start w-full">
-          <div className="w-16 h-16 border border-primary bg-slate-200 dark:bg-slate-800 dark:border dark:border-slate-950 p-2 rounded-lg flex-shrink-0">
-            <img
-              src={isDarkMode ? pipedark : pipelite}
-              alt="automated data pipeline"
-              className="w-full h-full object-contain"
-            />
-          </div>
-          <div className="flex flex-col gap-5">
-            <h4 className="text-2xl font-semibold dark:text-white">
+        <div className="gap-5 w-full relative rounded-xl bg-white/10 dark:bg-black/50 backdrop-blur-xl shadow-2xl px-3 pt-3 border border-white/20 dark:border-white/10 ">
+          <div className="flex items-center gap-5">
+            <div className="w-16 h-20  p-2 rounded-lg flex-shrink-0 ">
+              <img
+                src={isDarkMode ? pipedark : pipelite}
+                alt="automated data pipeline"
+                className="w-full h-full object-contain"
+              />
+            </div>
+            <h4 className="text-xl font-bold dark:text-white ">
               Turn Data Into Actions.
             </h4>
-            <p className="text-lg dark:text-secondary-dark  text-start">
+          </div>
+
+          <div className="flex flex-col gap-5">
+            <p className="font-extralight dark:text-secondary-dark text-justify">
               Structured.&nbsp; Semi-Structured.&nbsp; Unstructured. With THub’s
               automated data pipeline, your data flows where it matters—into
               action.
@@ -89,17 +83,6 @@ function Features_First() {
           </div>
         </div>
       </div>
-
-      {/* <div className="flex justify-center">
-        <a href={url} target="_blank">
-          <button
-            type="button"
-            className="text-white dark:text-secondary bg-primary hover:bg-blue-900 font-lg rounded-lg text-lg px-5 py-2.5 me-2  dark:bg-primary-dark dark:hover:bg-pink-600 focus:outline-none"
-          >
-            Try a demo
-          </button>
-        </a>
-      </div> */}
     </section>
   );
 }

@@ -53,7 +53,7 @@ const ContactForm = () => {
       onSubmit={handleSubmit}
     >
       {() => (
-        <div className="flex items-center justify-center min-h-screen bg-background dark:bg-background-dark">
+        <div className="flex items-center justify-center min-h-screen">
           <Form className="py-16 w-full max-w-md">
             <div className="mb-4">
               <div className="flex flex-col">

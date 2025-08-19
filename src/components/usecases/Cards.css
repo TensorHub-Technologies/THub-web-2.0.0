@@ -1,0 +1,12 @@
+.parent-card {
+  background: linear-gradient(
+    to right,
+    rgba(60, 91, 164, 0) 10%,
+    rgba(60, 91, 164, 0.4) 30%,
+    rgba(60, 91, 164, 0) 70%
+  );
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 16px;
+  padding: 1rem;
+}  

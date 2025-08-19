@@ -5,7 +5,7 @@ import subStyle from "./subscription.module.css";
 import PriceDropdown from "./PriceDropdown";
 import { ToastContainer, toast } from "react-toastify";
 import Enterprice_Form from "./Enterprice_Form";
-import LogoSlider from "./LogoSlider";
+import "../../index.css";
 
 function Pricing_Plan() {
   const isDarkMode = useSelector((state) => state.customization.isDarkMode);
@@ -36,10 +36,10 @@ function Pricing_Plan() {
   const handleClick = (planTitle) => {
     console.log(planTitle);
     if (planTitle === "Pro Power") {
-      window.open(url, "_blank");
+      window.open(`${url}/signup`, "_blank");
     } else if (planTitle === "Free Forever") {
-      window.open(url, "_blank");
-    } else if (planTitle === "Enterprise Excellence") {
+      window.open(`${url}/signup`, "_blank");
+    } else if (planTitle === "Enterprise") {
       setShowForm(true);
     }
   };
@@ -69,22 +69,11 @@ function Pricing_Plan() {
     return plan.prices[currency] || plan.prices["INR"];
   };
 
-  const getExtraPrice = (plan) => {
-    if (plan.extraPrice) {
-      return plan.extraPrice[currency] || plan.extraPrice["INR"];
-    }
-    return null;
-  };
-
   return (
     <>
-      <div className="w-full">
-        <h2 className="w-3/4 mx-auto text-center text-4xl font-semibold text-gray-800 dark:text-gray-100 mb-8">
-          250+ Integrated Tools
-        </h2>
-        <LogoSlider />
-      </div>
-      <section className="px-4 sm:px-8 lg:px-16 pb-10 py-10">
+      <section
+        className={`px-4 sm:px-8 lg:px-16 pb-10 py-10 ${isDarkMode ? "hero-card-global-subtle-dark" : "hero-card-global-subtle-light"} `}
+      >
         <ToastContainer />
         <div className="flex flex-col justify-center items-center">
           <p className="text-primary dark:text-primary-dark text-4xl mb-5">
@@ -184,7 +173,7 @@ function Pricing_Plan() {
           {pricingData[selectedPlan].map((plan, index) => (
             <div
               key={index}
-              className={`group p-6 bg-white  dark:bg-background-dark border-black rounded-lg dark:border-gray-700 relative border hover:border-primary dark:hover:border-primary-dark ${isDarkMode ? subStyle.card_selection_dark : subStyle.card_selection_light}`}
+              className={`group border p-6 backdrop-blur-xl bg-white/10 dark:bg-black/50 border-white/70 rounded-lg  relative border hover:border-primary dark:hover:border-primary-dark ${isDarkMode ? subStyle.card_selection_dark : subStyle.card_selection_light}`}
             >
               <p className="mb-5 text-3xl text-primary dark:text-primary-dark">
                 {plan.title}
@@ -215,15 +204,14 @@ function Pricing_Plan() {
               </p>
               <div className="flex justify-center items-center">
                 <button
-                  onClick={() => {
-                    handleClick(plan.title);
-                  }}
+                  onClick={() => handleClick(plan.title)}
                   type="button"
-                  className="text-primary group-hover:bg-primary border dark:border-primary-dark border-primary group-hover:text-[#11121C] rounded font-medium text-lg w-full py-2 me-2 my-5 dark:bg-background-dark dark:group-hover:bg-primary-dark focus:outline-none dark:text-primary-dark cursor-pointer"
+                  className="text-primary group-hover:bg-primary group-hover:text-[#11121C] border border-white/30  rounded-xl font-medium text-lg w-full py-2 me-2 my-5 focus:outline-none cursor-pointer bg-white/10 dark:bg-black/50 dark:text-primary-dark backdrop-blur-xl shadow-lg transition-all duration-300"
                 >
                   {plan.buttonInfo}
                 </button>
               </div>
+
               <ul>
                 {plan.list.map((planList, i) => (
                   <li
@@ -234,13 +222,12 @@ function Pricing_Plan() {
                     }
                     key={i}
                   >
-                    {planList.includes("₹ 17,999/per Additional Agents") &&
-                    plan.title === "Pro"
-                      ? `${getExtraPrice(plan)}/Per Additional Agents`
-                      : planList}
+                    {planList}
                   </li>
                 ))}
               </ul>
+              {/* Soft Glow Effect */}
+              <div className="absolute overflow-hidden inset-0 rounded-xl bg-gradient-to-r from-[rgba(60,91,164,0.3)] to-[rgba(226,42,144,0.3)] opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-lg -z-10"></div>
             </div>
           ))}
         </div>

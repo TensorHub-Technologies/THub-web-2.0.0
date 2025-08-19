@@ -41,7 +41,6 @@ export const pricingData = {
         "All Free Features",
         "5 Users",
         "25 Agents",
-        "₹ 17,999/per Additional Agents",
         "Team collaboration",
         "Train your own local LLM",
         "Fine Tune open source LLM",
@@ -50,7 +49,7 @@ export const pricingData = {
       ],
     },
     {
-      title: "Enterprise Excellence",
+      title: "Enterprise",
       prices: {
         INR: "Contact Us",
         USD: "Contact Us",

@@ -2,9 +2,10 @@ import Accordion from "../components/home/Accordion";
 import Features_Anime_One from "../components/home/Features_Anime_One";
 import Features_Anime_Three from "../components/home/Features_Anime_Three";
 import Features_Anime_Two from "../components/home/Features_Anime_Two";
-import Features_First from "../components/home/Features_First";
 import Pricing_Plan from "../components/home/Pricing_Plan";
 import Hero from "../components/home/Hero";
+import LogoSlider from "../components/home/LogoSlider";
+import "../index.css";
 
 const Home = () => {
   console.log("*** env: ", import.meta.env.VITE_URL);
@@ -15,10 +16,10 @@ const Home = () => {
       id="banner-main"
     >
       <Hero />
-      <Features_First />
       <Features_Anime_One />
       <Features_Anime_Two />
       <Features_Anime_Three />
+      <LogoSlider />
       <Pricing_Plan />
       <Accordion />
       {/* <FooterImage /> */}
