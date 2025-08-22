@@ -40,7 +40,6 @@ function Features_Anime_One() {
             need—LLMs, agents, chains, embedding models, or voice agents—and
             drop it into place
           </p>
-
           <ul className="list-disc flex flex-col gap-3">
             <li className="flex gap-2">
               <div className="w-4 pt-1 dark:text-white">
@@ -145,7 +144,7 @@ function Features_Anime_One() {
 
         <div className="w-full lg:w-auto flex justify-center items-center">
           <img
-            className="gif-anime object-contain max-w-full h-auto"
+            className="gif-anime object-contain max-w-full h-auto border border-transparent rounded-3xl shadow-lg"
             src={isDarkMode ? feature_first_gif_dark : feature_first_gif_light}
             alt="gif"
           />
