@@ -29,7 +29,7 @@ function Features_Anime_Two() {
       <div className="flex flex-col-reverse lg:flex-row gap-10 lg:pl-16 lg:pr-16">
         <div className="w-full lg:w-auto flex justify-center items-center">
           <img
-            className="gif-anime object-contain max-w-full h-auto"
+            className="gif-anime object-contain max-w-full h-auto border border-transparent rounded-3xl shadow-lg"
             src={
               isDarkMode ? feature_second_gif_dark : feature_second_gif_light
             }

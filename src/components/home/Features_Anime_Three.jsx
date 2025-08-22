@@ -142,7 +142,7 @@ function Features_Anime_Three() {
         </div>
         <div className="w-full lg:w-auto flex justify-center items-center">
           <img
-            className="gif-anime object-contain max-w-full h-auto"
+            className="gif-anime object-contain max-w-full h-auto border border-transparent rounded-3xl shadow-lg"
             src={isDarkMode ? feature_third_gif_dark : feature_third_gif_light}
             alt="gif"
           />

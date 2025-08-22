@@ -173,7 +173,7 @@ function Pricing_Plan() {
           {pricingData[selectedPlan].map((plan, index) => (
             <div
               key={index}
-              className={`group border p-6 backdrop-blur-xl bg-white/10 dark:bg-black/50 border-white/70 rounded-lg  relative border hover:border-primary dark:hover:border-primary-dark ${isDarkMode ? subStyle.card_selection_dark : subStyle.card_selection_light}`}
+              className={`group p-6 backdrop-blur-xl bg-white/10 dark:bg-black/50 border-white/70 rounded-lg  relative border hover:border-primary dark:hover:border-primary-dark ${isDarkMode ? subStyle.card_selection_dark : subStyle.card_selection_light}`}
             >
               <p className="mb-5 text-3xl text-primary dark:text-primary-dark">
                 {plan.title}

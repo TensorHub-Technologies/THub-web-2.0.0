@@ -26,7 +26,7 @@ const Footer = () => {
 
   return (
     <footer
-      className={`relative z-10 text-black border-t border-gray-200 dark:border-gray-700 ${isDarkMode ? "hero-card-global-subtle-dark" : "hero-card-global-subtle-light"}`}
+      className={`relative z-10 text-black border-t border-gray-400 ${isDarkMode ? "hero-card-global-subtle-dark" : "hero-card-global-subtle-light"}`}
     >
       <div className="relative z-20 mx-auto w-full max-w-screen-xl ">
         <div className="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
