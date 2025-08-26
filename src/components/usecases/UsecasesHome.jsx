@@ -32,30 +32,7 @@ const UsecaseHome = () => {
     //   agentUrl:
     //     "https://app.thub.tech/chatbot/701c21ea-1e25-4870-a512-847ab7bab5dc",
     // },
-    {
-      id: "5d564b77-ee3c-4aaa-91aa-f121cdfcfd04",
-      name: "Expense Finance Audit Agent",
-      tenantId: "9bf57af6-4020-4e53-951d-647d2db86070",
-      icon: agentLogos.financialAnalysisAgent,
-      tools: {
-        "Supervisor Agent": toolIcons.supervisorAgent,
-        "Worker Agent": toolIcons.worker,
-        "Chat OpenAI": toolIcons.chatopenAI,
-        "Custom Tool": toolIcons.customTool,
-        MCP: toolIcons.customMcp,
-        Postgres: toolIcons.postgres,
-        // "Cheerio": toolIcons.cheerio,
-        // "Qdrant": toolIcons.qdrant,
-        // "Text Splitter": toolIcons.textSplitter,
-        // "OpenAI Embeddings": toolIcons.openAIEmbeddings,
-        // "Retriever Tool":toolIcons.retrievertool,
-      },
-      workspaceUid: "9bf57af6-4020-4e53-951d-647d2db86070",
-      description:
-        "This agent pulls data from PostgreSQL and performs financial audit and generate report.",
-      agentUrl:
-        "https://app.thub.tech/chatbot/5d564b77-ee3c-4aaa-91aa-f121cdfcfd04",
-    },
+
     {
       id: "e49090f8-566a-4a66-a006-64af2325627f",
       name: "Customer Support & Sales Agent",
@@ -93,6 +70,30 @@ const UsecaseHome = () => {
         "The Project Planning Agent is an AI-driven assistant that helps teams design, schedule, and manage projects with greater speed and accuracy. It automates the creation of project charters, timelines, resource allocation plans, and risk assessments by synthesizing inputs from requirement documents, stakeholder interviews, and historical data.",
       agentUrl:
         "https://app.thub.tech/chatbot/d4b95519-bb06-4b8c-82dc-9ece64daceae",
+    },
+    {
+      id: "5d564b77-ee3c-4aaa-91aa-f121cdfcfd04",
+      name: "Expense Finance Audit Agent",
+      tenantId: "9bf57af6-4020-4e53-951d-647d2db86070",
+      icon: agentLogos.financialAnalysisAgent,
+      tools: {
+        "Supervisor Agent": toolIcons.supervisorAgent,
+        "Worker Agent": toolIcons.worker,
+        "Chat OpenAI": toolIcons.chatopenAI,
+        "Custom Tool": toolIcons.customTool,
+        MCP: toolIcons.customMcp,
+        Postgres: toolIcons.postgres,
+        // "Cheerio": toolIcons.cheerio,
+        // "Qdrant": toolIcons.qdrant,
+        // "Text Splitter": toolIcons.textSplitter,
+        // "OpenAI Embeddings": toolIcons.openAIEmbeddings,
+        // "Retriever Tool":toolIcons.retrievertool,
+      },
+      workspaceUid: "9bf57af6-4020-4e53-951d-647d2db86070",
+      description:
+        "This agent pulls data from PostgreSQL and performs financial audit and generate report.",
+      agentUrl:
+        "https://app.thub.tech/chatbot/5d564b77-ee3c-4aaa-91aa-f121cdfcfd04",
     },
     {
       id: "49d59ecc-e0b6-41a9-b1c3-c7ebe9068029",
