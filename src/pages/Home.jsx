@@ -6,13 +6,17 @@ import Pricing_Plan from "../components/home/Pricing_Plan";
 import Hero from "../components/home/Hero";
 import LogoSlider from "../components/home/LogoSlider";
 import "../index.css";
+import { useSelector } from "react-redux";
 
 const Home = () => {
   console.log("*** env: ", import.meta.env.VITE_URL);
   console.log(import.meta.env.VITE_SOME_KEY);
+  const isDarkMode = useSelector((state) => state.customization.isDarkMode);
+
   return (
     <div
-      className="w-full min-h-screen dark:bg-secondary bg-[#FEFEFE]"
+      // className="w-full min-h-screen dark:bg-secondary bg-[#FEFEFE]"
+      className={`w-full min-h-screen relative ${isDarkMode ? "hero-card-global-subtle-dark" : "hero-card-global-subtle-light"}`}
       id="banner-main"
     >
       <Hero />

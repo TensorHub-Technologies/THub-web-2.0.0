@@ -173,7 +173,7 @@ function Pricing_Plan() {
           {pricingData[selectedPlan].map((plan, index) => (
             <div
               key={index}
-              className={`group border p-6 backdrop-blur-xl bg-white/10 dark:bg-black/50 border-white/70 rounded-lg  relative border hover:border-primary dark:hover:border-primary-dark ${isDarkMode ? subStyle.card_selection_dark : subStyle.card_selection_light}`}
+              className={`group p-6 backdrop-blur-xl bg-white/10 dark:bg-black/50 border-white/70 rounded-lg  relative border hover:border-primary dark:hover:border-primary-dark ${isDarkMode ? subStyle.card_selection_dark : subStyle.card_selection_light}`}
             >
               <p className="mb-5 text-3xl text-primary dark:text-primary-dark">
                 {plan.title}
@@ -206,7 +206,7 @@ function Pricing_Plan() {
                 <button
                   onClick={() => handleClick(plan.title)}
                   type="button"
-                  className="text-primary group-hover:bg-primary group-hover:text-[#11121C] border border-white/30  rounded-xl font-medium text-lg w-full py-2 me-2 my-5 focus:outline-none cursor-pointer bg-white/10 dark:bg-black/50 dark:text-primary-dark backdrop-blur-xl shadow-lg transition-all duration-300"
+                  className="text-primary group-hover:bg-primary group-hover:text-[#11121C] border border-white  rounded-xl font-medium text-lg w-full py-2 me-2 my-5 focus:outline-none cursor-pointer bg-white/10 dark:bg-black/50 dark:text-primary-dark dark:group-hover:bg-primary-dark backdrop-blur-xl shadow-lg transition-all duration-300"
                 >
                   {plan.buttonInfo}
                 </button>
