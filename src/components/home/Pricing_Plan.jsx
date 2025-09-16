@@ -181,17 +181,6 @@ function Pricing_Plan() {
               {plan.title === "Pro Power" ? (
                 <p className="text-3xl my-2 text-black dark:text-white">
                   {getPrice(plan)}
-                  <span
-                    style={{
-                      fontSize: "16px",
-                      verticalAlign: "super",
-                      marginLeft: "4px",
-                      fontWeight: "bolder",
-                      color: isDarkMode ? "white" : "black",
-                    }}
-                  >
-                    /agent
-                  </span>
                 </p>
               ) : (
                 <p className="text-3xl my-2 text-black dark:text-white">
