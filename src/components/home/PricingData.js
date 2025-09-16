@@ -74,7 +74,7 @@ export const pricingData = {
       buttonInfo: "Start for Free",
       list: [
         "Single User",
-        "5 Agents",
+        "3 Agents",
         "API based access to LLM",
         "Embedding Model",
         "Vector Database",

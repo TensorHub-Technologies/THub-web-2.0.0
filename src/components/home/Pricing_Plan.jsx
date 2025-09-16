@@ -34,7 +34,6 @@ function Pricing_Plan() {
     setCurrency(selectedCurrency);
 
   const handleClick = (planTitle) => {
-    console.log(planTitle);
     if (planTitle === "Pro Power") {
       window.open(`${url}/signup`, "_blank");
     } else if (planTitle === "Free Forever") {

@@ -46,7 +46,6 @@ const Enterprice_Form = ({ setShowForm, handleLoading, handleError }) => {
   }, [setShowForm]);
 
   const handleSubmit = async (values, resetForm) => {
-    console.log(values, "submitting");
     const apiUrl =
       window.location.hostname === "localhost"
         ? "http://localhost:2000"

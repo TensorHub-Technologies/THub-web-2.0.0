@@ -8,7 +8,6 @@ function Features_Anime_Two() {
   const handleNavigation = () => {
     const hostname = window.location.hostname;
     let url;
-    console.log(hostname, "hostname");
 
     switch (hostname) {
       case "localhost":

@@ -9,8 +9,6 @@ import "../index.css";
 import { useSelector } from "react-redux";
 
 const Home = () => {
-  console.log("*** env: ", import.meta.env.VITE_URL);
-  console.log(import.meta.env.VITE_SOME_KEY);
   const isDarkMode = useSelector((state) => state.customization.isDarkMode);
 
   return (

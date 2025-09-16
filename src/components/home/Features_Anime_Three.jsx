@@ -9,7 +9,6 @@ function Features_Anime_Three() {
   const handleNavigation = () => {
     const hostname = window.location.hostname;
     let url;
-    console.log(hostname, "hostname");
     switch (hostname) {
       case "localhost":
         url = import.meta.env.VITE_THUB_WEB_APP_URL;

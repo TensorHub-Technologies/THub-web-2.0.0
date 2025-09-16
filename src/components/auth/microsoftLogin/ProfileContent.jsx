@@ -10,7 +10,6 @@ import "../../auth/index.css";
 const ProfileContent = () => {
   const { instance, accounts } = useMsal();
   const [loading, setLoading] = useState(false);
-  console.log("loading", loading);
   useEffect(() => {
     if (accounts && accounts.length > 0) {
       setLoading(true);
