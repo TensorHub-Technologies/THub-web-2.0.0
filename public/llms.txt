@@ -293,7 +293,7 @@ Pro Power
 
 ₹ 19,999/agent
 
-For teams: 5 users, 25 agents, tools to scale.
+For teams: 5 users, 10 agents, tools to scale.
 
 Choose Plan
 
