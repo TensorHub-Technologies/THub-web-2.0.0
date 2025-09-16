@@ -13,7 +13,6 @@ function FooterImage() {
   const handleNavigation = () => {
     let url;
     const hostname = window.location.hostname;
-    console.log(hostname, "hostname");
 
     switch (hostname) {
       case "localhost":

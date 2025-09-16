@@ -93,8 +93,6 @@ function Github_Custom_Button() {
             break;
         }
 
-        console.log(redirectUrl, "redirectUrl");
-
         setTimeout(() => {
           window.location.href = redirectUrl;
         }, 100);

@@ -60,7 +60,6 @@ const Navbar = () => {
   ];
   let url;
   const hostname = window.location.hostname;
-  console.log(hostname, "hostname");
 
   switch (hostname) {
     case "localhost":
@@ -73,7 +72,6 @@ const Navbar = () => {
       url = import.meta.env.VITE_THUB_WEB_APP_URL;
       break;
   }
-  console.log(url, "url");
 
   return (
     // className="h-auto fixed w-[100%] top-0 left-0 right-0 z-50   px-2 py-5 flex  border  shadow-lg"
