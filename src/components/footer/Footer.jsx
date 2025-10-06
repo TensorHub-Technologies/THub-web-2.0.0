@@ -242,6 +242,8 @@ const Footer = () => {
         <div className="border-t border-gray-300 dark:border-gray-700 py-4">
           <p className="text-center text-sm text-secondary dark:text-secondary-dark">
             © {new Date().getFullYear()} TensorHub Technologies Private Limited
+            <span className="mx-4"></span>
+            🚀 Innovation from 🇮🇳 Bharath, powering the 🌍 World ❤️
           </p>
         </div>
       </div>
