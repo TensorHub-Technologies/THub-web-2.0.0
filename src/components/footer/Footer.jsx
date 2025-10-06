@@ -28,117 +28,112 @@ const Footer = () => {
     <footer
       className={`relative z-10 text-black border-t border-gray-400 ${isDarkMode ? "hero-card-global-subtle-dark" : "hero-card-global-subtle-light"}`}
     >
-      <div className="relative z-20 mx-auto w-full max-w-screen-xl ">
-        <div className="grid grid-cols-2 gap-8 px-4 py-6 lg:py-8 md:grid-cols-4">
-          <div className="">
-            <img
-              src={ThubLogo}
-              className="h-8 w-32 mb-5 mr-40"
-              alt="THub Logo"
-            />
-            <ul className="text-secondary dark:text-gray-400 font-medium">
-              <li className="mb-2">
-                <p className="">
-                  A Magical Tool to Build Generative AI Apps without coding
-                  knowledge.
-                </p>
-              </li>
-            </ul>
+      <div className="relative z-20 mx-auto w-full max-w-screen-xl px-4">
+        <div className="grid grid-cols-1 gap-8 py-8 md:grid-cols-2 lg:grid-cols-5 lg:gap-6">
+          {/* Company Info */}
+          <div className="lg:col-span-1">
+            <img src={ThubLogo} className="h-8 w-32 mb-4" alt="THub Logo" />
+            <p className="text-secondary dark:text-gray-400 text-sm leading-relaxed">
+              A Magical Tool to Build Generative AI Apps without coding
+              knowledge.
+            </p>
           </div>
-          <div className="flex flex-col  items-center">
-            <h2 className="mb-2 text-lg font-bold text-secondary  dark:text-white mr-4">
+
+          {/* THub Links */}
+          <div>
+            <h2 className="mb-4 text-lg font-bold text-secondary dark:text-white">
               THub
             </h2>
-            <ul className="text-secondary dark:text-secondary-dark font-medium">
-              <li className="mb-2">
+            <ul className="text-secondary dark:text-secondary-dark font-medium space-y-2">
+              <li>
                 <Link
                   to="/about"
-                  className="transition-all duration-300 hover:text-primary dark:hover:text-primary-dark hover:ml-1"
+                  className="text-sm transition-all duration-300 hover:text-primary dark:hover:text-primary-dark hover:translate-x-1 inline-block"
                 >
                   About
                 </Link>
               </li>
-              <li className="mb-2">
+              <li>
                 <Link
                   to="/blog"
-                  className=" transition-all duration-300 hover:text-primary dark:hover:text-primary-dark hover:ml-1 dark:text-secondary-dark"
+                  className="text-sm transition-all duration-300 hover:text-primary dark:hover:text-primary-dark hover:translate-x-1 inline-block"
                 >
                   Blog
                 </Link>
               </li>
-              <li className="mb-2">
+              <li>
                 <a
                   href={`${url}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className=" transition-all duration-300 hover:text-primary dark:hover:text-primary-dark hover:ml-1 dark:text-secondary-dark"
+                  className="text-sm transition-all duration-300 hover:text-primary dark:hover:text-primary-dark hover:translate-x-1 inline-block"
                 >
                   Sign in
                 </a>
               </li>
-              <li className="mb-2">
+              <li>
                 <a
                   href={`${url}/signup`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className=" transition-all duration-300 hover:text-primary dark:hover:text-primary-dark hover:ml-1 dark:text-secondary-dark"
+                  className="text-sm transition-all duration-300 hover:text-primary dark:hover:text-primary-dark hover:translate-x-1 inline-block"
                 >
                   Register
                 </a>
               </li>
-
-              <li className="mb-2">
+              <li>
                 <Link
                   to="/contact"
-                  className=" transition-all duration-300 hover:text-primary dark:hover:text-primary-dark hover:ml-1 dark:text-secondary-dark"
+                  className="text-sm transition-all duration-300 hover:text-primary dark:hover:text-primary-dark hover:translate-x-1 inline-block"
                 >
                   Contact
                 </Link>
               </li>
             </ul>
           </div>
-          <div className="flex flex-col justify-center ">
-            <h2 className="mb-2 text-lg font-bold text-secondary  dark:text-white text-start">
+
+          {/* Use Cases */}
+          <div>
+            <h2 className="mb-4 text-lg font-bold text-secondary dark:text-white">
               Use Cases
             </h2>
-            <ul className="text-secondary dark:text-secondary-dark font-medium">
-              <li className="mb-2">
+            <ul className="text-secondary dark:text-secondary-dark font-medium space-y-2">
+              <li>
                 <Link
                   to="#"
-                  className=" transition-all duration-300 hover:text-primary dark:hover:text-primary-dark hover:ml-1"
+                  className="text-sm transition-all duration-300 hover:text-primary dark:hover:text-primary-dark hover:translate-x-1 inline-block"
                 >
                   Agents
                 </Link>
               </li>
-
-              <li className="mb-2">
+              <li>
                 <Link
                   to="#"
-                  className=" transition-all duration-300 hover:text-primary dark:hover:text-primary-dark hover:ml-1"
+                  className="text-sm transition-all duration-300 hover:text-primary dark:hover:text-primary-dark hover:translate-x-1 inline-block"
                 >
                   Retrieval Augmented Generation
                 </Link>
               </li>
-              <li className="mb-2">
+              <li>
                 <Link
                   to="#"
-                  className=" transition-all duration-300 hover:text-primary dark:hover:text-primary-dark hover:ml-1 dark:text-secondary-dark"
+                  className="text-sm transition-all duration-300 hover:text-primary dark:hover:text-primary-dark hover:translate-x-1 inline-block"
                 >
                   Retrieval Augmented Fine Tuning
                 </Link>
               </li>
-              <li className="mb-2">
+              <li>
                 <Link
                   to="#"
-                  className=" transition-all duration-300 hover:text-primary dark:hover:text-primary-dark hover:ml-1 dark:text-secondary-dark"
+                  className="text-sm transition-all duration-300 hover:text-primary dark:hover:text-primary-dark hover:translate-x-1 inline-block"
                 >
                   Recommender System
                 </Link>
               </li>
-              <li className="mb-2">
+              <li>
                 <Link
                   to="#"
-                  className=" transition-all duration-300 hover:text-primary dark:hover:text-primary-dark hover:ml-1 dark:text-secondary-dark"
+                  className="text-sm transition-all duration-300 hover:text-primary dark:hover:text-primary-dark hover:translate-x-1 inline-block"
                 >
                   Document Summarization
                 </Link>
@@ -146,73 +141,109 @@ const Footer = () => {
             </ul>
           </div>
 
-          <div className="flex flex-col ">
-            <h2 className="mb-2 text-lg font-bold text-secondary  dark:text-white">
-              News & Update
+          {/* Policies */}
+          <div>
+            <h2 className="mb-4 text-lg font-bold text-secondary dark:text-white">
+              Usage & Policies
             </h2>
-            <div className="w-full max-w-sm">
-              <div className="flex items-center">
-                <div className="relative w-full">
-                  <input
-                    type="email"
-                    name="email"
-                    className="px-3 py-3 dark:bg-white text-secondary dark:text-black border rounded-e-none border-e-0 shadow-md border-secondary-dark placeholder-black focus:outline-none dark:focus:border-primary-dark focus:border-primary focus:ring-primary  dark:focus:ring-primary-dark focus:right-0 block w-full rounded-md text-lg focus:ring-1"
-                    placeholder="Enter your email"
-                  />
-                </div>
-                <button
-                  className="flex-shrink-0 dark:bg-primary-dark dark:text-secondary  border-r-0 inline-flex items-center px-4 bg-primary rounded-e-lg  text-background"
-                  type="button"
+            <ul className="text-secondary dark:text-secondary-dark font-medium space-y-2">
+              <li>
+                <Link
+                  to="/terms"
+                  className="text-sm transition-all duration-300 hover:text-primary dark:hover:text-primary-dark hover:translate-x-1 inline-block"
                 >
-                  <span id="send-icon" className="py-[14px]">
-                    <RiSendPlaneLine size={26} />
-                  </span>
+                  Terms of Use
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/policy"
+                  className="text-sm transition-all duration-300 hover:text-primary dark:hover:text-primary-dark hover:translate-x-1 inline-block"
+                >
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link
+                  to="/aipolicy"
+                  className="text-sm transition-all duration-300 hover:text-primary dark:hover:text-primary-dark hover:translate-x-1 inline-block"
+                >
+                  AI Acceptable Use Policy
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Newsletter */}
+          <div>
+            <h2 className="mb-4 text-lg font-bold text-secondary dark:text-white">
+              News & Updates
+            </h2>
+            <div className="w-full">
+              <div className="flex">
+                <input
+                  type="email"
+                  name="email"
+                  className="flex-1 px-3 py-3 dark:bg-white text-secondary dark:text-black border border-secondary-dark rounded-l-md shadow-sm placeholder-gray-500 focus:outline-none focus:border-primary dark:focus:border-primary-dark focus:ring-1 focus:ring-primary dark:focus:ring-primary-dark text-sm"
+                  placeholder="Enter your email"
+                />
+                <button
+                  className="flex-shrink-0 bg-primary dark:bg-primary-dark text-background dark:text-secondary px-4 py-3 rounded-r-md hover:opacity-90 transition-opacity"
+                  type="button"
+                  aria-label="Subscribe"
+                >
+                  <RiSendPlaneLine size={20} />
                 </button>
               </div>
             </div>
-            <div className="flex columns-5 mt-6 mr-24">
+
+            {/* Social Links */}
+            <div className="flex gap-4 mt-6">
               <Link
-                // to="#"
-                className="text-gray-500 hover:text-secondary dark:hover:text-white"
-                // target="_blank"
+                to="#"
+                className="text-gray-500 hover:text-secondary dark:hover:text-white transition-colors"
                 rel="noopener noreferrer"
+                aria-label="GitHub"
               >
                 <FiGithub className="w-5 h-5" />
-                <span className="sr-only">GitHub account</span>
               </Link>
               <Link
                 to="https://www.linkedin.com/company/102053952"
-                className="text-gray-500 hover:text-secondary dark:hover:text-white ms-5"
+                className="text-gray-500 hover:text-secondary dark:hover:text-white transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="LinkedIn"
               >
                 <FaLinkedinIn className="w-5 h-5" />
-                <span className="sr-only">Linkedin</span>
               </Link>
               <Link
                 to="https://www.facebook.com/profile.php?id=61564135198933"
-                className="text-gray-500 hover:text-secondary dark:hover:text-white ms-5"
+                className="text-gray-500 hover:text-secondary dark:hover:text-white transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Facebook"
               >
                 <FiFacebook className="w-5 h-5" />
-                <span className="sr-only">Facebook page</span>
               </Link>
               <Link
                 to="https://x.com/TensorH90867"
-                className="text-gray-500 hover:text-secondary dark:hover:text-white ms-5"
+                className="text-gray-500 hover:text-secondary dark:hover:text-white transition-colors"
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="Twitter"
               >
                 <FaXTwitter className="w-5 h-5" />
-                <span className="sr-only">Twitter page</span>
               </Link>
             </div>
           </div>
         </div>
-        <div className="flex justify-center items-center pb-2">
-          <p className="text-sm text-secondary dark:text-secondary-dark">
-            © TensorHub Technologies Private Limited
+
+        {/* Copyright */}
+        <div className="border-t border-gray-300 dark:border-gray-700 py-4">
+          <p className="text-center text-sm text-secondary dark:text-secondary-dark">
+            © {new Date().getFullYear()} TensorHub Technologies Private Limited
+            <span className="mx-4"></span>
+            🚀 Innovation from 🇮🇳 Bharath, powering the 🌍 World ❤️
           </p>
         </div>
       </div>
