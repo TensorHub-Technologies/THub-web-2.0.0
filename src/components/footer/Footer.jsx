@@ -175,7 +175,7 @@ const Footer = () => {
           </div>
 
           {/* Newsletter */}
-          <div>
+          <div className="mr-4">
             <h2 className="mb-4 text-lg font-bold text-secondary dark:text-white">
               News & Updates
             </h2>
@@ -184,11 +184,11 @@ const Footer = () => {
                 <input
                   type="email"
                   name="email"
-                  className="flex-1 px-3 py-3 dark:bg-white text-secondary dark:text-black border border-secondary-dark rounded-l-md shadow-sm placeholder-gray-500 focus:outline-none focus:border-primary dark:focus:border-primary-dark focus:ring-1 focus:ring-primary dark:focus:ring-primary-dark text-sm"
+                  className="flex-1 px-1.5 py-2 dark:bg-white text-secondary dark:text-black border border-secondary-dark rounded-l-md shadow-sm placeholder-gray-500 focus:outline-none focus:border-primary dark:focus:border-primary-dark focus:ring-1 focus:ring-primary dark:focus:ring-primary-dark text-sm"
                   placeholder="Enter your email"
                 />
                 <button
-                  className="flex-shrink-0 bg-primary dark:bg-primary-dark text-background dark:text-secondary px-4 py-3 rounded-r-md hover:opacity-90 transition-opacity"
+                  className="flex-shrink-0 bg-primary dark:bg-primary-dark text-background dark:text-secondary px-2  py-3 rounded-r-md hover:opacity-90 transition-opacity"
                   type="button"
                   aria-label="Subscribe"
                 >
