@@ -9,6 +9,9 @@ const UseCases = loadable(() => import("../pages/UseCases"));
 const Pricing = loadable(() => import("../pages/Pricing"));
 const Blog = loadable(() => import("../pages/Blog"));
 const AboutUs = loadable(() => import("../pages/AboutUs"));
+const Terms = loadable(() => import("../pages/Terms"));
+const Policy = loadable(() => import("../pages/Policy"));
+const AIpolicy = loadable(() => import("../pages/AIpolicy"));
 const BlogDetails = loadable(() => import("../pages/BlogDetails"));
 const BlogDetails2 = loadable(() => import("../pages/BlogDetails2"));
 const BlogDetails3 = loadable(() => import("../pages/BlogDetails3"));
@@ -106,6 +109,18 @@ export const router = createBrowserRouter([
       {
         path: "about",
         element: <AboutUs />,
+      },
+      {
+        path: "terms",
+        element: <Terms />,
+      },
+      {
+        path: "policy",
+        element: <Policy />,
+      },
+      {
+        path: "aipolicy",
+        element: <AIpolicy />,
       },
     ],
   },
