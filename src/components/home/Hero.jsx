@@ -49,7 +49,7 @@ const Hero = () => {
       className={`mt-8 relative ${isDarkMode ? "hero-card-global-subtle-dark" : "hero-card-global-subtle-light"}`}
     >
       <Helmet>
-        <title>THub - Build AI Apps 30X Faster | No-Code GenAI Platform</title>
+        <title>THub - Simply Drag Drop Deploy AI Agents</title>
         <meta
           name="description"
           content="Launch agentic workflows, RAG systems, and GenAI apps 30x faster with THub’s no-code AI platform. Start building smarter today!"
