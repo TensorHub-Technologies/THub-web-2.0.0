@@ -10,7 +10,7 @@ import "../../index.css";
 function Pricing_Plan() {
   const isDarkMode = useSelector((state) => state.customization.isDarkMode);
   const [selectedPlan, setSelectedPlan] = useState("monthly");
-  const [currency, setCurrency] = useState("INR");
+  const [currency, setCurrency] = useState("USD");
   const [showForm, setShowForm] = useState(false);
 
   const handleMonthly = () => setSelectedPlan("monthly");
@@ -65,7 +65,7 @@ function Pricing_Plan() {
 
   // Function to get the correct price based on selected plan and currency
   const getPrice = (plan) => {
-    return plan.prices[currency] || plan.prices["INR"];
+    return plan.prices[currency] || plan.prices["USD"];
   };
 
   return (

@@ -35,7 +35,8 @@ export const pricingData = {
         GBP: "£149",
         Euro: "€159",
       },
-      description: "For teams: 5 users, 10 agents, tools to scale.",
+      description:
+        "For teams: 1 primary account with access for up to 5 users.",
       buttonInfo: "Choose Plan",
       list: [
         "All Free Features",
@@ -97,7 +98,8 @@ export const pricingData = {
         GBP: "£1,599",
         Euro: "€1,899",
       },
-      description: "For teams: 5 users, 10 agents, tools to scale.",
+      description:
+        "For teams: 1 primary account with access for up to 5 users.",
       buttonInfo: "Choose Plan",
       list: [
         "All Free Features",
