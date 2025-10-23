@@ -8,7 +8,7 @@ import EuroFlag from "../../assets/images/flag/ero.png";
 
 const PriceDropdown = ({ onCurrencyChange }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedOption, setSelectedOption] = useState("INR");
+  const [selectedOption, setSelectedOption] = useState("USD");
 
   const toggleDropdown = () => setIsOpen(!isOpen);
 
