@@ -69,7 +69,7 @@ const UsecaseHome = () => {
       description:
         "The Project Planning Agent is an AI-driven assistant that helps teams design, schedule, and manage projects with greater speed and accuracy. It automates the creation of project charters, timelines, resource allocation plans, and risk assessments by synthesizing inputs from requirement documents, stakeholder interviews, and historical data.",
       agentUrl:
-        "https://demo.thub.tech/chatbot/d4b95519-bb06-4b8c-82dc-9ece64daceae",
+        "https://demo.thub.tech/chatbot/f1e4aa8c-ac1b-463c-9dbe-259305320fc0",
     },
     {
       id: "5d564b77-ee3c-4aaa-91aa-f121cdfcfd04",
