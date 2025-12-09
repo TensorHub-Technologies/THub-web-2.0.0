@@ -25,7 +25,7 @@ function Pricing_Plan() {
       url = `https://demo.thub.tech`;
       break;
     default:
-      url = `https://app.thub.tech`;
+      url = `https://thub-app.wittysand-a4a5c89d.westus2.azurecontainerapps.io`;
       break;
   }
 

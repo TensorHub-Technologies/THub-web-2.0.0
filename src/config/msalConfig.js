@@ -11,9 +11,11 @@ const getRedirectUri = () => {
   if (hostname === "localhost") {
     return "http://localhost:5173/";
   } else if (
-    hostname.includes("thub-web-2-0-0-378678297066.us-central1.run.app")
+    hostname.includes(
+      "https://thub-web.happytree-73f6fdda.westus2.azurecontainerapps.io",
+    )
   ) {
-    return "https://thub-web-2-0-0-378678297066.us-central1.run.app/";
+    return "https://https://thub-web.happytree-73f6fdda.westus2.azurecontainerapps.io/";
   } else {
     return "https://thub.tech/";
   }

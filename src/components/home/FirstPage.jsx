@@ -18,7 +18,7 @@ function FirstPage() {
       url = `https://demo.thub.tech/signup`;
       break;
     default:
-      url = `https://app.thub.tech/signup`;
+      url = `https://thub-app.wittysand-a4a5c89d.westus2.azurecontainerapps.io/signup`;
       break;
   }
   const strings = [
