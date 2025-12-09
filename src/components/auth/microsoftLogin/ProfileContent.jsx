@@ -35,7 +35,7 @@ const ProfileContent = () => {
               const apiUrl =
                 window.location.hostname === "localhost"
                   ? "http://localhost:2000"
-                  : "https://thub-web-server-2-0-378678297066.us-central1.run.app";
+                  : "https://thub-server.wittycoast-8619cdd6.westus2.azurecontainerapps.io";
 
               axios
                 .post(`${apiUrl}/microuser`, payload)
@@ -53,7 +53,7 @@ const ProfileContent = () => {
                     case "localhost":
                       redirectUrl = `http://localhost:8080/?theme=${theme}&uid=${userId}`;
                       break;
-                    case "thub-web-2-0-0-378678297066.us-central1.run.app":
+                    case "https://thub-web.happytree-73f6fdda.westus2.azurecontainerapps.io":
                       redirectUrl = `http://34.31.158.201/?theme=${theme}&uid=${userId}`;
                       break;
                     default:

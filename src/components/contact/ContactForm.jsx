@@ -17,7 +17,7 @@ const ContactForm = () => {
     const apiUrl =
       window.location.hostname === "localhost"
         ? "http://localhost:2000"
-        : "https://thub-web-server-2-0-378678297066.us-central1.run.app";
+        : "https://thub-server.wittycoast-8619cdd6.westus2.azurecontainerapps.io";
 
     setLoading(true);
     try {

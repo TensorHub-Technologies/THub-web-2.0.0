@@ -26,7 +26,7 @@ const SignIn = () => {
     const apiUrl =
       window.location.hostname === "localhost"
         ? "http://localhost:2000"
-        : "https://thub-web-server-2-0-378678297066.us-central1.run.app";
+        : "https://thub-server.wittycoast-8619cdd6.westus2.azurecontainerapps.io";
     try {
       const response = await axios.post(`${apiUrl}/loginUser`, {
         email,
@@ -44,7 +44,8 @@ const SignIn = () => {
         const redirectUrl =
           hostname === "thub.tech"
             ? `https://${finalWorkspace}.thub.tech/?theme=${theme}&uid=${userId}`
-            : hostname === "thub-web-2-0-0-378678297066.us-central1.run.app"
+            : hostname ===
+                "https://thub-web.happytree-73f6fdda.westus2.azurecontainerapps.io"
               ? `https://demo.thub.tech/?theme=${theme}&uid=${userId}`
               : `http://localhost:8080/?theme=${theme}&uid=${userId}`;
 
