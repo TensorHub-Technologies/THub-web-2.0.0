@@ -1,5 +1,6 @@
 import { useState } from "react";
 import ContactForm from "../../contact/ContactForm.jsx";
+import axios from "axios";
 
 const MasterClassGenAI = () => {
   // State to manage dropdown visibility
@@ -18,6 +19,46 @@ const MasterClassGenAI = () => {
       ...prev,
       [id]: !prev[id],
     }));
+  };
+
+  const handleEnroll = async () => {
+    try {
+      // 1. create order
+      const { data } = await axios.post(
+        "http://localhost:2000/api/create-course-order",
+        {
+          courseName: "MasterClass in GenAI",
+          amount: 1999,
+        },
+      );
+
+      const options = {
+        key: data.key,
+        amount: data.amount,
+        currency: "INR",
+        name: "THub",
+        description: "GenAI MasterClass Enrollment",
+        order_id: data.orderId,
+
+        handler: async function (response) {
+          const verify = await axios.post(
+            "http://localhost:2000/api/verify-course-payment",
+            response,
+          );
+
+          if (verify.data.success) {
+            alert("Payment Successful!");
+          }
+        },
+
+        theme: { color: "#3399cc" },
+      };
+
+      const razorpayObject = new window.Razorpay(options);
+      razorpayObject.open();
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   return (
@@ -188,6 +229,14 @@ const MasterClassGenAI = () => {
               </div>
             )}
           </div>
+        </div>
+        <div className="flex justify-center items-center">
+          <button
+            onClick={handleEnroll}
+            className="bg-primary text-white p-3 rounded-lg w-56 mt-6"
+          >
+            Enroll Now – ₹1999
+          </button>
         </div>
       </div>
       <ContactForm />
