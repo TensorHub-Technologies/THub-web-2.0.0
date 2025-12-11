@@ -69,7 +69,7 @@ const Navbar = () => {
       url = import.meta.env.VITE_THUB_WEB_DEMO_URL;
       break;
     default:
-      url = import.meta.env.VITE_THUB_WEB_APP_URL;
+      url = "https://thub-app.wittysand-a4a5c89d.westus2.azurecontainerapps.io";
       break;
   }
 
