@@ -1,8 +1,12 @@
 import { useState } from "react";
-import ContactForm from "../../contact/ContactForm.jsx";
+import StudentDetails_Form from "../../home/StudentDetails_Form.jsx";
+import { toast } from "react-toastify";
+import { useSelector } from "react-redux";
 
 const MasterClassGenAI = () => {
   // State to manage dropdown visibility
+  const [showForm, setShowForm] = useState(false);
+  const isDarkMode = useSelector((state) => state.customization.isDarkMode);
   const [dropdowns, setDropdowns] = useState({
     topic1: false,
     topic2: false,
@@ -18,6 +22,30 @@ const MasterClassGenAI = () => {
       ...prev,
       [id]: !prev[id],
     }));
+  };
+
+  const showStudentForm = () => {
+    setShowForm(true);
+  };
+
+  const handleLoading = (message) => {
+    toast.success(message, {
+      theme: "colored",
+      style: {
+        background: isDarkMode ? "#e22a90" : "#3c5ba4",
+        color: "white",
+      },
+    });
+  };
+
+  const handleError = (message) => {
+    toast.error(message, {
+      theme: "colored",
+      style: {
+        background: "red",
+        color: "white",
+      },
+    });
   };
 
   return (
@@ -190,7 +218,22 @@ const MasterClassGenAI = () => {
           </div>
         </div>
       </div>
-      <ContactForm />
+      <div className="flex justify-center items-center">
+        <button
+          onClick={showStudentForm}
+          type="enroll now"
+          className="w-36 py-3 px-6 bg-primary dark:bg-primary-dark text-white dark:text-secondary rounded-lg hover:bg-[#31519b] dark:hover:bg-[#e65ca8] disabled:opacity-60"
+        >
+          enroll now
+        </button>
+      </div>
+      {showForm && (
+        <StudentDetails_Form
+          setShowForm={setShowForm}
+          handleLoading={handleLoading}
+          handleError={handleError}
+        />
+      )}
     </div>
   );
 };
