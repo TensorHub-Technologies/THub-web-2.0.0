@@ -51,7 +51,7 @@ const UsecaseHome = () => {
       workspaceUid: "9bf57af6-4020-4e53-951d-647d2db86070",
       description: "Workflow for RAG on Music and Arts website.",
       agentUrl:
-        "https://demo.thub.tech/chatbot/e49090f8-566a-4a66-a006-64af2325627f",
+        "https://thub-app.wittysand-a4a5c89d.westus2.azurecontainerapps.io/chatbot/4ea1b570-a4b9-47ff-8f54-54c111beee8d",
     },
     {
       id: "d4b95519-bb06-4b8c-82dc-9ece64daceae",
@@ -69,7 +69,7 @@ const UsecaseHome = () => {
       description:
         "The Project Planning Agent is an AI-driven assistant that helps teams design, schedule, and manage projects with greater speed and accuracy. It automates the creation of project charters, timelines, resource allocation plans, and risk assessments by synthesizing inputs from requirement documents, stakeholder interviews, and historical data.",
       agentUrl:
-        "https://demo.thub.tech/chatbot/f1e4aa8c-ac1b-463c-9dbe-259305320fc0",
+        "https://thub-app.wittysand-a4a5c89d.westus2.azurecontainerapps.io/chatbot/77124ec9-cd27-4574-afcf-b30e489d996b",
     },
     {
       id: "5d564b77-ee3c-4aaa-91aa-f121cdfcfd04",
@@ -93,7 +93,7 @@ const UsecaseHome = () => {
       description:
         "This agent pulls data from PostgreSQL and performs financial audit and generate report.",
       agentUrl:
-        "https://demo.thub.tech/chatbot/a49fb157-a351-4cbd-86e1-6e5f283ef46b",
+        "https://thub-app.wittysand-a4a5c89d.westus2.azurecontainerapps.io/chatbot/8ab6fc13-56d3-4c84-8cd2-5fa90043faea",
     },
     {
       id: "49d59ecc-e0b6-41a9-b1c3-c7ebe9068029",
@@ -111,7 +111,7 @@ const UsecaseHome = () => {
       description:
         "The Startup Idea Generator Agent is an AI-powered brainstorming assistant designed to help entrepreneurs, innovators, and venture studios discover unique and viable startup ideas. It analyzes market trends, user pain points, emerging technologies, and successful business models to generate validated startup concepts across industries.",
       agentUrl:
-        "https://demo.thub.tech/chatbot/49d59ecc-e0b6-41a9-b1c3-c7ebe9068029",
+        "https://thub-app.wittysand-a4a5c89d.westus2.azurecontainerapps.io/chatbot/45f23e58-9c2b-47b5-9a60-4b8f686ea358",
     },
     {
       id: "b1c07a97-e6e3-4925-b851-013f9492ffae",
@@ -130,7 +130,7 @@ const UsecaseHome = () => {
       description:
         "The Product Comparison Agent is an AI-powered assistant that automates side-by-side evaluations of competing products based on features, pricing, specifications, customer reviews, and third-party benchmarks. Ideal for sales teams, procurement units, or end-users, it delivers objective, data-driven comparisons to aid faster and smarter decision-making.",
       agentUrl:
-        "https://demo.thub.tech/chatbot/9375e78b-66cf-46ee-9bd6-311316928256",
+        "https://thub-app.wittysand-a4a5c89d.westus2.azurecontainerapps.io/chatbot/8ea6f784-a132-458f-a4e1-d639aa3e3a61",
     },
     {
       id: "7d8b5e28-6805-4d2a-b4c7-85008dc94b27",
@@ -148,7 +148,7 @@ const UsecaseHome = () => {
       description:
         "The Investment Analysis Agent is an AI-powered assistant that streamlines financial due diligence by analyzing company reports, market trends, investor presentations, news, and financial statements. It assists analysts and fund managers in identifying opportunities, assessing risks, and generating investment memos with data-driven insights.",
       agentUrl:
-        "https://demo.thub.tech/chatbot/7aa7bb0a-e7ab-4aef-8419-ae9b90cd6c20",
+        "https://thub-app.wittysand-a4a5c89d.westus2.azurecontainerapps.io/chatbot/d3e38fd4-8556-428e-98b8-678eec821455",
     },
     {
       id: "3282cd95-4df4-4758-9766-a9cb862eed83",
@@ -168,7 +168,7 @@ const UsecaseHome = () => {
       description:
         "The Competitor Analysis Agent is an AI-driven assistant that continuously monitors, extracts, and analyzes competitive intelligence from public sources such as websites, press releases, financial filings, job postings, social media, and news. It helps strategy, product, and sales teams stay informed on market movements, product updates, pricing strategies, and emerging threats.",
       agentUrl:
-        "https://demo.thub.tech/chatbot/5416b299-ee62-43c7-b911-8c3e2f97586e",
+        "https://thub-app.wittysand-a4a5c89d.westus2.azurecontainerapps.io/chatbot/43bc784a-1f63-4354-9c1c-0a887fd87a53",
     },
     {
       id: "5b3484d7-deb1-498c-b91b-aefd9199df75",
@@ -190,7 +190,7 @@ const UsecaseHome = () => {
       description:
         "The Code Review Agent is an AI-powered assistant designed to automatically analyze, review, and provide feedback on source code across multiple languages.",
       agentUrl:
-        "https://demo.thub.tech/chatbot/48d5e7e1-9265-41b0-9501-da314349d9c4",
+        "https://thub-app.wittysand-a4a5c89d.westus2.azurecontainerapps.io/chatbot/b2f19729-0c8e-4113-a326-d9fe3d29345b",
     },
     {
       id: "953d0151-5356-41e3-9e79-ba8b429d064a",
@@ -207,7 +207,7 @@ const UsecaseHome = () => {
       description:
         "The Software Development Agent is an AI-powered assistant that accelerates the end-to-end software development lifecycle—from requirements gathering to code generation, testing, and deployment. It supports product managers, developers, and DevOps teams by automating repetitive tasks, improving code quality, and ensuring faster delivery cycles.",
       agentUrl:
-        "https://demo.thub.tech/chatbot/a3aac8f6-2406-4b4e-a240-1ad4e4095c32",
+        "https://thub-app.wittysand-a4a5c89d.westus2.azurecontainerapps.io/chatbot/c0bae397-de44-4821-ac2e-ea20697ecf29",
     },
   ];
 
