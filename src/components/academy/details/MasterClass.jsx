@@ -1,6 +1,7 @@
 import { useState } from "react";
 import StudentDetails_Form from "../../home/StudentDetails_Form.jsx";
-import { toast } from "react-toastify";
+import toast, { Toaster } from "react-hot-toast";
+import "react-toastify/dist/ReactToastify.css";
 import { useSelector } from "react-redux";
 
 const MasterClassGenAI = () => {
@@ -50,6 +51,7 @@ const MasterClassGenAI = () => {
 
   return (
     <div className="p-4 bg-background dark:bg-background-dark mt-20">
+      <Toaster />
       <div className="container max-w-2xl mx-auto">
         <h2 className="text-center  text-primary dark:text-primary-dark">
           MasterClass in GenAI Details
@@ -222,13 +224,14 @@ const MasterClassGenAI = () => {
         <button
           onClick={showStudentForm}
           type="enroll now"
-          className="w-36 py-3 px-6 bg-primary dark:bg-primary-dark text-white dark:text-secondary rounded-lg hover:bg-[#31519b] dark:hover:bg-[#e65ca8] disabled:opacity-60"
+          className="w-48 text-lg py-3 px-6 bg-primary dark:bg-primary-dark text-white dark:text-secondary rounded-lg hover:bg-[#31519b] dark:hover:bg-[#e65ca8] disabled:opacity-60"
         >
-          enroll now
+          Enroll Now
         </button>
       </div>
       {showForm && (
         <StudentDetails_Form
+          courseName="MasterClass in GenAI"
           setShowForm={setShowForm}
           handleLoading={handleLoading}
           handleError={handleError}

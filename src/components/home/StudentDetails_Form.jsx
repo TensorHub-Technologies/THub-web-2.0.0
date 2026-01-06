@@ -4,13 +4,19 @@ import axios from "axios";
 import PropTypes from "prop-types";
 import { useEffect, useRef } from "react";
 
-const StudentDetails_Form = ({ setShowForm, handleLoading, handleError }) => {
+const StudentDetails_Form = ({
+  courseName,
+  setShowForm,
+  handleLoading,
+  handleError,
+}) => {
   const formRef = useRef(null);
 
   const initialValues = {
     firstName: "",
     lastName: "",
     email: "",
+    course: courseName || "",
     current_status: "",
     collegeName: "",
     companyName: "",
@@ -22,6 +28,7 @@ const StudentDetails_Form = ({ setShowForm, handleLoading, handleError }) => {
     firstName: Yup.string().required("First Name is required"),
     lastName: Yup.string().required("Last Name is required"),
     email: Yup.string().email("Invalid email").required("Email is required"),
+    course: Yup.string().required("Enter the course name"),
     current_status: Yup.string().required("Current status is required"),
 
     collegeName: Yup.string().when("current_status", {
@@ -53,7 +60,6 @@ const StudentDetails_Form = ({ setShowForm, handleLoading, handleError }) => {
   }, [setShowForm]);
 
   const handleSubmit = async (values, resetForm) => {
-    console.log(values, "values");
     const apiUrl =
       window.location.hostname === "localhost"
         ? "http://localhost:2000"
@@ -130,12 +136,22 @@ const StudentDetails_Form = ({ setShowForm, handleLoading, handleError }) => {
                 />
               </div>
 
+              {/* course */}
+              <div className="relative z-0 w-full group">
+                <Field
+                  name="course"
+                  type="text"
+                  className={`${inputClass} cursor-not-allowed text-gray-600 bg-gray-100 dark:text-[#7D838E]`}
+                  readOnly
+                />
+              </div>
+
               {/* Status */}
               <div className="relative z-0 w-full group">
                 <Field
                   as="select"
                   name="current_status"
-                  className={`${inputClass} appearance-none pr-8`}
+                  className={`${inputClass} appearance-none pr-8 text-gray-600 dark:text-[#7D838E]`}
                 >
                   <option value="">Current Status</option>
                   <option value="Student">Student</option>
@@ -242,7 +258,7 @@ const StudentDetails_Form = ({ setShowForm, handleLoading, handleError }) => {
                 <button
                   type="button"
                   onClick={() => setShowForm(false)}
-                  className="px-8 py-2 border rounded-lg"
+                  className="px-8 py-2 border rounded-lg dark:text-white"
                 >
                   Cancel
                 </button>
@@ -265,6 +281,7 @@ StudentDetails_Form.propTypes = {
   setShowForm: PropTypes.func.isRequired,
   handleLoading: PropTypes.func.isRequired,
   handleError: PropTypes.func.isRequired,
+  courseName: PropTypes.string.isRequired,
 };
 
 export default StudentDetails_Form;
