@@ -166,7 +166,6 @@ const ContactForm = () => {
             >
               {loading ? "Sending..." : "Send Message"}
             </button>
-
             {error && <div className="text-red-500 text-sm mt-4">{error}</div>}
 
             <ToastContainer />
