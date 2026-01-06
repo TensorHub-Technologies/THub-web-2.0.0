@@ -1,8 +1,13 @@
 import { useState } from "react";
-import ContactForm from "../../contact/ContactForm.jsx";
+import toast, { Toaster } from "react-hot-toast";
+import "react-toastify/dist/ReactToastify.css";
+import { useSelector } from "react-redux";
+import StudentDetails_Form from "../../home/StudentDetails_Form.jsx";
 
 const Leadership = () => {
   // State to manage dropdown visibility
+  const [showForm, setShowForm] = useState(false);
+  const isDarkMode = useSelector((state) => state.customization.isDarkMode);
   const [dropdowns, setDropdowns] = useState({
     topic1: false,
     topic2: false,
@@ -20,8 +25,33 @@ const Leadership = () => {
     }));
   };
 
+  const showStudentForm = () => {
+    setShowForm(true);
+  };
+
+  const handleLoading = (message) => {
+    toast.success(message, {
+      theme: "colored",
+      style: {
+        background: isDarkMode ? "#e22a90" : "#3c5ba4",
+        color: "white",
+      },
+    });
+  };
+
+  const handleError = (message) => {
+    toast.error(message, {
+      theme: "colored",
+      style: {
+        background: "red",
+        color: "white",
+      },
+    });
+  };
+
   return (
     <div className="p-4 bg-background dark:bg-background-dark mt-20">
+      <Toaster />
       <div className="container max-w-2xl mx-auto">
         <h2 className="text-center  text-primary dark:text-primary-dark">
           GenAI For Leaders and CxO&apos;s Details
@@ -261,8 +291,6 @@ const Leadership = () => {
                   )}
                 </div>
 
-                {/* Subtopic 4 */}
-
                 {/* Subtopic 5 */}
                 <div className="subtopic mt-2">
                   <div
@@ -465,16 +493,28 @@ const Leadership = () => {
                     </div>
                   )}
                 </div>
-
-                {/* Subtopic 4 */}
-
-                {/* Subtopic 5 */}
               </div>
             )}
           </div>
         </div>
       </div>
-      <ContactForm />
+      <div className="flex justify-center items-center">
+        <button
+          onClick={showStudentForm}
+          type="enroll now"
+          className="w-48 text-lg py-3 px-6 bg-primary dark:bg-primary-dark text-white dark:text-secondary rounded-lg hover:bg-[#31519b] dark:hover:bg-[#e65ca8] disabled:opacity-60"
+        >
+          Enroll Now
+        </button>
+      </div>
+      {showForm && (
+        <StudentDetails_Form
+          courseName="GenAI for Leaders and CxO's"
+          setShowForm={setShowForm}
+          handleLoading={handleLoading}
+          handleError={handleError}
+        />
+      )}
     </div>
   );
 };
