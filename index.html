@@ -35,7 +35,7 @@
   }
   </script>
 
-    <script>function initApollo() {
+  <script>function initApollo() {
       var n = Math.random().toString(36).substring(7), o = document.createElement("script");
       o.src = "https://assets.apollo.io/micro/website-tracker/tracker.iife.js?nocache=" + n, o.async = !0, o.defer = !0,
         o.onload = function () { window.trackingFunctions.onLoad({ appId: "693284d9fb52330011d81ccd" }) },
@@ -102,8 +102,9 @@
   <script type="module">
     import Chatbot from "https://cdn.jsdelivr.net/npm/thub-embed@9.3.3/dist/web.js"
     Chatbot.init({
-      chatflowid: "2b414cd1-cded-4915-be17-31e256246765",
-      apiHost: "https://demo.thub.tech",
+      chatflowid: "f9a1c5b3-19f6-46f0-8a30-9034e6cca9fa",
+      apiHost: "https://thub-app.wittysand-a4a5c89d.westus2.azurecontainerapps.io",
+
       chatflowConfig: {
         // topK: 2
       },
@@ -129,10 +130,10 @@
           size: "small",
           dragAndDrop: true,
           iconColor: 'black',
-          customIconSrc: 'assets/robo1.mp4', 
+          customIconSrc: 'assets/robo1.mp4',
           autoWindowOpen: {
-            autoOpen: false, 
-            openDelay: 2, 
+            autoOpen: false,
+            openDelay: 2,
             autoOpenOnMobile: false,
           },
         },
@@ -142,16 +143,16 @@
           showAgentMessages: true,
           title: "THub Bot",
           welcomeMessage: `Hello! ${localStorage.getItem("name")
-              ? localStorage.getItem("name") + " "
-              : "Guest" + " "
+            ? localStorage.getItem("name") + " "
+            : "Guest" + " "
             }welcome to THub`,
           //titleAvatarSrc: 'svg/thub_icon.svg',
           titleBackgroundColor: 'linear-gradient(90deg, #e22a90 0%, #3c5ba4 100%)',
           titleTextColor: '#ffffff',
           welcomeMessage: "THub Bot",
           welcomeMessage: `Hello! ${localStorage.getItem("name")
-              ? localStorage.getItem("name") + " "
-              : "Guest" + " "
+            ? localStorage.getItem("name") + " "
+            : "Guest" + " "
             }welcome to THub`,
           errorMessage: 'This is a custom error message',
           backgroundColor: '#ffffff',
@@ -184,7 +185,7 @@
             maxChars: 50,
             maxCharsWarningMessage: 'You exceeded the characters limit. Please input less than 50 characters.',
             autoFocus: false, // If not used, autofocus is disabled on mobile and enabled on desktop. true enables it on both, false disables it on both.
-           // sendMessageSound: true,
+            // sendMessageSound: true,
             // sendSoundLocation: "send_message.mp3", // If this is not used, the default sound effect will be played if sendSoundMessage is true.
             receiveMessageSound: true,
             // receiveSoundLocation: "receive_message.mp3", // If this is not used, the default sound effect will be played if receiveSoundMessage is true.
@@ -234,7 +235,7 @@
   </script>
 
 
-  
+
 
   <!-- Moved the main script here -->
   <script type="module" src="/src/main.jsx"></script>
@@ -244,7 +245,8 @@
   <div id="root">
     <noscript>
       <h1>THub: No-Code AI Agent Orchestration Platform</h1>
-      <p>Build and deploy multi-agent AI workflows for eCommerce, banking, and supply chain management — all without coding.</p>
+      <p>Build and deploy multi-agent AI workflows for eCommerce, banking, and supply chain management — all without
+        coding.</p>
     </noscript>
   </div>
 </body>
