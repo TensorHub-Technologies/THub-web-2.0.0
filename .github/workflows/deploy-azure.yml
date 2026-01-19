@@ -1,38 +1,65 @@
-name: Deploy to Azure Container App
-
-on:
-  push:
-    branches:
-      - main
-
-jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-
-      - name: Login to Azure
-        uses: azure/login@v1
-        with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
-
-      - name: Build and Push Container Image
-        uses: azure/docker-login@v1
-        with:
-          login-server: ca7a4dd637e6acr.azurecr.io
-          username: ca7a4dd637e6acr
-          password: ${{ secrets.ACR_PASSWORD }}
-
-      - name: Build and Push Docker image
-        run: |
-          docker build -t ca7a4dd637e6acr.azurecr.io/thub:${{ github.sha }} .
-          docker push ca7a4dd637e6acr.azurecr.io/thub:${{ github.sha }}
-
-      - name: Deploy to Azure Container Apps
-        run: |
-          az containerapp update \
-            --name ${{ secrets.CONTAINER_APP_NAME }} \
-            --resource-group ${{ secrets.RESOURCE_GROUP }} \
-            --image ca7a4dd637e6acr.azurecr.io/thub:${{ github.sha }}
+trigger:
+  - main
+ 
+variables:
+  # Azure Resource Manager service connection (used by AzureCLI@2)
+  azureSubscription: ARMSC   # <-- ARM service connection name
+ 
+  # Docker Registry service connection (used by Docker@2)
+  dockerRegistryServiceConnection: DockerSC    # <-- Docker Registry service connection name
+ 
+  resourceGroup: gs_rg_0361
+  acrName: ca7a4dd637e6acr            # ACR name (not FQDN)
+  containerAppName: thub-web
+  imageName: thub-web
+  tag: $(Build.BuildId)
+ 
+pool:
+  vmImage: ubuntu-latest
+ 
+stages:
+  - stage: BuildAndDeploy
+    displayName: Build and Deploy to Azure Container Apps (Dev)
+    jobs:
+      - job: Build
+        displayName: Build & Deploy
+        steps:
+          - checkout: self
+ 
+          # Azure login (ARM service connection)
+          - task: AzureCLI@2
+            displayName: Azure Login
+            inputs:
+              azureSubscription: $(azureSubscription)
+              scriptType: bash
+              scriptLocation: inlineScript
+              inlineScript: |
+                az account show
+ 
+          # Build & push via Docker task using Docker Registry service connection
+          - task: Docker@2
+            displayName: Build and Push Image
+            inputs:
+              command: buildAndPush
+              repository: $(imageName)
+              dockerfile: Dockerfile
+              containerRegistry: $(dockerRegistryServiceConnection)  # <-- service connection NAME
+              tags: |
+                $(tag)
+ 
+          # Deploy the newly pushed image to Container Apps using ARM service connection
+          - task: AzureCLI@2
+            displayName: Deploy to Container App
+            inputs:
+              azureSubscription: $(azureSubscription)
+              scriptType: bash
+              scriptLocation: inlineScript
+              inlineScript: |
+                set -e
+                IMAGE="$(acrName).azurecr.io/$(imageName):$(tag)"
+                echo "Deploying image: ${IMAGE}"
+ 
+                az containerapp update \
+                  --name $(containerAppName) \
+                  --resource-group $(resourceGroup) \
+                  --image "${IMAGE}" \ 
