@@ -51,7 +51,7 @@ const UsecaseHome = () => {
       workspaceUid: "9bf57af6-4020-4e53-951d-647d2db86070",
       description: "Workflow for RAG on Music and Arts website.",
       agentUrl:
-        "https://thub-app.wittysand-a4a5c89d.westus2.azurecontainerapps.io/chatbot/4ea1b570-a4b9-47ff-8f54-54c111beee8d",
+        "https://thub-app.wittysand-a4a5c89d.westus2.azurecontainerapps.io/chatbot/b45cf381-1404-4d44-a8ed-8f29960a82fa",
     },
     {
       id: "d4b95519-bb06-4b8c-82dc-9ece64daceae",
