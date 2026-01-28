@@ -16,7 +16,7 @@ const Footer = () => {
     case "localhost":
       url = import.meta.env.VITE_THUB_WEB_URL;
       break;
-    case "thub-web-demo-378678297066.europe-west1.run.app":
+    case "https://thub-web.calmisland-c4dd80be.westus2.azurecontainerapps.io":
       url = import.meta.env.VITE_THUB_WEB_DEMO_URL;
       break;
     default:

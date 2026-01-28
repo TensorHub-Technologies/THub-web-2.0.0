@@ -30,7 +30,7 @@ const UsecaseHome = () => {
     //   description:
     //     "This agent audit insurance policy sales data, checks GST rates with govt portal and check for the correctness of all the data.",
     //   agentUrl:
-    //     "https://demo.thub.tech/chatbot/701c21ea-1e25-4870-a512-847ab7bab5dc",
+    //     "https://thub-app.calmisland-c4dd80be.westus2.azurecontainerapps.io/chatbot/701c21ea-1e25-4870-a512-847ab7bab5dc",
     // },
 
     {

@@ -170,7 +170,7 @@ const SignUp = () => {
             window.location.href = `http://localhost:8080/?theme=${theme}&uid=${userId}`;
             break;
           case "https://thub-web.happytree-73f6fdda.westus2.azurecontainerapps.io":
-            window.location.href = `https://demo.thub.tech/?theme=${theme}&uid=${userId}`;
+            window.location.href = `https://thub-app.calmisland-c4dd80be.westus2.azurecontainerapps.io/?theme=${theme}&uid=${userId}`;
             break;
           default:
             window.location.href = `https://${finalWorkspace}.thub.tech/?theme=${theme}&uid=${userId}`;

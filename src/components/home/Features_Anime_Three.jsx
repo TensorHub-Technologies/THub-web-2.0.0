@@ -13,7 +13,7 @@ function Features_Anime_Three() {
       case "localhost":
         url = import.meta.env.VITE_THUB_WEB_APP_URL;
         break;
-      case "thub-web-demo-378678297066.europe-west1.run.app":
+      case "https://thub-web.calmisland-c4dd80be.westus2.azurecontainerapps.io":
         url = import.meta.env.VITE_THUB_WEB_APP_URL;
         break;
       default:
