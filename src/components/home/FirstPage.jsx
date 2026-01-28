@@ -14,8 +14,8 @@ function FirstPage() {
     case "localhost":
       url = `http://localhost:8080/signup`;
       break;
-    case "thub-web-demo-378678297066.europe-west1.run.app":
-      url = `https://demo.thub.tech/signup`;
+    case "https://thub-web.calmisland-c4dd80be.westus2.azurecontainerapps.io":
+      url = `https://thub-app.calmisland-c4dd80be.westus2.azurecontainerapps.io/signup`;
       break;
     default:
       url = `https://thub-app.wittysand-a4a5c89d.westus2.azurecontainerapps.io/signup`;
