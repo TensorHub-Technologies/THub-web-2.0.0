@@ -65,7 +65,7 @@ const Navbar = () => {
     case "localhost":
       url = import.meta.env.VITE_THUB_WEB_URL;
       break;
-    case "https://thub-web.calmisland-c4dd80be.westus2.azurecontainerapps.io":
+    case "thub-web.calmisland-c4dd80be.westus2.azurecontainerapps.io":
       url =
         "https://thub-app.calmisland-c4dd80be.westus2.azurecontainerapps.io";
       break;
