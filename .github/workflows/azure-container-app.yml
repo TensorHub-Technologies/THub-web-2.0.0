@@ -1,4 +1,4 @@
-trigger:
+repositorytrigger:
   - main
  
 variables:
@@ -41,7 +41,7 @@ stages:
             displayName: Build and Push Image
             inputs:
               command: buildAndPush
-              repository: $(imageName)
+              repository: $(acrName).azurecr.io/$(imageName)
               dockerfile: Dockerfile
               containerRegistry: $(dockerRegistryServiceConnection)  # <-- service connection NAME
               tags: |
@@ -62,4 +62,4 @@ stages:
                 az containerapp update \
                   --name $(containerAppName) \
                   --resource-group $(resourceGroup) \
-                  --image "${IMAGE}" \ 
+                  --image "${IMAGE}"
