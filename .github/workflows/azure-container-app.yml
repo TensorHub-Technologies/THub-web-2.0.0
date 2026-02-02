@@ -62,4 +62,4 @@ stages:
                 az containerapp update \
                   --name $(containerAppName) \
                   --resource-group $(resourceGroup) \
-                  --image "${IMAGE}"
+                  --image "${IMAGE}" \
