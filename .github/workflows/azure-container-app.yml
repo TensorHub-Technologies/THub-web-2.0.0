@@ -62,4 +62,6 @@ stages:
                 az containerapp update \
                   --name $(containerAppName) \
                   --resource-group $(resourceGroup) \
-                  --image "${IMAGE}" \ 
+                  --image $(acrName).azurecr.io/$(imageName) \
+                  --target-port 3000 \
+                  --ingress external
