@@ -7,13 +7,16 @@ import "./Cards.css";
 import "../home/Home.css";
 
 const UsecaseHome = () => {
-  const webOrigin = window.location.origin;
+  const { hostname } = window.location;
 
-  const APP_BASE_URL = webOrigin.includes("localhost")
-    ? "http://localhost:8080"
-    : webOrigin.includes("calmisland")
-      ? "https://thub-app.calmisland-c4dd80be.westus2.azurecontainerapps.io"
-      : "https://thub-app.wittysand-a4a5c89d.westus2.azurecontainerapps.io";
+  const APP_BASE_URL =
+    hostname === "localhost"
+      ? "http://localhost:8080"
+      : hostname.includes("calmisland")
+        ? import.meta.env.VITE_THUB_WEB_DEMO_URL ||
+          "https://thub-app.calmisland-c4dd80be.westus2.azurecontainerapps.io"
+        : import.meta.env.VITE_THUB_WEB_APP_URL ||
+          "https://thub-app.calmisland-c4dd80be.westus2.azurecontainerapps.io";
 
   const chatFlowData = [
     // {
