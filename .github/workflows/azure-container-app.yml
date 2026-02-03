@@ -41,7 +41,7 @@ stages:
             displayName: Build and Push Image
             inputs:
               command: buildAndPush
-              repository: $(acrName).azurecr.io/$(imageName)
+              repository: $(imageName)
               dockerfile: Dockerfile
               containerRegistry: $(dockerRegistryServiceConnection)  # <-- service connection NAME
               tags: |
