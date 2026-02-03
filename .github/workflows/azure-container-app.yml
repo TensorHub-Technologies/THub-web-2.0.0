@@ -56,12 +56,15 @@ stages:
               scriptLocation: inlineScript
               inlineScript: |
                 set -e
+                
+                az extension add --name containerapp --upgrade
+                
                 IMAGE="$(acrName).azurecr.io/$(imageName):$(tag)"
                 echo "Deploying image: ${IMAGE}"
  
                 az containerapp update \
                   --name $(containerAppName) \
                   --resource-group $(resourceGroup) \
-                  --image $(acrName).azurecr.io/$(imageName) \
+                  --image "$(acrName).azurecr.io/$(imageName):$(tag)" \
                   --target-port 3000 \
-                  --ingress external
+                  --ingress external \
