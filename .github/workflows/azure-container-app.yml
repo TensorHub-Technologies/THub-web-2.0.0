@@ -2,14 +2,10 @@ trigger:
   - main
  
 variables:
-  # Azure Resource Manager service connection (used by AzureCLI@2)
-  azureSubscription: ARMSC   # <-- ARM service connection name
- 
-  # Docker Registry service connection (used by Docker@2)
-  dockerRegistryServiceConnection: DockerSC    # <-- Docker Registry service connection name
- 
+  azureSubscription: ARMSC                # ARM service connection name
+  dockerRegistryServiceConnection: DockerSC   # Docker Registry service connection name
   resourceGroup: gs_rg_0361
-  acrName: ca7a4dd637e6acr            # ACR name (not FQDN)
+  acrName: ca7a4dd637e6acr                # ACR name (not FQDN)
   containerAppName: thub-web
   imageName: thub-web
   tag: $(Build.BuildId)
@@ -18,15 +14,13 @@ pool:
   vmImage: ubuntu-latest
  
 stages:
-  - stage: BuildAndDeploy
-    displayName: Build and Deploy to Azure Container Apps (Dev)
+  - stage: Build
+    displayName: Build & Push Image
     jobs:
       - job: Build
-        displayName: Build & Deploy
         steps:
           - checkout: self
  
-          # Azure login (ARM service connection)
           - task: AzureCLI@2
             displayName: Azure Login
             inputs:
@@ -36,18 +30,32 @@ stages:
               inlineScript: |
                 az account show
  
-          # Build & push via Docker task using Docker Registry service connection
           - task: Docker@2
             displayName: Build and Push Image
             inputs:
               command: buildAndPush
               repository: $(imageName)
               dockerfile: Dockerfile
-              containerRegistry: $(dockerRegistryServiceConnection)  # <-- service connection NAME
+              containerRegistry: $(dockerRegistryServiceConnection)
               tags: |
-                $(Build.BuildId)
+                $(tag)
  
-          # Deploy the newly pushed image to Container Apps using ARM service connection
+          - task: AzureCLI@2
+            displayName: Verify Image in ACR
+            inputs:
+              azureSubscription: $(azureSubscription)
+              scriptType: bash
+              scriptLocation: inlineScript
+              inlineScript: |
+                echo "Checking if image tag exists in ACR..."
+                az acr repository show-tags --name $(acrName) --repository $(imageName) --top 20 | grep $(tag)
+ 
+  - stage: Deploy
+    displayName: Deploy to Azure Container Apps
+    dependsOn: Build
+    jobs:
+      - job: Deploy
+        steps:
           - task: AzureCLI@2
             displayName: Deploy to Container App
             inputs:
@@ -56,21 +64,20 @@ stages:
               scriptLocation: inlineScript
               inlineScript: |
                 set -e
-          
                 az extension add --name containerapp --upgrade
-          
+ 
                 IMAGE="$(acrName).azurecr.io/$(imageName):$(tag)"
                 echo "Deploying image: ${IMAGE}"
-          
-                # 1️⃣ Update container image
+ 
                 az containerapp update \
                   --name $(containerAppName) \
                   --resource-group $(resourceGroup) \
-                  --image "$(acrName).azurecr.io/$(imageName):$(tag)"
-          
-                # 2️⃣ Configure ingress + port (separate command!)
+                  --image "${IMAGE}" \
+                  --registry-server "$(acrName).azurecr.io"
+ 
                 az containerapp ingress update \
                   --name $(containerAppName) \
                   --resource-group $(resourceGroup) \
                   --type external \
                   --target-port 3000
+ 
