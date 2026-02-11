@@ -10,8 +10,8 @@ variables:
  
   resourceGroup: gs_rg_0361
   acrName: ca7a4dd637e6acr            # ACR name (not FQDN)
-  containerAppName: thub-test
-  imageName: thub-test
+  containerAppName: thub-web
+  imageName: thub-web
   tag: $(Build.BuildId)
  
 pool:
