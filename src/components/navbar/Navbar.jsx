@@ -48,7 +48,7 @@ const Navbar = () => {
 
   const navItems = [
     { name: "Home", path: "/" },
-    { name: "Use Cases", path: "/use-cases" },
+    // { name: "Use Cases", path: "/use-cases" },
     { name: "Pricing", path: "/pricing" },
     { name: "Blog", path: "/blog" },
     { name: "Academy", path: "/academy" },
@@ -65,8 +65,9 @@ const Navbar = () => {
     case "localhost":
       url = import.meta.env.VITE_THUB_WEB_URL;
       break;
-    case "thub-web-demo-378678297066.europe-west1.run.app":
-      url = import.meta.env.VITE_THUB_WEB_DEMO_URL;
+    case "thub-web.calmisland-c4dd80be.westus2.azurecontainerapps.io":
+      url =
+        "https://thub-app.calmisland-c4dd80be.westus2.azurecontainerapps.io";
       break;
     default:
       url = "https://thub-app.wittysand-a4a5c89d.westus2.azurecontainerapps.io";

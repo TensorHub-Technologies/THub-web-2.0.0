@@ -8,28 +8,28 @@ import { FaXTwitter } from "react-icons/fa6";
 import { useSelector } from "react-redux";
 
 const Footer = () => {
-  let url;
-  const hostname = window.location.hostname;
+  // let url;
+  // const hostname = window.location.hostname;
   const isDarkMode = useSelector((state) => state.customization.isDarkMode);
 
-  switch (hostname) {
-    case "localhost":
-      url = import.meta.env.VITE_THUB_WEB_URL;
-      break;
-    case "thub-web-demo-378678297066.europe-west1.run.app":
-      url = import.meta.env.VITE_THUB_WEB_DEMO_URL;
-      break;
-    default:
-      url = import.meta.env.VITE_THUB_WEB_APP_URL;
-      break;
-  }
+  // switch (hostname) {
+  //   case "localhost":
+  //     url = import.meta.env.VITE_THUB_WEB_URL;
+  //     break;
+  //   case "https://thub-web.calmisland-c4dd80be.westus2.azurecontainerapps.io":
+  //     url = import.meta.env.VITE_THUB_WEB_DEMO_URL;
+  //     break;
+  //   default:
+  //     // url = import.meta.env.VITE_THUB_WEB_APP_URL;
+  //     break;
+  // }
 
   return (
     <footer
       className={`relative z-10 text-black border-t border-gray-400 ${isDarkMode ? "hero-card-global-subtle-dark" : "hero-card-global-subtle-light"}`}
     >
       <div className="relative z-20 mx-auto w-full max-w-screen-xl px-4">
-        <div className="grid grid-cols-1 gap-8 py-8 md:grid-cols-2 lg:grid-cols-5 lg:gap-6">
+        <div className="grid grid-cols-1 gap-8 py-8 md:grid-cols-2 lg:grid-cols-4 lg:gap-6">
           {/* Company Info */}
           <div className="lg:col-span-1">
             <img src={ThubLogo} className="h-8 w-32 mb-4" alt="THub Logo" />
@@ -61,7 +61,7 @@ const Footer = () => {
                   Blog
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <a
                   href={`${url}`}
                   target="_blank"
@@ -80,7 +80,7 @@ const Footer = () => {
                 >
                   Register
                 </a>
-              </li>
+              </li> */}
               <li>
                 <Link
                   to="/contact"
@@ -93,7 +93,7 @@ const Footer = () => {
           </div>
 
           {/* Use Cases */}
-          <div>
+          {/* <div>
             <h2 className="mb-4 text-lg font-bold text-secondary dark:text-white">
               Use Cases
             </h2>
@@ -139,7 +139,7 @@ const Footer = () => {
                 </Link>
               </li>
             </ul>
-          </div>
+          </div> */}
 
           {/* Policies */}
           <div>
