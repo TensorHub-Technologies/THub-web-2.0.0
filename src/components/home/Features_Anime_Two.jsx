@@ -13,7 +13,8 @@ function Features_Anime_Two() {
       case "localhost":
         url = import.meta.env.VITE_THUB_WEB_APP_URL;
         break;
-      case "https://thub-web.calmisland-c4dd80be.westus2.azurecontainerapps.io":
+      // case "https://thub-web.calmisland-c4dd80be.westus2.azurecontainerapps.io":
+      case "https://thub-app.wittysand-a4a5c89d.westus2.azurecontainerapps.io/signup?theme=light":
         url = import.meta.env.VITE_THUB_WEB_APP_URL;
         break;
       default:
