@@ -1,416 +1,726 @@
-# Build Smarter. Build Faster. Build with THub.
-
-## The 30X Faster Way to Launch
-
-\|
-
-Start Now
-
-![THub AI Platform Hero Banner showing No-code GenAI Solutions](https://thub.tech/assets/Picture1-x5rk8VfZ.png)
-
-- Agentic Workflows
-- Build Agent and GenAI Apps 30X faster
-- Build RAG Systems
-- Build Retrieval Augmented Fine Tuning
-
-# One Platform. Infinite Possibilities
-
-## Build  Multi Agents & GenAI Apps at Rapid Pace Across Your Favorite LLMs
-
-![low code](https://thub.tech/assets/light-app-r2nzqVtu.png)
-
-#### Agents. RAG. Fine-Tuning. All in One Place.
-
-Forget complexity. THub gives you everything you need to build powerful GenAI workflows—without writing a single line of code.
-
-![drag and drop](data:image/svg+xml,%3csvg%20width='194'%20height='171'%20viewBox='0%200%20194%20171'%20fill='none'%20xmlns='http://www.w3.org/2000/svg'%3e%3cpath%20d='M31.068%2013.9974C22.8013%2017.5974%2022.668%2018.6641%2022.668%2072.5307C22.668%20106.531%2023.068%20122.264%2024.268%20124.531C27.3346%20131.597%2030.9346%20132.531%2053.468%20133.064L74.268%20133.597L72.9346%20139.864C72.268%20143.197%2071.468%20146.264%2071.068%20146.664C70.8013%20146.931%2067.7346%20147.597%2064.4013%20147.997C56.8013%20148.797%2054.268%20151.864%2057.868%20155.864C60.268%20158.531%2061.7346%20158.664%2094.668%20158.664C127.601%20158.664%20129.068%20158.531%20131.468%20155.864C135.201%20151.731%20132.535%20148.797%20124.935%20148.264C118.135%20147.864%20116.935%20146.531%20115.468%20138.397L114.535%20133.597L135.068%20133.064C152.001%20132.797%20156.135%20132.264%20159.201%20130.264C166.401%20125.464%20166.668%20122.931%20166.668%2071.9974C166.668%2020.2641%20166.535%2019.7307%20158.268%2014.6641C154.268%2012.1307%20151.201%2011.9974%2094.668%2011.9974C47.068%2012.1307%2034.5346%2012.5307%2031.068%2013.9974ZM156.001%2026.6641C156.935%2028.2641%20157.201%2042.3974%20157.068%2066.9307L156.668%20104.664L95.068%20105.064L33.3346%20105.331V64.6641V23.9974H94.0013C152.801%2023.9974%20154.668%2024.1307%20156.001%2026.6641ZM155.335%20119.331C155.335%20121.997%20154.268%20121.997%2095.2013%20122.397C43.6013%20122.664%2034.8013%20122.397%2033.3346%20120.797C32.5346%20119.597%2032.1346%20118.131%2032.668%20117.331C33.2013%20116.397%2052.8013%20116.131%2094.4013%20116.264C154.268%20116.664%20155.335%20116.664%20155.335%20119.331ZM104.401%20134.264C104.801%20134.931%20105.468%20138.131%20105.868%20141.597L106.801%20147.997H94.8013C81.3346%20147.997%2081.3346%20148.131%2084.1346%20138.264L85.468%20133.331H94.668C99.7346%20133.331%20104.135%20133.731%20104.401%20134.264Z'%20fill='%233c5ba4'/%3e%3cpath%20d='M45.7335%2033.1979C39.8668%2036.9312%2037.4668%2044.5312%2040.5335%2050.3979C42.9335%2055.0645%2048.8002%2058.6645%2053.8668%2058.6645C56.0002%2058.6645%2057.8668%2059.7312%2058.8002%2061.5979C59.6002%2063.3312%2061.4668%2065.9979%2062.9335%2067.5979C64.9335%2069.7312%2065.4668%2071.7312%2064.9335%2074.9312C63.6002%2083.5979%2070.4002%2091.9979%2078.8002%2091.9979C83.2002%2091.9979%2090.6668%2083.7312%2090.6668%2078.7979C90.6668%2075.4645%2091.8668%2073.7312%2097.3335%2069.4645C102.933%2065.0645%20104.533%2064.3979%20107.733%2065.1979C109.733%2065.7312%20112%2065.9979%20112.8%2065.7312C113.733%2065.4645%20116.533%2068.2645%20119.333%2071.9979C123.333%2077.4645%20124.133%2079.5979%20123.467%2082.7979C121.467%2092.6645%20131.467%20102.265%20140.133%2098.6645C146%2096.1312%20148.4%2092.6645%20148.533%2086.1312C148.667%2078.6645%20144.533%2073.5979%20137.067%2072.5312C129.2%2071.1979%20123.333%2063.1979%20123.333%2053.5979C123.2%2047.1979%20122.667%2045.8645%20118.933%2042.5312C113.467%2037.5979%20108.267%2037.4645%20102.8%2042.1312C100%2044.3979%2098.4002%2047.1979%2097.8668%2050.7979C97.2002%2054.7979%2095.6002%2057.0645%2091.0668%2060.7979C85.7335%2065.1979%2084.6668%2065.5979%2079.3335%2064.7979C74.2668%2063.9979%2072.8002%2062.9312%2069.0668%2057.5979C65.6002%2052.9312%2064.6668%2050.5312%2065.3335%2047.9979C68.1335%2036.9312%2055.3335%2027.3312%2045.7335%2033.1979ZM55.7335%2043.5979C55.2002%2046.5312%2049.3335%2047.7312%2049.3335%2044.9312C49.3335%2042.3979%2050.6668%2041.3312%2053.6002%2041.3312C55.3335%2041.3312%2056.0002%2042.1312%2055.7335%2043.5979ZM113.2%2051.1979C114.267%2052.5312%20114.267%2053.3312%20112.933%2054.3979C110.667%2056.2645%20107.333%2054.1312%20108.4%2051.4645C109.467%2048.7979%20111.2%2048.7979%20113.2%2051.1979ZM80.4002%2076.5312C81.4668%2079.0645%2078.4002%2081.4645%2076.1335%2079.9979C73.8668%2078.6645%2075.2002%2074.6645%2077.8668%2074.6645C78.8002%2074.6645%2080.0002%2075.4645%2080.4002%2076.5312ZM138.667%2086.7979C138.667%2088.3979%20137.733%2089.3312%20136%2089.3312C133.467%2089.3312%20132.267%2085.5979%20134.133%2083.5979C135.6%2082.1312%20138.667%2084.2645%20138.667%2086.7979Z'%20fill='%233c5ba4'/%3e%3c/svg%3e)
-
-#### Drag. Drop. Done.
-
-Your ideas. Your flow. Your way. No-code. Low-code. No limits. Design apps visually—just drag, drop, and deploy.
-
-![automated data pipeline](https://thub.tech/assets/pipe_lite-CU6vYrxM.svg)
-
-#### Turn Data Into Decisions.
-
-Structured.  Semi-Structured.  Unstructured. With THub’s automated data pipeline, your data flows where it matters—into action.
-
-Try a demo
-
-Features 1
-
-### Drag. Drop. Deploy.
-
-#### Create in Minutes. No Code Required.
-
-Build AI apps with the speed of thought. Just drag what you need—LLMs, agents, chains, embedding models, or voice agents—and drop it into place
-
-- From prototype to production in record time
-
-- Intuitive canvas interface
-
-- Voice-to-text and text-to-voice features baked in
-
-
-#### Think it. Build it. Ship it.
-
-Get Started Free
-
-![gif](https://thub.tech/assets/feature_first-2-CgjF-nI-.gif)
-
-![gif](https://thub.tech/assets/feature_second-2-B2nnrrgu.gif)
-
-Features 2
-
-### Smarter Data. Sharper Apps.
-
-#### Harness the Power of Vector Search and Voice Intelligence.
-
-Pinecone. Faiss. Weaviate. Qdrant. All integrated. All blazing fast.
-
-- Real-time semantic and voice search and discovery
-
-- Lightning-fast document, voice, and media retrieval
-
-- Efficient similarity search across text, audio, and images
-
-
-#### From raw data to real insight—THub delivers.
-
-Get Started Free
-
-Features 3
-
-### From Idea to Intelligence. Instantly.
-
-#### Versatile. Scalable. Effortless. Voice-Enabled.
-
-THub powers it all—chatbots, document processors, voice agents, recommendation engines, customer copilots, and more.
-
-- Build Retrieval-Augmented Generation apps in clicks
-
-- Fine-tune models using RAFT workflows
-
-- Automate data preprocessing, voice transcription, and orchestration
-
-
-#### One platform. Infinite potential.
-
-Get Started Free
-
-![gif](https://thub.tech/assets/feature_third-2-BaYplfOz.gif)
-
-# Tools for Tomorrow
-
-## The Future of Artificial Intelligence is Yours
-
-![drag and drop](<Base64-Image-Removed>)
-
-#### Agents for Every Task
-
-Support. Analysis. Audits. Agents as tireless as you.
-
-Try Agents
-
-![low code](<Base64-Image-Removed>)
-
-#### Smarter Apps, Instantly
-
-Data retrieval that thinks ahead. Brilliance, built in.
-
-Try RAG
-
-![drag and drop](<Base64-Image-Removed>)
-
-#### Fine-Tune with Flair
-
-Precision, a drag away. Performance, perfected.
-
-Try RAFT
-
-![sql management](<Base64-Image-Removed>)
-
-#### SQL, Simplified
-
-Queries flow fast. Results, real-time.
-
-Try SQL
-
-![automated data pipeline](https://thub.tech/assets/light-app-r2nzqVtu.png)
-
-#### Recommendations That Wow
-
-Personal. Perfect. Delight in every suggestion.
-
-Try Recommender
-
-![customer engagement](https://thub.tech/assets/customer_lite-DpCyAjD1.png)
-
-#### Know Your Customers
-
-Powerful insights that truly connect, engagement that genuinely transforms.
-
-Try Customer Engagement
-
-![document generation](<Base64-Image-Removed>)
-
-#### Documents, Done
-
-Automatic. Accurate. Time, saved.
-
-Try Document Generation
-
-![description generation](https://thub.tech/assets/desc_lite-DWrIShcC.png)
-
-#### Descriptions That Captivate
-
-Words that sell, crafted instantly.
-
-Try Description Generation
-
-## 250+ Integrated Tools
-
-![Logo 1](https://thub.tech/assets/llm_vector/chatgpt.png)
-
-![Logo 2](https://thub.tech/assets/llm_vector/anthropic.png)
-
-![Logo 3](https://thub.tech/assets/llm_vector/Google_Gemini_logo-lite.png)
-
-![Logo 4](https://thub.tech/assets/llm_vector/llama_3.1-lite-1.png)
-
-![Logo 5](https://thub.tech/assets/llm_vector/azure.png)
-
-![Logo 6](https://thub.tech/assets/llm_vector/ollama.png)
-
-![Logo 7](https://thub.tech/assets/llm_vector/hugging.png)
-
-![Logo 8](https://thub.tech/assets/llm_vector/grok_lite.png)
-
-![Logo 9](https://thub.tech/assets/llm_vector/fireworks.png)
-
-![Logo 10](https://thub.tech/assets/llm_vector/aws_dark.png)
-
-![Logo 11](https://thub.tech/assets/llm_vector/deepseek.png)
-
-![Logo 12](https://thub.tech/assets/llm_vector/palm.png)
-
-![Logo 13](https://thub.tech/assets/llm_vector/chatgpt.png)
-
-![Logo 14](https://thub.tech/assets/llm_vector/anthropic.png)
-
-![Logo 15](https://thub.tech/assets/llm_vector/Google_Gemini_logo-lite.png)
-
-![Logo 16](https://thub.tech/assets/llm_vector/llama_3.1-lite-1.png)
-
-![Logo 17](https://thub.tech/assets/llm_vector/azure.png)
-
-![Logo 18](https://thub.tech/assets/llm_vector/ollama.png)
-
-![Logo 19](https://thub.tech/assets/llm_vector/hugging.png)
-
-![Logo 20](https://thub.tech/assets/llm_vector/grok_lite.png)
-
-![Logo 21](https://thub.tech/assets/llm_vector/fireworks.png)
-
-![Logo 22](https://thub.tech/assets/llm_vector/aws_dark.png)
-
-![Logo 23](https://thub.tech/assets/llm_vector/deepseek.png)
-
-![Logo 24](https://thub.tech/assets/llm_vector/palm.png)
-
-![Logo 1](https://thub.tech/assets/llm_vector/pine_dark.png)
-
-![Logo 2](https://thub.tech/assets/llm_vector/qdrant_logo.png)
-
-![Logo 3](https://thub.tech/assets/llm_vector/mongo.png)
-
-![Logo 4](https://thub.tech/assets/llm_vector/faisis.png)
-
-![Logo 5](https://thub.tech/assets/llm_vector/upstash.png)
-
-![Logo 6](https://thub.tech/assets/llm_vector/vectara.png)
-
-![Logo 7](https://thub.tech/assets/llm_vector/chroma.png)
-
-![Logo 8](https://thub.tech/assets/llm_vector/redis.png)
-
-![Logo 9](https://thub.tech/assets/llm_vector/milvus.png)
-
-![Logo 10](https://thub.tech/assets/llm_vector/opens.png)
-
-![Logo 11](https://thub.tech/assets/llm_vector/pine_dark.png)
-
-![Logo 12](https://thub.tech/assets/llm_vector/qdrant_logo.png)
-
-![Logo 13](https://thub.tech/assets/llm_vector/mongo.png)
-
-![Logo 14](https://thub.tech/assets/llm_vector/faisis.png)
-
-![Logo 15](https://thub.tech/assets/llm_vector/upstash.png)
-
-![Logo 16](https://thub.tech/assets/llm_vector/vectara.png)
-
-![Logo 17](https://thub.tech/assets/llm_vector/chroma.png)
-
-![Logo 18](https://thub.tech/assets/llm_vector/redis.png)
-
-![Logo 19](https://thub.tech/assets/llm_vector/milvus.png)
-
-![Logo 20](https://thub.tech/assets/llm_vector/opens.png)
-
-Pricing Plan
-
-# Ready to Get Started?
-
-# Don't Worry, We'll Keep You Under Budget
-
-No risk. All reward. Discover what’s possible.
-
-## Your 90-Day Trial Starts Now
-
-MonthlyYearly
-
-INR
-
-Free Forever
-
-₹0
-
-For starters: one user, 3 agents, endless potential.
-
-Start Free
-
-- Single User
-- 3 Agents
-- API based access to LLM
-- Embedding Model
-- Vector Database
-- Bring your own API key
-- Basic Analytics
-- Standard Support
-
-Pro Power
-
-₹ 19,999/agent
-
-For teams: 5 users, 10 agents, tools to scale.
-
-Choose Plan
-
-- All Free Features
-- 5 Users
-- 25 Agents
-- ₹ 17,999/per Additional Agents
-- Team collaboration
-- Train your own local LLM
-- Fine Tune open source LLM
-- Advanced Analytics
-- Priority support
-
-Enterprise Excellence
-
-Contact Us
-
-For giants: unlimited users, unlimited possibilities.
-
-Get in Touch
-
-- All Pro Features
-- Unlimited Users
-- Unlimited Agents
-
-# Questions About our THub   We have Answers!
-
-### −
-
-### What is THub?
-
-Your gateway to AI apps. Drag, drop, and deploy—innovation, simplified.
-
-### +
-
-### For Non-Coders
-
-Yes. From beginners to pros, THub welcomes all.
-
-### +
-
-### What Makes THub Different?
-
-Simplicity with strength. Speed with sophistication.
-
-### +
-
-### What Can You Build
-
-Chatbots. Recommenders. Summaries. Anything you imagine.
-
-### +
-
-### For Every Business?
-
-Startups to giants—THub grows with you.
-
-# Using THub you can save hours each week
-
-# creating long-form content.
-
-Get Started Free![arrow image](data:image/svg+xml,%3csvg%20fill='%233c5ba4'%20viewBox='0%200%2034%2090'%20xmlns='http://www.w3.org/2000/svg'%20%3e%3cpath%20d='M3.724%202.303c8.095%204.54%2013.968%2013.648%2016.408%2022.434%202.336%208.415%202.426%2020.276-5.705%2025.79-2.961%202.01-7.092%202.24-8.781-1.444-1.571-3.422.29-7.096%203.683-8.452%209.162-3.663%2016.334%208.02%2018.234%2015.324a30.563%2030.563%200%200%201%20.279%2014.195c-.952%204.334-2.866%209.283-6.298%2012.254-.494.427-1.3-.29-.971-.84%201.77-2.928%203.677-5.571%204.79-8.851%201.155-3.405%201.62-7.048%201.44-10.626-.358-7.103-3.568-15.745-10.125-19.354-3.476-1.912-10.316-1.353-10.055%203.973.107%202.158%201.647%204.035%203.933%203.81%202.086-.209%204.001-1.766%205.333-3.279%205.427-6.16%204.857-15.89%202.67-23.215a39.21%2039.21%200%200%200-5.682-11.577c-2.69-3.76-6.017-6.61-9.592-9.472-.35-.277.039-.896.44-.67Z'%20fill='%233c5ba4'/%3e%3cpath%20d='M1.562.977c9.931%202.79%2017.058%2011.508%2019.312%2021.4%201.085%204.762%201.187%209.7.548%2014.54-.653%204.937-1.854%2010.549-4.949%2014.589-2.156%202.82-7.305%205.961-10.266%202.388-2.608-3.142-2.18-9.094.45-12.093%202.945-3.356%208.048-2.969%2011.491-.718%204.112%202.688%206.675%207.596%208.265%2012.12%203.48%209.905%202.395%2021.33-3.11%2030.327-.527.858-1.947.203-1.423-.676%203.935-6.565%205.559-14.253%204.688-21.84-.443-3.864-1.552-7.677-3.306-11.147-2.011-3.973-5.078-8.396-9.854-8.994-5.273-.66-7.99%204.089-7.3%208.82.403%202.76%201.938%204.99%205.042%204.079%202.519-.74%204.35-3.051%205.51-5.296%203.708-7.194%204.563-16.802%203.066-24.658C17.848%2013.969%2011.217%204.92%201.373%201.995.736%201.812.917.797%201.563.977Z'%20fill='%233c5ba4'/%3e%3cpath%20d='M21.218%2073.052c.375%202.062.446%204.204.634%206.29.088.987.18%201.975.266%202.964.04.457-.025%202.873.383%203.085.21.11%202.177-1.456%202.452-1.64l2.452-1.641c1.595-1.065%203.329-2.678%205.205-3.148.671-.169%201.174.542.746%201.106-.792%201.05-1.99%201.644-3.08%202.36-1.23.812-2.464%201.62-3.695%202.432-1.142.748-3.43%203.037-4.974%202.3-1.476-.7-.955-3.793-1.042-5.105-.198-2.945-.602-5.957-.531-8.906a.595.595%200%200%201%201.184-.097Z'%20fill='%233c5ba4'/%3e%3cpath%20d='M21.773%2073.169c-.032%202.254-.679%204.55-.972%206.789-.338%202.597-.601%205.224-.564%207.844-.465-.225-.933-.454-1.398-.68a76.772%2076.772%200%200%200%206.002-4.227c1.876-1.465%203.568-3.521%205.632-4.678.6-.336%201.581.26%201.137.983-1.181%201.924-3.415%203.456-5.165%204.844a64.808%2064.808%200%200%201-6.607%204.574c-.694.421-1.465-.14-1.385-.91.27-2.565.462-5.128.849-7.683.348-2.297.616-4.895%201.59-7.019.19-.398.887-.308.88.163Z'%20fill='%233c5ba4'/%3e%3cpath%20d='M22.85%2071.546c-.873%205.764-1.778%2011.525-2.588%2017.298-.462-.304-.922-.605-1.384-.91%202.439-1.254%204.864-2.527%207.207-3.954%202.158-1.317%204.212-3.127%206.536-4.109.733-.31%201.331.688.841%201.25-1.713%201.972-4.396%203.318-6.619%204.634-2.326%201.378-4.712%202.663-7.172%203.78-.633.287-1.294-.395-1.174-1.015%201.098-5.725%202.104-11.464%203.137-17.2.137-.79%201.337-.563%201.215.226Z'%20fill='%233c5ba4'/%3e%3c/svg%3e)![THub Workspace Mockup](https://thub.tech/assets/top-2-BAvfWpUq.png)
-
-# THub Agents & Core Components
-
-## Categories of Agents and Use Cases
-
-- **Low Code Builder**: Visually create workflows with drag-and-drop components.
-- **Multi-Agent Orchestrator**: Coordinate multiple AI agents across tasks.
-- **Sequential Agents**: Execute complex processes in sequence.
-
-## Industry-Specific Agents
-
-- **Insurance Underwriting Agent**: Evaluate risk and process policies.
-- **Insurance Claims Agent**: Automate and validate insurance claims.
-
-## Startup and Business Agents
-
-- **Startup Financial Projection Agent**: Generate detailed financial forecasts.
-- **Startup Idea Generation Agent**: Ideate and evaluate startup concepts.
-
-## Project and Product Agents
-
-- **Project Planning Agent**: Assist with timelines, task breakdowns, and Gantt charts.
-- **Product Comparison Agent**: Compare features, pricing, and specs.
-
-## Market & Competitor Intelligence
-
-- **Competitor Analysis Agent**: Monitor and analyze competitor activity.
-
-## Vision & Code Automation
-
-- **Visual Inspection Agent**: Identify issues from images or videos.
-- **Code Review Agent**: Analyze and give suggestions on code quality.
-- **Software Testing Agent**: Simulate test cases and generate reports.
-
-## Business Operations Agents
-
-- **Marketing Agent**: Run targeted campaigns and strategy generation.
-- **Sales Agent**: Lead scoring, outreach automation, and CRM updates.
-- **Customer Support Agent**: Chatbot-driven resolution and escalation.
-
-## Technical Workforce Agents
-
-- **Software Development Agent**: Code generation and task automation.
-- **Software Architect Agent**: Design scalable architecture patterns.
-
-## Financial Services Agents
-
-- **Financial Advisor Agent**: Personalized investment and budgeting guidance.
-
-## Core Protocol Components
-
-- **Model Context Protocol (MCP)**: Standard for sharing context across agents.
-- **MCP Server**: Central controller for context-aware agent coordination.
-- **MCP Client**: Lightweight client to interact with the MCP server.
-
-## Agent Collaboration
-
-- **Agent2Agent**: Inter-agent communication and decision-making protocol.
+{\rtf1\ansi\ansicpg1252\cocoartf2867
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 # THub\
+THub is a revolutionary no-code/low-code Agentic AI Platform that enables businesses to rapidly design, develop, and deploy powerful AI-driven applications without requiring extensive coding expertise. Built to democratize AI innovation, THub empowers organizations to create intelligent agents, data-driven workflows, and sophisticated GenAI applications through an intuitive drag-and-drop interface. The platform seamlessly integrates with 500+ tools, open-source and closed-source LLMs, MCP (Model Context Protocol) tools, major ERP systems like SAP, Oracle, Workday, and NetSuite, MES (Manufacturing Execution Systems), and IoT devices, making it a comprehensive solution for enterprise-wide AI automation.\
+\
+THub specializes in building Business Operations-specific Audit Agents across critical domains including Finance, Manufacturing & Operations, Supply Chain & Inventory Management, HR & Workforce, Internal Audit, Cybersecurity & Data, and ESG & Compliance. The platform supports agent-to-agent communication protocols, enabling sophisticated multi-agent systems that can collaborate and orchestrate complex workflows autonomously.\
+\
+---\
+\
+## Core Platform & Capabilities\
+\
+### No-Code/Low-Code Agentic AI Platform\
+- **What it is:** THub is a visual development platform that allows users to build production-ready GenAI applications through drag-and-drop functionality without writing code. Users can design complex AI workflows by connecting nodes representing different functions\'97from data loaders and LLMs to agents, chains, and embedding models.\
+- **Who uses it:** Entrepreneurs, small business owners, no-code developers, efficiency seekers, tech enthusiasts, developers, marketers, and professionals across all industries seeking to leverage AI without deep technical expertise.\
+- **Key features:**\
+  - Drag-and-drop workflow designer with visual node-based architecture\
+  - Pre-built templates for rapid deployment\
+  - Real-time workflow execution and testing\
+  - Built-in analytics dashboard for monitoring performance\
+  - Comprehensive toolkit with AI and utility nodes\
+  - Secure credential management for external API keys\
+  - Environment and app-specific variable management\
+  - Production-ready GenAI app deployment in minutes\
+\
+### Agentic AI Capabilities\
+- **What it is:** An intelligent system that can reason, make decisions, and perform tasks autonomously using tools or APIs based on user input. THub enables the creation of agents that don't just respond to commands but can plan, execute, and adapt to achieve specified goals.\
+- **Agent types supported:**\
+  - Autonomous agents with chain-of-thought reasoning (AutoGPT)\
+  - Conversational agents with retrieval capabilities\
+  - Tool-enabled agents that integrate with external services\
+  - Multi-agent systems with collaborative workflows\
+  - Sequential agent workflows\
+  - React-based agents optimized for chat models\
+- **Key features:**\
+  - Agent-to-agent communication protocols\
+  - Memory management for contextual conversations\
+  - Tool integration and function calling\
+  - Real-time decision-making and adaptation\
+  - Human-in-the-loop escalation options\
+\
+---\
+\
+## Integration Ecosystem\
+\
+### 500+ Tool Integrations\
+THub provides native integration with over 500 applications and services, enabling comprehensive workflow automation across the entire business ecosystem.\
+\
+**Workflow Automation Tools:**\
+- Zapier, Make.com, viaSocket\
+- Cal.com for calendar and scheduling automation\
+\
+**AI & LLM Integration:**\
+- OpenAI (GPT-4.1, GPT-4o, GPT-3.5-turbo)\
+- Anthropic (Claude Sonnet 4)\
+- Google Gemini\
+- Azure OpenAI\
+- Cohere\
+- Custom LLM integration support\
+\
+**Search & Data Retrieval:**\
+- Brave Search API\
+- Google Search (SerpAPI)\
+- Serper.dev\
+- SearXNG metasearch\
+- Tavily API\
+- Exa Search\
+- Web scraping capabilities\
+\
+**Business Applications:**\
+- Airtable for data management\
+- Composio (200+ app integrations)\
+- GitHub for repository management\
+- Email and communication platforms\
+\
+### MCP (Model Context Protocol) Tools\
+THub provides comprehensive support for the Model Context Protocol, enabling standardized integration with external tools and services:\
+\
+**Core MCP Features:**\
+- Custom MCP server connections for bespoke tools\
+- Brave Search MCP integration\
+- GitHub MCP integration\
+- Filesystem access and management\
+- Real-time tool discovery and execution\
+- Secure authentication and authorization\
+- Seamless data exchange between AI agents and external services\
+\
+**MCP Benefits:**\
+- Standardized protocol for AI tool integration (described as "USB-C port for AI")\
+- Dynamic tool loading and adaptation\
+- Cross-platform compatibility\
+- Reduced integration complexity\
+- Enhanced agent capabilities through external tool access\
+\
+### ERP System Integration\
+THub connects seamlessly with major Enterprise Resource Planning systems, enabling AI agents to access and manipulate enterprise data:\
+\
+**Supported ERP Systems:**\
+- **SAP S/4HANA:** Integration with SAP's flagship ERP solution for large enterprises\
+- **Oracle NetSuite:** Cloud-based ERP with unified business applications\
+- **Oracle Fusion Cloud ERP:** Advanced enterprise-grade ERP for complex organizations\
+- **Microsoft Dynamics 365:** Supply chain management and business applications\
+- **Workday:** Human capital management and financial management\
+- **SAP Business One:** ERP solution for small to medium enterprises\
+\
+**ERP Integration Capabilities:**\
+- Real-time data synchronization\
+- Financial data access and manipulation\
+- Inventory management integration\
+- Procurement and supply chain data access\
+- HR and workforce data integration\
+- Multi-entity and multi-currency support\
+- Custom API endpoints and RESTful integration\
+- SOAP and REST web services support\
+\
+### MES (Manufacturing Execution Systems) & IoT Integration\
+THub bridges the gap between shop floor operations and enterprise systems through comprehensive MES and IoT device connectivity:\
+\
+**MES Integration:**\
+- Real-time production monitoring and control\
+- Work order management and tracking\
+- Quality control and compliance monitoring\
+- Material tracking and genealogy\
+- Production scheduling and optimization\
+- Equipment performance monitoring\
+- Batch and lot management\
+- Real-time data collection from PLCs and SCADA systems\
+\
+**IoT Device Connectivity:**\
+- Integration with industrial sensors and monitoring devices\
+- Support for standard IoT protocols (OPC UA, MQTT, Modbus)\
+- Edge computing and real-time data processing\
+- Predictive maintenance through sensor data analysis\
+- Equipment health monitoring and diagnostics\
+- Energy consumption tracking and optimization\
+- Machine-to-machine (M2M) communication\
+- IIoT (Industrial Internet of Things) platform integration\
+\
+**Manufacturing & Operations Benefits:**\
+- Real-time visibility into shop floor operations\
+- Automated data collection from production equipment\
+- Reduced downtime through predictive maintenance\
+- Enhanced quality control and defect detection\
+- Improved OEE (Overall Equipment Effectiveness)\
+- Streamlined compliance and audit trails\
+- Digital twin capabilities for simulation and optimization\
+\
+---\
+\
+## Agent-to-Agent Communication Protocols\
+\
+### Multi-Agent Orchestration\
+THub supports sophisticated agent-to-agent communication, enabling collaborative AI systems:\
+\
+**Communication Capabilities:**\
+- Sequential agent workflows where outputs feed into subsequent agents\
+- Parallel agent execution for complex task distribution\
+- Hierarchical agent structures with supervisor-worker patterns\
+- Message passing and state sharing between agents\
+- Coordinated decision-making across agent teams\
+- Event-driven agent activation and response\
+\
+**Agent Collaboration Patterns:**\
+- **Supervisor-Worker:** Master agent delegates tasks to specialized sub-agents\
+- **Pipeline:** Sequential processing where each agent specializes in specific tasks\
+- **Collaborative:** Multiple agents work together, sharing context and information\
+- **Competitive:** Agents propose different solutions, best one selected\
+- **Hybrid:** Combination of patterns for complex workflows\
+\
+**Use Cases:**\
+- Complex workflow automation requiring multiple specialized skills\
+- Enterprise-wide process orchestration across departments\
+- Audit workflows requiring data collection, analysis, and reporting\
+- Supply chain optimization with multiple decision points\
+- Financial analysis combining multiple data sources and methodologies\
+\
+---\
+\
+## Business Operations Audit Agents\
+\
+### Finance Audit Agents\
+THub enables the creation of specialized AI agents for comprehensive financial auditing and compliance:\
+\
+**Capabilities:**\
+- Automated transaction monitoring and anomaly detection\
+- Financial statement analysis and validation\
+- Accounts payable and receivable auditing\
+- Expense report verification and policy compliance\
+- Revenue recognition and accounting standard compliance\
+- Tax compliance and regulatory reporting\
+- Fraud detection through pattern analysis\
+- Budget variance analysis and forecasting\
+\
+**Integration Points:**\
+- Direct connection to ERP financial modules (SAP, Oracle, NetSuite)\
+- Bank account and payment gateway integration\
+- Invoice and receipt processing systems\
+- General ledger and chart of accounts access\
+- Financial reporting and BI systems\
+\
+**Audit Outputs:**\
+- Real-time compliance dashboards\
+- Exception reports and findings documentation\
+- Corrective action recommendations\
+- Audit trail and evidence collection\
+- Executive summary reports\
+- Regulatory filing assistance\
+\
+### Manufacturing & Operations Audit Agents\
+Specialized agents for monitoring and optimizing manufacturing operations:\
+\
+**Capabilities:**\
+- Production process compliance monitoring\
+- Quality control and defect analysis\
+- Equipment maintenance and downtime tracking\
+- Production efficiency and OEE analysis\
+- Standard operating procedure (SOP) compliance\
+- Work order and routing validation\
+- Material usage and waste analysis\
+- Safety incident monitoring and reporting\
+\
+**Integration Points:**\
+- MES systems for real-time production data\
+- IoT sensors and equipment monitoring devices\
+- Quality management systems (QMS)\
+- Maintenance management systems (CMMS)\
+- Production planning and scheduling systems\
+- ERP manufacturing modules\
+\
+**Audit Outputs:**\
+- Production efficiency reports\
+- Quality metrics and trend analysis\
+- Equipment performance dashboards\
+- Compliance violation alerts\
+- Process improvement recommendations\
+- Root cause analysis for defects\
+\
+### Supply Chain & Inventory Audit Agents\
+Comprehensive audit capabilities for supply chain transparency and optimization:\
+\
+**Capabilities:**\
+- Inventory accuracy and valuation audits\
+- Supplier performance monitoring and compliance\
+- Procurement process auditing\
+- Logistics and transportation efficiency analysis\
+- Warehouse operations auditing\
+- Demand forecasting accuracy assessment\
+- Supply chain risk identification\
+- Contract compliance verification\
+\
+**Integration Points:**\
+- ERP supply chain modules\
+- Warehouse management systems (WMS)\
+- Transportation management systems (TMS)\
+- Supplier relationship management (SRM) platforms\
+- IoT tracking devices and RFID systems\
+- Third-party logistics (3PL) systems\
+\
+**Audit Outputs:**\
+- Inventory accuracy reports\
+- Supplier scorecards and risk assessments\
+- Procurement compliance findings\
+- Logistics cost optimization recommendations\
+- Supply chain resilience assessments\
+- Working capital optimization insights\
+\
+### HR & Workforce Audit Agents\
+Specialized agents for human resources and workforce compliance:\
+\
+**Capabilities:**\
+- Payroll accuracy and compliance auditing\
+- Time and attendance verification\
+- Benefits administration compliance\
+- Employee data integrity checks\
+- Recruitment process compliance\
+- Performance management auditing\
+- Training and certification tracking\
+- Labor law and regulation compliance\
+- Diversity and inclusion metrics analysis\
+\
+**Integration Points:**\
+- HRIS and HCM systems (Workday, SAP SuccessFactors)\
+- Payroll systems and time tracking software\
+- Benefits administration platforms\
+- Applicant tracking systems (ATS)\
+- Learning management systems (LMS)\
+- Performance management systems\
+\
+**Audit Outputs:**\
+- Payroll discrepancy reports\
+- Compliance violation alerts\
+- Employee data quality dashboards\
+- Compensation equity analysis\
+- Training compliance status\
+- Workforce analytics and trends\
+\
+### Internal Audit Agents\
+Comprehensive internal audit capabilities across all business functions:\
+\
+**Capabilities:**\
+- Internal control effectiveness assessment\
+- Risk assessment and management\
+- Policy and procedure compliance monitoring\
+- Operational efficiency auditing\
+- Financial control testing\
+- IT general controls (ITGC) evaluation\
+- Business process auditing\
+- Regulatory compliance verification\
+- Continuous monitoring and real-time alerts\
+\
+**Integration Points:**\
+- ERP systems across all modules\
+- Governance, risk, and compliance (GRC) platforms\
+- Document management systems\
+- Access control and security systems\
+- Business process management (BPM) tools\
+- Audit management software\
+\
+**Audit Outputs:**\
+- Control deficiency reports\
+- Risk heat maps and assessments\
+- Audit findings and recommendations\
+- Management action plans\
+- Executive dashboards\
+- Compliance status reports\
+\
+### Cybersecurity & Data Audit Agents\
+Specialized agents for information security and data governance:\
+\
+**Capabilities:**\
+- Security incident monitoring and analysis\
+- Access control and user permission auditing\
+- Data privacy compliance (GDPR, CCPA, etc.)\
+- Vulnerability assessment and remediation tracking\
+- Security policy compliance verification\
+- Data loss prevention monitoring\
+- Encryption and data protection auditing\
+- Network security analysis\
+- Third-party security assessment\
+\
+**Integration Points:**\
+- Security information and event management (SIEM) systems\
+- Identity and access management (IAM) platforms\
+- Data loss prevention (DLP) tools\
+- Vulnerability management systems\
+- Network monitoring and intrusion detection systems\
+- Cloud security platforms\
+- Endpoint protection systems\
+\
+**Audit Outputs:**\
+- Security incident reports\
+- Access violation alerts\
+- Compliance gap analysis\
+- Vulnerability remediation tracking\
+- Data privacy assessment reports\
+- Security posture dashboards\
+- Third-party risk assessments\
+\
+### ESG & Compliance Audit Agents\
+Comprehensive Environmental, Social, and Governance audit capabilities:\
+\
+**Capabilities:**\
+- Environmental impact monitoring and reporting\
+- Carbon footprint calculation and tracking\
+- Social responsibility compliance assessment\
+- Governance policy adherence monitoring\
+- Sustainability metrics tracking\
+- Supply chain sustainability auditing\
+- Regulatory compliance for ESG requirements (CSDDD, EUDR, CSRD)\
+- Stakeholder engagement analysis\
+- ESG disclosure and reporting automation\
+\
+**Integration Points:**\
+- ERP systems for operational data\
+- Energy management systems\
+- Supply chain visibility platforms\
+- HR systems for social metrics\
+- Corporate governance platforms\
+- Sustainability reporting tools\
+- Third-party ESG data providers\
+\
+**Audit Outputs:**\
+- ESG performance dashboards\
+- Sustainability reports (GRI, SASB, TCFD)\
+- Carbon emission calculations\
+- Supply chain sustainability assessments\
+- Governance compliance reports\
+- Stakeholder communication materials\
+- Regulatory filing assistance\
+\
+---\
+\
+## Technical Architecture\
+\
+### AI & Machine Learning Components\
+\
+**Large Language Models (LLMs):**\
+- Support for both open-source and closed-source models\
+- Pay-as-you-use model for cost optimization\
+- Custom LLM integration capabilities\
+- Model switching based on use case requirements\
+- Token limit management and optimization\
+\
+**Embeddings & Vector Databases:**\
+- Industry-leading embedding models for unstructured data\
+- Support for multiple vector databases (Pinecone, Weaviate, Qdrant)\
+- Semantic search capabilities\
+- Document similarity and clustering\
+\
+**Frameworks:**\
+- LangChain integration for complex AI workflows\
+- LlamaIndex support for data indexing and retrieval\
+- RAG (Retrieval-Augmented Generation) systems\
+- RAFT workflows for LLM fine-tuning\
+- Voice intelligence integration (voice-to-text, text-to-voice)\
+\
+### Data Management\
+\
+**Data Loaders:**\
+- Structured data (CSV, Excel, databases)\
+- Semi-structured data (JSON, XML)\
+- Unstructured data (PDFs, documents, images)\
+- Real-time data streams\
+- API data ingestion\
+\
+**Data Processing:**\
+- Automated data pipeline creation\
+- Text splitting and chunking for optimal LLM processing\
+- Data transformation and normalization\
+- Record management and versioning\
+- Data validation and quality checks\
+\
+### Memory & Context Management\
+- Conversation history persistence\
+- Short-term and long-term memory systems\
+- Context window optimization\
+- Session management\
+- State persistence across workflow runs\
+\
+### Output Parsers & Formatting\
+- Structured output generation\
+- JSON schema validation\
+- Custom format transformation\
+- Multi-format support (text, JSON, XML)\
+\
+---\
+\
+## Platform Features\
+\
+### AI Workspace Dashboard\
+Central hub for managing all AI applications and workflows:\
+- Monitor existing AI apps and workflows\
+- Performance metrics and analytics\
+- Resource utilization tracking\
+- Version control and change management\
+- Collaboration features for team workflows\
+\
+### Templates Library\
+Ready-made templates for quick deployment:\
+- Industry-specific workflow templates\
+- Common use case templates (content generation, data analysis, customer service)\
+- Best practice templates for audit workflows\
+- Customizable starting points for rapid development\
+\
+### Credentials Management\
+Secure storage and management of external integrations:\
+- Encrypted credential storage\
+- Service-specific authentication configurations\
+- API key management\
+- OAuth integration support\
+- Role-based access control\
+\
+### Variables & Configuration\
+Flexible environment and application configuration:\
+- Environment-specific variables (dev, staging, production)\
+- Application-specific parameters\
+- Dynamic configuration management\
+- Secret management and protection\
+\
+### API Keys & Integration\
+Enable external systems to interact with THub applications:\
+- Generate secure API keys\
+- RESTful API endpoints\
+- Webhook configurations\
+- Integration with external systems\
+- Rate limiting and quota management\
+\
+---\
+\
+## Security & Compliance\
+\
+### Data Security\
+- End-to-end encryption for data in transit and at rest\
+- Secure credential storage\
+- Access control and authentication\
+- Audit logging and monitoring\
+- Data residency options\
+\
+### Compliance Support\
+- GDPR compliance features\
+- SOC 2 readiness\
+- Industry-specific compliance support (HIPAA, PCI-DSS)\
+- Audit trail generation\
+- Data retention policies\
+\
+---\
+\
+## Deployment & Scalability\
+\
+### Deployment Options\
+- Cloud-based deployment (SaaS)\
+- Hybrid cloud support\
+- Enterprise-grade infrastructure\
+- High availability and disaster recovery\
+- Multi-region deployment options\
+\
+### Scalability\
+- Horizontal scaling for high-volume operations\
+- Auto-scaling based on demand\
+- Load balancing and performance optimization\
+- Concurrent workflow execution\
+- Resource allocation management\
+\
+### Performance\
+- Real-time execution monitoring\
+- Performance analytics and optimization\
+- Bottleneck identification\
+- Resource efficiency tracking\
+\
+---\
+\
+## Pricing & Plans\
+\
+### Free Forever Plan\
+- Entry-level access to platform capabilities\
+- Limited workflows and executions\
+- Community support\
+- Basic integrations\
+- Perfect for learning and proof-of-concept\
+\
+### Pro Power Plan\
+- \uc0\u8377 19,999 per agent monthly\
+- Enhanced workflow capabilities\
+- Priority support\
+- Advanced integrations\
+- Production-ready deployments\
+\
+### Enterprise Plan\
+- Custom pricing for unlimited users and agents\
+- Dedicated support and SLAs\
+- Custom integrations and development\
+- On-premise deployment options\
+- Enterprise security and compliance features\
+- White-label options\
+- Dedicated account management\
+\
+---\
+\
+## Use Cases & Applications\
+\
+### Digital Marketing\
+- Automated long-form content creation\
+- RAG systems for content generation\
+- Voice intelligence for content production\
+- SEO optimization workflows\
+- Social media automation\
+\
+### Customer Service\
+- Intelligent chatbot creation\
+- Multi-channel customer support automation\
+- Sentiment analysis and routing\
+- Knowledge base integration\
+- Automated response generation\
+\
+### Data Analysis & Business Intelligence\
+- Automated report generation\
+- Data visualization and dashboards\
+- Predictive analytics workflows\
+- KPI monitoring and alerting\
+- Root cause analysis automation\
+\
+### Software Development\
+- Code generation and review\
+- Documentation automation\
+- Test case generation\
+- Bug detection and analysis\
+- Development workflow optimization\
+\
+### Sales & Marketing\
+- Lead qualification automation\
+- Customer engagement workflows\
+- Sales forecasting and analytics\
+- Campaign automation\
+- CRM integration and enrichment\
+\
+---\
+\
+## Getting Started\
+\
+### Quick Start Process\
+1. **Sign Up:** Create account at app.thub.tech\
+2. **Choose Authentication:** Continue with Google, GitHub, or Microsoft credentials\
+3. **Access Dashboard:** Land on AI Workspace Dashboard\
+4. **Create GenAI App:** Click "Create GenAI App" button\
+5. **Name and Categorize:** Provide name and select appropriate category\
+6. **Design Workflow:** Drag and drop nodes from toolbox onto canvas\
+7. **Connect Nodes:** Establish data flow by connecting nodes visually\
+8. **Configure:** Set up credentials, variables, and parameters\
+9. **Test:** Execute workflow and validate outputs\
+10. **Deploy:** Launch application for production use\
+\
+### Learning Resources\
+- Comprehensive documentation at docs.thub.tech\
+- Pre-built templates for common use cases\
+- Community forums and support\
+- Video tutorials and guides\
+- Best practices documentation\
+\
+### Support\
+- Community support for Free plan\
+- Email and chat support for Pro plans\
+- Dedicated support for Enterprise customers\
+- Technical documentation and API references\
+- Regular platform updates and feature releases\
+\
+---\
+\
+## Competitive Advantages\
+\
+### Accessibility\
+- True no-code interface requiring zero programming knowledge\
+- Visual workflow designer with intuitive drag-and-drop\
+- Faster implementation than traditional development (applications ready in minutes)\
+- Lower barrier to entry compared to framework-based solutions\
+\
+### Comprehensiveness\
+- 500+ tool integrations out of the box\
+- Support for both open-source and commercial LLMs\
+- Native MCP protocol support\
+- Enterprise system integration (ERP, MES, IoT)\
+- End-to-end solution from data ingestion to deployment\
+\
+### Flexibility\
+- Customizable workflows and templates\
+- Support for multiple AI frameworks (LangChain, LlamaIndex)\
+- Hybrid deployment options\
+- Extensible through custom integrations\
+- Pay-as-you-use pricing model\
+\
+### Enterprise-Ready\
+- Scalable architecture for high-volume operations\
+- Security and compliance features\
+- Audit capabilities for regulated industries\
+- Multi-tenant support\
+- Professional services and support\
+\
+---\
+\
+## Platform Roadmap & Innovation\
+\
+### Continuous Improvement\
+- Regular platform updates and feature releases\
+- Expanding integration ecosystem\
+- Enhanced AI model support\
+- Performance optimization\
+- User experience improvements\
+\
+### Emerging Capabilities\
+- Advanced multi-agent orchestration\
+- Enhanced real-time processing\
+- Expanded industry-specific templates\
+- Deeper ERP and enterprise system integration\
+- Advanced analytics and insights\
+\
+---\
+\
+## Target Industries\
+\
+THub serves organizations across diverse sectors:\
+- **Manufacturing:** Production optimization, quality control, supply chain management\
+- **Financial Services:** Compliance automation, fraud detection, risk management\
+- **Healthcare:** Patient data management, compliance monitoring, operational efficiency\
+- **Retail & E-commerce:** Customer service, inventory management, demand forecasting\
+- **Logistics & Transportation:** Route optimization, shipment tracking, warehouse automation\
+- **Professional Services:** Document processing, client management, workflow automation\
+- **Technology:** DevOps automation, code generation, system monitoring\
+- **Education:** Content generation, student support, administrative automation\
+- **Government & Public Sector:** Compliance monitoring, citizen services, data analysis\
+\
+---\
+\
+## Community & Ecosystem\
+\
+### User Community\
+- Growing community of no-code developers and AI practitioners\
+- Knowledge sharing and best practices\
+- Template marketplace and contributions\
+- Collaborative problem-solving\
+\
+### Partner Ecosystem\
+- Integration partners (tool providers)\
+- Implementation partners (consulting firms)\
+- Technology partners (AI model providers)\
+- Reseller and distribution partners\
+\
+---\
+\
+## Contact & Resources\
+\
+**Platform Access:** https://app.thub.tech/workflows\
+**Documentation:** https://docs.thub.tech/\
+**Website:** https://thub.tech/\
+\
+---\
+\
+## Summary\
+\
+THub represents a new paradigm in AI application development\'97democratizing access to powerful agentic AI capabilities through an intuitive no-code platform. By combining comprehensive integration capabilities (500+ tools, major ERPs, MES systems, IoT devices), support for cutting-edge AI technologies (LLMs, RAG, embeddings), and specialized audit agent capabilities across all business operations, THub enables organizations to rapidly innovate and automate complex workflows without extensive technical expertise.\
+\
+Whether you're building financial audit agents, optimizing manufacturing operations, ensuring supply chain compliance, or managing enterprise-wide ESG initiatives, THub provides the tools, integrations, and intelligence needed to succeed in the age of agentic AI. The platform's support for agent-to-agent communication protocols and multi-agent systems enables sophisticated orchestration of complex business processes, making it an ideal choice for enterprises seeking to leverage AI at scale.\
+\
+With flexible pricing from free to enterprise plans, comprehensive security and compliance features, and a growing ecosystem of integrations and templates, THub is positioned as a leading platform for organizations looking to harness the power of AI without the traditional barriers of complex coding and lengthy development cycles.}
