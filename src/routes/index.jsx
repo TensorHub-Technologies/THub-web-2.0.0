@@ -19,6 +19,8 @@ const BlogDetails4 = loadable(() => import("../pages/BlogDetails4"));
 const BlogDetails5 = loadable(() => import("../pages/BlogDetails5"));
 const BlogDetails6 = loadable(() => import("../pages/BlogDetails6"));
 const BlogDetails7 = loadable(() => import("../pages/BlogDetails7"));
+const BlogDetails8 = loadable(() => import("../pages/BlogDetails8"));
+const BlogDetails9 = loadable(() => import("../pages/BlogDetails9"));
 const Academy = loadable(() => import("../pages/Academy"));
 const Contact = loadable(() => import("../pages/Contact"));
 const ErrorPage = loadable(() => import("../pages/Error"));
@@ -81,6 +83,14 @@ export const router = createBrowserRouter([
       {
         path: "blog/project-planning-automation-multi-agent-model-ai-workflow",
         element: <BlogDetails7 />,
+      },
+      {
+        path: "blog/Finance-&-Accounting-Audits-Reimagined:-The-TensorHub-Approach",
+        element: <BlogDetails8 />,
+      },
+      {
+        path: "blog/Transforming-HR-&-Workforce-Audits-with-AI:-The-TensorHub-Revolution",
+        element: <BlogDetails9 />,
       },
       {
         path: "blog/rise-of-voicebot-with-genai",
