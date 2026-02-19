@@ -65,4 +65,19 @@ export const blogPosts = [
     date: "Thu Jul 04 2024",
     readTime: "2 Min Read",
   },
+  {
+    title: "Finance-&-Accounting-Audits-Reimagined:-The-TensorHub-Approach",
+    path: "/blog/Finance-&-Accounting-Audits-Reimagined:-The-TensorHub-Approach",
+    image: rag_ai,
+    date: "Thu Jul 04 2024",
+    readTime: "2 Min Read",
+  },
+  {
+    title:
+      "Transforming-HR-&-Workforce-Audits-with-AI:-The-TensorHub-Revolution",
+    path: "/blog/Transforming-HR-&-Workforce-Audits-with-AI:-The-TensorHub-Revolution",
+    image: rag_ai,
+    date: "Thu Jul 04 2024",
+    readTime: "2 Min Read",
+  },
 ];
