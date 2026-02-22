@@ -8,8 +8,8 @@ variables:
   # Docker Registry service connection (used by Docker@2)
   dockerRegistryServiceConnection: DockerSCQA    # <-- Docker Registry service connection name
  
-  resourceGroup: thub-dev
-  acrName: thubdev            # ACR name (not FQDN)
+  resourceGroup: thub-qa
+  acrName: thubqa            # ACR name (not FQDN)
   containerAppName: thub-web
   imageName: thub-web
   tag: $(Build.BuildId)
