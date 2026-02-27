@@ -26,7 +26,11 @@ const SignIn = () => {
     const apiUrl =
       window.location.hostname === "localhost"
         ? "http://localhost:2000"
-        : "https://thub-server.wittycoast-8619cdd6.westus2.azurecontainerapps.io";
+        : window.location.hostname ===
+            "thub-web.lemonpond-e68ea8b7.westus2.azurecontainerapps.io"
+          ? "https://thub-server.lemonpond-e68ea8b7.westus2.azurecontainerapps.io"
+          : "https://thub-server.wittycoast-8619cdd6.westus2.azurecontainerapps.io";
+
     try {
       const response = await axios.post(`${apiUrl}/loginUser`, {
         email,
@@ -45,9 +49,12 @@ const SignIn = () => {
           hostname === "thub.tech"
             ? `https://${finalWorkspace}.thub.tech/?theme=${theme}&uid=${userId}`
             : hostname ===
-                "https://thub-web.happytree-73f6fdda.westus2.azurecontainerapps.io"
+                "thub-web.happytree-73f6fdda.westus2.azurecontainerapps.io"
               ? `https://thub-app.calmisland-c4dd80be.westus2.azurecontainerapps.io/?theme=${theme}&uid=${userId}`
-              : `http://localhost:8080/?theme=${theme}&uid=${userId}`;
+              : hostname ===
+                  "thub-web.lemonpond-e68ea8b7.westus2.azurecontainerapps.io"
+                ? `https://thub-server.lemonpond-e68ea8b7.westus2.azurecontainerapps.io/?theme=${theme}&uid=${userId}`
+                : `http://localhost:8080/?theme=${theme}&uid=${userId}`;
 
         window.location.replace(redirectUrl);
       } else {

@@ -6,6 +6,11 @@ import { FiFacebook, FiGithub } from "react-icons/fi";
 import { FaLinkedinIn } from "react-icons/fa6";
 import { FaXTwitter } from "react-icons/fa6";
 import { useSelector } from "react-redux";
+import chatgpt from "../../assets/images/chatgpt.png";
+import perplexity from "../../assets/images/perplexity-ai.png";
+import google from "../../assets/images/google-gemini.png";
+import claude from "../../assets/images/claude.png";
+import grok from "../../assets/images/gork.png";
 
 const Footer = () => {
   // let url;
@@ -31,12 +36,72 @@ const Footer = () => {
       <div className="relative z-20 mx-auto w-full max-w-screen-xl px-4">
         <div className="grid grid-cols-1 gap-8 py-8 md:grid-cols-2 lg:grid-cols-4 lg:gap-6">
           {/* Company Info */}
+          {/* Company Info */}
           <div className="lg:col-span-1">
             <img src={ThubLogo} className="h-8 w-32 mb-4" alt="THub Logo" />
             <p className="text-secondary dark:text-gray-400 text-sm leading-relaxed">
               A Magical Tool to Build Generative AI Apps without coding
               knowledge.
             </p>
+
+            {/* ✅ ADD THIS BLOCK */}
+            <div className="mt-4">
+              <p className="text-xs text-secondary dark:text-gray-400 mb-2 font-medium">
+                Ask AI about THub
+              </p>
+              <div className="flex gap-2 flex-wrap">
+                {[
+                  {
+                    label: "ChatGPT",
+                    href: "https://chat.openai.com/?q=What+is+THub+by+TensorHub+Technologies",
+                    bg: "#10a37f",
+                    icon: chatgpt,
+                  },
+                  {
+                    label: "Perplexity",
+                    href: "https://www.perplexity.ai/?q=What+is+THub+by+TensorHub+Technologies",
+                    bg: "#ffff",
+                    icon: perplexity,
+                  },
+                  {
+                    label: "Grok",
+                    href: "https://grok.com/?q=What+is+THub+by+TensorHub+Technologies",
+                    bg: "#000000",
+                    icon: grok,
+                  },
+                  {
+                    label: "Claude",
+                    href: "https://claude.ai/new?q=What+is+THub+by+TensorHub+Technologies",
+                    bg: "#CC785C",
+                    icon: claude,
+                  },
+                  {
+                    label: "Gemini",
+                    href: "https://gemini.google.com/?q=What+is+THub+by+TensorHub+Technologies",
+                    bg: "#f4f4f6",
+                    icon: google,
+                  },
+                ].map(({ label, href, bg, icon }) => (
+                  <a
+                    key={label}
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`Ask ${label} about THub`}
+                    title={label}
+                    style={{ backgroundColor: bg }}
+                    className="w-8 h-8 rounded-lg flex items-center justify-center transition-colors duration-200 hover:brightness-95 active:scale-95"
+                  >
+                    <img
+                      src={icon}
+                      alt={label}
+                      className="w-5 h-5 object-contain"
+                    />
+                  </a>
+                ))}
+              </div>
+            </div>
+            {/* ✅ END OF ADDED BLOCK */}
           </div>
 
           {/* THub Links */}

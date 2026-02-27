@@ -37,7 +37,10 @@ function Github_Custom_Button() {
         const apiUrl =
           window.location.hostname === "localhost"
             ? "http://localhost:2000"
-            : "https://thub-server.wittycoast-8619cdd6.westus2.azurecontainerapps.io";
+            : window.location.hostname ===
+                "thub-web.lemonpond-e68ea8b7.westus2.azurecontainerapps.io"
+              ? "https://thub-server.lemonpond-e68ea8b7.westus2.azurecontainerapps.io"
+              : "https://thub-server.wittycoast-8619cdd6.westus2.azurecontainerapps.io";
 
         const response = await axios.get(`${apiUrl}/getAccessToken`, {
           params: { code },
@@ -61,10 +64,19 @@ function Github_Custom_Button() {
 
   const getUserData = async () => {
     try {
+      const hostname = window.location.hostname;
+      const origin = window.location.origin;
+
       const apiUrl =
-        window.location.hostname === "localhost"
+        hostname === "localhost"
           ? "http://localhost:2000"
-          : "https://thub-server.wittycoast-8619cdd6.westus2.azurecontainerapps.io";
+          : origin ===
+              "https://thub-web.lemonpond-e68ea8b7.westus2.azurecontainerapps.io"
+            ? "https://thub-server.lemonpond-e68ea8b7.westus2.azurecontainerapps.io"
+            : origin ===
+                "https://thub-web.wittycoast-8619cdd6.westus2.azurecontainerapps.io"
+              ? "https://thub-server.wittycoast-8619cdd6.westus2.azurecontainerapps.io"
+              : "https://thub-server.wittycoast-8619cdd6.westus2.azurecontainerapps.io";
 
       const response = await axios.get(`${apiUrl}/getuserData`, {
         headers: {
@@ -85,9 +97,15 @@ function Github_Custom_Button() {
           case "localhost":
             redirectUrl = `http://localhost:8080/?theme=${theme}&uid=${data?.uid}`;
             break;
-          case "https://thub-web.happytree-73f6fdda.westus2.azurecontainerapps.io":
+
+          case "thub-web.happytree-73f6fdda.westus2.azurecontainerapps.io":
             redirectUrl = `https://thub-app.calmisland-c4dd80be.westus2.azurecontainerapps.io/?theme=${theme}&uid=${data?.uid}`;
             break;
+
+          case "thub-web.lemonpond-e68ea8b7.westus2.azurecontainerapps.io":
+            redirectUrl = `https://thub-server.lemonpond-e68ea8b7.westus2.azurecontainerapps.io/?theme=${theme}&uid=${data?.uid}`;
+            break;
+
           default:
             redirectUrl = `https://${finalWorkspace}.thub.tech/?theme=${theme}&uid=${data?.uid}`;
             break;

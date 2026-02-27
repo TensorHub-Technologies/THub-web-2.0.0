@@ -35,7 +35,10 @@ const ProfileContent = () => {
               const apiUrl =
                 window.location.hostname === "localhost"
                   ? "http://localhost:2000"
-                  : "https://thub-server.wittycoast-8619cdd6.westus2.azurecontainerapps.io";
+                  : window.location.hostname ===
+                      "thub-web.lemonpond-e68ea8b7.westus2.azurecontainerapps.io"
+                    ? "https://thub-server.lemonpond-e68ea8b7.westus2.azurecontainerapps.io"
+                    : "https://thub-server.wittycoast-8619cdd6.westus2.azurecontainerapps.io";
 
               axios
                 .post(`${apiUrl}/microuser`, payload)
@@ -49,17 +52,25 @@ const ProfileContent = () => {
                       : "lite";
 
                   let redirectUrl;
+
                   switch (window.location.hostname) {
                     case "localhost":
                       redirectUrl = `http://localhost:8080/?theme=${theme}&uid=${userId}`;
                       break;
-                    case "https://thub-web.happytree-73f6fdda.westus2.azurecontainerapps.io":
+
+                    case "thub-web.happytree-73f6fdda.westus2.azurecontainerapps.io":
                       redirectUrl = `http://34.31.158.201/?theme=${theme}&uid=${userId}`;
                       break;
+
+                    case "thub-web.lemonpond-e68ea8b7.westus2.azurecontainerapps.io":
+                      redirectUrl = `https://thub-server.lemonpond-e68ea8b7.westus2.azurecontainerapps.io/?theme=${theme}&uid=${userId}`;
+                      break;
+
                     default:
                       redirectUrl = `https://${finalWorkspace}.thub.tech/?theme=${theme}&uid=${userId}`;
                       break;
                   }
+
                   sessionStorage.clear();
                   setTimeout(() => {
                     window.location.href = redirectUrl;
