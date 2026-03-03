@@ -37,7 +37,10 @@ const SignUp = () => {
   const apiUrl =
     window.location.hostname === "localhost"
       ? "http://localhost:2000"
-      : "https://thub-server.wittycoast-8619cdd6.westus2.azurecontainerapps.io";
+      : window.location.hostname ===
+          "thub-web.lemonpond-e68ea8b7.westus2.azurecontainerapps.io"
+        ? "https://thub-server.lemonpond-e68ea8b7.westus2.azurecontainerapps.io"
+        : "https://thub-server.wittycoast-8619cdd6.westus2.azurecontainerapps.io";
 
   const checkEmail = async (email) => {
     console.log(apiUrl);
@@ -169,9 +172,15 @@ const SignUp = () => {
           case "localhost":
             window.location.href = `http://localhost:8080/?theme=${theme}&uid=${userId}`;
             break;
-          case "https://thub-web.happytree-73f6fdda.westus2.azurecontainerapps.io":
+
+          case "thub-web.happytree-73f6fdda.westus2.azurecontainerapps.io":
             window.location.href = `https://thub-app.calmisland-c4dd80be.westus2.azurecontainerapps.io/?theme=${theme}&uid=${userId}`;
             break;
+
+          case "thub-web.lemonpond-e68ea8b7.westus2.azurecontainerapps.io":
+            window.location.href = `https://thub-server.lemonpond-e68ea8b7.westus2.azurecontainerapps.io/?theme=${theme}&uid=${userId}`;
+            break;
+
           default:
             window.location.href = `https://${finalWorkspace}.thub.tech/?theme=${theme}&uid=${userId}`;
             break;

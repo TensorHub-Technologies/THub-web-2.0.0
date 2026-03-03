@@ -63,7 +63,10 @@ const StudentDetails_Form = ({
     const apiUrl =
       window.location.hostname === "localhost"
         ? "http://localhost:2000"
-        : "https://thub-server.wittycoast-8619cdd6.westus2.azurecontainerapps.io";
+        : window.location.hostname ===
+            "thub-web.lemonpond-e68ea8b7.westus2.azurecontainerapps.io"
+          ? "https://thub-server.lemonpond-e68ea8b7.westus2.azurecontainerapps.io"
+          : "https://thub-server.wittycoast-8619cdd6.westus2.azurecontainerapps.io";
 
     try {
       await axios.post(`${apiUrl}/api/student-enroll`, values);

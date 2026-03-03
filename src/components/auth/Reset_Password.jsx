@@ -60,7 +60,10 @@ function ResetPassword() {
       const apiUrl =
         window.location.hostname === "localhost"
           ? "http://localhost:2000"
-          : "https://thub-server.wittycoast-8619cdd6.westus2.azurecontainerapps.io";
+          : window.location.hostname ===
+              "thub-web.lemonpond-e68ea8b7.westus2.azurecontainerapps.io"
+            ? "https://thub-server.lemonpond-e68ea8b7.westus2.azurecontainerapps.io"
+            : "https://thub-server.wittycoast-8619cdd6.westus2.azurecontainerapps.io";
 
       const response = await axios.post(`${apiUrl}/reset-password/${token}`, {
         token,
@@ -70,7 +73,7 @@ function ResetPassword() {
 
       if (response.status === 200) {
         setSuccess("Password reset successfully! Redirecting to login...");
-        setTimeout(() => navigate("/auth/login"), 3000);
+        setTimeout(() => navigate("/"), 3000);
       }
     } catch (error) {
       console.error("Error resetting password:", error);
