@@ -73,7 +73,7 @@ function ResetPassword() {
 
       if (response.status === 200) {
         setSuccess("Password reset successfully! Redirecting to login...");
-        setTimeout(() => navigate("/auth/login"), 3000);
+        setTimeout(() => navigate("/"), 3000);
       }
     } catch (error) {
       console.error("Error resetting password:", error);
