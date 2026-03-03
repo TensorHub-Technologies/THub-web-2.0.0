@@ -53,31 +53,31 @@ const Footer = () => {
                 {[
                   {
                     label: "ChatGPT",
-                    href: "https://chat.openai.com/?q=What+is+THub+by+TensorHub+Technologies",
+                    href: "https://chat.openai.com/?q=What+is+THub+by+TensorHub+Technologies%3F+Please+explain+what+it+does+and+its+key+features.",
                     bg: "#10a37f",
                     icon: chatgpt,
                   },
                   {
                     label: "Perplexity",
-                    href: "https://www.perplexity.ai/?q=What+is+THub+by+TensorHub+Technologies",
+                    href: "https://www.perplexity.ai/?q=What+is+THub+by+TensorHub+Technologies%3F+Please+explain+what+it+does+and+its+key+features.",
                     bg: "#ffff",
                     icon: perplexity,
                   },
                   {
                     label: "Grok",
-                    href: "https://grok.com/?q=What+is+THub+by+TensorHub+Technologies",
+                    href: "https://grok.com/?q=What+is+THub+by+TensorHub+Technologies%3F+Please+explain+what+it+does+and+its+key+features.",
                     bg: "#000000",
                     icon: grok,
                   },
                   {
                     label: "Claude",
-                    href: "https://claude.ai/new?q=What+is+THub+by+TensorHub+Technologies",
+                    href: "https://claude.ai/new?q=What+is+THub+by+TensorHub+Technologies%3F+Please+explain+what+it+does+and+its+key+features.",
                     bg: "#CC785C",
                     icon: claude,
                   },
                   {
                     label: "Gemini",
-                    href: "https://gemini.google.com/?q=What+is+THub+by+TensorHub+Technologies",
+                    href: "https://www.google.com/search?udm=50&aep=11&q=What+is+THub+by+TensorHub+Technologies%3F+Please+explain+what+it+does+and+its+key+features..",
                     bg: "#f4f4f6",
                     icon: google,
                   },
