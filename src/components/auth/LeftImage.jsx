@@ -16,7 +16,7 @@ const LeftImage = () => {
         <img
           src={isDarkMode ? darkImage : LeftImg}
           alt="leftimage"
-          className="max-w-full h-auto border-4 border-red-700"
+          className="max-w-full h-auto"
         />
       </div>
     </div>

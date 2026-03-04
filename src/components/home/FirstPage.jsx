@@ -17,6 +17,9 @@ function FirstPage() {
     case "https://thub-web.calmisland-c4dd80be.westus2.azurecontainerapps.io":
       url = `https://thub-app.calmisland-c4dd80be.westus2.azurecontainerapps.io/signup`;
       break;
+    case "thub-web.lemonpond-e68ea8b7.westus2.azurecontainerapps.io":
+      url = "https://thub-app.lemonpond-e68ea8b7.westus2.azurecontainerapps.io";
+      break;
     default:
       url = `https://thub-app.wittysand-a4a5c89d.westus2.azurecontainerapps.io/signup`;
       break;
