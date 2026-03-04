@@ -10,14 +10,17 @@ function Features_Anime_One() {
     let url;
     switch (hostname) {
       case "localhost":
-        url = import.meta.env.VITE_THUB_WEB_APP_URL;
+        url = `http://localhost:8080/signup`;
         break;
-      // case "https://thub-web.calmisland-c4dd80be.westus2.azurecontainerapps.io":
-      case "https://thub-app.wittysand-a4a5c89d.westus2.azurecontainerapps.io/signup?theme=light":
-        url = import.meta.env.VITE_THUB_WEB_APP_URL;
+      case "https://thub-web.calmisland-c4dd80be.westus2.azurecontainerapps.io":
+        url = `https://thub-app.calmisland-c4dd80be.westus2.azurecontainerapps.io/signup`;
+        break;
+      case "thub-web.lemonpond-e68ea8b7.westus2.azurecontainerapps.io":
+        url =
+          "https://thub-app.lemonpond-e68ea8b7.westus2.azurecontainerapps.io";
         break;
       default:
-        url = import.meta.env.VITE_THUB_WEB_DEMO_URL;
+        url = `https://thub-app.wittysand-a4a5c89d.westus2.azurecontainerapps.io/signup`;
         break;
     }
     window.open(`${url}/signup`, "_blank");
