@@ -13,10 +13,8 @@ const UsecaseHome = () => {
     hostname === "localhost"
       ? "http://localhost:8080"
       : hostname.includes("calmisland")
-        ? import.meta.env.VITE_THUB_WEB_DEMO_URL ||
-          "https://thub-app.calmisland-c4dd80be.westus2.azurecontainerapps.io"
-        : import.meta.env.VITE_THUB_WEB_APP_URL ||
-          "https://thub-app.calmisland-c4dd80be.westus2.azurecontainerapps.io";
+        ? import.meta.env.VITE_THUB_WEB_DEMO_URL || "https://dev.thub.tech"
+        : import.meta.env.VITE_THUB_WEB_APP_URL || "https://dev.thub.tech";
 
   const chatFlowData = [
     {

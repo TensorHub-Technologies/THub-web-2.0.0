@@ -66,14 +66,13 @@ const Navbar = () => {
       url = import.meta.env.VITE_THUB_WEB_URL;
       break;
     case "thub-web.calmisland-c4dd80be.westus2.azurecontainerapps.io":
-      url =
-        "https://thub-app.calmisland-c4dd80be.westus2.azurecontainerapps.io";
+      url = "https://dev.thub.tech";
       break;
     case "thub-web.lemonpond-e68ea8b7.westus2.azurecontainerapps.io":
-      url = "https://thub-app.lemonpond-e68ea8b7.westus2.azurecontainerapps.io";
+      url = "https://qa.thub.tech";
       break;
     default:
-      url = "https://thub-app.wittysand-a4a5c89d.westus2.azurecontainerapps.io";
+      url = "https://app.thub.tech";
       break;
   }
 

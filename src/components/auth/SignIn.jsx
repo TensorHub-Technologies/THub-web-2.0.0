@@ -50,7 +50,7 @@ const SignIn = () => {
             ? `https://${finalWorkspace}.thub.tech/?theme=${theme}&uid=${userId}`
             : hostname ===
                 "thub-web.happytree-73f6fdda.westus2.azurecontainerapps.io"
-              ? `https://thub-app.calmisland-c4dd80be.westus2.azurecontainerapps.io/?theme=${theme}&uid=${userId}`
+              ? `https://dev.thub.tech/?theme=${theme}&uid=${userId}`
               : hostname ===
                   "thub-web.lemonpond-e68ea8b7.westus2.azurecontainerapps.io"
                 ? `https://thub-server.lemonpond-e68ea8b7.westus2.azurecontainerapps.io/?theme=${theme}&uid=${userId}`
