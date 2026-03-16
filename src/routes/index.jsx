@@ -3,6 +3,7 @@ import loadable from "@loadable/component";
 import Forgot_Password from "../components/auth/Forgot_Password";
 import ResetPassword from "../components/auth/Reset_Password";
 import BlogVoiceBots from "../pages/BlogVoiceBots";
+import BlogDetails810 from "../pages/BlogDetails810";
 
 const Home = loadable(() => import("../pages/Home"));
 const UseCases = loadable(() => import("../pages/UseCases"));
@@ -91,6 +92,10 @@ export const router = createBrowserRouter([
       {
         path: "blog/Transforming-HR-&-Workforce-Audits-with-AI:-The-TensorHub-Revolution",
         element: <BlogDetails9 />,
+      },
+      {
+        path: "blog/BlogDetails810",
+        element: <BlogDetails810 />,
       },
       {
         path: "blog/rise-of-voicebot-with-genai",

@@ -40,7 +40,7 @@ function Google_Custom_Button() {
             break;
 
           case "thub-web.happytree-73f6fdda.westus2.azurecontainerapps.io":
-            redirectUrl = `https://thub-app.calmisland-c4dd80be.westus2.azurecontainerapps.io/?theme=${theme}&uid=${userId}`;
+            redirectUrl = `https://dev.thub.tech/?theme=${theme}&uid=${userId}`;
             break;
 
           case "thub-web.lemonpond-e68ea8b7.westus2.azurecontainerapps.io":

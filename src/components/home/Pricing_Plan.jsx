@@ -22,10 +22,10 @@ function Pricing_Plan() {
       url = `http://localhost:8080`;
       break;
     case "https://thub-web.calmisland-c4dd80be.westus2.azurecontainerapps.io":
-      url = `https://thub-app.calmisland-c4dd80be.westus2.azurecontainerapps.io`;
+      url = `https://dev.thub.tech`;
       break;
     default:
-      url = `https://thub-app.wittysand-a4a5c89d.westus2.azurecontainerapps.io`;
+      url = `https://app.thub.tech`;
       break;
   }
 
