@@ -12,9 +12,13 @@ const UsecaseHome = () => {
   const APP_BASE_URL =
     hostname === "localhost"
       ? "http://localhost:8080"
-      : hostname.includes("calmisland")
-        ? import.meta.env.VITE_THUB_WEB_DEMO_URL || "https://dev.thub.tech"
-        : import.meta.env.VITE_THUB_WEB_APP_URL || "https://dev.thub.tech";
+      : hostname.includes("happytree")
+        ? "https://app.thub.tech"
+        : hostname.includes("calmisland")
+          ? "https://dev.thub.tech"
+          : hostname.includes("lemonpond")
+            ? "https://qa.thub.tech"
+            : "https://app.thub.tech";
 
   const chatFlowData = [
     {
