@@ -22,6 +22,7 @@ const BlogDetails6 = loadable(() => import("../pages/BlogDetails6"));
 const BlogDetails7 = loadable(() => import("../pages/BlogDetails7"));
 const BlogDetails8 = loadable(() => import("../pages/BlogDetails8"));
 const BlogDetails9 = loadable(() => import("../pages/BlogDetails9"));
+const BlogDetails10 = loadable(() => import("../pages/BlogDetails10"));
 const Academy = loadable(() => import("../pages/Academy"));
 const Contact = loadable(() => import("../pages/Contact"));
 const ErrorPage = loadable(() => import("../pages/Error"));
@@ -92,6 +93,10 @@ export const router = createBrowserRouter([
       {
         path: "blog/Transforming-HR-&-Workforce-Audits-with-AI:-The-TensorHub-Revolution",
         element: <BlogDetails9 />,
+      },
+      {
+        path: "blog/The-Hidden-Tax:-How-a-Multi-Agent-AI-System-Catches-Contract-Leakage",
+        element: <BlogDetails10 />,
       },
       {
         path: "blog/BlogDetails810",
