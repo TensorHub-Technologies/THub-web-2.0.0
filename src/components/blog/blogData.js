@@ -7,8 +7,16 @@ import type3 from "../../assets/images/blog/type3_rag.png";
 import level from "../../assets/images/blog/levels.png";
 import voicebot from "../../assets/images/blog/voicebot.png";
 import projectplaning from "../../assets/images/blog/project_planing.png";
+import contract_leakage from "../../assets/images/blog/contract_leakage.png";
 
 export const blogPosts = [
+  {
+    title: "Multi-Agent AI for Contract Leakage",
+    path: "/blog/The-Hidden-Tax:-How-a-Multi-Agent-AI-System-Catches-Contract-Leakage",
+    image: contract_leakage,
+    date: "Tue Mar 17 2026",
+    readTime: "8 Min Read",
+  },
   {
     title: "Project Planing Automation Agent",
     path: "/blog/project-planning-automation-multi-agent-model-ai-workflow",
